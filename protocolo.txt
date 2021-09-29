@@ -1,0 +1,291 @@
+\documentclass[letterpaper,12pt,openright,oneside]{article}
+
+
+\usepackage[left=2.5cm,top=2cm,right=2.5cm,nohead,foot=.5cm]{geometry}
+\usepackage[spanish,mexico]{babel}
+%\usepackage[spanish]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage{url}
+\usepackage{pdflscape}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{babelbib}
+\usepackage{subfig}
+\usepackage{amsmath,amssymb,amsthm} 
+% assumes amsmath package installed
+%\usepackage[document]{ragged2e}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+citecolor=blue,
+urlcolor=black,
+}
+\urlstyle{rm}
+\expandafter\def\expandafter\UrlBreaks\expandafter{\UrlBreaks%  save the current one
+  \do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j%
+  \do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t%
+  \do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D%
+  \do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N%
+  \do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X%
+  \do\Y\do\Z}
+\newcommand{\grad}{$^{\circ}$}
+\usepackage{multirow}
+\usepackage{todonotes}
+\usepackage{makecell}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{tabularx}
+\usepackage{bm,upgreek}
+\usepackage{afterpage}
+\usepackage{gensymb}
+\usepackage{float}
+\usepackage{marvosym}
+\definecolor{light-gray}{gray}{.7}
+%\spanishdecimal{.}
+
+%-------------------------------------------
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newcommand{\parcial}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newtheorem{lemma}{Lema}[subsection]
+%\newtheorem{proof}[theorem]{Proof}
+%\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{remark}{Remark}
+%\newcommand{\parcial}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\DeclareMathOperator{\sign}{sign}
+\newcommand{\m}[1]{\mathbf{#1}}
+\DeclareMathOperator{\diag}{diag}
+
+\renewcommand{\baselinestretch}{1.15}
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\begin{document}
+
+%\pagestyle{empty} %No headings for the first pages.
+
+
+%\includegraphics[width=0.05\textwidth]{./logo.jpg}~\\[1cm]
+
+\begin{titlepage}
+\begin{center}
+
+% Upper part of the page. The '~' is needed because \\
+% only works if a paragraph has started.
+
+
+\textsc{\LARGE Universidad Autónoma de Querétaro}\\[1 cm]
+\includegraphics[width=0.15\textwidth]{./uaqlogo}~\\[0.75cm]
+\textsc{\Large Facultad de Ingeniería \\ \large{Ingeniería en Automatización}}\\[0.5 cm]
+\textsc{\large Protocolo de Investigación \\ (Agosto 2021 - xxxx 20xx)}\\[0.5cm]
+
+{ 
+\huge \bfseries 
+Título: Metodología para determinar los elementos de un sistema de clasificación de botellas PET post-consumo
+\\[0.4cm] }
+%\vspace*{2cm}
+\vspace*{1.0cm}
+
+
+
+% Author and supervisor
+\large \textbf{Presenta:} Javier Iván Luna Ramos \\\vspace*{0.5cm}
+\textbf{Director:} Mtro. Luis Alberto Ángeles Hurtado$^{1}$\\\vspace*{0.5cm}
+%\textbf{Co Director:} Dr. Sebastian Salazar Colores$^{1}$\\\vspace*{0.5cm}
+\textbf{Secretario:} Dr. Juvenal Rodríguez Reséndiz$^{1}$\\\vspace*{0.5cm}
+\textbf{Vocal:} XXXX$^{1}$\\\vspace*{0.5cm}
+% \textbf{Suplente:} XXXX$^{1}$\\\vspace*{0.5cm}
+% \textbf{Suplente:} XXXX$^{1}$\\\vspace*{0.5cm}
+\raggedright
+$^{1}$ Universidad Autónoma de Querétaro, Facultad de Ingeniería.\\
+%$^{2}$ Instituto Tecnológico de Celaya, Departamento de Ingeniería Electrónica.
+\vfill
+\centering
+% Bottom of the page
+{\large \today}
+%{\large 5 de diciembre de 2020}
+\end{center}
+\end{titlepage}
+
+\newpage
+%%%%
+\hypersetup{linkcolor=black}
+\newpage
+% 
+\section*{Datos Generales}
+\subsection*{Título del proyecto de Tesis}
+Título: Metodología para determinar los elementos de un sistema de clasificación de botellas PET post-consumo
+\subsection*{Nombre del alumno}
+Javier Iván Luna Ramos
+
+\subsection*{Número de expediente}
+252273
+
+\subsection*{Programa de Estudios}
+Ingeniería en Automatización línea terminal en Electrónica y Sistemas Embebidos
+\subsection*{Director de Tesis}
+Luis Alberto Ángeles Hurtado
+
+\subsection*{Co-director}
+Juvenal Rodríguez Reséndiz
+
+\subsection*{Lugar donde se realizará la investigación}
+Facultad de Ingeniería ``UAQ''
+
+\subsection*{Línea de investigación}
+Automatización
+
+\subsection*{Tipo de investigación}
+[básica, aplicada o tecnológica (diseño, construcción de prototipo o prueba experimental)]
+
+\subsection*{Horario de trabajo:}
+Lunes a Viernes de 00:00 Hrs-00:00 Hrs  
+
+\tableofcontents
+\newpage
+
+\section{Introducción}
+El presente documento data sobre la metodología que se planea llevar a cabo para seleccionar los componentes y elementos que utilizarán para el diseño y simulación de un sistema clasificador de PET post-consumo bajo la premisa de costo asequible para centros de acopio.
+Para ello hay que entender primero cada uno de los términos involucrados.
+
+La metodología es la \textit{parte de la lógica que estudia los fundamentos y los métodos generales de las disciplinas científicas}.
+Ahora, el método, según Descartes, se define como las \textit{reglas ciertas y fáciles gracias a las cuales quien las observe exactamente no tomará nunca lo falso por lo verdadero, y llegará, sin gasto inútil del esfuerzo de su espíritu, al verdadero conocimiento de todo aquello de que sea capaz, mediante un aumento gradual de su ciencia}\cite{quillet1974tomo6}.
+
+Por otra parte, un sistema se define como el \textit{conjunto de elementos que ordenadamente relacionadas entre sí contribuyen a determinado objeto}\cite{quillet1974tomo8}.
+De está definición se puede asumir que los elementos son las partes que componen a un sistema y que trabajan en conjunto para el funcionamiento del mismo.
+Siguiendo esta analogía, un elemento se define como \textit{parte que, junto con otras, constituye la base de una cosa o un conjunto de cosas materiales o inmateriales}\cite{OxfordDictionary}.
+
+Los plásticos, en función de su estructura y su comportamiento cuando son expuestos a la temperatura pueden clasificarse en termoplásticos, termofijos y elastómeros.
+Los termoplásticos, al estar compuestos por cadenas lineales y ramificadas, se funden al ser sometidos al calor y pueden adoptar nuevas formas. Esta propiedad es fundamental para el reciclaje, pues permite recuperar los materiales y volver a utilizarlos mediante procesos físicos simples, como el calentamiento. Dado que aproximadamente el $80\%$ de los plásticos que se producen son termoplásticos, puede afirmarse que la gran mayoría de los plásticos son reciclables.\cite{morillas2014reciclaje}
+
+Ahora bien, los plásticos reciclables (termoplásticos) se definen como polímeros que se pueden fundir y moldear casi indefinidamente.
+Se derriten cuando se calientan se endurecen cuando se enfrían, sin embargo, si se congelan, los termoplásticos se pueden romper, igual que el vidrio.
+Esas características, a las que deben su nombre, son reversibles, por lo que el material se puede calentar, moldear y congelar muchas veces.
+Existen más de 100 tipos de plásticos, siendo seis los más usados \cite{pelaez2018plan} y los que más se reciclan: polipropileno, el polietileno, el policloruro de vinilo, el poliestireno, el tereftalato de polietileno y el policarbonato \cite{garrain2008analisis}.
+Se identifican por un número dentro de un triángulo que facilita su identificación, y fueron codificados por la Sociedad industrial del plástico en 1980 \cite{Ramli2008}, ver Tabla \ref{Sımbolos}. %\vspace*{0.5cm}
+
+\begin{table}[h]
+    \centering
+    \caption{Símbolos para identificar el tipo de plástico reciclado \cite{Ramli2008}.}
+    \label{Sımbolos}
+    \begin{center}
+    \begin{tabular}{ c c c c c c c }
+        \hline
+        \includegraphics[trim = {31mm 225mm 165mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} & 
+        \includegraphics[trim = {52mm 225mm 142mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} & 
+        \includegraphics[trim = {74mm 225mm 120mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
+        \includegraphics[trim = {96mm 225mm 98mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
+        \includegraphics[trim = {118mm 225mm 76mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
+        \includegraphics[trim = {140mm 225mm 54mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
+        \includegraphics[trim = {162mm 225mm 32mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} \\
+            PET & HDPE & PVC & LDPE & PP & PS & OTROS \\ 
+            
+    \end{tabular}
+    \begin{tabular}{l c c c c c c}
+        PET:\textit{Polyethylene Terephthalate} & & & & & & HDPE: \textit{High Density Polyethylene}\\
+        PVC:\textit{Polyvinyl Chloride} & & & & & & LDPE: \textit{Low Density Polyethylene}\\
+        PP:\textit{Polypropylene} & & & & & & PS: \textit{Polystyrene}\\
+        \hline
+    \end{tabular}
+    \end{center}
+    
+\end{table}
+
+Comercialmente existen empresas que fabrican y distribuyen sistemas de clasificación ver Tabla \ref{Sistemas} como el sistema de \textit{BottleSort}.
+Este sistema es capaz de identificar el PET transparente del PET verde \cite{Milgrom1994}, \cite{Bruno2000}.
+El sistema \textit{Poly-Sort}, es similar a \textit{BottleSort}, comienza separando las botellas en orden individualmente \cite{Bruno2000}, \cite{Association2008}.
+Otro sistema automático para la separación de resinas de plástico es \textit{Near infrared refrectance spectroscopy} es un método de identificación de dos filtros \cite{Scott1995156}, \cite{Masoumi2012}.
+Otra sistema radica en el campo del reflejo y transmisión de rayos-x, es similar al método de \textit{infrared spectroscopic} y al sistema VS-2 tiene una capacidad eficiente \cite{Bruno2000}, \cite{Foundation2015}.
+%\vspace*{0.5cm}
+
+\begin{table}[h]
+    %\centering
+    \caption{Sistemas comerciales para la clasificación de diferentes tipos de plásticos reciclables. }
+    \label{Sistemas}
+    \begin{tabular}{c m{33 em}}
+         \hline
+           Sistema & Ventajas \\  
+         \hline
+           1 & Considera el tamaño de la botella, remueve contaminantes, trabaja con 16 sensores de rayos infrarrojos, clasificación en 5 milisegundos, identifica color, utiliza un sistema neumático expulsando las botellas. \\
+           2 & Utiliza una cámara de color, separa las botellas en orden individual, remueve contaminantes, velocidad de detección de 15 veces por segundo e identificación de 19 milisegundos, identifica tipos de colores en las botellas. \\
+          
+          3 &Alta detección al utilizar el reflejo de rayos x y de sensores infrarrojos por medio de espectroscopia este método es recomendado para detectar PCV. Analiza de 200 veces por segundo, separa 2 a 3 botellas por segundo. \\
+          %&4 & & &  \\
+         \hline
+    \end{tabular}
+    \begin{tabular}{l}
+            1 - \textit{BottleSort}, 2- \textit{Poly-Sort}, 3- \textit{Near infrared spectroscopic} y VS-2 \\
+         \end{tabular}
+\end{table}
+
+%-alusión al objetivo sin mencionar el método
+Cada uno de los métodos de clasificación que existen y que se investigan tienen diferentes características y diseños.
+En este trabajo se plantea una combinación en los métodos y tecnología \cite{HuiWang201975} para clasificar botellas de plástico recicladas con envases que tengan merma \cite{Association2008}.
+ %\vspace*{0.5cm}
+ 
+%-hasta donde esta el estado del arte
+Cada uno de los métodos descritos  utilizan \textit{machine learning} y proporcionan ventajas y desventajas que ayudan diferenciar la mejor opción para implementar un sistema de alta velocidad de clasificación y de bajo costo. 
+
+\section{Justificación}
+En México, esto puede ser fácilmente comprobado con sólo salir a la calle y observar que en las carreteras o en las misma banqueta de una colonia hay botellas de plástico tiradas en el suelo, a esto se le agrega que muchas de estás botellas pese a que terminen en los contenedores de basura no son recicladas de manera correcta debido a que no hay una metodología que permita realizar esta tarea de manera rápida y sencilla.
+
+En México existen organismos dedicados a la recolección y reciclado de plásticos
+desde 1992, incluido el PET. Las organizaciones más importantes son: La Asociación
+para Promover el Reciclaje de PET, (APREPET), Ecología y Compromiso Empresarial (ECOCE) y el Instituto Nacional de Recicladores (INARE).\cite{floresproblema}
+
+Estás instituciones a menudo realizan programas de recolección dirigidas a la población para después proceder a la parte del reciclaje de plásticos, el problema es que este proceso es muy tardado debido a que tiene que pasar a través de otras instituciones como centros de acopio para después proceder al reciclaje que se llevará a cabo en una industria dedicada a ello.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.70\textwidth]{img/PROCRES.png}
+    %\includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.9]{img/PROCRES.PNG}
+    \caption{Proceso de recolección y reciclaje del PET \cite{floresproblema}}
+    \label{PETCICLO}
+\end{figure}
+
+\section{Descripción del problema}
+
+\section{Fundamentación teórica}
+
+% \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Hipótesis}
+
+\section{Objetivo}
+
+\subsection{Objetivos específicos }
+
+\section{Metodología}
+
+\subsection{Cronograma del plan de trabajo}
+
+%\newpage
+\section{Resultados esperados}
+
+\subsection{Factibilidad e impacto y social}
+
+\subsection{Aporte Tecnológico}
+
+% \newpage
+\section{Abreviaturas y Acrónimos}
+
+\begin{itemize}
+    \item \textbf{PET}. ”\textit{Polyethylene Terephthalate}”
+    \item \textbf{HDPE}. ”\textit{High Density Polyethylene}”
+\end{itemize}
+
+\newpage
+
+\clearpage
+\bibliographystyle{unsrt}
+\addcontentsline{toc}{section}{Referencias}
+\bibliography{tesis.bib} 
+
+\end{document}
