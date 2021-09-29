@@ -170,6 +170,8 @@ Esas características, a las que deben su nombre, son reversibles, por lo que el
 Existen más de 100 tipos de plásticos, siendo seis los más usados \cite{pelaez2018plan} y los que más se reciclan: polipropileno, el polietileno, el policloruro de vinilo, el poliestireno, el tereftalato de polietileno y el policarbonato \cite{garrain2008analisis}.
 Se identifican por un número dentro de un triángulo que facilita su identificación, y fueron codificados por la Sociedad industrial del plástico en 1980 \cite{Ramli2008}, ver Tabla \ref{Sımbolos}. %\vspace*{0.5cm}
 
+% Identificar que herramientas parecidas al ppap existen para tener una la referencia de las diferentes metodologías.
+
 \begin{table}[h]
     \centering
     \caption{Símbolos para identificar el tipo de plástico reciclado \cite{Ramli2008}.}
@@ -250,10 +252,9 @@ Estás instituciones a menudo realizan programas de recolección dirigidas a la 
 \end{figure}
 
 \section{Descripción del problema}
+El PET actualmente es uno de los materiales más utilizados en el día a día de los seres humanos siendo este el material base para todo tipo de productos, por ejemplo; Botellas de agua o cualquier otro líquido, envolturas de productos de consumo humano o de productos desechables, bolsas de plástico, etc. De lo anterior se entiende que debido a la alta presencia de este material en la vida actual del ser humano es necesario recurrir a la labor de la reutilización o reciclaje. 
 
-Es en esta premisa en la cual recae este proyecto, permitir la clasificación del PET de una
-forma rápida, eficiente y automática con el fin de realizar la ardua labor de la separación del
-PET en una tarea más sencilla y simple.
+Si bien es cierto que no todos los productos realizados con PET son reutilizables vale la pena aclarar que el PET es el plástico más utilizado y más propenso a ser reciclado de una manera más sencilla, sin embargo, es un proceso complejo y que requiere de mucha labor. Es en esta premisa en la cual recae este proyecto, permitir la clasificación del PET de una forma rápida, eficiente y automática con el fin de realizar la ardua labor de la separación del PET en una tarea más sencilla y simple.
 
 \section{Fundamentación teórica}
 
