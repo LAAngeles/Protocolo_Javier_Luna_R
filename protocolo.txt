@@ -87,7 +87,7 @@ urlcolor=black,
 
 { 
 \huge \bfseries 
-Título: Metodología para determinar los elementos de un sistema de clasificación de botellas PET post-consumo
+Metodología para determinar los elementos de un sistema de clasificación de botellas PET post-consumo
 \\[0.4cm] }
 %\vspace*{2cm}
 \vspace*{1.0cm}
@@ -99,7 +99,7 @@ Título: Metodología para determinar los elementos de un sistema de clasificaci
 \textbf{Director:} Mtro. Luis Alberto Ángeles Hurtado$^{1}$\\\vspace*{0.5cm}
 %\textbf{Co Director:} Dr. Sebastian Salazar Colores$^{1}$\\\vspace*{0.5cm}
 \textbf{Secretario:} Dr. Juvenal Rodríguez Reséndiz$^{1}$\\\vspace*{0.5cm}
-\textbf{Vocal:} XXXX$^{1}$\\\vspace*{0.5cm}
+\textbf{Vocal:} Mtro. Juan Pablo Ramírez Vázquez $^{1}$\\\vspace*{0.5cm}
 % \textbf{Suplente:} XXXX$^{1}$\\\vspace*{0.5cm}
 % \textbf{Suplente:} XXXX$^{1}$\\\vspace*{0.5cm}
 \raggedright
@@ -120,7 +120,7 @@ $^{1}$ Universidad Autónoma de Querétaro, Facultad de Ingeniería.\\
 % 
 \section*{Datos Generales}
 \subsection*{Título del proyecto de Tesis}
-Título: Metodología para determinar los elementos de un sistema de clasificación de botellas PET post-consumo
+Metodología para determinar los elementos de un sistema de clasificación de botellas PET post-consumo
 \subsection*{Nombre del alumno}
 Javier Iván Luna Ramos
 
