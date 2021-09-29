@@ -251,6 +251,10 @@ Estás instituciones a menudo realizan programas de recolección dirigidas a la 
 
 \section{Descripción del problema}
 
+Es en esta premisa en la cual recae este proyecto, permitir la clasificación del PET de una
+forma rápida, eficiente y automática con el fin de realizar la ardua labor de la separación del
+PET en una tarea más sencilla y simple.
+
 \section{Fundamentación teórica}
 
 % \newpage
