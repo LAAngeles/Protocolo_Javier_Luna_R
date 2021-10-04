@@ -235,10 +235,11 @@ En este trabajo se plantea una combinación en los métodos y tecnología \cite{
 Cada uno de los métodos descritos  utilizan \textit{machine learning} y proporcionan ventajas y desventajas que ayudan diferenciar la mejor opción para implementar un sistema de alta velocidad de clasificación y de bajo costo. 
 
 \section{Justificación}
-En México, esto puede ser fácilmente comprobado con sólo salir a la calle y observar que en las carreteras o en las misma banqueta de una colonia hay botellas de plástico tiradas en el suelo, a esto se le agrega que muchas de estás botellas pese a que terminen en los contenedores de basura no son recicladas de manera correcta debido a que no hay una metodología que permita realizar esta tarea de manera rápida y sencilla.
+En México, esto puede ser fácilmente comprobado con sólo salir a la calle y observar que en las carreteras o en la misma banqueta de una colonia hay botellas de plástico tiradas en el suelo, a esto se le agrega que muchas de estás botellas pese a que terminen en los contenedores de basura no son recicladas de manera correcta debido a que no hay una metodología clara que permita realizar esta tarea de manera rápida y sencilla.
 
 En México existen organismos dedicados a la recolección y reciclado de plásticos
-desde 1992, incluido el PET. Las organizaciones más importantes son: La Asociación
+desde 1992, incluido el PET.
+Las organizaciones más importantes son: La Asociación
 para Promover el Reciclaje de PET, (APREPET), Ecología y Compromiso Empresarial (ECOCE) y el Instituto Nacional de Recicladores (INARE).\cite{floresproblema}
 
 Estás instituciones a menudo realizan programas de recolección dirigidas a la población para después proceder a la parte del reciclaje de plásticos, el problema es que este proceso es muy tardado debido a que tiene que pasar a través de otras instituciones como centros de acopio para después proceder al reciclaje que se llevará a cabo en una industria dedicada a ello.
@@ -250,6 +251,27 @@ Estás instituciones a menudo realizan programas de recolección dirigidas a la 
     \caption{Proceso de recolección y reciclaje del PET \cite{floresproblema}}
     \label{PETCICLO}
 \end{figure}
+%-De la línea 255 a la 258 fue tomado del artículo del maestro Luis Hurtado
+El 17 de mayo de 2021, a través de un comunicado de prensa de la Industria Mexicana de Coca-Cola, se informó que generan más de 2,900 empleos directos y más de 35 mil indirectos dentro de la cadena de reciclaje.
+La gran cantidad de botellas de plástico que se generan en el mundo requiere de sistemas que detecten las propiedades de los envases y descarten otros materiales a gran velocidad. Existen tecnologías automatizadas para clasificar las botellas de plástico.
+Estas tecnologías no se aplican a la mayoría de los plásticos debido a la variedad de tamaños, formas, revestimientos, pintura de los plásticos, grosor y opacidad de los mismos, lo que dificulta el uso de técnicas de clasificación \cite{kang2005electronic}.
+
+%- De la línea 260 a la línea 275 fue tomado del protócolo del maestro Luis Hurtado.
+En México se generan más de 44 millones de toneladas anuales de residuos, y se espera que la cifra se incremente a 65 millones para el año 2030.
+La mitad de nuestros residuos son orgánicos, y la otra mitad son sólidos, e incluyen plástico, papel, cartón, vidrio, aluminio.
+El 90{$\%$} de estos desperdicios se arrojan a tiraderos de cielo abierto o a rellenos sanitarios lo que provoca contaminación del aire y el suelo.
+Los plásticos reciclados son materiales muy utilizados a nivel global en México de todos estos residuos que se producen solo el 5{$\%$} se recicla o valoriza lo que equivaldría a unas 2.2 millones de toneladas anuales \cite{SEMARNAT2019}
+
+El crecimiento de la población a nivel mundial contribuye al aumento de materiales sólidos tanto los que que se pueden reciclar y los que no se reciclan. La adecuada clasificación de los plásticos representa una actividad económica para personas físicas y morales que contribuyen en la recolección, traslado y proceso de los diferentes materiales.
+
+Las empresas y principalmente la ciudadanía deben seguir contribuyendo a que se recolecten más materiales solidos a través de los centros de acopio, solo para México se procesan 85 mil toneladas al año de plástico PET, el equivalente a 4,100 millones de botellas.
+Con la adecuada recolección se evita el 87{$\%$} de emisiones de gases de efecto invernadero frente a la producción de resina virgen, lo que equivale a 101,350 toneladas anuales de dióxido de carbono ($CO_2$) cantidad que se evitaría si todos los automóviles de la ciudad de México dejaran de circular durante dos días \cite{SEMARNAT2019}.
+
+En México y en el mundo se necesitan tecnologías que sean accesibles e incrementen la velocidad de clasificar la mayor cantidad de materiales.
+La clasificación manual no es una opción rentable para separar en grandes cantidades.
+Existen presentaciones de plásticos que se comercializan cada día, las cuales no tienen la nomenclatura que las identifique, en consecuencia si no se cuenta con sistemas automatizados se opta por, raspar el plástico para comprobar su dureza así como observar si no existen otros plásticos mezclados.
+Se muerde el plástico para determinar la dureza del material. Se dan pequeños golpes con la mano al plástico para escuchar que sonido emite.
+Se quema el plástico, para observar si emite humo de color blanco y si tiene un olor muy parecido a cera de una veladora.
 
 \section{Descripción del problema}
 El PET actualmente es uno de los materiales más utilizados en el día a día de los seres humanos siendo este el material base para todo tipo de productos, por ejemplo; Botellas de agua o cualquier otro líquido, envolturas de productos de consumo humano o de productos desechables, bolsas de plástico, etc. De lo anterior se entiende que debido a la alta presencia de este material en la vida actual del ser humano es necesario recurrir a la labor de la reutilización o reciclaje. 
