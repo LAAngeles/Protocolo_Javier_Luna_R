@@ -3,13 +3,14 @@
 
 \usepackage[left=2.5cm,top=2cm,right=2.5cm,nohead,foot=.5cm]{geometry}
 \usepackage[spanish,mexico]{babel}
-%\usepackage[spanish]{babel}
+% \usepackage[spanish]{babel}
 %\usepackage[latin1]{inputenc}
 \usepackage{times}
 \usepackage{url}
 \usepackage{pdflscape}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\graphicspath{ {images/} }
 \usepackage{color}
 \usepackage{babelbib}
 \usepackage{subfig}
@@ -36,9 +37,7 @@ urlcolor=black,
 \usepackage{makecell}
 \usepackage{enumitem}
 \usepackage{array}
-\usepackage{amssymb}
 \usepackage{amsmath}
-\usepackage{graphics}
 \usepackage{tabularx}
 \usepackage{bm,upgreek}
 \usepackage{afterpage}
@@ -65,6 +64,7 @@ urlcolor=black,
 \renewcommand{\baselinestretch}{1.15}
 
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
 
 \begin{document}
 
@@ -142,33 +142,33 @@ Facultad de Ingeniería ``UAQ''
 Automatización
 
 \subsection*{Tipo de investigación}
-[básica, aplicada o tecnológica (diseño, construcción de prototipo o prueba experimental)]
+Tecnológica (diseño y prueba experimental)
 
 \subsection*{Horario de trabajo:}
-Lunes a Viernes de 00:00 Hrs-00:00 Hrs  
+Lunes a Viernes de 15:00 Hrs-16:00 Hrs  
 
 \tableofcontents
 \newpage
 
 \section{Introducción}
-El presente documento data sobre la metodología que se planea llevar a cabo para seleccionar los componentes y elementos que utilizarán para el diseño y simulación de un sistema clasificador de PET post-consumo bajo la premisa de costo asequible para centros de acopio.
-Para ello hay que entender primero cada uno de los términos involucrados.
 
+El presente documento data sobre la metodología que se planea llevar a cabo para seleccionar los componentes y elementos que se utilizarán para el diseño y experimentación de un sistema clasificador de botellas PET post-consumo bajo la premisa de tener un costo asequible para centros de acopio.
+Para ello hay que entender primero cada uno de los términos involucrados.
+ 
 La metodología es la \textit{parte de la lógica que estudia los fundamentos y los métodos generales de las disciplinas científicas}.
 Ahora, el método, según Descartes, se define como las \textit{reglas ciertas y fáciles gracias a las cuales quien las observe exactamente no tomará nunca lo falso por lo verdadero, y llegará, sin gasto inútil del esfuerzo de su espíritu, al verdadero conocimiento de todo aquello de que sea capaz, mediante un aumento gradual de su ciencia}\cite{quillet1974tomo6}.
 
-Por otra parte, un sistema se define como el \textit{conjunto de elementos que ordenadamente relacionadas entre sí contribuyen a determinado objeto}\cite{quillet1974tomo8}.
+Por otra parte, un sistema se define como el conjunto de elementos que están ordenadamente relacionados entre sí y contribuyen a determinado objetivo \cite{quillet1974tomo8}.
 De está definición se puede asumir que los elementos son las partes que componen a un sistema y que trabajan en conjunto para el funcionamiento del mismo.
-Siguiendo esta analogía, un elemento se define como \textit{parte que, junto con otras, constituye la base de una cosa o un conjunto de cosas materiales o inmateriales}\cite{OxfordDictionary}.
+Siguiendo esta analogía, un elemento se define como \textit{la parte que, junto con otras, constituye la base de una cosa o un conjunto de cosas materiales o inmateriales} \cite{OxfordDictionary}.
 
-Los plásticos, en función de su estructura y su comportamiento cuando son expuestos a la temperatura pueden clasificarse en termoplásticos, termofijos y elastómeros.
-Los termoplásticos, al estar compuestos por cadenas lineales y ramificadas, se funden al ser sometidos al calor y pueden adoptar nuevas formas. Esta propiedad es fundamental para el reciclaje, pues permite recuperar los materiales y volver a utilizarlos mediante procesos físicos simples, como el calentamiento. Dado que aproximadamente el $80\%$ de los plásticos que se producen son termoplásticos, puede afirmarse que la gran mayoría de los plásticos son reciclables.\cite{morillas2014reciclaje}
+Los plásticos se definen como polímeros, en función de su estructura y su comportamiento cuando son expuestos a la temperatura pueden clasificarse en termoplásticos, termofijos y elastómeros.
+Los termoplásticos, al estar compuestos por cadenas lineales y ramificadas, se funden al ser sometidos al calor y pueden adoptar nuevas formas. 
+Esta propiedad es fundamental para el reciclaje, pues permite recuperar los materiales y volver a utilizarlos mediante procesos físicos simples, como el calentamiento. 
+Dado que aproximadamente el $80\%$ de los plásticos que se producen son termoplásticos, se tienen que clasificar correctamente para poder ser reciclados \cite{morillas2014reciclaje}.
 
-Ahora bien, los plásticos reciclables (termoplásticos) se definen como polímeros que se pueden fundir y moldear casi indefinidamente.
-Se derriten cuando se calientan se endurecen cuando se enfrían, sin embargo, si se congelan, los termoplásticos se pueden romper, igual que el vidrio.
-Esas características, a las que deben su nombre, son reversibles, por lo que el material se puede calentar, moldear y congelar muchas veces.
 Existen más de 100 tipos de plásticos, siendo seis los más usados \cite{pelaez2018plan} y los que más se reciclan: polipropileno, el polietileno, el policloruro de vinilo, el poliestireno, el tereftalato de polietileno y el policarbonato \cite{garrain2008analisis}.
-Se identifican por un número dentro de un triángulo que facilita su identificación, y fueron codificados por la Sociedad industrial del plástico en 1980 \cite{Ramli2008}, ver Tabla \ref{Sımbolos}. %\vspace*{0.5cm}
+Se identifican por un número dentro de un triángulo que facilita su identificación, y fueron codificados por la Sociedad industrial del plástico en 1980 \cite{Ramli2008}, ver Tabla \ref{Sımbolos}.
 
 % Identificar que herramientas parecidas al ppap existen para tener una la referencia de las diferentes metodologías.
 
@@ -240,7 +240,7 @@ En México, esto puede ser fácilmente comprobado con sólo salir a la calle y o
 En México existen organismos dedicados a la recolección y reciclado de plásticos
 desde 1992, incluido el PET.
 Las organizaciones más importantes son: La Asociación
-para Promover el Reciclaje de PET, (APREPET), Ecología y Compromiso Empresarial (ECOCE) y el Instituto Nacional de Recicladores (INARE).\cite{floresproblema}
+para Promover el Reciclaje de PET, (APREPET), Ecología y Compromiso Empresarial (ECOCE) y el Instituto Nacional de Recicladores (INARE) \cite{floresproblema}.
 
 Estás instituciones a menudo realizan programas de recolección dirigidas a la población para después proceder a la parte del reciclaje de plásticos, el problema es que este proceso es muy tardado debido a que tiene que pasar a través de otras instituciones como centros de acopio para después proceder al reciclaje que se llevará a cabo en una industria dedicada a ello.
 
@@ -260,7 +260,7 @@ Estas tecnologías no se aplican a la mayoría de los plásticos debido a la var
 En México se generan más de 44 millones de toneladas anuales de residuos, y se espera que la cifra se incremente a 65 millones para el año 2030.
 La mitad de nuestros residuos son orgánicos, y la otra mitad son sólidos, e incluyen plástico, papel, cartón, vidrio, aluminio.
 El 90{$\%$} de estos desperdicios se arrojan a tiraderos de cielo abierto o a rellenos sanitarios lo que provoca contaminación del aire y el suelo.
-Los plásticos reciclados son materiales muy utilizados a nivel global en México de todos estos residuos que se producen solo el 5{$\%$} se recicla o valoriza lo que equivaldría a unas 2.2 millones de toneladas anuales \cite{SEMARNAT2019}
+Los plásticos reciclados son materiales muy utilizados a nivel global en México de todos estos residuos que se producen solo el 5{$\%$} se recicla o valoriza lo que equivaldría a unas 2.2 millones de toneladas anuales \cite{SEMARNAT2019}.
 
 El crecimiento de la población a nivel mundial contribuye al aumento de materiales sólidos tanto los que que se pueden reciclar y los que no se reciclan. La adecuada clasificación de los plásticos representa una actividad económica para personas físicas y morales que contribuyen en la recolección, traslado y proceso de los diferentes materiales.
 
@@ -274,12 +274,20 @@ Se muerde el plástico para determinar la dureza del material. Se dan pequeños 
 Se quema el plástico, para observar si emite humo de color blanco y si tiene un olor muy parecido a cera de una veladora.
 
 \section{Descripción del problema}
-El PET actualmente es uno de los materiales más utilizados en el día a día de los seres humanos siendo este el material base para todo tipo de productos, por ejemplo; Botellas de agua o cualquier otro líquido, envolturas de productos de consumo humano o de productos desechables, bolsas de plástico, etc. De lo anterior se entiende que debido a la alta presencia de este material en la vida actual del ser humano es necesario recurrir a la labor de la reutilización o reciclaje. 
+El PET actualmente es uno de los materiales más utilizados en el día a día de los seres humanos siendo este el material base para todo tipo de productos, por ejemplo; Botellas de agua o cualquier otro líquido, envolturas de productos de consumo humano o de productos desechables, bolsas de plástico, etc.
+De lo anterior se entiende que debido a la alta presencia de este material en la vida actual del ser humano es necesario recurrir a la labor de la reutilización o reciclaje. 
 
-Si bien es cierto que no todos los productos realizados con PET son reutilizables vale la pena aclarar que el PET es el plástico más utilizado y más propenso a ser reciclado de una manera más sencilla, sin embargo, es un proceso complejo y que requiere de mucha labor. Es en esta premisa en la cual recae este proyecto, permitir la clasificación del PET de una forma rápida, eficiente y automática con el fin de realizar la ardua labor de la separación del PET en una tarea más sencilla y simple.
+Si bien es cierto que no todos los productos realizados con PET son reutilizables vale la pena aclarar que el PET es el plástico más utilizado y más propenso a ser reciclado de una manera más sencilla, sin embargo, es un proceso complejo y que requiere de mucha labor.
+Es en esta premisa en la cual recae este proyecto, permitir la clasificación del PET de una forma rápida, eficiente y automática con el fin de realizar la ardua labor de la separación del PET en una tarea más sencilla y simple.
+%-De la línea 283 a la línea 288 fue tomado del protocolo del maestro Luis Hurtado.
+Los centros de acopio que abastecen de material a diversas empresas en todo el mundo se encuentran con la falta de maquinaria y métodos que les permitan tener resultados más favorables en los precios y costes; Por lo que se han implementado varias técnicas manuales que dependen de la interpretación del observador.
+El material en la mayoría de los casos se encuentra revuelto y se almacena en super sacos o contenedores de manera que manualmente se clasifican al 100{$\%$} debido a que estos materiales suelen estar contaminados con líquidos dentro de las botellas, materiales orgánicos, pintura, etiquetas de PVC, aceites etc. 
+
+Se debe tener un sistema automatizado que sea capaz de distinguir entre diferentes diseños de botellas de plástico como el color, tipo de etiqueta, tamaño, deformación y merma dentro de la botella y que al mismo tiempo sea un sistema que sea de bajo costo y accesible.
+Para ello se busca la implementación de una metodología que nos permita seleccionar los elementos que van a componer al sistema cumpliendo con las premisas previamente descritas.
 
 \section{Fundamentación teórica}
-
+\cite{Angeles2021}
 % \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -296,7 +304,7 @@ Si bien es cierto que no todos los productos realizados con PET son reutilizable
 %\newpage
 \section{Resultados esperados}
 
-\subsection{Factibilidad e impacto y social}
+\subsection{Factibilidad e impacto social}
 
 \subsection{Aporte Tecnológico}
 
