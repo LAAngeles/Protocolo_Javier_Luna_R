@@ -152,15 +152,16 @@ Lunes a Viernes de 15:00 Hrs-16:00 Hrs
 
 \section{Introducción}
 
-El presente documento data sobre la una metodología que se propone llevar a cabo para seleccionar los componentes y elementos que se pueden llegar a utilizar para el diseño y experimentación de un sistema clasificador de botellas PET post-consumo bajo la premisa de que debe tener un costo asequible para centros de acopio.
+El presente documento data sobre una metodología que se propone llevar a cabo para seleccionar los componentes y elementos que se pueden llegar a utilizar para el diseño y experimentación de un sistema clasificador de botellas PET post-consumo bajo la premisa de que debe tener un costo asequible para centros de acopio.
 Para ello hay que entender primero cada uno de los términos involucrados.
 La metodología es la \textit{parte de la lógica que estudia los fundamentos y los métodos generales de las disciplinas científicas}.
 Ahora, el método, según Descartes, se define como las \textit{reglas ciertas y fáciles gracias a las cuales quien las observe exactamente no tomará nunca lo falso por lo verdadero, y llegará, sin gasto inútil del esfuerzo de su espíritu, al verdadero conocimiento de todo aquello de que sea capaz, mediante un aumento gradual de su ciencia} \cite{quillet1974tomo6}.
 Por otra parte, un sistema se define como el conjunto de elementos que están ordenadamente relacionados entre sí y contribuyen a determinado objetivo \cite{quillet1974tomo8}.
 De está definición se puede asumir que los elementos son las partes que componen a un sistema y que trabajan en conjunto para el funcionamiento del mismo.
 Siguiendo esta analogía, un elemento se define como \textit{la parte que, junto con otras, constituye la base de una cosa o un conjunto de cosas materiales o inmateriales} \cite{OxfordDictionary}.
+
 Los plásticos se definen como polímeros, en función de su estructura y su comportamiento cuando son expuestos a la temperatura pueden clasificarse en termoplásticos, termofijos y elastómeros.
-Los termoplásticos, al estar compuestos por cadenas lineales y ramificadas, se funden al ser sometidos al calor y pueden adoptar nuevas formas. 
+Los termoplásticos, al estar compuestos por cadenas lineales y ramificadas, se funden al ser sometidos al calor y pueden adoptar nuevas formas.
 Esta propiedad es fundamental para el reciclaje, pues permite recuperar los materiales y volver a utilizarlos mediante procesos físicos simples, como el calentamiento.
 Dado que aproximadamente el 80 \% de los plásticos que se producen son termoplásticos, se tienen que clasificar correctamente para poder ser reciclados \cite{morillas2014reciclaje}.
 Existen más de 100 tipos de plásticos, siendo siete los más usados \cite{pelaez2018plan} y los que más se reciclan: polipropileno, polietileno, policloruro de vinilo, poliestireno, tereftalato de polietileno y el policarbonato \cite{garrain2008analisis}.
@@ -197,23 +198,25 @@ Se identifican por un número dentro de un triángulo que facilita su identifica
 
 Comercialmente existen empresas que fabrican y distribuyen sistemas de clasificación de polímeros, ver Tabla \ref{Sistemas}, como el sistema de \textit{BottleSort}.
 Este sistema es capaz de identificar el PET transparente del PET verde \cite{Milgrom1994}, \cite{Bruno2000}.
-El sistema \textit{Poly-Sort}, es similar a \textit{BottleSort}, comienza separando las botellas en orden individualmente \cite{Bruno2000}, \cite{Association2008}.
+El sistema \textit{Poly-Sort}, es similar a \textit{BottleSort}, comienza separando las botellas en orden individual \cite{Bruno2000}, \cite{Association2008}.
 Otro sistema automático para la separación de resinas de plástico es \textit{Near infrared refrectance spectroscopy} es un método de identificación de dos filtros \cite{Scott1995156}, \cite{Masoumi2012}.
-Otra sistema radica en el campo del reflejo y transmisión de rayos-x, es similar al método de \textit{infrared spectroscopic} y al sistema ``VS-2'' tiene una capacidad eficiente \cite{Bruno2000}, \cite{Foundation2015}.
-Cada uno de los métodos descritos  utilizan y proporcionan ventajas y desventajas que ayudan a diferenciar la mejor opción para desarrollar un sistema de clasificación y de bajo costo.
+Otro tipo de sistema radica en el campo del reflejo y transmisión de rayos-x, es similar al método de \textit{infrared spectroscopic} y al sistema ``VS-2'' que tiene una capacidad eficiente \cite{Bruno2000}, \cite{Foundation2015}.
+Cada uno de los métodos descritos  utilizan y proporcionan ventajas y desventajas que ayudan a diferenciar la mejor opción para desarrollar un sistema de clasificación y de costo asequible.
 
 %-hasta donde esta el estado del arte
 Existen diferentes metodologías para el diseño y el desarrollo de tecnología.
-En ingeniería, una heurística es un método basado en la experiencia que puede utilizarse como ayuda para resolver problemas de diseño, desde calcular los recursos necesarios hasta en planear las condiciones de operación de los sistemas. 
+En ingeniería, la heurística es un método basado en la experiencia que puede utilizarse como ayuda para resolver problemas de diseño.
+La heurística abarca desde hacer cálculos de los recursos necesarios hasta la planeación y las mejores condiciones de operación de los sistemas. 
 Mediante el uso de heurísticas, es posible resolver más rápidamente problemas conocidos o similares a otros conocidos. 
-Existen varios métodos heurísticos disponibles para los ingenieros como, por ejemplo, el Análisis modal de fallos y efectos y los árboles de fallo. 
-En el primero se depende de un grupo de ingenieros experimentados que evalúan los problemas y fallos, los ordenan según su importancia y recomiendan soluciones. 
-Otros métodos son las \textit{Core Tools} son un conjunto de herramientas principalmente usadas en el sector automotriz también conocidas como ``APQP'', ``PPAP'', ``AMEF'', ``SPC'' y ``MSA''.
-Estas herramientas son procesos desarrollados conjuntamente por \textit{Chrysler}, \textit{Ford} y \textit{General Motors} para diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente.
+Existen varios métodos heurísticos disponibles para los ingenieros como, por ejemplo, el análisis modal de fallas y efectos. 
+Dichos métodos dependen de un grupo de ingenieros experimentados que evalúan los problemas y fallas, los ordenan según su importancia y recomiendan soluciones \cite{beuchot1999}, \cite{breyer2011}. 
+Otros métodos que se utilizan son las \textit{Core Tools}. 
+Son un conjunto de herramientas principalmente usadas en el sector automotriz también conocidas como ``APQP'', ``PPAP'', ``AMEF'', ``SPC'' y ``MSA''.
+Estas herramientas son procesos desarrollados conjuntamente por \textit{Chrysler}, \textit{Ford} y \textit{General Motors} para diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
 
 %-alusión al objetivo sin mencionar el método
-Cada uno de los métodos de diseño para identificar los elementos en una experimentación tienen diferentes características.
-En este trabajo se plantea una combinación en los métodos y tecnología para proponer una metodología \cite{HuiWang201975} para clasificar botellas PET post-consumo \cite{Association2008}.
+Cada una de las metodologías de diseño para identificar los elementos en una experimentación tienen diferentes características.
+En este trabajo se plantea una combinación en las métodos, técnicas y tecnología para proponer una metodología para clasificar botellas PET post-consumo \cite{Association2008}.
 
 \section{Justificación}
 En México, esto puede ser fácilmente comprobado con sólo salir a la calle y observar que en las carreteras o en la misma banqueta de una colonia hay botellas de plástico tiradas en el suelo, a esto se le agrega que muchas de estás botellas pese a que terminen en los contenedores de basura no son recicladas de manera correcta debido a que no hay una metodología clara que permita realizar esta tarea de manera rápida y sencilla.
@@ -269,6 +272,7 @@ Para ello se busca la implementación de una metodología que nos permita selecc
 
 \section{Fundamentación teórica}
 
+Asequible se refiere a lo que se puede alcanzar, obtener o lograr, lo que se pretenda o desea \cite{RAE2021}.
 La heurística es una técnica o procedimiento práctico, para resolver problemas. 
 Alternativamente, Lakatos lo define como un conjunto de reglas metodológicas no necesariamente forzosas, positivas y negativas, que sugieren o establecen cómo proceder y qué problemas evitar a la hora de generar soluciones y elaborar hipótesis. 
 La base de la heurística está en la experiencia de resolver problemas y en ver cómo otros lo hacen. 
