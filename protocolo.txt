@@ -167,6 +167,87 @@ Dado que aproximadamente el 80 \% de los plásticos que se producen son termopl�
 Existen más de 100 tipos de plásticos, siendo siete los más usados \cite{pelaez2018plan} y los que más se reciclan: polipropileno, polietileno, policloruro de vinilo, poliestireno, tereftalato de polietileno y el policarbonato \cite{garrain2008analisis}.
 Se identifican por un número dentro de un triángulo que facilita su identificación, y fueron codificados por la Sociedad industrial del plástico en 1980 \cite{Ramli2008}, véase la Tabla \ref{Sımbolos}.
 
+Comercialmente existen empresas que fabrican y distribuyen sistemas de clasificación de polímeros, ver Tabla \ref{Sistemas}, como el sistema de \textit{BottleSort}.
+Este sistema es capaz de identificar el PET transparente del PET verde \cite{Milgrom1994}, \cite{Bruno2000}.
+El sistema \textit{Poly-Sort}, es similar a \textit{BottleSort}, comienza separando las botellas en orden individual \cite{Bruno2000}, \cite{Association2008}.
+Otro sistema automático para la separación de resinas de plástico es \textit{Near infrared refrectance spectroscopy} es un método de identificación de dos filtros \cite{Scott1995156}, \cite{Masoumi2012}.
+Otro tipo de sistema radica en el campo del reflejo y transmisión de rayos-x, es similar al método de \textit{infrared spectroscopic} y al sistema ``VS-2'' que tiene una capacidad eficiente \cite{Bruno2000}, \cite{Foundation2015}.
+Cada uno de los métodos descritos  utilizan y proporcionan ventajas y desventajas que ayudan a diferenciar la mejor opción para desarrollar un sistema de clasificación y de costo asequible.
+
+%-hasta donde esta el estado del arte
+Existen diferentes metodologías para el diseño y el desarrollo de tecnología.
+En ingeniería, la heurística es un método basado en la experiencia que puede utilizarse como ayuda para resolver problemas de diseño.
+La heurística abarca desde hacer cálculos de los recursos necesarios hasta la planeación y las mejores condiciones de operación de los sistemas. 
+Mediante el uso de heurísticas, es posible resolver más rápidamente problemas conocidos o similares a otros conocidos. 
+Existen varios métodos heurísticos disponibles para los ingenieros como, por ejemplo, el análisis modal de fallas y efectos. 
+Dichos métodos dependen de un grupo de ingenieros experimentados que evalúan los problemas y fallas, los ordenan según su importancia y recomiendan soluciones \cite{beuchot1999}, \cite{breyer2011}. 
+Otros métodos que se utilizan son las \textit{Core Tools}. 
+Son un conjunto de herramientas principalmente usadas en el sector automotriz también conocidas como ``APQP'', ``PPAP'', ``AMEF'', ``SPC'' y ``MSA''.
+Estas herramientas son procesos desarrollados conjuntamente por \textit{Chrysler}, \textit{Ford} y \textit{General Motors} para diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
+
+%-alusión al objetivo sin mencionar el método
+Cada una de las metodologías de diseño para identificar los elementos en una experimentación tienen diferentes características.
+En este trabajo se plantea una combinación de los métodos, técnicas y tecnologías para proponer una metodología para clasificar botellas PET post-consumo \cite{Association2008}.
+
+\section{Justificación}
+
+El crecimiento de la población a nivel mundial contribuye al aumento de materiales sólidos tanto los que se pueden reciclar y los que no se reciclan. La adecuada clasificación de los plásticos representa una actividad económica para personas físicas y morales que contribuyen en la recolección, traslado y proceso de los diferentes materiales.
+El crecimiento de la producción de plástico a nivel mundial alcanzó los 280 millones de toneladas en 2011, 322 millones de toneladas en 2015, y se estima que para 2021 rondará los 400 a 414 millones de toneladas \cite{Grigore2017}, \cite{Sahin2018}.
+
+%- De la línea 260 a la línea 275 fue tomado del protócolo del maestro Luis Hurtado.
+En México se generan más de 44 millones de toneladas anuales de residuos, y se espera que la cifra se incremente a 65 millones para el año 2030.
+La mitad de nuestros residuos son orgánicos, y la otra mitad son sólidos, e incluyen plástico, papel, cartón, vidrio y aluminio.
+El 90{$\%$} de estos desperdicios se arrojan a tiraderos de cielo abierto o a rellenos sanitarios lo que provoca contaminación del aire y el suelo.
+Los plásticos reciclados son materiales muy utilizados a nivel global en México de todos estos residuos que se producen solo el 5{$\%$} se recicla o valoriza lo que equivaldría a unas 2.2 millones de toneladas anuales \cite{SEMARNAT2019}.
+
+En México existen organismos dedicados a la recolección y reciclado de plásticos
+desde 1992, incluido el PET.
+Las organizaciones más importantes son: La Asociación
+para Promover el Reciclaje de PET, (APREPET), Ecología y Compromiso Empresarial (ECOCE) y el Instituto Nacional de Recicladores (INARE) \cite{floresproblema}.
+
+Estás instituciones a menudo realizan programas de recolección dirigidas a la población para después proceder a la parte del reciclaje de plásticos, el problema es que este proceso es muy tardado debido a que tiene que pasar a través de otras instituciones como centros de acopio para después proceder al reciclaje que se llevará a cabo en una industria dedicada a ello.
+
+%-De la línea 255 a la 258 fue tomado del artículo del maestro Luis Hurtado
+% El 17 de mayo de 2021, a través de un comunicado de prensa de la Industria Mexicana de Coca-Cola, se informó que generan más de 2,900 empleos directos y más de 35 mil indirectos dentro de la cadena de reciclaje.
+La gran cantidad de botellas de plástico que se generan en el mundo requiere de sistemas que detecten las propiedades de los envases y descarten otros materiales a gran velocidad. Existen tecnologías automatizadas para clasificar las botellas de plástico.
+Estas tecnologías no se aplican a la mayoría de los plásticos debido a la variedad de tamaños, formas, revestimientos, pintura de los plásticos, grosor y opacidad de los mismos, lo que dificulta el uso de técnicas de clasificación \cite{kang2005electronic}, \cite{Angeles2021}.
+
+
+Las empresas y principalmente la ciudadanía deben seguir contribuyendo a que se recolecten más materiales solidos a través de los centros de acopio, solo para México se procesan 85 mil toneladas al año de plástico PET, el equivalente a 4,100 millones de botellas.
+Con la adecuada recolección se evita el 87{$\%$} de emisiones de gases de efecto invernadero frente a la producción de resina virgen, lo que equivale a 101,350 toneladas anuales de dióxido de carbono ($CO_2$) cantidad que se evitaría si todos los automóviles de la ciudad de México dejaran de circular durante dos días \cite{SEMARNAT2019}.
+
+La clasificación manual no es una opción rentable para separar en grandes cantidades.
+Existen presentaciones de plásticos que se comercializan cada día, las cuales no tienen la nomenclatura que las identifique, en consecuencia si no se cuenta con sistemas automatizados se opta por raspar el plástico para comprobar su dureza así como observar si no existen otros plásticos mezclados, morder el plástico para determinar la dureza del material, dar pequeños golpes con la mano al plástico para escuchar que sonido emite o quemar el plástico para observar si emite humo de color blanco y si tiene un olor muy parecido a cera de una veladora \cite{Angeles2021}.
+
+\section{Descripción del problema}
+
+Si bien es cierto que no todos los productos realizados con PET son reutilizables vale la pena aclarar que el PET es el plástico más utilizado y más propenso a ser reciclado de una manera más sencilla, sin embargo, es un proceso complejo y que requiere de mucha labor.
+Es en esta premisa en la cual recae este proyecto, permitir la clasificación del PET de una forma rápida, eficiente y automática con el fin de realizar la ardua labor de la separación del PET en una tarea más sencilla y simple.
+En México, es fácilmente comprobado con sólo salir a la calle y observar que en las carreteras o en la misma banqueta de una colonia hay diversos polímeros y botellas de plástico tiradas en el suelo, a esto se le agrega que muchas de estás botellas pese a que terminen en los contenedores de basura no son recicladas de manera correcta debido a que no hay una metodología clara que permita realizar esta tarea de manera rápida y sencilla.
+%-De la línea 283 a la línea 288 fue tomado del protocolo del maestro Luis Hurtado.
+Los centros de acopio que abastecen de material a diversas empresas en todo el mundo se encuentran con la falta de maquinaria y métodos que les permitan tener resultados más favorables en los precios y costes; 
+Por lo que se han implementado varias técnicas manuales que dependen de la interpretación del observador.
+El material en la mayoría de los casos se encuentra revuelto y se almacena en super-sacos o contenedores de manera que manualmente se clasifican al 100{$\%$} debido a que estos materiales suelen estar contaminados con líquidos dentro de las botellas, materiales orgánicos, pintura, etiquetas de ``PVC'', aceites etc. 
+
+Se debe tener una metodología para poder experimentar y proponer mejoras para facilitar el proceso de automatización. 
+Se debe de poder identificar los mejores diseños a través de métodos que ayuden a reducir el coste en el proceso de implementación de un sistema tecnológico.
+Se debe de promover el desarrollo e implementación de nuevas técnicas de separación de plásticos.
+Para ello se busca la implementación de una metodología que nos permita seleccionar los elementos que van a componer al sistema cumpliendo con las premisas previamente descritas.
+
+\section{Fundamentación teórica}
+
+El PET actualmente es uno de los materiales más utilizados en el día a día de los seres humanos siendo este el material base para todo tipo de productos, por ejemplo; Botellas de agua o cualquier otro líquido, envolturas de productos de consumo humano o de productos desechables, bolsas de plástico, etc.
+De lo anterior se entiende que debido a la alta presencia de este material en la vida actual del ser humano es necesario recurrir a la labor de la reutilización o reciclaje. 
+
+
+Asequible se refiere a lo que se puede alcanzar, obtener o lograr, lo que se pretenda o desea \cite{RAE2021}.
+La heurística es una técnica o procedimiento práctico, para resolver problemas. 
+Alternativamente, Lakatos lo define como un conjunto de reglas metodológicas no necesariamente forzosas, positivas y negativas, que sugieren o establecen cómo proceder y qué problemas evitar a la hora de generar soluciones y elaborar hipótesis. 
+La base de la heurística está en la experiencia de resolver problemas y en ver cómo otros lo hacen. 
+Consecuentemente se dice que hay búsquedas ciegas, búsquedas heurísticas (basadas en la experiencia) y búsquedas racionales.
+
+Dado que las heurísticas pueden equivocarse, es fundamental conocer los casos en los que son aplicables y los límites a su uso. En general, en la ingeniería deben considerarse como ayudas o apoyos para hacer estimaciones rápidas y diseños preliminares, pero no como justificaciones finales de un diseño o proyecto u otros.
+
 % ##########################################################################################
 \begin{table}[h]
     \centering
@@ -196,90 +277,6 @@ Se identifican por un número dentro de un triángulo que facilita su identifica
 \end{table}
 % ##########################################################################################
 
-Comercialmente existen empresas que fabrican y distribuyen sistemas de clasificación de polímeros, ver Tabla \ref{Sistemas}, como el sistema de \textit{BottleSort}.
-Este sistema es capaz de identificar el PET transparente del PET verde \cite{Milgrom1994}, \cite{Bruno2000}.
-El sistema \textit{Poly-Sort}, es similar a \textit{BottleSort}, comienza separando las botellas en orden individual \cite{Bruno2000}, \cite{Association2008}.
-Otro sistema automático para la separación de resinas de plástico es \textit{Near infrared refrectance spectroscopy} es un método de identificación de dos filtros \cite{Scott1995156}, \cite{Masoumi2012}.
-Otro tipo de sistema radica en el campo del reflejo y transmisión de rayos-x, es similar al método de \textit{infrared spectroscopic} y al sistema ``VS-2'' que tiene una capacidad eficiente \cite{Bruno2000}, \cite{Foundation2015}.
-Cada uno de los métodos descritos  utilizan y proporcionan ventajas y desventajas que ayudan a diferenciar la mejor opción para desarrollar un sistema de clasificación y de costo asequible.
-
-%-hasta donde esta el estado del arte
-Existen diferentes metodologías para el diseño y el desarrollo de tecnología.
-En ingeniería, la heurística es un método basado en la experiencia que puede utilizarse como ayuda para resolver problemas de diseño.
-La heurística abarca desde hacer cálculos de los recursos necesarios hasta la planeación y las mejores condiciones de operación de los sistemas. 
-Mediante el uso de heurísticas, es posible resolver más rápidamente problemas conocidos o similares a otros conocidos. 
-Existen varios métodos heurísticos disponibles para los ingenieros como, por ejemplo, el análisis modal de fallas y efectos. 
-Dichos métodos dependen de un grupo de ingenieros experimentados que evalúan los problemas y fallas, los ordenan según su importancia y recomiendan soluciones \cite{beuchot1999}, \cite{breyer2011}. 
-Otros métodos que se utilizan son las \textit{Core Tools}. 
-Son un conjunto de herramientas principalmente usadas en el sector automotriz también conocidas como ``APQP'', ``PPAP'', ``AMEF'', ``SPC'' y ``MSA''.
-Estas herramientas son procesos desarrollados conjuntamente por \textit{Chrysler}, \textit{Ford} y \textit{General Motors} para diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
-
-%-alusión al objetivo sin mencionar el método
-Cada una de las metodologías de diseño para identificar los elementos en una experimentación tienen diferentes características.
-En este trabajo se plantea una combinación en las métodos, técnicas y tecnología para proponer una metodología para clasificar botellas PET post-consumo \cite{Association2008}.
-
-\section{Justificación}
-En México, esto puede ser fácilmente comprobado con sólo salir a la calle y observar que en las carreteras o en la misma banqueta de una colonia hay botellas de plástico tiradas en el suelo, a esto se le agrega que muchas de estás botellas pese a que terminen en los contenedores de basura no son recicladas de manera correcta debido a que no hay una metodología clara que permita realizar esta tarea de manera rápida y sencilla.
-
-En México existen organismos dedicados a la recolección y reciclado de plásticos
-desde 1992, incluido el PET.
-Las organizaciones más importantes son: La Asociación
-para Promover el Reciclaje de PET, (APREPET), Ecología y Compromiso Empresarial (ECOCE) y el Instituto Nacional de Recicladores (INARE) \cite{floresproblema}.
-
-Estás instituciones a menudo realizan programas de recolección dirigidas a la población para después proceder a la parte del reciclaje de plásticos, el problema es que este proceso es muy tardado debido a que tiene que pasar a través de otras instituciones como centros de acopio para después proceder al reciclaje que se llevará a cabo en una industria dedicada a ello.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.70\textwidth]{img/PROCRES.png}
-    %\includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.9]{img/PROCRES.PNG}
-    \caption{Proceso de recolección y reciclaje del PET \cite{floresproblema}}
-    \label{PETCICLO}
-\end{figure}
-%-De la línea 255 a la 258 fue tomado del artículo del maestro Luis Hurtado
-El 17 de mayo de 2021, a través de un comunicado de prensa de la Industria Mexicana de Coca-Cola, se informó que generan más de 2,900 empleos directos y más de 35 mil indirectos dentro de la cadena de reciclaje.
-La gran cantidad de botellas de plástico que se generan en el mundo requiere de sistemas que detecten las propiedades de los envases y descarten otros materiales a gran velocidad. Existen tecnologías automatizadas para clasificar las botellas de plástico.
-Estas tecnologías no se aplican a la mayoría de los plásticos debido a la variedad de tamaños, formas, revestimientos, pintura de los plásticos, grosor y opacidad de los mismos, lo que dificulta el uso de técnicas de clasificación \cite{kang2005electronic}.
-
-%- De la línea 260 a la línea 275 fue tomado del protócolo del maestro Luis Hurtado.
-En México se generan más de 44 millones de toneladas anuales de residuos, y se espera que la cifra se incremente a 65 millones para el año 2030.
-La mitad de nuestros residuos son orgánicos, y la otra mitad son sólidos, e incluyen plástico, papel, cartón, vidrio, aluminio.
-El 90{$\%$} de estos desperdicios se arrojan a tiraderos de cielo abierto o a rellenos sanitarios lo que provoca contaminación del aire y el suelo.
-Los plásticos reciclados son materiales muy utilizados a nivel global en México de todos estos residuos que se producen solo el 5{$\%$} se recicla o valoriza lo que equivaldría a unas 2.2 millones de toneladas anuales \cite{SEMARNAT2019}.
-
-El crecimiento de la población a nivel mundial contribuye al aumento de materiales sólidos tanto los que que se pueden reciclar y los que no se reciclan. La adecuada clasificación de los plásticos representa una actividad económica para personas físicas y morales que contribuyen en la recolección, traslado y proceso de los diferentes materiales.
-
-Las empresas y principalmente la ciudadanía deben seguir contribuyendo a que se recolecten más materiales solidos a través de los centros de acopio, solo para México se procesan 85 mil toneladas al año de plástico PET, el equivalente a 4,100 millones de botellas.
-Con la adecuada recolección se evita el 87{$\%$} de emisiones de gases de efecto invernadero frente a la producción de resina virgen, lo que equivale a 101,350 toneladas anuales de dióxido de carbono ($CO_2$) cantidad que se evitaría si todos los automóviles de la ciudad de México dejaran de circular durante dos días \cite{SEMARNAT2019}.
-
-En México y en el mundo se necesitan tecnologías que sean accesibles e incrementen la velocidad de clasificar la mayor cantidad de materiales.
-La clasificación manual no es una opción rentable para separar en grandes cantidades.
-Existen presentaciones de plásticos que se comercializan cada día, las cuales no tienen la nomenclatura que las identifique, en consecuencia si no se cuenta con sistemas automatizados se opta por, raspar el plástico para comprobar su dureza así como observar si no existen otros plásticos mezclados.
-Se muerde el plástico para determinar la dureza del material. Se dan pequeños golpes con la mano al plástico para escuchar que sonido emite.
-Se quema el plástico, para observar si emite humo de color blanco y si tiene un olor muy parecido a cera de una veladora.
-
-\section{Descripción del problema}
-El PET actualmente es uno de los materiales más utilizados en el día a día de los seres humanos siendo este el material base para todo tipo de productos, por ejemplo; Botellas de agua o cualquier otro líquido, envolturas de productos de consumo humano o de productos desechables, bolsas de plástico, etc.
-De lo anterior se entiende que debido a la alta presencia de este material en la vida actual del ser humano es necesario recurrir a la labor de la reutilización o reciclaje. 
-
-Si bien es cierto que no todos los productos realizados con PET son reutilizables vale la pena aclarar que el PET es el plástico más utilizado y más propenso a ser reciclado de una manera más sencilla, sin embargo, es un proceso complejo y que requiere de mucha labor.
-Es en esta premisa en la cual recae este proyecto, permitir la clasificación del PET de una forma rápida, eficiente y automática con el fin de realizar la ardua labor de la separación del PET en una tarea más sencilla y simple.
-%-De la línea 283 a la línea 288 fue tomado del protocolo del maestro Luis Hurtado.
-Los centros de acopio que abastecen de material a diversas empresas en todo el mundo se encuentran con la falta de maquinaria y métodos que les permitan tener resultados más favorables en los precios y costes; Por lo que se han implementado varias técnicas manuales que dependen de la interpretación del observador.
-El material en la mayoría de los casos se encuentra revuelto y se almacena en super sacos o contenedores de manera que manualmente se clasifican al 100{$\%$} debido a que estos materiales suelen estar contaminados con líquidos dentro de las botellas, materiales orgánicos, pintura, etiquetas de PVC, aceites etc. 
-
-Se debe tener un sistema automatizado que sea capaz de distinguir entre diferentes diseños de botellas de plástico como el color, tipo de etiqueta, tamaño, deformación y merma dentro de la botella y que al mismo tiempo sea un sistema que sea de bajo costo y accesible.
-Para ello se busca la implementación de una metodología que nos permita seleccionar los elementos que van a componer al sistema cumpliendo con las premisas previamente descritas.
-
-\section{Fundamentación teórica}
-
-Asequible se refiere a lo que se puede alcanzar, obtener o lograr, lo que se pretenda o desea \cite{RAE2021}.
-La heurística es una técnica o procedimiento práctico, para resolver problemas. 
-Alternativamente, Lakatos lo define como un conjunto de reglas metodológicas no necesariamente forzosas, positivas y negativas, que sugieren o establecen cómo proceder y qué problemas evitar a la hora de generar soluciones y elaborar hipótesis. 
-La base de la heurística está en la experiencia de resolver problemas y en ver cómo otros lo hacen. 
-Consecuentemente se dice que hay búsquedas ciegas, búsquedas heurísticas (basadas en la experiencia) y búsquedas racionales.
-
-Dado que las heurísticas pueden equivocarse, es fundamental conocer los casos en los que son aplicables y los límites a su uso. En general, en la ingeniería deben considerarse como ayudas o apoyos para hacer estimaciones rápidas y diseños preliminares, pero no como justificaciones finales de un diseño o proyecto u otros.
-
 \begin{table}[h]
     %\centering
     \caption{Sistemas comerciales para la clasificación de diferentes tipos de plásticos reciclables. }
@@ -301,6 +298,15 @@ Dado que las heurísticas pueden equivocarse, es fundamental conocer los casos e
 \end{table}
 % \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.70\textwidth]{img/PROCRES.png}
+    %\includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.9]{img/PROCRES.PNG}
+    \caption{Proceso de recolección y reciclaje del PET \cite{floresproblema}}
+    \label{PETCICLO}
+\end{figure}
+
 
 \section{Hipótesis}
 
