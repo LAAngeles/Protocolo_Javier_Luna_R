@@ -205,7 +205,7 @@ Los plásticos reciclados son materiales muy utilizados a nivel global en Méxic
 En México existen organismos dedicados a la recolección y reciclado de plásticos
 desde 1992, incluido el PET.
 Las organizaciones más importantes son: La Asociación
-para Promover el Reciclaje de PET, (APREPET), Ecología y Compromiso Empresarial (ECOCE) y el Instituto Nacional de Recicladores (INARE) \cite{floresproblema}.
+para Promover el Reciclaje de PET, ``APREPET'', Ecología y Compromiso Empresarial ``ECOCE'' y el Instituto Nacional de Recicladores ``INARE'' \cite{floresproblema}.
 
 Estás instituciones a menudo realizan programas de recolección dirigidas a la población para después proceder a la parte del reciclaje de plásticos, el problema es que este proceso es muy tardado debido a que tiene que pasar a través de otras instituciones como centros de acopio para después proceder al reciclaje que se llevará a cabo en una industria dedicada a ello.
 
@@ -242,16 +242,53 @@ Para ello se busca la implementación de una metodología que nos permita selecc
 
 \section{Fundamentación teórica}
 
-Partiendo del concepto de sistema como un conjunto de partes coordinadas de reglas o principios sobre una materia racionalmente enlazados entre sí y en interacción para alcanzar un conjunto de objetivos \cite{RAE}, \cite{Johansen2004}. Se puede afirmar que el conjunto de partes de un sistema es fundamental para que se alcancen sus metas más aun si se trata de sistemas de medición. Para evaluar el conjunto de partes de un sistema se utiliza estadística con la finalidad de recolectar datos que representen el comportamiento de los componentes. Los datos son representaciones simbólicas de los eventos que se presentan en cualquier sistema y se pueden obtener por medio de la observación, por transductores, sensores y modelos matemáticos \cite{crisci1983introduccion}. 
+Partiendo del concepto de sistema como un conjunto de partes coordinadas de reglas o principios sobre una materia racionalmente enlazados entre sí y en interacción para alcanzar un conjunto de objetivos \cite{RAE}, \cite{Johansen2004}. 
+Se puede afirmar que el conjunto de partes de un sistema es fundamental para que se alcancen sus metas más aun si se trata de sistemas de medición. 
+Para evaluar el conjunto de partes de un sistema se utiliza estadística con la finalidad de recolectar datos que representen el comportamiento de los componentes. 
+Los datos son representaciones simbólicas de los eventos que se presentan en cualquier sistema y se pueden obtener por medio de la observación, por transductores, sensores y modelos matemáticos \cite{crisci1983introduccion}. 
 Por lo que al buscar que los sistemas sean asequibles se deben de considerar más factores de interacción en el sistema.
 Asequible se refiere a lo que se puede alcanzar, obtener o lograr, lo que se pretenda o desea \cite{RAE2021}.
+Es difícil diferenciar entre los tipos de resinas que se utilizan y las diferentes presentaciones que circulan el mercado mundial ver Tabla \ref{Sımbolos}, esta fue una de las razones para que la Sociedad industrial del plástico instituyera un sistema de etiquetado en 1980 \cite{Ramli2008}. 
+El sistema crea un conjunto de códigos para cada uno de los 6 tipos de resinas más comunes. Estos códigos se pueden encontrar en la mayoría de las presentaciones bajo las botellas \cite{Rotheiser2009}.
+
+% ##########################################################################################
+\begin{table}[h]
+    \centering
+    \caption{Símbolos para identificar el tipo de plástico reciclado \cite{Ramli2008}.}
+    \label{Sımbolos}
+    \begin{center}
+    \begin{tabular}{ c c c c c c c }
+        \hline
+        \includegraphics[trim = {31mm 225mm 165mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} & 
+        \includegraphics[trim = {52mm 225mm 142mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} & 
+        \includegraphics[trim = {74mm 225mm 120mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
+        \includegraphics[trim = {96mm 225mm 98mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
+        \includegraphics[trim = {118mm 225mm 76mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
+        \includegraphics[trim = {140mm 225mm 54mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
+        \includegraphics[trim = {162mm 225mm 32mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} \\
+            PET & HDPE & PVC & LDPE & PP & PS & OTROS \\ 
+            
+    \end{tabular}
+    \begin{tabular}{l c c c c c c}
+        PET:\textit{Polyethylene Terephthalate} & & & & & & HDPE: \textit{High Density Polyethylene}\\
+        PVC:\textit{Polyvinyl Chloride} & & & & & & LDPE: \textit{Low Density Polyethylene}\\
+        PP:\textit{Polypropylene} & & & & & & PS: \textit{Polystyrene}\\
+        \hline
+    \end{tabular}
+    \end{center}
+    
+\end{table}
+% ##########################################################################################
+
+\subsection{Metodologías para el diseño y el desarrollo de tecnología}
 
 La heurística es una técnica o procedimiento práctico, para resolver problemas. 
-Alternativamente, Lakatos lo define como un conjunto de reglas metodológicas no necesariamente forzosas, positivas y negativas, que sugieren o establecen cómo proceder y qué problemas evitar a la hora de generar soluciones y elaborar hipótesis. 
+Alternativamente, \textit{Lakatos} lo define como un conjunto de reglas metodológicas no necesariamente forzosas, positivas y negativas, que sugieren o establecen cómo proceder y qué problemas evitar a la hora de generar soluciones y elaborar hipótesis. 
 La base de la heurística está en la experiencia de resolver problemas y en ver cómo otros lo hacen. 
 Consecuentemente se dice que hay búsquedas ciegas, búsquedas heurísticas (basadas en la experiencia) y búsquedas racionales.
 
-Dado que las heurísticas pueden equivocarse, es fundamental conocer los casos en los que son aplicables y los límites a su uso. En general, en la ingeniería deben considerarse como ayudas o apoyos para hacer estimaciones rápidas y diseños preliminares, pero no como justificaciones finales de un diseño o proyecto u otros.
+Dado que las heurísticas pueden equivocarse, es fundamental conocer los casos en los que son aplicables y los límites a su uso.
+En general, en la ingeniería deben considerarse como ayudas o apoyos para hacer estimaciones rápidas y diseños preliminares, pero no como justificaciones finales de un diseño o proyecto u otros.
 
 \subsection{Sistemas actuales de clasificación para botellas de plástico}
 
@@ -320,35 +357,6 @@ Para esta última parte se debe considerar que se requiere de un suministro cons
 \subsection{Diseño electrónico}
 Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de 5v para la entrada y otro de 24v para la activación de las bobinas de las electroválvulas.
 Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre 5v y 30v de corriente directa y de 125v a 250v de corriente alterna con corrientes de hasta 10A. El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $64$ dolares que equivalen a $1328$ pesos mexicanos mientras que el precio de la Nucleo STM32F446 es de $15.82$ dolares que equivalen a $328$ pesos mexicanos, esto sin contar los costos de envío.
-
-% ##########################################################################################
-\begin{table}[h]
-    \centering
-    \caption{Símbolos para identificar el tipo de plástico reciclado \cite{Ramli2008}.}
-    \label{Sımbolos}
-    \begin{center}
-    \begin{tabular}{ c c c c c c c }
-        \hline
-        \includegraphics[trim = {31mm 225mm 165mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} & 
-        \includegraphics[trim = {52mm 225mm 142mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} & 
-        \includegraphics[trim = {74mm 225mm 120mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
-        \includegraphics[trim = {96mm 225mm 98mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
-        \includegraphics[trim = {118mm 225mm 76mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
-        \includegraphics[trim = {140mm 225mm 54mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
-        \includegraphics[trim = {162mm 225mm 32mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} \\
-            PET & HDPE & PVC & LDPE & PP & PS & OTROS \\ 
-            
-    \end{tabular}
-    \begin{tabular}{l c c c c c c}
-        PET:\textit{Polyethylene Terephthalate} & & & & & & HDPE: \textit{High Density Polyethylene}\\
-        PVC:\textit{Polyvinyl Chloride} & & & & & & LDPE: \textit{Low Density Polyethylene}\\
-        PP:\textit{Polypropylene} & & & & & & PS: \textit{Polystyrene}\\
-        \hline
-    \end{tabular}
-    \end{center}
-    
-\end{table}
-% ##########################################################################################
 
 \begin{table}[h]
     %\centering
