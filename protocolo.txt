@@ -242,14 +242,18 @@ Para ello se busca la implementación de una metodología que nos permita selecc
 
 \section{Fundamentación teórica}
 
-Partiendo del concepto de sistema como un conjunto de partes coordinadas de reglas o principios sobre una materia racionalmente enlazados entre sí y en interacción para alcanzar un conjunto de objetivos \cite{RAE}, \cite{Johansen2004}. 
+Partiendo del concepto de sistema, como un conjunto de partes coordinadas y de reglas o principios sobre una materia racionalmente enlazadas entre sí y en interacción para alcanzar un conjunto de objetivos \cite{RAE}, \cite{Johansen2004}. 
 Se puede afirmar que el conjunto de partes de un sistema es fundamental para que se alcancen sus metas más aun si se trata de sistemas de medición. 
 Para evaluar el conjunto de partes de un sistema se utiliza estadística con la finalidad de recolectar datos que representen el comportamiento de los componentes. 
-Los datos son representaciones simbólicas de los eventos que se presentan en cualquier sistema y se pueden obtener por medio de la observación, por transductores, sensores y modelos matemáticos \cite{crisci1983introduccion}. 
+Por otro lado los datos son representaciones simbólicas de los eventos que se presentan en cualquier sistema y se pueden obtener por medio de la observación, por transductores, sensores y modelos matemáticos \cite{crisci1983introduccion}. 
 Por lo que al buscar que los sistemas sean asequibles se deben de considerar más factores de interacción en el sistema.
 Asequible se refiere a lo que se puede alcanzar, obtener o lograr, lo que se pretenda o desea \cite{RAE2021}.
 Es difícil diferenciar entre los tipos de resinas que se utilizan y las diferentes presentaciones que circulan el mercado mundial ver Tabla \ref{Sımbolos}, esta fue una de las razones para que la Sociedad industrial del plástico instituyera un sistema de etiquetado en 1980 \cite{Ramli2008}. 
-El sistema crea un conjunto de códigos para cada uno de los 6 tipos de resinas más comunes. Estos códigos se pueden encontrar en la mayoría de las presentaciones bajo las botellas \cite{Rotheiser2009}.
+El sistema crea un conjunto de códigos para cada uno de los 6 tipos de resinas más comunes. 
+Estos códigos se pueden encontrar en la mayoría de las presentaciones bajo las botellas \cite{Rotheiser2009}.
+El PET actualmente es uno de los materiales más utilizados en el día a día de los seres humanos siendo este el material base para todo tipo de productos, por ejemplo; 
+Botellas de agua o cualquier otro líquido, envolturas de productos de consumo humano o de productos desechables, bolsas de plástico, etc.
+De lo anterior se entiende que debido a la alta presencia de este material en la vida actual del ser humano es necesario recurrir a la labor de la reutilización o reciclaje en la Figura \ref{PETCICLO} se ilustra el procesos que puede llevar una botella de PET para ser reciclada.
 
 % ##########################################################################################
 \begin{table}[h]
@@ -280,6 +284,14 @@ El sistema crea un conjunto de códigos para cada uno de los 6 tipos de resinas 
 \end{table}
 % ##########################################################################################
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.70\textwidth]{img/PROCRES.png}
+    %\includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.9]{img/PROCRES.PNG}
+    \caption{Proceso de recolección y reciclaje del PET \cite{floresproblema}}
+    \label{PETCICLO}
+\end{figure}
+
 \subsection{Metodologías para el diseño y el desarrollo de tecnología}
 
 La heurística es una técnica o procedimiento práctico, para resolver problemas. 
@@ -288,56 +300,40 @@ La base de la heurística está en la experiencia de resolver problemas y en ver
 Consecuentemente se dice que hay búsquedas ciegas, búsquedas heurísticas (basadas en la experiencia) y búsquedas racionales.
 
 Dado que las heurísticas pueden equivocarse, es fundamental conocer los casos en los que son aplicables y los límites a su uso.
-En general, en la ingeniería deben considerarse como ayudas o apoyos para hacer estimaciones rápidas y diseños preliminares, pero no como justificaciones finales de un diseño o proyecto u otros.
+En general, en la ingeniería deben considerarse como ayudas o apoyos para hacer estimaciones rápidas y diseños preliminares, pero no como justificaciones finales de un diseño o proyecto u otros \cite{beuchot1999}, \cite{breyer2011}.
+
+% Agregar información sobre las core tools
+Las \textit{Core Tools} son un conjunto de herramientas principalmente usadas en el sector automotriz también conocidas como ``APQP'', ``PPAP'', ``AMEF'', ``SPC'' y ``MSA''.
+Estas herramientas son procesos para diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades \cite{olmedo2017}.
 
 \subsection{Sistemas actuales de clasificación para botellas de plástico}
 
-En los últimos nueve años se ha utilizado \textit{Machine learning}, siendo así un conjunto de algoritmos de clasificación de aprendizaje automático basado en la teoría del aprendizaje estadístico, esta modalidad se puede entender como algoritmos que aprenden de los datos ingresados por una persona \cite{1527552} y son implementados en diversas aplicaciones. En la Figura \ref{Ejemplo} se muestra el proceso completo de clasificación con un sistema de retroalimentación \cite{Association2008} existen diversos sistemas que difieren del que se muestra en la Figura \ref{Ejemplo}.
+En los últimos nueve años se ha utilizado \textit{Machine learning}, siendo así un conjunto de algoritmos de clasificación de aprendizaje automático basado en la teoría del aprendizaje estadístico, esta modalidad se puede entender como algoritmos que aprenden de los datos ingresados por una persona \cite{1527552} y son implementados en diversas aplicaciones. 
+En la Figura \ref{Ejemplo} se muestra el proceso completo de clasificación utilizando aprendizaje estadístico. El sistema cuenta con retroalimentación \cite{Association2008} para clasificar con una mejor precisión. 
+Existen diversos sistemas que difieren del que se muestra en la Figura \ref{Ejemplo}.
 
 %#############################################
 \begin{figure}[h]
     \centering
-    %\includegraphics[width=0.5\textwidth]{FIG01.JPG}
     \includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.8]{img/Vg_fig_11.pdf}
     \caption{Ejemplo de un diagrama de flujo del proceso de clasificación de botellas de plástico \cite{Association2008}.}
     \label{Ejemplo}
 \end{figure}
 %############################################
 
-
 \subsection{Tendencias recientes para mejorar la detección en los plásticos reciclables}
 
-Las investigaciones recientes plantean nuevos métodos como el principio del procesamiento de imágenes ver Figura \ref{NIR4} utilizando combinaciones de varias técnicas como análisis de componentes principales, espectroscopia \cite{Rani2019} y transformada \textit{Hough} \cite{Duda197211}, una de las limitantes de este método son las condiciones al momento de tomar la fotografía, la variación en la luz, resolución, fondo y la distancia de la cámara para obtener una precisión mayor a 95{$\%$} \cite{Prasad2012}.
+Las investigaciones recientes plantean nuevos métodos como el principio del procesamiento de imágenes ver Figura \ref{NIR4} utilizando combinaciones de varias técnicas como análisis de componentes principales, espectroscopia \cite{Rani2019} y transformada \textit{Hough} \cite{Duda197211}. 
+Una de las limitantes de este método son las condiciones al momento de tomar la fotografía, la variación en la luz, resolución, fondo y la distancia de la cámara para obtener una precisión mayor a 95{$\%$} \cite{Prasad2012}.
 
 %#############################################
 \begin{figure}[h]
     \centering
-    %\includegraphics[width=0.5\textwidth]{FIG01.JPG}
     \includegraphics[trim = {14mm 208mm 34mm 16mm},clip,scale=.8]{img/Vg_fig_24.pdf}
     \caption{Cámara fotográfica para la detección de botellas de color \cite{Wang2019170}.}
     \label{NIR4}
 \end{figure}
 %############################################
-
-\subsection{Premisas sobre los métodos y diseños utilizados en la clasificación de botellas de plástico}
-
-%-hasta donde esta el estado del arte
-Existen diferentes metodologías para el diseño y el desarrollo de tecnología.
-En ingeniería, la heurística es un método basado en la experiencia que puede utilizarse como ayuda para resolver problemas de diseño.
-La heurística abarca desde la elaboración de cálculos de los recursos necesarios hasta la planeación y las mejores condiciones de operación de los sistemas. 
-Mediante el uso de heurísticas, es posible resolver más rápidamente problemas conocidos o similares a otros conocidos. 
-Existen varios métodos heurísticos disponibles para los ingenieros como, por ejemplo, el análisis modal de fallas y efectos. 
-Dichos métodos dependen de un grupo de ingenieros experimentados que evalúan los problemas y fallas, los ordenan según su importancia y recomiendan soluciones \cite{beuchot1999}, \cite{breyer2011}. 
-Otros métodos que se utilizan son las \textit{Core Tools}. 
-Son un conjunto de herramientas principalmente usadas en el sector automotriz también conocidas como ``APQP'', ``PPAP'', ``AMEF'', ``SPC'' y ``MSA''.
-Estas herramientas son procesos desarrollados conjuntamente por \textit{Chrysler}, \textit{Ford} y \textit{General Motors} para diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
-
-%-alusión al objetivo sin mencionar el método
-Cada una de las metodologías de diseño para identificar los elementos en una experimentación tienen diferentes características.
-En este trabajo se plantea una combinación de los métodos, técnicas y tecnologías para proponer una metodología para clasificar botellas PET post-consumo
-
-El PET actualmente es uno de los materiales más utilizados en el día a día de los seres humanos siendo este el material base para todo tipo de productos, por ejemplo; Botellas de agua o cualquier otro líquido, envolturas de productos de consumo humano o de productos desechables, bolsas de plástico, etc.
-De lo anterior se entiende que debido a la alta presencia de este material en la vida actual del ser humano es necesario recurrir a la labor de la reutilización o reciclaje. 
 
 \subsection{Transductores, sensores y modelos matemáticos}
 
@@ -365,13 +361,11 @@ De lo anterior se entiende que debido a la alta presencia de este material en la
 % \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.70\textwidth]{img/PROCRES.png}
-    %\includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.9]{img/PROCRES.PNG}
-    \caption{Proceso de recolección y reciclaje del PET \cite{floresproblema}}
-    \label{PETCICLO}
-\end{figure}
+\subsection{Premisas para identificar los elementos de un sistema de clasificación de botellas de plástico}
+
+%-alusión a la hipótesis 
+Cada una de las metodologías de diseño para identificar los elementos en una experimentación tienen diferentes características.
+En este trabajo se plantea una combinación de los métodos, técnicas y tecnologías para proponer una metodología para clasificar botellas PET post-consumo.
 
 \section{Hipótesis}
 
