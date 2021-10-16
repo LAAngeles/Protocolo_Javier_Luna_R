@@ -336,6 +336,16 @@ Una de las limitantes de este método son las condiciones al momento de tomar la
 %############################################
 
 \subsection{Transductores, sensores y modelos matemáticos}
+La implementación de sensores basados en espectroscopia permite tener una gran ventaja al momento de clasificar los diferentes plásticos que se manejan en la industria puesto que permite realizar esta tarea sin ser invasivo con los plásticos, sin emitir contaminantes, tiene muy pocas limitaciones para el tamaño del material que se va a separar y permite hacerlo en grandes cantidades \cite{wu2020auto}.
+
+Algunas de las tecnologías de espectroscopia que pueden ser aplicadas para la separación de plásticos son, por ejemplo, la espectroscopia de infrarrojo cercano o near-infrared (NIR) spectroscopy; Espectroscopia de Raman; Espectroscopia de ruptura inducida por láser o laser induced breakdown (LIBS) spectroscopy y fluorescencia de rayos-X o X-ray fluorescence (XRF) \cite{wu2020auto}.
+
+En este caso como únicamente se busca separar botellas de PET se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre $800 nm$ y $2500 nm$ y esto a su vez permite clasificar polímeros siempre y cuando no sean oscuros.
+Esta tecnología en conjunto con una cámara que pueda generar imágenes hiper-espectrales y contenga un dispositivo de carga acoplada puede ser más que suficiente para realizar la clasificación de las botellas de PET \cite{wu2020auto}.
+
+Existen varios métodos para la extracción y manejo de los datos provenientes de los sensores basados en espectroscopia infrarroja dado que es una tarea compleja.
+Algunos de esto métodos son; Principal Component Analysis (PCA) \cite{serranti2013classification}, Linear Discriminan Analysis (LDA) \cite{de1999selecting}, y Support Vector Machine (SVM) \cite{noble2006support}.
+Aunque también se pueden combinar algunas metodologías para obtener un resultado más preciso y, por ende, más adecuado para lo que se desea realizar, un ejemplo es la combinación de la metodología de análisis de componentes principales (PCA) en conjunto con la análisis de discriminación lineal (LDA) (PCA-LDA) \cite{wu2020auto}.
 
 
 
