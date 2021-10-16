@@ -153,7 +153,7 @@ Lunes a Viernes de 15:00 Hrs-16:00 Hrs
 
 \section{Introducción}
 
-El presente documento data sobre una metodología que se propone llevar a cabo para seleccionar los componentes y elementos que se pueden llegar a utilizar para el diseño y experimentación de un sistema clasificador de botellas PET post-consumo bajo la premisa de que debe tener un costo asequible para centros de acopio.
+El presente documento data sobre una metodología que se propone llevar a cabo para seleccionar los componentes y elementos que se pueden llegar a utilizar para el diseño y experimentación de un sistema clasificador de botellas ``PET'' post-consumo bajo la premisa de que debe tener un costo asequible para centros de acopio.
 Para ello hay que entender primero cada uno de los términos involucrados.
 La metodología es la \textit{parte de la lógica que estudia los fundamentos y los métodos generales de las disciplinas científicas}.
 Ahora, el método, según Descartes, se define como las \textit{reglas ciertas y fáciles gracias a las cuales quien las observe exactamente no tomará nunca lo falso por lo verdadero, y llegará, sin gasto inútil del esfuerzo de su espíritu, al verdadero conocimiento de todo aquello de que sea capaz, mediante un aumento gradual de su ciencia} \cite{quillet1974tomo6}.
@@ -169,7 +169,7 @@ Existen más de 100 tipos de plásticos, siendo siete los más usados \cite{pela
 Se identifican por un número dentro de un triángulo que facilita su identificación, y fueron codificados por la Sociedad industrial del plástico en 1980 \cite{Ramli2008}, véase la Tabla \ref{Sımbolos}.
 
 Comercialmente existen empresas que fabrican y distribuyen sistemas de clasificación de polímeros, ver Tabla \ref{Sistemas}, como el sistema de \textit{BottleSort}.
-Este sistema es capaz de identificar el PET transparente del PET verde \cite{Milgrom1994}, \cite{Bruno2000}.
+Este sistema es capaz de identificar el ``PET'' transparente del ``PET'' verde \cite{Milgrom1994}, \cite{Bruno2000}.
 El sistema \textit{Poly-Sort}, es similar a \textit{BottleSort}, comienza separando las botellas en orden individual \cite{Bruno2000}, \cite{Association2008}.
 Otro sistema automático para la separación de resinas de plástico es \textit{Near infrared refrectance spectroscopy} es un método de identificación de dos filtros \cite{Scott1995156}, \cite{Masoumi2012}.
 Otro tipo de sistema radica en el campo del reflejo y transmisión de rayos-x, es similar al método de \textit{infrared spectroscopic} y al sistema ``VS-2'' que tiene una capacidad eficiente \cite{Bruno2000}, \cite{Foundation2015}.
@@ -188,7 +188,7 @@ Estas herramientas son procesos desarrollados conjuntamente por \textit{Chrysler
 
 %-alusión al objetivo sin mencionar el método
 Cada una de las metodologías de diseño para identificar los elementos en una experimentación tienen diferentes características.
-En este trabajo se plantea una combinación de los métodos, técnicas y tecnologías para proponer una metodología para clasificar botellas PET post-consumo \cite{Association2008}.
+En este trabajo se plantea una combinación de los métodos, técnicas y tecnologías para proponer una metodología para clasificar botellas ``PET'' post-consumo \cite{Association2008}.
 
 \section{Justificación}
 
@@ -203,9 +203,9 @@ El 90{$\%$} de estos desperdicios se arrojan a tiraderos de cielo abierto o a re
 Los plásticos reciclados son materiales muy utilizados a nivel global en México de todos estos residuos que se producen solo el 5{$\%$} se recicla o valoriza lo que equivaldría a unas 2.2 millones de toneladas anuales \cite{SEMARNAT2019}, \cite{Angeles2021}.
 
 En México existen organismos dedicados a la recolección y reciclado de plásticos
-desde 1992, incluido el PET.
+desde 1992, incluido el ``PET''.
 Las organizaciones más importantes son: La Asociación
-para Promover el Reciclaje de PET, ``APREPET'', Ecología y Compromiso Empresarial ``ECOCE'' y el Instituto Nacional de Recicladores ``INARE'' \cite{floresproblema}.
+para Promover el Reciclaje de ``PET'', ``APREPET'', Ecología y Compromiso Empresarial ``ECOCE'' y el Instituto Nacional de Recicladores ``INARE'' \cite{floresproblema}.
 
 Estás instituciones a menudo realizan programas de recolección dirigidas a la población para después proceder a la parte del reciclaje de plásticos, el problema es que este proceso es muy tardado debido a que tiene que pasar a través de otras instituciones como centros de acopio para después proceder al reciclaje que se llevará a cabo en una industria dedicada a ello.
 
@@ -214,7 +214,7 @@ Estás instituciones a menudo realizan programas de recolección dirigidas a la 
 La gran cantidad de botellas de plástico que se generan en el mundo requiere de sistemas que detecten las propiedades de los envases y descarten otros materiales a gran velocidad. Existen tecnologías automatizadas para clasificar las botellas de plástico.
 Estas tecnologías no se aplican a la mayoría de los plásticos debido a la variedad de tamaños, formas, revestimientos, pintura de los plásticos, grosor y opacidad de los mismos, lo que dificulta el uso de técnicas de clasificación \cite{kang2005electronic}, \cite{Angeles2021}.
 
-Las empresas y principalmente la ciudadanía deben seguir contribuyendo a que se recolecten más materiales solidos a través de los centros de acopio, solo para México se procesan 85 mil toneladas al año de plástico PET, el equivalente a 4,100 millones de botellas.
+Las empresas y principalmente la ciudadanía deben seguir contribuyendo a que se recolecten más materiales solidos a través de los centros de acopio, solo para México se procesan 85 mil toneladas al año de plástico ``PET'', el equivalente a 4,100 millones de botellas.
 Con la adecuada recolección se evita el 87{$\%$} de emisiones de gases de efecto invernadero frente a la producción de resina virgen, lo que equivale a 101,350 toneladas anuales de dióxido de carbono ($CO_2$) cantidad que se evitaría si todos los automóviles de la ciudad de México dejaran de circular durante dos días \cite{SEMARNAT2019}.
 
 La clasificación manual no es una opción rentable para separar en grandes cantidades.
@@ -227,8 +227,8 @@ Se le da pequeños golpes con la mano al plástico para escuchar que sonido emit
 \section{Descripción del problema}
 
 En México, es fácilmente comprobado con sólo salir a la calle y observar que en las carreteras o en la misma banqueta de una colonia hay diversos polímeros y botellas de plástico tiradas en el suelo, a esto se le agrega que muchas de estás botellas pese a que terminen en los contenedores de basura no son recicladas de manera correcta debido a que no hay una metodología clara que permita realizar esta tarea de manera rápida y sencilla.
-Si bien es cierto que no todos los materiales producidos con PET son reutilizables vale la pena aclarar que el PET es el plástico más utilizado y más propenso a ser reciclado de una manera más sencilla, sin embargo, es un proceso complejo y que requiere de mucha labor.
-Es en esta premisa en la cual recae este proyecto, permitir la clasificación del PET de una forma rápida, eficiente y automática con el fin de realizar la ardua labor de la separación del PET en una tarea más sencilla y simple.
+Si bien es cierto que no todos los materiales producidos con ``PET'' son reutilizables vale la pena aclarar que el ``PET'' es el plástico más utilizado y más propenso a ser reciclado de una manera más sencilla, sin embargo, es un proceso complejo y que requiere de mucha labor.
+Es en esta premisa en la cual recae este proyecto, permitir la clasificación del ``PET'' de una forma rápida, eficiente y automática con el fin de realizar la ardua labor de la separación del ``PET'' en una tarea más sencilla y simple.
 
 %-De la línea 283 a la línea 288 fue tomado del protocolo del maestro Luis Hurtado.
 Los centros de acopio que abastecen de material a diversas empresas en todo el mundo se encuentran con la falta de maquinaria y métodos que les permitan tener resultados más favorables en los precios y costes; 
@@ -251,9 +251,9 @@ Asequible se refiere a lo que se puede alcanzar, obtener o lograr, lo que se pre
 Es difícil diferenciar entre los tipos de resinas que se utilizan y las diferentes presentaciones que circulan el mercado mundial ver Tabla \ref{Sımbolos}, esta fue una de las razones para que la Sociedad industrial del plástico instituyera un sistema de etiquetado en 1980 \cite{Ramli2008}. 
 El sistema crea un conjunto de códigos para cada uno de los 6 tipos de resinas más comunes. 
 Estos códigos se pueden encontrar en la mayoría de las presentaciones bajo las botellas \cite{Rotheiser2009}.
-El PET actualmente es uno de los materiales más utilizados en el día a día de los seres humanos siendo este el material base para todo tipo de productos, por ejemplo; 
+El ``PET'' actualmente es uno de los materiales más utilizados en el día a día de los seres humanos siendo este el material base para todo tipo de productos, por ejemplo; 
 Botellas de agua o cualquier otro líquido, envolturas de productos de consumo humano o de productos desechables, bolsas de plástico, etc.
-De lo anterior se entiende que debido a la alta presencia de este material en la vida actual del ser humano es necesario recurrir a la labor de la reutilización o reciclaje en la Figura \ref{PETCICLO} se ilustra el procesos que puede llevar una botella de PET para ser reciclada.
+De lo anterior se entiende que debido a la alta presencia de este material en la vida actual del ser humano es necesario recurrir a la labor de la reutilización o reciclaje en la Figura \ref{PETCICLO} se ilustra el procesos que puede llevar una botella de ``PET'' para ser reciclada.
 
 % ##########################################################################################
 \begin{table}[h]
@@ -270,7 +270,7 @@ De lo anterior se entiende que debido a la alta presencia de este material en la
         \includegraphics[trim = {118mm 225mm 76mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
         \includegraphics[trim = {140mm 225mm 54mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
         \includegraphics[trim = {162mm 225mm 32mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} \\
-            PET & HDPE & PVC & LDPE & PP & PS & OTROS \\ 
+            ``PET'' & ``HDPE'' & ``PVC'' & ``LDPE'' & ``PP'' & ``PS'' & OTROS \\ 
             
     \end{tabular}
     \begin{tabular}{l c c c c c c}
@@ -288,7 +288,7 @@ De lo anterior se entiende que debido a la alta presencia de este material en la
     \centering
     \includegraphics[width=0.70\textwidth]{img/PROCRES.png}
     %\includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.9]{img/PROCRES.PNG}
-    \caption{Proceso de recolección y reciclaje del PET \cite{floresproblema}}
+    \caption{Proceso de recolección y reciclaje del ``PET'' \cite{floresproblema}}
     \label{PETCICLO}
 \end{figure}
 
@@ -315,7 +315,7 @@ Existen diversos sistemas que difieren del que se muestra en la Figura \ref{Ejem
 %#############################################
 \begin{figure}[h]
     \centering
-    \includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.8]{img/Vg_fig_11.pdf}
+    \includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.7]{img/Vg_fig_11.pdf}
     \caption{Ejemplo de un diagrama de flujo del proceso de clasificación de botellas de plástico \cite{Association2008}.}
     \label{Ejemplo}
 \end{figure}
@@ -336,22 +336,19 @@ Una de las limitantes de este método son las condiciones al momento de tomar la
 %############################################
 
 \subsection{Transductores, sensores y modelos matemáticos}
+
 La implementación de sensores basados en espectroscopia permite tener una gran ventaja al momento de clasificar los diferentes plásticos que se manejan en la industria puesto que permite realizar esta tarea sin ser invasivo con los plásticos, sin emitir contaminantes, tiene muy pocas limitaciones para el tamaño del material que se va a separar y permite hacerlo en grandes cantidades \cite{wu2020auto}.
-
-Algunas de las tecnologías de espectroscopia que pueden ser aplicadas para la separación de plásticos son, por ejemplo, la espectroscopia de infrarrojo cercano o near-infrared (NIR) spectroscopy; Espectroscopia de Raman; Espectroscopia de ruptura inducida por láser o laser induced breakdown (LIBS) spectroscopy y fluorescencia de rayos-X o X-ray fluorescence (XRF) \cite{wu2020auto}.
-
-En este caso como únicamente se busca separar botellas de PET se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre $800 nm$ y $2500 nm$ y esto a su vez permite clasificar polímeros siempre y cuando no sean oscuros.
-Esta tecnología en conjunto con una cámara que pueda generar imágenes hiper-espectrales y contenga un dispositivo de carga acoplada puede ser más que suficiente para realizar la clasificación de las botellas de PET \cite{wu2020auto}.
-
+Algunas de las tecnologías de espectroscopia que pueden ser aplicadas para la separación de plásticos son, por ejemplo, la espectroscopia de infrarrojo cercano o \textit{near-infrared spectroscopy} ``NIR''; 
+Espectroscopia de Raman; Espectroscopia de ruptura inducida por láser o \textit{laser induced breakdown spectroscopy} ``LIBS'' y fluorescencia de rayos-X o \textit{X-ray fluorescence} ``XRF'' \cite{wu2020auto}.
+En este caso como únicamente se busca separar botellas de ``PET'' se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre 800 $nm$ y 2500 $nm$ y esto a su vez permite clasificar polímeros siempre y cuando no sean oscuros.
+Esta tecnología en conjunto con una cámara que pueda generar imágenes hiper-espectrales y contenga un dispositivo de carga acoplada puede ser más que suficiente para realizar la clasificación de las botellas de ``PET'' \cite{wu2020auto}.
 Existen varios métodos para la extracción y manejo de los datos provenientes de los sensores basados en espectroscopia infrarroja dado que es una tarea compleja.
-Algunos de esto métodos son; Principal Component Analysis (PCA) \cite{serranti2013classification}, Linear Discriminan Analysis (LDA) \cite{de1999selecting}, y Support Vector Machine (SVM) \cite{noble2006support}.
-Aunque también se pueden combinar algunas metodologías para obtener un resultado más preciso y, por ende, más adecuado para lo que se desea realizar, un ejemplo es la combinación de la metodología de análisis de componentes principales (PCA) en conjunto con la análisis de discriminación lineal (LDA) (PCA-LDA) \cite{wu2020auto}.
-
-
+Algunos de esto métodos son; \textit{Principal Component Analysis} ``PCA'' \cite{serranti2013classification}, \textit{Linear Discriminan Analysis} ``LDA'' \cite{de1999selecting}, y \textit{Support Vector Machine} ``SVM'' \cite{noble2006support}.
+Aunque también se pueden combinar algunas metodologías para obtener un resultado más preciso y, por ende, más adecuado para lo que se desea realizar, un ejemplo es la combinación de la metodología de ``PCA'' en conjunto con ``LDA'' o ``PCA''-``LDA'' \cite{wu2020auto}.
 
 \begin{table}[h]
     %\centering
-    \caption{Sistemas comerciales para la clasificación de diferentes tipos de plásticos reciclables. }
+    \caption{Sistemas comerciales para la clasificación de diferentes tipos de plásticos reciclables \cite{Angeles2021}. }
     \label{Sistemas}
     \begin{tabular}{c m{33 em}}
          \hline
@@ -375,7 +372,7 @@ Aunque también se pueden combinar algunas metodologías para obtener un resulta
 
 %-alusión a la hipótesis 
 Cada una de las metodologías de diseño para identificar los elementos en una experimentación tienen diferentes características.
-En este trabajo se plantea una combinación de los métodos, técnicas y tecnologías para proponer una metodología para clasificar botellas PET post-consumo.
+En este trabajo se plantea una combinación de los métodos, técnicas y tecnologías para proponer una metodología para clasificar botellas ``PET'' post-consumo.
 
 \section{Hipótesis}
 
@@ -389,7 +386,7 @@ En este trabajo se plantea una combinación de los métodos, técnicas y tecnolo
 
 De manera general la parte mecánica del sistema de clasificación se compone de una banda transportadora, un motor para dicha banda transportadora y un sistema que permita sostener el sistema eléctrico-electrónico encargado de realizar en forma la clasificación.
 
-Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de PET a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
+Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de ``PET'' a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
 Con esto y teniendo en cuenta que la clasificación en la sección de sensores de realizara de botella en botella entonces el peso en la banda transportadora no pasaría de 5kg, por ende, no es necesario recurrir a un motor muy potente ni a una tensión alta en la banda para poder desplazar el contenido.
 
 Por otro lado, suponiendo de que las botellas caerán a través de un embudo a la banda transportadora entonces se debe considerar por mera seguridad que estás salgan eyectadas hacía los laterales, siendo este el caso se deben colocar paredes de un metal que sea ligero pero lo suficientemente resistente para que no se deforme debido a los impactos y permita que las botellas se mantengan dentro de la banda transportadora en todo momento. 
