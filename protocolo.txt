@@ -400,8 +400,21 @@ Esta clasificación puede realizarse mediante pistones neumáticos que se accion
 Para esta última parte se debe considerar que se requiere de un suministro constante de aire comprimido para los pistones neumáticos, está presión debe ser de al menos $0.08MPa$, a menos que se requiera un control más estricto sobre el accionamiento se pueden utilizar pistones de simple efecto con retorno de muelle, de lo contrario se debe optar por pistones de doble efecto para controlar tanto el accionamiento como el regreso mediante un electroválvula de $\frac{5}{2}$ monoestable.
 
 \subsection{Diseño electrónico}
+
 Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de 5v para la entrada y otro de 24v para la activación de las bobinas de las electroválvulas.
-Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre 5v y 30v de corriente directa y de 125v a 250v de corriente alterna con corrientes de hasta 10A. El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $64$ dolares que equivalen a $1328$ pesos mexicanos mientras que el precio de la Nucleo STM32F446 es de $15.82$ dolares que equivalen a $328$ pesos mexicanos, esto sin contar los costos de envío.
+Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre 5v y 30v de corriente directa y de 125v a 250v de corriente alterna con corrientes de hasta 10A. 
+El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $64$ dolares que equivalen a $1328$ pesos mexicanos mientras que el precio de la Nucleo STM32F446 es de $15.82$ dolares que equivalen a $328$ pesos mexicanos, esto sin contar los costos de envío.
+
+\subsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
+
+Se busca minimizar los factores de ruido que con la interacción de todos los factores anteriormente descritos se obtenga la velocidad máxima y mínima que no afecte la eficiencia en la clasificación ver Figura \ref{diseño04} \cite{gutierrez2004analisis}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[trim = {31mm 145mm 13mm 20mm},clip,scale=0.65]{img/Vg_fig_18.pdf}
+    \caption{Factores y variables en el diseño de experimentos para la interacción de todo el sistema.}
+    \label{diseño04}
+\end{figure} 
 
 \subsection{Cronograma del plan de trabajo}
 
@@ -413,12 +426,12 @@ Dicho circuito puede ser realizado con un modulo de relevadores los cuales típi
 \subsection{Aporte Tecnológico}
 
 % \newpage
-\section{Abreviaturas y Acrónimos}
+% \section{Abreviaturas y Acrónimos}
 
-\begin{itemize}
-    \item \textbf{PET}. ”\textit{Polyethylene Terephthalate}”
-    \item \textbf{HDPE}. ”\textit{High Density Polyethylene}”
-\end{itemize}
+% \begin{itemize}
+%     \item \textbf{PET}. ”\textit{Polyethylene Terephthalate}”
+%     \item \textbf{HDPE}. ”\textit{High Density Polyethylene}”
+% \end{itemize}
 
 \newpage
 
