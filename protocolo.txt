@@ -342,6 +342,7 @@ Algunas de las tecnologías de espectroscopia que pueden ser aplicadas para la s
 Espectroscopia de Raman; Espectroscopia de ruptura inducida por láser o \textit{laser induced breakdown spectroscopy} ``LIBS'' y fluorescencia de rayos-X o \textit{X-ray fluorescence} ``XRF'' \cite{wu2020auto}.
 En este caso como únicamente se busca separar botellas de ``PET'' se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre 800 $nm$ y 2500 $nm$ y esto a su vez permite clasificar polímeros siempre y cuando no sean oscuros.
 Esta tecnología en conjunto con una cámara que pueda generar imágenes hiper-espectrales y contenga un dispositivo de carga acoplada puede ser más que suficiente para realizar la clasificación de las botellas de ``PET'' \cite{wu2020auto}.
+
 Existen varios métodos para la extracción y manejo de los datos provenientes de los sensores basados en espectroscopia infrarroja dado que es una tarea compleja.
 Algunos de esto métodos son; \textit{Principal Component Analysis} ``PCA'' \cite{serranti2013classification}, \textit{Linear Discriminan Analysis} ``LDA'' \cite{de1999selecting}, y \textit{Support Vector Machine} ``SVM'' \cite{noble2006support}.
 Aunque también se pueden combinar algunas metodologías para obtener un resultado más preciso y, por ende, más adecuado para lo que se desea realizar, un ejemplo es la combinación de la metodología de ``PCA'' en conjunto con ``LDA'' o ``PCA''-``LDA'' \cite{wu2020auto}.
