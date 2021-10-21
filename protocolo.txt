@@ -1,7 +1,7 @@
 \documentclass[letterpaper,12pt,openright,oneside]{article}
 
 
-\usepackage[left=2.5cm,top=2cm,right=3cm,nohead,foot=.5cm]{geometry}
+\usepackage[left=2.5cm,top=2cm,right=2cm,nohead,foot=.5cm]{geometry}
 \usepackage[spanish,mexico]{babel}
 % \usepackage[spanish]{babel}
 %\usepackage[latin1]{inputenc}
@@ -335,27 +335,29 @@ Una de las limitantes de este método son las condiciones al momento de tomar la
 \end{figure}
 %############################################
 
-\subsection{Transductores, sensores y modelos matemáticos}
+\subsection{Sensores para la identificación de polímeros}
 
-La implementación de sensores basados en espectroscopia permite tener una gran ventaja al momento de clasificar los diferentes plásticos que se manejan en la industria puesto que permite realizar esta tarea sin ser invasivo con los plásticos, sin emitir contaminantes, tiene muy pocas limitaciones para el tamaño del material que se va a separar y permite hacerlo en grandes cantidades \cite{wu2020auto}.
+La implementación de sensores basados en espectroscopia permite tener una gran ventaja al momento de clasificar los diferentes plásticos que se manejan en la industria puesto que permiten realizar esta tarea sin ser invasivo con los plásticos, sin emitir contaminantes. 
+Tienen muy pocas limitaciones para el tamaño del material que se va a separar y permiten hacerlo en grandes cantidades \cite{wu2020auto}.
 Algunas de las tecnologías de espectroscopia que pueden ser aplicadas para la separación de plásticos son, por ejemplo, la espectroscopia de infrarrojo cercano o \textit{near-infrared spectroscopy} ``NIR''; 
-Espectroscopia de Raman;
+Espectroscopia de \textit{Raman};
 Espectroscopia de ruptura inducida por láser o \textit{laser induced breakdown spectroscopy} ``LIBS'' y fluorescencia de rayos-X o \textit{X-ray fluorescence} ``XRF'' \cite{wu2020auto}.
-En este caso como únicamente se busca separar botellas de ``PET'' se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre 800 $nm$ y 2500 $nm$ aunque un rango de entre 800 $nm$ y 1100 $nm$ es más que suficiente para la detección y diferenciación entre el PET transparente y el de color.
+En este caso como únicamente se busca separar botellas de ``PET'' se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre 800 $nm$ y 2500 $nm$ aunque un rango de entre 800 $nm$ y 1100 $nm$ es más que suficiente para la detección y diferenciación entre el ``PET'' transparente y el de color.
 Esta tecnología en conjunto con una cámara que pueda generar imágenes hiper-espectrales y contenga un dispositivo de carga acoplada puede ser más que suficiente para realizar la clasificación de las botellas de ``PET'' \cite{wu2020auto}.
 
 Los sensores infrarrojos se basan en fotodiodos que pueden estar construidos a partir de cuatro elementos químicos como el silicio ``Si'', el indio ``In'', el galio ``Ga'' o el arsénico ``As'', sin embargo, cabe aclarar que se pueden adquirir fotodiodos hechos a partir de únicamente silicio y fotodiodos construidos a partir arseniuro de indio y galio ``InGaAs''.
 Cada material y fotodiodo tiene un distinto rango de operación ver Figura \ref{NIRRange} lo cual nos permite decidir que tipo de diodo es el ideal para la tarea que se desea realizar.
+
 %######################################################
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.80\textwidth]{img/waverange.PNG}
-    \caption{Rango de operación de los fotodiodos \cite{kk2015ingaas}.}
+    \caption{Rango de operación de los fotodiodos ``InGaAS'' \cite{kk2015ingaas}.}
     \label{NIRRange}
 \end{figure}
 %######################################################
 
-Basándonos en la gráfica ver Figura \ref{NIRRange} y en el hecho de que el rango necesario para detectar los colores del ``PET'' es de entre los 800 $nm$ y los 1100 $nm$ podemos asumir que un fotodiodo de silicio correspondiente al tipo ``S1227-BR'' \cite{kk2015ingaas} es suficiente para el sistema en cuestión, sin embargo, se debe considerar la frecuencia a la cual va a operar el sistema, el área fotosensible que ofrece el sensor y la variedad de modelos que se disponen, considerando estos factores es más factible utilizar un diodo construido a base de arseniuro de indio y galio.
+Basándonos en la gráfica de la Figura \ref{NIRRange} y en el hecho de que el rango necesario para detectar los colores del ``PET'' es de entre los 800 $nm$ y 1100 $nm$ podemos asumir que un fotodiodo de silicio correspondiente al tipo ``S1227-BR'' \cite{kk2015ingaas} es suficiente para el sistema en cuestión, sin embargo, se debe considerar la frecuencia a la cual va a operar el sistema, el área fotosensible que ofrece el sensor y la variedad de modelos que se disponen, considerando estos factores es más factible utilizar un diodo construido a base de arseniuro de indio y galio.
 %######################################################
 \begin{figure}[H]
     \centering
@@ -434,8 +436,11 @@ Dada la tabla ver Figura \ref{PINDiodes} podemos observar los diferentes modelos
 
 En las tablas ver tabla \ref{G10899CAS} y ver tabla \ref{G12180CAS} se muestran los modelos que pertenecen a las respectivas series de fotodiodos y sus características generales, sin embargo, cabe destacar que la serie ``G10899'' \cite{kk2015ingaas} tiene un rango de operación de entre 800 $nm$ y los 1700 $nm$ mientras que la serie ``G12180'' \cite{kk2015ingaas} tiene un rango menor de entre 900 $nm$ y 1700 $nm$, si bien esta diferencia de 100 $nm$ podría o no representar un cambio en la precisión considerable se compensa con el hecho de que la serie ``G12180'' \cite{kk2015ingaas} tiene más opciones que permiten obtener resultados diferentes en cuestiones de eficiencia y velocidad que son factores importantes para la realización del sistema de clasificación, por lo que de momento estas dos series son consideradas aptas para la tarea que se desea llevar a cabo.
 
+\subsubsection{Procesamiento de los datos de los sensores}
+
 Existen varios métodos para la extracción y manejo de los datos provenientes de los sensores basados en espectroscopia infrarroja dado que es una tarea compleja.
 Algunos de esto métodos son; \textit{Principal Component Analysis} ``PCA'' \cite{serranti2013classification}, \textit{Linear Discriminant Analysis} ``LDA'' \cite{de1999selecting}, y \textit{Support Vector Machine} ``SVM'' \cite{noble2006support}.
+Los métodos de arriba se consideraran para identificar si los elementos que compondrán el sistema automatizado cumplen con criterios de diseño asequible.
 
 \begin{table}[h]
     %\centering
