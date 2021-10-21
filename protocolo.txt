@@ -339,13 +339,103 @@ Una de las limitantes de este método son las condiciones al momento de tomar la
 
 La implementación de sensores basados en espectroscopia permite tener una gran ventaja al momento de clasificar los diferentes plásticos que se manejan en la industria puesto que permite realizar esta tarea sin ser invasivo con los plásticos, sin emitir contaminantes, tiene muy pocas limitaciones para el tamaño del material que se va a separar y permite hacerlo en grandes cantidades \cite{wu2020auto}.
 Algunas de las tecnologías de espectroscopia que pueden ser aplicadas para la separación de plásticos son, por ejemplo, la espectroscopia de infrarrojo cercano o \textit{near-infrared spectroscopy} ``NIR''; 
-Espectroscopia de Raman; Espectroscopia de ruptura inducida por láser o \textit{laser induced breakdown spectroscopy} ``LIBS'' y fluorescencia de rayos-X o \textit{X-ray fluorescence} ``XRF'' \cite{wu2020auto}.
-En este caso como únicamente se busca separar botellas de ``PET'' se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre 800 $nm$ y 2500 $nm$ y esto a su vez permite clasificar polímeros siempre y cuando no sean oscuros.
+Espectroscopia de Raman;
+Espectroscopia de ruptura inducida por láser o \textit{laser induced breakdown spectroscopy} ``LIBS'' y fluorescencia de rayos-X o \textit{X-ray fluorescence} ``XRF'' \cite{wu2020auto}.
+En este caso como únicamente se busca separar botellas de ``PET'' se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre 800 $nm$ y 2500 $nm$ aunque un rango de entre 800 $nm$ y 1100 $nm$ es más que suficiente para la detección y diferenciación entre el PET transparente y el de color.
 Esta tecnología en conjunto con una cámara que pueda generar imágenes hiper-espectrales y contenga un dispositivo de carga acoplada puede ser más que suficiente para realizar la clasificación de las botellas de ``PET'' \cite{wu2020auto}.
 
+Los sensores infrarrojos se basan en fotodiodos que pueden estar construidos a partir de cuatro elementos químicos como el silicio ``Si'', el indio ``In'', el galio ``Ga'' o el arsénico ``As'', sin embargo, cabe aclarar que se pueden adquirir fotodiodos hechos a partir de únicamente silicio y fotodiodos construidos a partir arseniuro de indio y galio ``InGaAs''.
+Cada material y fotodiodo tiene un distinto rango de operación ver Figura \ref{NIRRange} lo cual nos permite decidir que tipo de diodo es el ideal para la tarea que se desea realizar.
+%######################################################
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.80\textwidth]{img/waverange.PNG}
+    \caption{Rango de operación de los fotodiodos \cite{kk2015ingaas}.}
+    \label{NIRRange}
+\end{figure}
+%######################################################
+
+Basándonos en la gráfica ver Figura \ref{NIRRange} y en el hecho de que el rango necesario para detectar los colores del ``PET'' es de entre los 800 $nm$ y los 1100 $nm$ podemos asumir que un fotodiodo de silicio correspondiente al tipo ``S1227-BR'' \cite{kk2015ingaas} es suficiente para el sistema en cuestión, sin embargo, se debe considerar la frecuencia a la cual va a operar el sistema, el área fotosensible que ofrece el sensor y la variedad de modelos que se disponen, considerando estos factores es más factible utilizar un diodo construido a base de arseniuro de indio y galio.
+%######################################################
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/Ingaaastable.PNG}
+    \caption{Rangos de detección de diodos construidos de ``InGaAs'' \cite{kk2015ingaas}.}
+    \label{PINDiodes}
+\end{figure}
+%######################################################
+
+Dada la tabla ver Figura \ref{PINDiodes} podemos observar los diferentes modelos de diodos construidos a partir de ``InGaAs'', sus modelos de referencia y el rango de detección que poseen, con esta información es sencillo seleccionar una serie de construcción. 
+%################################################################
+\begin{table}[H]
+\centering
+\caption{Características de la serie ``G10899''\cite{kk2015ingaas}.}
+\label{G10899CAS}
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Modelo & Área fotosensible & Voltaje en reversa & Enfriamiento & \textit{Fc} $[MHz]$\\ 
+    \hline 
+    G10899-003K  & $\Phi$0.3 $mm$ &  5 $V$   & Ninguno & 150 - 300 $[MHz]$\\
+    \hline 
+    G10899-005K  & $\Phi$0.5 $mm$ &  5 $V$   & Ninguno & 75 - 150 $[MHz]$\\
+    \hline 
+    G10899-01K   & $\Phi$1 $mm$ &  5 $V$   & Ninguno & 25 - 45 $[MHz]$\\
+    \hline 
+    G10899-02K   & $\Phi$2 $mm$ &  2 $V$   & Ninguno & 4 - 10 $[MHz]$\\
+    \hline 
+    G10899-03K   & $\Phi$3 $mm$ &  2 $V$   & Ninguno & 2 - 5 $[MHz]$\\
+    \hline 
+\end{tabular} 
+%\vspace{0.5cm}
+\end{table}
+%######################################################################
+
+%################################################################
+\begin{table}[H]
+\centering
+\caption{Características de la serie ``G12180''\cite{kk2015ingaas}.}
+\label{G12180CAS}
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Modelo & Área fotosensible & Voltaje en reversa & Enfriamiento & \textit{Fc} $[MHz]$\\ 
+    \hline 
+    G10899-003A  & $\Phi$0.3 $mm$ &  20 $V$   & Ninguno & 450 - 600 $[MHz]$\\
+    \hline 
+    G10899-005A  & $\Phi$0.5 $mm$ &  20 $V$   & Ninguno & 160 - 200 $[MHz]$\\
+    \hline 
+    G10899-010A   & $\Phi$1 $mm$ &  10 $V$   & Ninguno & 25 - 60 $[MHz]$\\
+    \hline 
+    G10899-020A   & $\Phi$2 $mm$ &  5 $V$   & Ninguno & 4 - 13 $[MHz]$\\
+    \hline 
+    G10899-030A   & $\Phi$3 $mm$ &  5 $V$   & Ninguno & 2.5 - 7 $[MHz]$\\
+    \hline
+    G10899-050A   & $\Phi$5 $mm$ &  2 $V$   & Ninguno & 0.5 - 3 $[MHz]$\\
+    \hline
+    G10899-110A  & $\Phi$1 $mm$ &  5 $V$   & TE de una etapa & 20 - 40 $[MHz]$\\
+    \hline 
+    G10899-120A  & $\Phi$2 $mm$ &  5 $V$   & TE de una etapa & 4 - 13 $[MHz]$\\
+    \hline 
+    G10899-130A   & $\Phi$3 $mm$ &  5 $V$   & TE de una etapa & 2.5 - 7 $[MHz]$\\
+    \hline 
+    G10899-150A   & $\Phi$5 $mm$ &  2 $V$   & TE de una etapa & 0.5 - 3 $[MHz]$\\
+    \hline 
+    G10899-210A   & $\Phi$1 $mm$ &  5 $V$   & TE de doble etapa & 20 - 40 $[MHz]$\\
+    \hline
+    G10899-220A   & $\Phi$2 $mm$ &  5 $V$   & TE de doble etapa & 4 - 13 $[MHz]$\\
+    \hline 
+    G10899-230A   & $\Phi$3 $mm$ &  5 $V$   & TE de doble etapa & 2.5 - 7 $[MHz]$\\
+    \hline 
+    G10899-250A   & $\Phi$5 $mm$ &  2 $V$   & TE de doble etapa & 0.5 - 3 $[MHz]$\\
+    \hline 
+\end{tabular} 
+%\vspace{0.5cm}
+\end{table}
+%######################################################################
+
+En las tablas ver tabla \ref{G10899CAS} y ver tabla \ref{G12180CAS} se muestran los modelos que pertenecen a las respectivas series de fotodiodos y sus características generales, sin embargo, cabe destacar que la serie ``G10899'' \cite{kk2015ingaas} tiene un rango de operación de entre 800 $nm$ y los 1700 $nm$ mientras que la serie ``G12180'' \cite{kk2015ingaas} tiene un rango menor de entre 900 $nm$ y 1700 $nm$, si bien esta diferencia de 100 $nm$ podría o no representar un cambio en la precisión considerable se compensa con el hecho de que la serie ``G12180'' \cite{kk2015ingaas} tiene más opciones que permiten obtener resultados diferentes en cuestiones de eficiencia y velocidad que son factores importantes para la realización del sistema de clasificación, por lo que de momento estas dos series son consideradas aptas para la tarea que se desea llevar a cabo.
+
 Existen varios métodos para la extracción y manejo de los datos provenientes de los sensores basados en espectroscopia infrarroja dado que es una tarea compleja.
-Algunos de esto métodos son; \textit{Principal Component Analysis} ``PCA'' \cite{serranti2013classification}, \textit{Linear Discriminan Analysis} ``LDA'' \cite{de1999selecting}, y \textit{Support Vector Machine} ``SVM'' \cite{noble2006support}.
-Aunque también se pueden combinar algunas metodologías para obtener un resultado más preciso y, por ende, más adecuado para lo que se desea realizar, un ejemplo es la combinación de la metodología de ``PCA'' en conjunto con ``LDA'' o ``PCA''-``LDA'' \cite{wu2020auto}.
+Algunos de esto métodos son; \textit{Principal Component Analysis} ``PCA'' \cite{serranti2013classification}, \textit{Linear Discriminant Analysis} ``LDA'' \cite{de1999selecting}, y \textit{Support Vector Machine} ``SVM'' \cite{noble2006support}.
 
 \begin{table}[h]
     %\centering
@@ -376,6 +466,7 @@ Cada una de las metodologías de diseño para identificar los elementos en una e
 En este trabajo se plantea una combinación de los métodos, técnicas y tecnologías para proponer una metodología para clasificar botellas ``PET'' post-consumo.
 
 \section{Hipótesis}
+Al utilizar y combinar diferentes metodologías ya existentes se pueda desarrollar una sola metodología que permita seleccionar de manera objetiva, teórica y correcta los componentes que formarán parte de un sistema de clasificación de botellas de ``PET'' post-consumo con el fin de obtener el correcto y más óptimo funcionamiento posible permitiendo que se obtenga un sistema de clasificación confiable y viable.
 
 \section{Objetivo}
 
@@ -385,8 +476,10 @@ En este trabajo se plantea una combinación de los métodos, técnicas y tecnolo
 
 \subsection{Diseño mecánico}
 
-De manera general la parte mecánica del sistema de clasificación se compone de una banda transportadora, un motor para dicha banda transportadora y un sistema que permita sostener el sistema eléctrico-electrónico encargado de realizar en forma la clasificación.
+% De manera general la parte mecánica del sistema de clasificación se compone de una banda transportadora, un motor para dicha banda transportadora y un sistema que permita sostener el sistema eléctrico-electrónico encargado de realizar en forma la clasificación.
+De manera general se propone para la parte mecánica del sistema de clasificación una banda transportadora, un motor para dicha banda transportadora y un sistema que permita sostener el sistema eléctrico-electrónico encargado de realizar en forma la clasificación.
 
+Para poder identificar si los elementos son los adecuados.
 Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de ``PET'' a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
 Con esto y teniendo en cuenta que la clasificación en la sección de sensores de realizara de botella en botella entonces el peso en la banda transportadora no pasaría de 5kg, por ende, no es necesario recurrir a un motor muy potente ni a una tensión alta en la banda para poder desplazar el contenido.
 
