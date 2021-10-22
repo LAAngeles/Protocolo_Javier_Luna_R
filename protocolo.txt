@@ -5,6 +5,7 @@
 \usepackage[spanish,mexico]{babel}
 % \usepackage[spanish]{babel}
 %\usepackage[latin1]{inputenc}
+\usepackage{lineno}
 \usepackage{times}
 \usepackage{url}
 \usepackage{pdflscape}
@@ -150,7 +151,7 @@ Lunes a Viernes de 15:00 Hrs-16:00 Hrs
 
 \tableofcontents
 \newpage
-
+\linenumbers
 \section{Introducción}
 
 El presente documento data sobre una metodología que se propone llevar a cabo para seleccionar los componentes y elementos que se pueden llegar a utilizar para el diseño y experimentación de un sistema clasificador de botellas ``PET'' post-consumo bajo la premisa de que debe tener un costo asequible para centros de acopio.
