@@ -315,7 +315,7 @@ Existen diversos sistemas que difieren del que se muestra en la Figura \ref{Ejem
 %#############################################
 \begin{figure}[h]
     \centering
-    \includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.7]{img/Vg_fig_11.pdf}
+    \includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.68]{img/Vg_fig_11.pdf}
     \caption{Ejemplo de un diagrama de flujo del proceso de clasificación de botellas de plástico \cite{Association2008}.}
     \label{Ejemplo}
 \end{figure}
@@ -329,7 +329,7 @@ Una de las limitantes de este método son las condiciones al momento de tomar la
 %#############################################
 \begin{figure}[h]
     \centering
-    \includegraphics[trim = {14mm 208mm 34mm 16mm},clip,scale=.8]{img/Vg_fig_24.pdf}
+    \includegraphics[trim = {14mm 208mm 34mm 16mm},clip,scale=.72]{img/Vg_fig_24.pdf}
     \caption{Cámara fotográfica para la detección de botellas de color \cite{Wang2019170}.}
     \label{NIR4}
 \end{figure}
@@ -351,23 +351,23 @@ Cada material y fotodiodo tiene un distinto rango de operación ver Figura \ref{
 %######################################################
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.80\textwidth]{img/waverange.PNG}
+    \includegraphics[width=0.78\textwidth]{img/WVERNG.pdf}
     \caption{Rango de operación de los fotodiodos ``InGaAS'' \cite{kk2015ingaas}.}
     \label{NIRRange}
 \end{figure}
 %######################################################
 
-Basándonos en la gráfica de la Figura \ref{NIRRange} y en el hecho de que el rango necesario para detectar los colores del ``PET'' es de entre los 800 $nm$ y 1100 $nm$ podemos asumir que un fotodiodo de silicio correspondiente al tipo ``S1227-BR'' \cite{kk2015ingaas} es suficiente para el sistema en cuestión, sin embargo, se debe considerar la frecuencia a la cual va a operar el sistema, el área fotosensible que ofrece el sensor y la variedad de modelos que se disponen, considerando estos factores es más factible utilizar un diodo construido a base de arseniuro de indio y galio.
+Basándonos en la gráfica de la Figura \ref{NIRRange} y en el hecho de que el rango necesario para detectar los colores del ``PET'' es de entre los 800 $nm$ y 1100 $nm$ podemos asumir que un fotodiodo de silicio correspondiente al tipo ``S1337-BR'' \cite{kk2015ingaas} es suficiente para el sistema en cuestión, sin embargo, se debe considerar la frecuencia a la cual va a operar el sistema, el área fotosensible que ofrece el sensor y la variedad de modelos que se disponen, considerando estos factores es más factible utilizar un diodo construido a base de arseniuro de indio y galio.
 %######################################################
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{img/Ingaaastable.PNG}
+ \includegraphics[trim = {0mm 20mm 0mm 30mm},clip,scale=.58]{img/PINTABLEDIODES2.pdf}
     \caption{Rangos de detección de diodos construidos de ``InGaAs'' \cite{kk2015ingaas}.}
     \label{PINDiodes}
 \end{figure}
 %######################################################
 
-Dada la tabla ver Figura \ref{PINDiodes} podemos observar los diferentes modelos de diodos construidos a partir de ``InGaAs'', sus modelos de referencia y el rango de detección que poseen, con esta información es sencillo seleccionar una serie de construcción. 
+Dada la tabla en la Figura \ref{PINDiodes} podemos observar los diferentes modelos de diodos construidos a partir de ``InGaAs'', sus modelos de referencia y el rango de detección que poseen, con esta información es sencillo seleccionar una serie de construcción. 
 %################################################################
 \begin{table}[H]
 \centering
@@ -474,8 +474,14 @@ En este trabajo se plantea una combinación de los métodos, técnicas y tecnolo
 Al utilizar y combinar diferentes metodologías ya existentes se pueda desarrollar una sola metodología que permita seleccionar de manera objetiva, teórica y correcta los componentes que formarán parte de un sistema de clasificación de botellas de ``PET'' post-consumo con el fin de obtener el correcto y más óptimo funcionamiento posible permitiendo que se obtenga un sistema de clasificación confiable y viable.
 
 \section{Objetivo}
+Desarrollar una metodología especifica en función de metodologías ya existentes que permita seleccionar los componentes con las características idóneas y suficientes para el correcto funcionamiento de un sistema de clasificación de botellas de ``PET'' post-consumo.
 
 \subsection{Objetivos específicos }
+\begin{itemize}
+    \item 
+    \item 
+    \item 
+\end{itemize}
 
 \section{Metodología}
 
