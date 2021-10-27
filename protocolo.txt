@@ -5,7 +5,7 @@
 \usepackage[spanish,mexico]{babel}
 % \usepackage[spanish]{babel}
 %\usepackage[latin1]{inputenc}
-%\usepackage{lineno}
+\usepackage{lineno}
 \usepackage{times}
 \usepackage{url}
 \usepackage{pdflscape}
@@ -115,10 +115,10 @@ $^{1}$ Universidad Autónoma de Querétaro, Facultad de Ingeniería.\\
 \end{center}
 \end{titlepage}
 
-\newpage
+% \newpage
 %%%%
 \hypersetup{linkcolor=black}
-\newpage
+% \newpage
 % 
 \section*{Datos Generales}
 \subsection*{Título del proyecto de Tesis}
@@ -150,6 +150,8 @@ Tecnológica (diseño y prueba experimental)
 Lunes a Viernes de 15:00 Hrs-16:00 Hrs  
 
 \tableofcontents
+\listoffigures
+\listoftables
 \newpage
 \linenumbers
 \section{Introducción}
@@ -468,14 +470,17 @@ Los métodos de arriba se consideraran para identificar si los elementos que com
 \subsection{Premisas para identificar los elementos de un sistema de clasificación de botellas de plástico}
 
 %-alusión a la hipótesis 
-Cada una de las metodologías de diseño para identificar los elementos en una experimentación tienen diferentes características.
-En este trabajo se plantea una combinación de los métodos, técnicas y tecnologías para proponer una metodología para clasificar botellas ``PET'' post-consumo.
+\begin{itemize}
+    \item Existen metodologías que combinadas pueden ayudar a determinar los elementos necesarios para un sistema de clasificación de botellas ``PET''.
+    \item Proponiendo solo un sensor de ``InGaAS'' podemos identificar que elementos mecánicos, eléctricos y electrónicos son necesarios.
+    \item La combinación de los métodos, como ``PCA'' así como tecnologías en la adquisición de datos son suficientes para proponer una metodología para clasificar botellas ``PET'' post-consumo.
+\end{itemize}
 
 \section{Hipótesis}
 % Al utilizar y combinar diferentes metodologías ya existentes se pueda desarrollar una sola metodología que permita seleccionar de manera objetiva, teórica y correcta los componentes que formarán parte de un sistema de clasificación de botellas de ``PET'' post-consumo con el fin de obtener el correcto y más óptimo funcionamiento posible permitiendo que se obtenga un sistema de clasificación confiable y viable.
 
 % Propuesta para la hipótesis
-Al combinar diferentes metodologías ya existentes se puede desarrollar una nueva que permita seleccionar de manera objetiva, teórica y correcta los elementos que interactuaran con un sistema de clasificación de botellas de ``PET'' post-consumo, basándose en las características de diodos construidos a partir de ``InGaAs'' con el fin de obtener el correcto y más óptimo funcionamiento posible al interactuar con elementos mecánicos, eléctricos y electrónicos permitiendo que se obtenga un sistema de clasificación asequible, confiable y viable.
+Al combinar diferentes metodologías ya existentes se puede desarrollar una nueva que permita seleccionar los elementos que interactuaran con un sistema de clasificación de botellas de ``PET'' post-consumo, basándose en las características de los diodos ``InGaAs'' para obtener el correcto funcionamiento considerando la interacción de elementos mecánicos, eléctricos y electrónicos permitiendo que se obtenga un sistema de clasificación asequible, confiable y viable.
 
 \section{Objetivo}
 Desarrollar una metodología especifica en función de metodologías ya existentes que permita seleccionar los componentes con las características idóneas y suficientes para el correcto funcionamiento de un sistema de clasificación de botellas de ``PET'' post-consumo.
