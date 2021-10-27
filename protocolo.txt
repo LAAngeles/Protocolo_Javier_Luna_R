@@ -472,7 +472,7 @@ Los métodos de arriba se consideraran para identificar si los elementos que com
 %-alusión a la hipótesis 
 \begin{itemize}
     \item Existen metodologías que combinadas pueden ayudar a determinar los elementos necesarios para un sistema de clasificación de botellas ``PET''.
-    \item Proponiendo solo un sensor de ``InGaAS'' podemos identificar que elementos mecánicos, eléctricos y electrónicos son necesarios.
+    \item Proponiendo solo un sensor de ``InGaAs'' podemos identificar que elementos mecánicos, eléctricos y electrónicos son necesarios.
     \item La combinación de los métodos, como ``PCA'' así como tecnologías en la adquisición de datos son suficientes para proponer una metodología para clasificar botellas ``PET'' post-consumo.
 \end{itemize}
 
@@ -480,21 +480,32 @@ Los métodos de arriba se consideraran para identificar si los elementos que com
 % Al utilizar y combinar diferentes metodologías ya existentes se pueda desarrollar una sola metodología que permita seleccionar de manera objetiva, teórica y correcta los componentes que formarán parte de un sistema de clasificación de botellas de ``PET'' post-consumo con el fin de obtener el correcto y más óptimo funcionamiento posible permitiendo que se obtenga un sistema de clasificación confiable y viable.
 
 % Propuesta para la hipótesis
-Al combinar diferentes metodologías ya existentes se puede desarrollar una nueva que permita seleccionar los elementos que interactuaran con un sistema de clasificación de botellas de ``PET'' post-consumo, basándose en las características de los diodos ``InGaAs'' para obtener el correcto funcionamiento considerando la interacción de elementos mecánicos, eléctricos y electrónicos permitiendo que se obtenga un sistema de clasificación asequible, confiable y viable.
+
+Mediante la combinación de tecnologías previas para la clasificación de botellas  "PET" post-consumo se puede desarrollar una nueva metodología basada en las características de los diodos "InGaAs"  y su interacción con elementos mecánicos, eléctricos y electrónicos que permite ofrecer un sistema asequible." 
+
+% Al combinar diferentes metodologías ya existentes se puede desarrollar una nueva que permita seleccionar los elementos que interactuaran con un sistema de clasificación de botellas de ``PET'' post-consumo, basándose en las características de los diodos ``InGaAs'' para obtener el correcto funcionamiento considerando la interacción de elementos mecánicos, eléctricos y electrónicos permitiendo que se obtenga un sistema de clasificación asequible, confiable y viable.
+
+% Propuesta de Juan Pablo
+% Al implementar una metodología sistemática es posible determinar los elementos que interactuarán con un sistema de clasificación de botellas “PET” Post-consumo. A partir de conocer las características de los diodos “InGaAs” y su interacción con los elementos mecánicos, eléctricos y electrónicos se obtendrá un sistema de clasificación novedoso.
 
 \section{Objetivo}
-Desarrollar una metodología especifica en función de metodologías ya existentes que permita seleccionar los componentes con las características idóneas y suficientes para el correcto funcionamiento de un sistema de clasificación de botellas de ``PET'' post-consumo.
+% Desarrollar una metodología especifica en función de metodologías ya existentes que permita seleccionar los componentes con las características idóneas y suficientes para el correcto funcionamiento de un sistema de clasificación de botellas de ``PET'' post-consumo.
+
+% Objetivo general
+Desarrollar e implementar una metodología que permita seleccionar los componentes significativos que contribuyen al correcto funcionamiento de un sistema de clasificación de “PET” Post-consumo utilizando tecnologías previas en un periodo de un año y medio aproximadamente.
 
 \subsection{Objetivos específicos }
 \begin{itemize}
-    \item 
-    \item 
-    \item 
+    \item Determinar una metodología a partir de las características de los diodos ``InGaAs'' para seleccionar los elementos mecánicos.
+    \item Justificar a partir de una metodología los elementos mecánicos y eléctricos que interactuarán en el sistema.
+    \item Comparar el comportamiento del diodo ``InGaAs'' con los distintos elementos eléctricos y electrónicos del sistema.
 \end{itemize}
 
 \section{Metodología}
 
-\subsection{Diseño mecánico}
+\subsection{Determinación de una metodología para el diseño mecánico}
+
+% \subsection{Diseño mecánico}
 
 % De manera general la parte mecánica del sistema de clasificación se compone de una banda transportadora, un motor para dicha banda transportadora y un sistema que permita sostener el sistema eléctrico-electrónico encargado de realizar en forma la clasificación.
 De manera general se propone para la parte mecánica del sistema de clasificación una banda transportadora, un motor para dicha banda transportadora y un sistema que permita sostener el sistema eléctrico-electrónico encargado de realizar en forma la clasificación.
@@ -512,7 +523,7 @@ De manera general se propone para la parte mecánica del sistema de clasificaci�
 % Esta clasificación puede realizarse mediante pistones neumáticos que se accionen mediante sus respectivas electroválvulas, las cuales son fáciles de controlar puesto que únicamente se activarían si las características de la botella identificadas en la sección previa cumplen con lo estipulado.
 % Para esta última parte se debe considerar que se requiere de un suministro constante de aire comprimido para los pistones neumáticos, está presión debe ser de al menos $0.08MPa$, a menos que se requiera un control más estricto sobre el accionamiento se pueden utilizar pistones de simple efecto con retorno de muelle, de lo contrario se debe optar por pistones de doble efecto para controlar tanto el accionamiento como el regreso mediante un electroválvula de $\frac{5}{2}$ monoestable.
 
-\subsection{Diseño electrónico}
+\subsection{Justificación de una metodología para los elementos del sistema}
 
 % Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de 5v para la entrada y otro de 24v para la activación de las bobinas de las electroválvulas.
 % Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre 5v y 30v de corriente directa y de 125v a 250v de corriente alterna con corrientes de hasta 10A. 
