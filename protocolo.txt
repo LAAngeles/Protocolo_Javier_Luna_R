@@ -481,7 +481,7 @@ Los métodos de arriba se consideraran para identificar si los elementos que com
 
 % Propuesta para la hipótesis
 
-Mediante la combinación de tecnologías previas para la clasificación de botellas  "PET" post-consumo se puede desarrollar una nueva metodología basada en las características de los diodos "InGaAs"  y su interacción con elementos mecánicos, eléctricos y electrónicos que permite ofrecer un sistema asequible." 
+Mediante la combinación de tecnologías previas para la clasificación de botellas  ``PET'' post-consumo se puede desarrollar una nueva metodología basada en las características de los diodos ``InGaAs''  y en su interacción con elementos mecánicos, eléctricos y electrónicos que permita proponer un sistema asequible. 
 
 % Al combinar diferentes metodologías ya existentes se puede desarrollar una nueva que permita seleccionar los elementos que interactuaran con un sistema de clasificación de botellas de ``PET'' post-consumo, basándose en las características de los diodos ``InGaAs'' para obtener el correcto funcionamiento considerando la interacción de elementos mecánicos, eléctricos y electrónicos permitiendo que se obtenga un sistema de clasificación asequible, confiable y viable.
 
@@ -496,12 +496,28 @@ Desarrollar e implementar una metodología que permita seleccionar los component
 
 \subsection{Objetivos específicos }
 \begin{itemize}
-    \item Determinar una metodología a partir de las características de los diodos ``InGaAs'' para seleccionar los elementos mecánicos.
     \item Justificar a partir de una metodología los elementos mecánicos, eléctricos y electrónicos que interactuarán en el sistema.
-    \item Comparar el comportamiento del diodo ``InGaAs'' con los distintos elementos eléctricos y electrónicos del sistema.
+    \item Determinar una metodología a partir de las características de los diodos ``InGaAs'' para seleccionar los elementos mecánicos.
+    \item Comparar el comportamiento del diodo ``InGaAs'' con los distintos elementos electrónicos y eléctricos del sistema.
 \end{itemize}
 
 \section{Metodología}
+
+Por el método de la observación y el análisis estadístico se llevara acabo este trabajo de investigación. 
+El estudio y la recolección de los datos se realizaron en la ciudad de Querétaro, en los laboratorios de automatización de la facultad de ingeniería ``UAQ''. 
+El período de investigación y recolección de los datos se llevara acabo del XX de XX de 2022 y se estima que termine el análisis el XX de XX de 2022. 
+Para empezar con la metodología de una mejor forma se definirá el nivel de abstracción inicial para el diseño eléctrico, y mecánico, se realizara una descomposición jerárquica, definiendo la estructura de nuevos niveles jerárquicos, estableciendo los niveles de potencia y control para desarrollar la arquitectura necesaria, y finalmente, seleccionar la tecnóloga que se va a utilizar.
+
+\subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
+
+De manera general se requiere utilizar un controlador para ejecutar todas las tareas que el sistema de clasificación requiera y también se debe considerar el apartado de potencia puesto que se utilizara cuando menos un motor y una banda transportadora.
+
+Para la selección de estos componentes es necesario considerar aspectos de frecuencia de operación, número de entradas y salidas digitales, número de puertos de conversión A/D, número de \textit{TIMERS} disponibles, así mismo, se planea considerar el tipo de conectores y elementos necesarios para realizar una etapa de potencia ideal para que el sistema de clasificación funcione correctamente manteniendo la seguridad como premisa principal.
+Dado que se utilizará al diodo de ``InGaAs'' como componente principal para el trabajo de espectroscopia se deben considerar aquellos factores de ruido que puedan provocar fallas en su funcionamiento, para ello es crucial identificar dichos factores y determinar cual sería la manera más idónea para eliminarlos con el fin de permitir que el diodo y sus futuras etapas de amplificación y de filtrado funcionen correctamente.
+
+% Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de 5v para la entrada y otro de 24v para la activación de las bobinas de las electroválvulas.
+% Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre 5v y 30v de corriente directa y de 125v a 250v de corriente alterna con corrientes de hasta 10A. 
+% El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $64$ dolares que equivalen a $1328$ pesos mexicanos mientras que el precio de la Nucleo STM32F446 es de $15.82$ dolares que equivalen a $328$ pesos mexicanos, esto sin contar los costos de envío.
 
 \subsection{Determinación de una metodología para el diseño mecánico}
 
@@ -530,17 +546,6 @@ Para esta implementación en la metodología es necesario considerar factores co
 % Después de la sección de identificación sigue la sección de clasificación en la cual las botellas serán removidas de la banda transportadora y pasarán a contenedores en función de sus características previamente identificadas.
 % Esta clasificación puede realizarse mediante pistones neumáticos que se accionen mediante sus respectivas electroválvulas, las cuales son fáciles de controlar puesto que únicamente se activarían si las características de la botella identificadas en la sección previa cumplen con lo estipulado.
 % Para esta última parte se debe considerar que se requiere de un suministro constante de aire comprimido para los pistones neumáticos, está presión debe ser de al menos $0.08MPa$, a menos que se requiera un control más estricto sobre el accionamiento se pueden utilizar pistones de simple efecto con retorno de muelle, de lo contrario se debe optar por pistones de doble efecto para controlar tanto el accionamiento como el regreso mediante un electroválvula de $\frac{5}{2}$ monoestable.
-
-\subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
-
-De manera general se requiere utilizar un controlador para ejecutar todas las tareas que el sistema de clasificación requiera y también se debe considerar el apartado de potencia puesto que se utilizara cuando menos un motor y una banda transportadora.
-
-Para la selección de estos componentes es necesario considerar aspectos de frecuencia de operación, número de entradas y salidas digitales, número de puertos de conversión A/D, número de \textit{TIMERS} disponibles, así mismo, se planea considerar el tipo de conectores y elementos necesarios para realizar una etapa de potencia ideal para que el sistema de clasificación funcione correctamente manteniendo la seguridad como premisa principal.
-Dado que se utilizará al diodo de ``InGaAs'' como componente principal para el trabajo de espectroscopia se deben considerar aquellos factores de ruido que puedan provocar fallas en su funcionamiento, para ello es crucial identificar dichos factores y determinar cual sería la manera más idónea para eliminarlos con el fin de permitir que el diodo y sus futuras etapas de amplificación y de filtrado funcionen correctamente.
-
-% Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de 5v para la entrada y otro de 24v para la activación de las bobinas de las electroválvulas.
-% Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre 5v y 30v de corriente directa y de 125v a 250v de corriente alterna con corrientes de hasta 10A. 
-% El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $64$ dolares que equivalen a $1328$ pesos mexicanos mientras que el precio de la Nucleo STM32F446 es de $15.82$ dolares que equivalen a $328$ pesos mexicanos, esto sin contar los costos de envío.
 
 \subsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
 
