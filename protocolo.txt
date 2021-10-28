@@ -497,7 +497,7 @@ Desarrollar e implementar una metodología que permita seleccionar los component
 \subsection{Objetivos específicos }
 \begin{itemize}
     \item Determinar una metodología a partir de las características de los diodos ``InGaAs'' para seleccionar los elementos mecánicos.
-    \item Justificar a partir de una metodología los elementos mecánicos y eléctricos que interactuarán en el sistema.
+    \item Justificar a partir de una metodología los elementos mecánicos, eléctricos y electrónicos que interactuarán en el sistema.
     \item Comparar el comportamiento del diodo ``InGaAs'' con los distintos elementos eléctricos y electrónicos del sistema.
 \end{itemize}
 
@@ -509,6 +509,14 @@ Desarrollar e implementar una metodología que permita seleccionar los component
 
 % De manera general la parte mecánica del sistema de clasificación se compone de una banda transportadora, un motor para dicha banda transportadora y un sistema que permita sostener el sistema eléctrico-electrónico encargado de realizar en forma la clasificación.
 De manera general se propone para la parte mecánica del sistema de clasificación una banda transportadora, un motor para dicha banda transportadora y un sistema que permita sostener el sistema eléctrico-electrónico encargado de realizar en forma la clasificación.
+
+La determinación de estos objetos se propone realizarse en función de las características de las botellas de ``PET'' y del espacio del que se dispone para el sistema de clasificación.
+Otro factor a considerar para esta metodología es el espacio de los eléctricos y electrónicos que se utilizaran tanto en el funcionamiento del sensor como en el funcionamiento de elementos previamente mencionados como el motor o la banda transportadora, como el fin de que se mantenga una distribución de cables y conexiones discreta y manteniendo el mínimo requerimiento de seguridad.
+
+Dado que se trabajará con espectroscopia y se planea el uso de una cámara entonces también es otro factor a considerar puesto que se requiere de una fuente de luz estable y constante, para ello la implementación de una estructura aislada sobre la estructura principal es indispensable, en ese sentido, dentro de la metodología debe indicarse que factores permiten el aislamiento de una sección de factores externos como la luz y/o las vibraciones que se puedan presentar en otras secciones del sistema.
+
+Finalmente para la parte que se encargará en forma de separar las botellas de ``PET'' se propone la implementación de pistones neumáticos.
+Para esta implementación en la metodología es necesario considerar factores como longitud, peso, velocidad de accionamiento, tipo de accionamiento y la presión mínima que requiere el pistón para ejecutar la tarea de manera óptima.
 
 % Para poder identificar si los elementos son los adecuados.
 % Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de ``PET'' a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
@@ -523,7 +531,12 @@ De manera general se propone para la parte mecánica del sistema de clasificaci�
 % Esta clasificación puede realizarse mediante pistones neumáticos que se accionen mediante sus respectivas electroválvulas, las cuales son fáciles de controlar puesto que únicamente se activarían si las características de la botella identificadas en la sección previa cumplen con lo estipulado.
 % Para esta última parte se debe considerar que se requiere de un suministro constante de aire comprimido para los pistones neumáticos, está presión debe ser de al menos $0.08MPa$, a menos que se requiera un control más estricto sobre el accionamiento se pueden utilizar pistones de simple efecto con retorno de muelle, de lo contrario se debe optar por pistones de doble efecto para controlar tanto el accionamiento como el regreso mediante un electroválvula de $\frac{5}{2}$ monoestable.
 
-\subsection{Justificación de una metodología para los elementos del sistema}
+\subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
+
+De manera general se requiere utilizar un controlador para ejecutar todas las tareas que el sistema de clasificación requiera y también se debe considerar el apartado de potencia puesto que se utilizara cuando menos un motor y una banda transportadora.
+
+Para la selección de estos componentes es necesario considerar aspectos de frecuencia de operación, número de entradas y salidas digitales, número de puertos de conversión A/D, número de \textit{TIMERS} disponibles, así mismo, se planea considerar el tipo de conectores y elementos necesarios para realizar una etapa de potencia ideal para que el sistema de clasificación funcione correctamente manteniendo la seguridad como premisa principal.
+Dado que se utilizará al diodo de ``InGaAs'' como componente principal para el trabajo de espectroscopia se deben considerar aquellos factores de ruido que puedan provocar fallas en su funcionamiento, para ello es crucial identificar dichos factores y determinar cual sería la manera más idónea para eliminarlos con el fin de permitir que el diodo y sus futuras etapas de amplificación y de filtrado funcionen correctamente.
 
 % Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de 5v para la entrada y otro de 24v para la activación de las bobinas de las electroválvulas.
 % Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre 5v y 30v de corriente directa y de 125v a 250v de corriente alterna con corrientes de hasta 10A. 
