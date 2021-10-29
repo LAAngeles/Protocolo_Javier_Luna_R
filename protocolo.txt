@@ -506,14 +506,22 @@ Desarrollar e implementar una metodología que permita seleccionar los component
 Por el método de la observación y el análisis estadístico se llevara acabo este trabajo de investigación. 
 El estudio y la recolección de los datos se realizaron en la ciudad de Querétaro, en los laboratorios de automatización de la facultad de ingeniería ``UAQ''. 
 El período de investigación y recolección de los datos se llevara acabo del XX de XX de 2022 y se estima que termine el análisis el XX de XX de 2022. 
-Para empezar con la metodología de una mejor forma se definirá el nivel de abstracción inicial para el diseño eléctrico, y mecánico, se realizara una descomposición jerárquica, definiendo la estructura de nuevos niveles jerárquicos, estableciendo los niveles de potencia y control para desarrollar la arquitectura necesaria, y finalmente, seleccionar la tecnóloga que se va a utilizar.
+Para empezar con la metodología de una mejor forma se definirá el nivel de abstracción inicial para el diseño eléctrico, y mecánico, se realizara una descomposición jerárquica, definiendo la estructura de nuevos niveles jerárquicos, estableciendo los niveles de potencia y control para desarrollar la arquitectura necesaria, y finalmente, seleccionar la tecnología que se va a utilizar.
 
 \subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
 
-De manera general se requiere utilizar un controlador para ejecutar todas las tareas que el sistema de clasificación requiera y también se debe considerar el apartado de potencia puesto que se utilizara cuando menos un motor y una banda transportadora.
+De manera general se requiere utilizar un microcontrolador para ejecutar todas las tareas que el sistema de clasificación requiera y también se debe considerar el apartado de potencia puesto que se utilizara cuando menos un motor y una banda transportadora.
 
-Para la selección de estos componentes es necesario considerar aspectos de frecuencia de operación, número de entradas y salidas digitales, número de puertos de conversión A/D, número de \textit{TIMERS} disponibles, así mismo, se planea considerar el tipo de conectores y elementos necesarios para realizar una etapa de potencia ideal para que el sistema de clasificación funcione correctamente manteniendo la seguridad como premisa principal.
-Dado que se utilizará al diodo de ``InGaAs'' como componente principal para el trabajo de espectroscopia se deben considerar aquellos factores de ruido que puedan provocar fallas en su funcionamiento, para ello es crucial identificar dichos factores y determinar cual sería la manera más idónea para eliminarlos con el fin de permitir que el diodo y sus futuras etapas de amplificación y de filtrado funcionen correctamente.
+Un microcontrolador es un componente electrónico que en una sola pastilla o circuito integrado incluye la memoria, puertos y algunos periféricos \cite{del1999sistemas}.
+Para la selección de este componente es necesario considerar aspectos de frecuencia de operación, número de entradas y salidas digitales, número de puertos de conversión A/D, número de \textit{TIMERS} disponibles, etc. \cite{del1999sistemas}.
+Así mismo, se planea considerar el tipo de conectores y elementos necesarios para realizar una etapa de potencia ideal para que el sistema de clasificación funcione correctamente manteniendo la seguridad como premisa principal.
+Dado que se utilizará al diodo de ``InGaAs'' como componente principal para el trabajo de espectroscopia, se deben considerar aquellos factores de ruido que puedan provocar fallas en su funcionamiento, para ello es crucial identificar dichos factores y determinar cual sería la manera más idónea para eliminarlos con el fin de permitir que el diodo y sus futuras etapas de amplificación y de filtrado funcionen correctamente mediante la información que del elemento. 
+Dicha información puede ser obtenida mediante la hoja de datos característica del dispositivo y esto puede ser realizado de manera similar con cada componente que vaya a formar parte del sistema, ya sea en la parte de control o en la parte de potencia.
+Otro factor a considerar es el hecho de que cada componente funciona de manera diferente en función del entorno que lo rodea puesto que todo semiconductor puede verse afectado en su función debido a la temperatura exterior \cite{malvino1991principios}.
+Por ende, será necesario utilizar instrumentos de medición como voltímetros, amperímetros u otro equipo que nos permita analizar e identificar posibles alteraciones en el funcionamiento esperado para poder realizar las correcciones necesarias con el fin de obtener el funcionamiento deseado en el sistema.
+
+
+
 
 % Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de 5v para la entrada y otro de 24v para la activación de las bobinas de las electroválvulas.
 % Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre 5v y 30v de corriente directa y de 125v a 250v de corriente alterna con corrientes de hasta 10A. 
@@ -532,7 +540,10 @@ Otro factor a considerar para esta metodología es el espacio de los eléctricos
 Dado que se trabajará con espectroscopia y se planea el uso de una cámara entonces también es otro factor a considerar puesto que se requiere de una fuente de luz estable y constante, para ello la implementación de una estructura aislada sobre la estructura principal es indispensable, en ese sentido, dentro de la metodología debe indicarse que factores permiten el aislamiento de una sección de factores externos como la luz y/o las vibraciones que se puedan presentar en otras secciones del sistema.
 
 Finalmente para la parte que se encargará en forma de separar las botellas de ``PET'' se propone la implementación de pistones neumáticos.
-Para esta implementación en la metodología es necesario considerar factores como longitud, peso, velocidad de accionamiento, tipo de accionamiento y la presión mínima que requiere el pistón para ejecutar la tarea de manera óptima.
+Para esta implementación en la metodología es necesario considerar factores como longitud, peso, velocidad de accionamiento, tipo de accionamiento y la presión mínima que requiere el pistón para ejecutar la tarea de manera óptima \cite{sole2012neumatica}.
+
+Todo esto se realizará en función de las características de cada elemento mecánico, eléctrico y electrónico que pueda formar parte del sistema de clasificación, así mismo, se utilizarán herramientas como las \textit{Core Tools} que son herramientas que en la industria automotriz permiten diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
+
 
 % Para poder identificar si los elementos son los adecuados.
 % Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de ``PET'' a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
@@ -559,6 +570,13 @@ Se busca minimizar los factores de ruido que con la interacción de todos los fa
 \end{figure} 
 
 \subsection{Cronograma del plan de trabajo}
+
+\begin{figure}[H]
+    \centering
+ \includegraphics[trim = {0mm 20mm 0mm 15mm},clip,scale=.58]{img/Cronograma.pdf}
+    \caption{Cronograma de actividades \cite{kk2015ingaas}.}
+    \label{CronAct}
+\end{figure}
 
 %\newpage
 \section{Resultados esperados}
