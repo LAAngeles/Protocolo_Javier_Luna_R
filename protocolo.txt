@@ -82,16 +82,16 @@ urlcolor=black,
 
 
 \textsc{\LARGE Universidad Autónoma de Querétaro}\\[1 cm]
-\includegraphics[width=0.15\textwidth]{./uaqlogo}~\\[0.75cm]
+\includegraphics[width=0.15\textwidth]{./uaqlogo}~\\[0.65cm]
 \textsc{\Large Facultad de Ingeniería \\ \large{Ingeniería en Automatización}}\\[0.5 cm]
-\textsc{\large Protocolo de Investigación \\ (Agosto 2021 - xxxx 20xx)}\\[0.5cm]
+\textsc{\large Protocolo de Investigación \\ (Agosto 2021 - Noviembre 2021)}\\[0.5cm]
 
 { 
 \huge \bfseries 
 Metodología para determinar los elementos de un sistema de clasificación de botellas PET post-consumo
 \\[0.4cm] }
 %\vspace*{2cm}
-\vspace*{1.0cm}
+\vspace*{0.8cm}
 
 
 
@@ -100,17 +100,19 @@ Metodología para determinar los elementos de un sistema de clasificación de bo
 \textbf{Director:} Mtro. Luis Alberto Ángeles Hurtado$^{1}$\\\vspace*{0.5cm}
 %\textbf{Co Director:} Dr. Sebastian Salazar Colores$^{1}$\\\vspace*{0.5cm}
 \textbf{Secretario:} Dr. Juvenal Rodríguez Reséndiz$^{1}$\\\vspace*{0.5cm}
-\textbf{Vocal:} Mtro. Juan Pablo Ramírez Vázquez $^{1}$\\\vspace*{0.5cm}
-\textbf{Suplente:} Mtro. Hugo Torres Salinas $^{1}$\\\vspace*{0.5cm}
+\textbf{Vocal:} Mtro. Juan Pablo Ramírez Vázquez $^{1,3}$\\\vspace*{0.5cm}
+\textbf{Suplente:} Mtro. Hugo Torres Salinas $^{2}$\\\vspace*{0.5cm}
 % \textbf{Suplente:} XXXX$^{1}$\\\vspace*{0.5cm}
 % \textbf{Suplente:} XXXX$^{1}$\\\vspace*{0.5cm}
 \raggedright
 $^{1}$ Universidad Autónoma de Querétaro, Facultad de Ingeniería.\\
-%$^{2}$ Instituto Tecnológico de Celaya, Departamento de Ingeniería Electrónica.
+$^{2}$ Universidad Autónoma de Querétaro, Facultad de Informática.\\
+$^{3}$ IPN, CICATA Unidad Querétaro.
+
 \vfill
 \centering
 % Bottom of the page
-{\large \today}
+% {\large \today}
 %{\large 5 de diciembre de 2020}
 \end{center}
 \end{titlepage}
@@ -505,7 +507,7 @@ Desarrollar e implementar una metodología que permita seleccionar los component
 
 Por el método de la observación y el análisis estadístico se llevara acabo este trabajo de investigación. 
 El estudio y la recolección de los datos se realizaron en la ciudad de Querétaro, en los laboratorios de automatización de la facultad de ingeniería ``UAQ''. 
-El período de investigación y recolección de los datos se llevara acabo del XX de XX de 2022 y se estima que termine el análisis el XX de XX de 2022. 
+El período de investigación y recolección de los datos se llevara acabo en enero de 2022 y se estima que termine el análisis en diciembre de 2022, véase \ref{CronAct}. 
 Para empezar con la metodología de una mejor forma se definirá el nivel de abstracción inicial para el diseño eléctrico, y mecánico, se realizara una descomposición jerárquica, definiendo la estructura de nuevos niveles jerárquicos, estableciendo los niveles de potencia y control para desarrollar la arquitectura necesaria, y finalmente, seleccionar la tecnología que se va a utilizar.
 
 \subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
