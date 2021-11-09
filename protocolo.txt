@@ -97,11 +97,11 @@ Metodología para determinar los elementos de un sistema de clasificación de bo
 
 % Author and supervisor
 \large \textbf{Presenta:} Javier Iván Luna Ramos \\\vspace*{0.5cm}
-\textbf{Director:} Mtro. Luis Alberto Ángeles Hurtado$^{1}$\\\vspace*{0.5cm}
+\textbf{Director:} M.I. Luis Alberto Ángeles Hurtado$^{1}$\\\vspace*{0.5cm}
 %\textbf{Co Director:} Dr. Sebastian Salazar Colores$^{1}$\\\vspace*{0.5cm}
-\textbf{Secretario:} Dr. Juvenal Rodríguez Reséndiz$^{1}$\\\vspace*{0.5cm}
-\textbf{Vocal:} Mtro. Juan Pablo Ramírez Vázquez $^{1,3}$\\\vspace*{0.5cm}
-\textbf{Suplente:} Mtro. Hugo Torres Salinas $^{2}$\\\vspace*{0.5cm}
+\textbf{Co-Director:} Dr. Juvenal Rodríguez Reséndiz$^{1}$\\\vspace*{0.5cm}
+\textbf{Vocal:} M.I. Juan Pablo Ramírez Vázquez $^{1,3}$\\\vspace*{0.5cm}
+\textbf{Suplente:} M.C. Hugo Torres Salinas $^{2}$\\\vspace*{0.5cm}
 % \textbf{Suplente:} XXXX$^{1}$\\\vspace*{0.5cm}
 % \textbf{Suplente:} XXXX$^{1}$\\\vspace*{0.5cm}
 \raggedright
@@ -357,7 +357,7 @@ Cada material y fotodiodo tiene un distinto rango de operación ver Figura \ref{
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.78\textwidth]{img/WVERNG.pdf}
-    \caption{Rango de operación de los fotodiodos ``InGaAS'' \cite{kk2015ingaas}.}
+    \caption{Rango de operación de los fotodiodos ``InGaAs'' \cite{kk2015ingaas}.}
     \label{NIRRange}
 \end{figure}
 %######################################################
@@ -510,6 +510,11 @@ El estudio y la recolección de los datos se realizaron en la ciudad de Queréta
 El período de investigación y recolección de los datos se llevara acabo en enero de 2022 y se estima que termine el análisis en diciembre de 2022, véase \ref{CronAct}. 
 Para empezar con la metodología de una mejor forma se definirá el nivel de abstracción inicial para el diseño eléctrico, y mecánico, se realizara una descomposición jerárquica, definiendo la estructura de nuevos niveles jerárquicos, estableciendo los niveles de potencia y control para desarrollar la arquitectura necesaria, y finalmente, seleccionar la tecnología que se va a utilizar.
 
+\subsection{Definición del mensurando para la medición de la longitud de onda en el diodo ``InGaAs''}
+
+Para la medición de la longitud de onda se considera al mensurando como la corriente eléctrica que pasa por un foto-diodo de ``InGaAs'', la medición es de manera indirecta debido a las propiedades del sensor que al variar la iluminancia que pasa por el material expuesto se refleja y cambia la longitud de onda en el foto-diodo y su resistencia cambia.
+Al variar la resistencia del foto-diodo debido al cambio de iluminancia y al \textbf{V} inducido, la \textbf{I} cambiará, dependiendo de esta variación se puede calcular la longitud de onda. Si la relación entre \textbf{V} e \textbf{I} es lineal, decimos que estamos en presencia de un material o componente óhmico y la relación que describe este comportamiento se conoce como ley de Ohm.
+
 \subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
 
 De manera general se requiere utilizar un microcontrolador para ejecutar todas las tareas que el sistema de clasificación requiera y también se debe considerar el apartado de potencia puesto que se utilizara cuando menos un motor y una banda transportadora.
@@ -569,7 +574,16 @@ Se busca minimizar los factores de ruido que con la interacción de todos los fa
     \includegraphics[trim = {31mm 145mm 13mm 20mm},clip,scale=0.65]{img/Vg_fig_18.pdf}
     \caption{Factores y variables en el diseño de experimentos para la interacción de todo el sistema.}
     \label{diseño04}
-\end{figure} 
+\end{figure}
+
+% ###############################################
+\subsubsection{Análisis de componentes principales para la identificación de los elementos}
+
+El método de ``PCA'' se utilizara para explicar la cantidad máxima de varianza con el menor número de componentes.
+``PCA'' analizara los elementos principales de múltiples características, exponer la naturaleza resaltando sus principales características, acortando las dimensiones de los datos. 
+``PCA'' establecerá un método para disminuir la dimensión de los datos.
+El análisis de componentes principales se utilizará para describir la variación en los conjuntos de variables correlacionadas reduciendo la complejidad ayudando a la interpretación de los datos y la reducción del ruido o variables que se tienen que monitorear.
+% ###############################################
 
 \subsection{Cronograma del plan de trabajo}
 
@@ -582,10 +596,17 @@ Se busca minimizar los factores de ruido que con la interacción de todos los fa
 
 %\newpage
 \section{Resultados esperados}
+\begin{itemize}
+    \item Obtener una metodología basada en el funcionamiento de los diodos de ``InGaAs''.
+    \item Con la aplicación de herramientas estadísticas como ``PCA'' poder determinar los elementos para el sistema de clasificación.
+    \item Obtención de un artículo ``JCR''.
+    \item Simular el comportamiento del diodo de ``InGaAs'' y los componentes mecánicos para la automatización.
+    \item Comprobar que con la metodología obtenida se da la opción para la realización de un diseño asequible.
+    \item Generar una presentación de un plan de negocios.
+\end{itemize}
+% \subsection{Factibilidad e impacto social}
 
-\subsection{Factibilidad e impacto social}
-
-\subsection{Aporte Tecnológico}
+% \subsection{Aporte Tecnológico}
 
 % \newpage
 % \section{Abreviaturas y Acrónimos}
