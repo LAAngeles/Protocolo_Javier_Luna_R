@@ -87,7 +87,8 @@ urlcolor=black,
 \textsc{\large Protocolo de Investigación \\ (Agosto 2021 - Noviembre 2021)}\\[0.5cm]
 
 { 
-\huge \bfseries 
+\huge \bfseries
+% Desarrollo de metodología y sistema de acondicionamiento de señal para los elementos de un sistema de clasificación de botellas PET post-consumo.
 Metodología para determinar los elementos de un sistema de clasificación de botellas PET post-consumo
 \\[0.4cm] }
 %\vspace*{2cm}
@@ -501,6 +502,7 @@ Desarrollar e implementar una metodología que permita seleccionar los component
     \item Justificar a partir de una metodología los elementos mecánicos, eléctricos y electrónicos que interactuarán en el sistema.
     \item Determinar una metodología a partir de las características de los diodos ``InGaAs'' para seleccionar los elementos mecánicos.
     \item Comparar el comportamiento del diodo ``InGaAs'' con los distintos elementos electrónicos y eléctricos del sistema.
+    \item Diseñar y desarrollar un sistema de acondicionamiento de señal para el diodo de ``InGaAs''.
 \end{itemize}
 
 \section{Metodología}
@@ -515,6 +517,10 @@ Para empezar con la metodología de una mejor forma se definirá el nivel de abs
 Para la medición de la longitud de onda se considera al mensurando como la corriente eléctrica que pasa por un foto-diodo de ``InGaAs'', la medición es de manera indirecta debido a las propiedades del sensor que al variar la iluminancia que pasa por el material expuesto se refleja y cambia la longitud de onda en el foto-diodo y su resistencia cambia.
 Al variar la resistencia del foto-diodo debido al cambio de iluminancia y al \textbf{V} inducido, la \textbf{I} cambiará, dependiendo de esta variación se puede calcular la longitud de onda. Si la relación entre \textbf{V} e \textbf{I} es lineal, decimos que estamos en presencia de un material o componente óhmico y la relación que describe este comportamiento se conoce como ley de Ohm.
 
+\subsection{Justificación para el desarrollo de un sistema de acondicionamiento de señal para el diodo de ``InGaAs''}
+Dado que se trabajará con un diodo de ``InGaAs'' por si sólo entonces se requiere de un sistema que permita al controlador interpretar los datos provenientes del diodo de una manera más sencilla y exacta con el fin de obtener una mayor presición en la clasificación del ``PET''. 
+Para esto se estudiarán las propiedades del diodo, el tipo de salida que envía al realizar una medición y su comportamiento con diferentes elementos como amplificadores operacionales y filtros.
+
 \subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
 
 De manera general se requiere utilizar un microcontrolador para ejecutar todas las tareas que el sistema de clasificación requiera y también se debe considerar el apartado de potencia puesto que se utilizara cuando menos un motor y una banda transportadora.
@@ -526,9 +532,6 @@ Dado que se utilizará al diodo de ``InGaAs'' como componente principal para el 
 Dicha información puede ser obtenida mediante la hoja de datos característica del dispositivo y esto puede ser realizado de manera similar con cada componente que vaya a formar parte del sistema, ya sea en la parte de control o en la parte de potencia.
 Otro factor a considerar es el hecho de que cada componente funciona de manera diferente en función del entorno que lo rodea puesto que todo semiconductor puede verse afectado en su función debido a la temperatura exterior \cite{malvino1991principios}.
 Por ende, será necesario utilizar instrumentos de medición como voltímetros, amperímetros u otro equipo que nos permita analizar e identificar posibles alteraciones en el funcionamiento esperado para poder realizar las correcciones necesarias con el fin de obtener el funcionamiento deseado en el sistema.
-
-
-
 
 % Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de 5v para la entrada y otro de 24v para la activación de las bobinas de las electroválvulas.
 % Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre 5v y 30v de corriente directa y de 125v a 250v de corriente alterna con corrientes de hasta 10A. 
@@ -599,7 +602,8 @@ El análisis de componentes principales se utilizará para describir la variaci�
 \begin{itemize}
     \item Obtener una metodología basada en el funcionamiento de los diodos de ``InGaAs''.
     \item Con la aplicación de herramientas estadísticas como ``PCA'' poder determinar los elementos para el sistema de clasificación.
-    \item Obtención de un artículo ``JCR''.
+    \item Buscar la obtención de un artículo ``JCR''.
+    \item Desarrollar un sistema de acondicionamiento de señal para diodo de ``InGaAs''.
     \item Simular el comportamiento del diodo de ``InGaAs'' y los componentes mecánicos para la automatización.
     \item Comprobar que con la metodología obtenida se da la opción para la realización de un diseño asequible.
     \item Generar una presentación de un plan de negocios.
