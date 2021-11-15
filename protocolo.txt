@@ -89,7 +89,7 @@ urlcolor=black,
 { 
 \huge \bfseries
 % Desarrollo de metodología y sistema de acondicionamiento de señal para los elementos de un sistema de clasificación de botellas PET post-consumo.
-Desarrollo de un sistema de acondicionamiento de señal para determinar los elementos en un sistema de clasificación para botellas PET post-consumo.
+Desarrollo de un sistema de acondicionamiento de señal para determinar elementos en un sistema de clasificación para botellas PET post-consumo
 % Metodología para determinar los elementos de un sistema de clasificación de botellas PET post-consumo
 \\[0.4cm] }
 %\vspace*{2cm}
