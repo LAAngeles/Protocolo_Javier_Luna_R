@@ -81,18 +81,19 @@ urlcolor=black,
 % only works if a paragraph has started.
 
 
-\textsc{\LARGE Universidad Autónoma de Querétaro}\\[1 cm]
-\includegraphics[width=0.15\textwidth]{./uaqlogo}~\\[0.65cm]
+\textsc{\LARGE Universidad Autónoma de Querétaro}\\[0.3 cm]
+\includegraphics[width=0.15\textwidth]{./uaqlogo}~\\[0.45cm]
 \textsc{\Large Facultad de Ingeniería \\ \large{Ingeniería en Automatización}}\\[0.5 cm]
 \textsc{\large Protocolo de Investigación \\ (Agosto 2021 - Noviembre 2021)}\\[0.5cm]
 
 { 
 \huge \bfseries
 % Desarrollo de metodología y sistema de acondicionamiento de señal para los elementos de un sistema de clasificación de botellas PET post-consumo.
-Metodología para determinar los elementos de un sistema de clasificación de botellas PET post-consumo
+Desarrollo de un sistema de acondicionamiento de señal para determinar los elementos en un sistema de clasificación para botellas PET post-consumo.
+% Metodología para determinar los elementos de un sistema de clasificación de botellas PET post-consumo
 \\[0.4cm] }
 %\vspace*{2cm}
-\vspace*{0.8cm}
+\vspace*{0.5cm}
 
 
 
@@ -499,10 +500,10 @@ Desarrollar e implementar una metodología que permita seleccionar los component
 
 \subsection{Objetivos específicos }
 \begin{itemize}
+    \item Diseñar y desarrollar un sistema de acondicionamiento de señal para el diodo de ``InGaAs''.
     \item Justificar a partir de una metodología los elementos mecánicos, eléctricos y electrónicos que interactuarán en el sistema.
     \item Determinar una metodología a partir de las características de los diodos ``InGaAs'' para seleccionar los elementos mecánicos.
     \item Comparar el comportamiento del diodo ``InGaAs'' con los distintos elementos electrónicos y eléctricos del sistema.
-    \item Diseñar y desarrollar un sistema de acondicionamiento de señal para el diodo de ``InGaAs''.
 \end{itemize}
 
 \section{Metodología}
@@ -602,8 +603,8 @@ El análisis de componentes principales se utilizará para describir la variaci�
 \begin{itemize}
     \item Obtener una metodología basada en el funcionamiento de los diodos de ``InGaAs''.
     \item Con la aplicación de herramientas estadísticas como ``PCA'' poder determinar los elementos para el sistema de clasificación.
-    \item Buscar la obtención de un artículo ``JCR''.
     \item Desarrollar un sistema de acondicionamiento de señal para diodo de ``InGaAs''.
+    \item Buscar la obtención de un artículo ``JCR''.
     \item Simular el comportamiento del diodo de ``InGaAs'' y los componentes mecánicos para la automatización.
     \item Comprobar que con la metodología obtenida se da la opción para la realización de un diseño asequible.
     \item Generar una presentación de un plan de negocios.
