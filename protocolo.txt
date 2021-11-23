@@ -193,6 +193,10 @@ Otros métodos que se utilizan son las \textit{Core Tools}.
 Son un conjunto de herramientas principalmente usadas en el sector automotriz también conocidas como ``APQP'', ``PPAP'', ``AMEF'', ``SPC'' y ``MSA''.
 Estas herramientas son procesos desarrollados conjuntamente por \textit{Chrysler}, \textit{Ford} y \textit{General Motors} para diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
 
+Un sensor es un dispositivo que, a partir de la energía del medio donde se mide, da una señal de salida transducible que es en función de la variable medida \cite{areny2005sensores}.
+Los sensores son parte fundamental de todo sistema que se desea sea automatizado dado que permiten imponer límites y/o condiciones en el sistema en cuestión para obtener un funcionamiento deseado, sin embargo, dado que los sensores por sí mismos no pueden ofrecer una señal perfecta, es decir, sin ruido ni efectos secundarios que alteren la precisión de esta, es necesario recurrir a un sistema de acondicionamiento para dicha señal.
+Los acondicionadores de señal, adaptadores o amplificadores, en sentido amplio, son los elementos del sistema de medida que ofrecen, a partir de la señal de salida del sensor electrónico, una señal apta para ser presentada o registrada o que simplemente permita un procesamiento posterior mediante un equipo de instrumentación estándar \cite{areny2005sensores}.
+
 %-alusión al objetivo sin mencionar el método
 Cada una de las metodologías de diseño para identificar los elementos en una experimentación tienen diferentes características.
 En este trabajo se plantea una combinación de los métodos, técnicas y tecnologías para proponer una metodología para clasificar botellas ``PET'' post-consumo \cite{Association2008}.
@@ -358,7 +362,7 @@ Cada material y fotodiodo tiene un distinto rango de operación ver Figura \ref{
 %######################################################
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.78\textwidth]{img/WVERNG.pdf}
+    \includegraphics[width=0.78\textwidth]{img/WAVERNGBW.pdf}
     \caption{Rango de operación de los fotodiodos ``InGaAs'' \cite{kk2015ingaas}.}
     \label{NIRRange}
 \end{figure}
@@ -368,7 +372,7 @@ Basándonos en la gráfica de la Figura \ref{NIRRange} y en el hecho de que el r
 %######################################################
 \begin{figure}[H]
     \centering
- \includegraphics[trim = {0mm 20mm 0mm 30mm},clip,scale=.58]{img/PINTABLEDIODES2.pdf}
+ \includegraphics[trim = {0mm 20mm 0mm 30mm},clip,scale=.58]{img/SPRES.pdf}
     \caption{Rangos de detección de diodos construidos de ``InGaAs'' \cite{kk2015ingaas}.}
     \label{PINDiodes}
 \end{figure}
@@ -443,6 +447,18 @@ Dada la tabla en la Figura \ref{PINDiodes} podemos observar los diferentes model
 
 En las tablas ver tabla \ref{G10899CAS} y ver tabla \ref{G12180CAS} se muestran los modelos que pertenecen a las respectivas series de fotodiodos y sus características generales, sin embargo, cabe destacar que la serie ``G10899'' \cite{kk2015ingaas} tiene un rango de operación de entre 800 $nm$ y los 1700 $nm$ mientras que la serie ``G12180'' \cite{kk2015ingaas} tiene un rango menor de entre 900 $nm$ y 1700 $nm$, si bien esta diferencia de 100 $nm$ podría o no representar un cambio en la precisión considerable se compensa con el hecho de que la serie ``G12180'' \cite{kk2015ingaas} tiene más opciones que permiten obtener resultados diferentes en cuestiones de eficiencia y velocidad que son factores importantes para la realización del sistema de clasificación, por lo que de momento estas dos series son consideradas aptas para la tarea que se desea llevar a cabo.
 
+\subsubsection{Sistema de acondicionamiento de señal}
+Los sistemas de acondicionamiento de señales usualmente consisten en circuitos electrónicos que ejercen funciones como amplificación, cambio de nivel \textit{(level shifting)}, filtrado, acople de impedancias y modulación \cite{pallas2012sensors}.
+Normalmente alguna de las etapas que componen al sistema de acondicionamiento consiste en la conversión de la señal analógica, proveniente del sensor, a una señal digital \textit{(ADC)} por sus siglas en inglés \cite{pallas2012sensors}.
+
+Se deben considerar también las características que se muestran a continuación:
+\begin{itemize}
+    \item Configuración general de entrada y salida del sensor.
+    \item Exactitud, precisión y sensibilidad.
+    \item Linealidad y resolución
+\end{itemize}
+En función de estás características se procede con el diseño particular del sistema de acondicionamiento para el sensor en cuestión \cite{pallas2012sensors}.
+
 \subsubsection{Procesamiento de los datos de los sensores}
 
 Existen varios métodos para la extracción y manejo de los datos provenientes de los sensores basados en espectroscopia infrarroja dado que es una tarea compleja.
@@ -450,7 +466,6 @@ Algunos de esto métodos son; \textit{Principal Component Analysis} ``PCA'' \cit
 Los métodos de arriba se consideraran para identificar si los elementos que compondrán el sistema automatizado cumplen con criterios de diseño asequible.
 
 \begin{table}[h]
-    %\centering
     \caption{Sistemas comerciales para la clasificación de diferentes tipos de plásticos reciclables \cite{Angeles2021}. }
     \label{Sistemas}
     \begin{tabular}{c m{33 em}}
@@ -520,7 +535,7 @@ Al variar la resistencia del foto-diodo debido al cambio de iluminancia y al \te
 
 \subsection{Justificación para el desarrollo de un sistema de acondicionamiento de señal para el diodo de ``InGaAs''}
 Dado que se trabajará con un diodo de ``InGaAs'' por si sólo entonces se requiere de un sistema que permita al controlador interpretar los datos provenientes del diodo de una manera más sencilla y exacta con el fin de obtener una mayor presición en la clasificación del ``PET''. 
-Para esto se estudiarán las propiedades del diodo, el tipo de salida que envía al realizar una medición y su comportamiento con diferentes elementos como amplificadores operacionales y filtros.
+Para esto se estudiarán las propiedades del diodo, el tipo de salida que envía al realizar una medición y su comportamiento con diferentes elementos como amplificadores operacionales y filtros y en función de ello comenzar con la selección de componentes para las etapas de amplificación y filtrado de la señal de salida del sensor.
 
 \subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
 
