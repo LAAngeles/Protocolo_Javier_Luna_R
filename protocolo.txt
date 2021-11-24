@@ -193,9 +193,10 @@ Otros métodos que se utilizan son las \textit{Core Tools}.
 Son un conjunto de herramientas principalmente usadas en el sector automotriz también conocidas como ``APQP'', ``PPAP'', ``AMEF'', ``SPC'' y ``MSA''.
 Estas herramientas son procesos desarrollados conjuntamente por \textit{Chrysler}, \textit{Ford} y \textit{General Motors} para diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
 
-Un sensor es un dispositivo que, a partir de la energía del medio donde se mide, da una señal de salida transducible que es en función de la variable medida \cite{areny2005sensores}.
-Los sensores son parte fundamental de todo sistema que se desea sea automatizado dado que permiten imponer límites y/o condiciones en el sistema en cuestión para obtener un funcionamiento deseado, sin embargo, dado que los sensores por sí mismos no pueden ofrecer una señal perfecta, es decir, sin ruido ni efectos secundarios que alteren la precisión de esta, es necesario recurrir a un sistema de acondicionamiento para dicha señal.
-Los acondicionadores de señal, adaptadores o amplificadores, en sentido amplio, son los elementos del sistema de medida que ofrecen, a partir de la señal de salida del sensor electrónico, una señal apta para ser presentada o registrada o que simplemente permita un procesamiento posterior mediante un equipo de instrumentación estándar \cite{areny2005sensores}.
+Un sensor es un dispositivo que detecta energía, presión, etc., a partir una acción externa por un medio, proporciona una señal de salida transducible que puede estar en función de la variable medida \cite{areny2005sensores}.
+Los sensores son parte fundamental de todo sistema que se desea automatizar dado que permiten imponer límites y/o condiciones en el sistema en cuestión para obtener un funcionamiento deseado, sin embargo, dado que los sensores por sí mismos no pueden ofrecer una señal perfecta, es decir, sin ruido ni efectos secundarios que alteren la precisión de esta, es necesario recurrir a un sistema de acondicionamiento para dicha señal.
+Los acondicionadores de señal, se pueden definir como circuitos electrónicos que modifican las características de una señal eléctrica \cite{RAE2021}. 
+Se pueden componer de adaptadores o amplificadores, en sentido amplio, son los elementos del sistema de medida que ofrecen, a partir de un conjunto de elementos pasivos y activos la señal de salida del sensor electrónico, una señal apta que permita una interpretación mediante un equipo de instrumentación estándar \cite{areny2005sensores}.
 
 %-alusión al objetivo sin mencionar el método
 Cada una de las metodologías de diseño para identificar los elementos en una experimentación tienen diferentes características.
@@ -516,7 +517,7 @@ Desarrollar e implementar una metodología que permita seleccionar los component
 \subsection{Objetivos específicos }
 \begin{itemize}
     \item Diseñar y desarrollar un sistema de acondicionamiento de señal para el diodo de ``InGaAs''.
-    \item Justificar a partir de una metodología los elementos mecánicos, eléctricos y electrónicos que interactuarán en el sistema.
+    \item Justificar a partir de una metodología los elementos eléctricos y electrónicos que interactuarán en el sistema.
     \item Determinar una metodología a partir de las características de los diodos ``InGaAs'' para seleccionar los elementos mecánicos.
     \item Comparar el comportamiento del diodo ``InGaAs'' con los distintos elementos electrónicos y eléctricos del sistema.
 \end{itemize}
@@ -528,12 +529,14 @@ El estudio y la recolección de los datos se realizaron en la ciudad de Queréta
 El período de investigación y recolección de los datos se llevara acabo en enero de 2022 y se estima que termine el análisis en diciembre de 2022, véase \ref{CronAct}. 
 Para empezar con la metodología de una mejor forma se definirá el nivel de abstracción inicial para el diseño eléctrico, y mecánico, se realizara una descomposición jerárquica, definiendo la estructura de nuevos niveles jerárquicos, estableciendo los niveles de potencia y control para desarrollar la arquitectura necesaria, y finalmente, seleccionar la tecnología que se va a utilizar.
 
-\subsection{Definición del mensurando para la medición de la longitud de onda en el diodo ``InGaAs''}
+\subsection{Diseño y desarrollo del sistema de acondicionamiento de señal para el diodo de ``InGaAs''.}
+
+\subsubsection{Definición del mensurando para la medición de la longitud de onda en el diodo ``InGaAs''}
 
 Para la medición de la longitud de onda se considera al mensurando como la corriente eléctrica que pasa por un foto-diodo de ``InGaAs'', la medición es de manera indirecta debido a las propiedades del sensor que al variar la iluminancia que pasa por el material expuesto se refleja y cambia la longitud de onda en el foto-diodo y su resistencia cambia.
 Al variar la resistencia del foto-diodo debido al cambio de iluminancia y al \textbf{V} inducido, la \textbf{I} cambiará, dependiendo de esta variación se puede calcular la longitud de onda. Si la relación entre \textbf{V} e \textbf{I} es lineal, decimos que estamos en presencia de un material o componente óhmico y la relación que describe este comportamiento se conoce como ley de Ohm.
 
-\subsection{Justificación para el desarrollo de un sistema de acondicionamiento de señal para el diodo de ``InGaAs''}
+\subsubsection{Justificación para el desarrollo de un sistema de acondicionamiento de señal para el diodo de ``InGaAs''}
 Dado que se trabajará con un diodo de ``InGaAs'' por si sólo entonces se requiere de un sistema que permita al controlador interpretar los datos provenientes del diodo de una manera más sencilla y exacta con el fin de obtener una mayor presición en la clasificación del ``PET''. 
 Para esto se estudiarán las propiedades del diodo, el tipo de salida que envía al realizar una medición y su comportamiento con diferentes elementos como amplificadores operacionales y filtros y en función de ello comenzar con la selección de componentes para las etapas de amplificación y filtrado de la señal de salida del sensor.
 
