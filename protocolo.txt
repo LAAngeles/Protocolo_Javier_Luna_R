@@ -363,7 +363,7 @@ Cada material y fotodiodo tiene un distinto rango de operación ver Figura \ref{
 %######################################################
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.78\textwidth]{img/WAVERNGBW.pdf}
+    \includegraphics[width=0.8\textwidth]{img/WVERNG.pdf}
     \caption{Rango de operación de los fotodiodos ``InGaAs'' \cite{kk2015ingaas}.}
     \label{NIRRange}
 \end{figure}
@@ -373,7 +373,7 @@ Basándonos en la gráfica de la Figura \ref{NIRRange} y en el hecho de que el r
 %######################################################
 \begin{figure}[H]
     \centering
- \includegraphics[trim = {0mm 20mm 0mm 30mm},clip,scale=.58]{img/SPRES.pdf}
+ \includegraphics[trim = {0mm 20mm 0mm 30mm},clip,scale=.58]{img/PINTABLEDIODES2.pdf}
     \caption{Rangos de detección de diodos construidos de ``InGaAs'' \cite{kk2015ingaas}.}
     \label{PINDiodes}
 \end{figure}
@@ -530,6 +530,9 @@ El período de investigación y recolección de los datos se llevara acabo en en
 Para empezar con la metodología de una mejor forma se definirá el nivel de abstracción inicial para el diseño eléctrico, y mecánico, se realizara una descomposición jerárquica, definiendo la estructura de nuevos niveles jerárquicos, estableciendo los niveles de potencia y control para desarrollar la arquitectura necesaria, y finalmente, seleccionar la tecnología que se va a utilizar.
 
 \subsection{Diseño y desarrollo del sistema de acondicionamiento de señal para el diodo de ``InGaAs''.}
+Para realizar el sistema de acondicionamiento de señal, primero se requiere conocer los rangos de operación del diodo y las características que este posee para trabajar bajo distintas condiciones ambientales.
+Para ello es necesario consultar la hoja de datos y obtener el tipo de señal de salida que el diodo envía y que será procesada para que sea una señal limpia y que permita tener errores mínimos en la medición.
+
 
 \subsubsection{Definición del mensurando para la medición de la longitud de onda en el diodo ``InGaAs''}
 
@@ -611,7 +614,658 @@ El análisis de componentes principales se utilizará para describir la variaci�
 
 \begin{figure}[H]
     \centering
- \includegraphics[trim = {0mm 20mm 0mm 15mm},clip,scale=.58]{img/Cronograma.pdf}
+ \includegraphics[trim = {0mm 20mm 0mm 15mm},clip,scale=.50]{img/CronogramaPT.pdf}
+    \caption{Cronograma de actividades \cite{kk2015ingaas}.}
+    \label{CronAct}
+\end{figure}
+
+%\newpage
+\section{Resultados esperados}
+\begin{itemize}
+    \item Obtener una metodología basada en el funcionamiento de los diodos de ``InGaAs''.
+    \item Con la aplicación de herramientas estadísticas como ``PCA'' poder determinar los elementos para el sistema de clasificación.
+    \item Desarrollar un sistema de acondicionamiento de señal para diodo de ``InGaAs''.
+    \item Buscar la obtención de un artículo ``JCR''.
+    \item Simular el comportamiento del diodo de ``InGaAs'' y los componentes mecánicos para la automatización.
+    \item Comprobar que con la metodología obtenida se da la opción para la realización de un diseño asequible.
+    \item Generar una presentación de un plan de negocios.
+\end{itemize}
+% \subsection{Factibilidad e impacto social}
+
+% \subsection{Aporte Tecnológico}
+
+% \newpage
+% \section{Abreviaturas y Acrónimos}
+
+% \begin{itemize}
+%     \item \textbf{PET}. ”\textit{Polyethylene Terephthalate}”
+%     \item \textbf{HDPE}. ”\textit{High Density Polyethylene}”
+% \end{itemize}
+
+\newpage
+
+\clearpage
+\bibliographystyle{unsrt}
+\addcontentsline{toc}{section}{Referencias}
+\bibliography{tesis.bib} 
+
+\end{document}\documentclass[letterpaper,12pt,openright,oneside]{article}
+
+
+\usepackage[left=2.5cm,top=2cm,right=2cm,nohead,foot=.5cm]{geometry}
+\usepackage[spanish,mexico]{babel}
+% \usepackage[spanish]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage{lineno}
+\usepackage{times}
+\usepackage{url}
+\usepackage{pdflscape}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{color}
+\usepackage{babelbib}
+\usepackage{subfig}
+\usepackage{amsmath,amssymb,amsthm} 
+% assumes amsmath package installed
+%\usepackage[document]{ragged2e}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+citecolor=blue,
+urlcolor=black,
+}
+\urlstyle{rm}
+\expandafter\def\expandafter\UrlBreaks\expandafter{\UrlBreaks%  save the current one
+  \do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j%
+  \do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t%
+  \do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D%
+  \do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N%
+  \do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X%
+  \do\Y\do\Z}
+\newcommand{\grad}{$^{\circ}$}
+\usepackage{multirow}
+\usepackage{todonotes}
+\usepackage{makecell}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{bm,upgreek}
+\usepackage{afterpage}
+\usepackage{gensymb}
+\usepackage{float}
+\usepackage{marvosym}
+\definecolor{light-gray}{gray}{.7}
+%\spanishdecimal{.}
+
+%-------------------------------------------
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newcommand{\parcial}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newtheorem{lemma}{Lema}[subsection]
+%\newtheorem{proof}[theorem]{Proof}
+%\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{remark}{Remark}
+%\newcommand{\parcial}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\DeclareMathOperator{\sign}{sign}
+\newcommand{\m}[1]{\mathbf{#1}}
+\DeclareMathOperator{\diag}{diag}
+
+\renewcommand{\baselinestretch}{1.15}
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\setlength {\marginparwidth }{2cm} 
+\begin{document}
+
+%\pagestyle{empty} %No headings for the first pages.
+
+
+%\includegraphics[width=0.05\textwidth]{./logo.jpg}~\\[1cm]
+
+\begin{titlepage}
+\begin{center}
+
+% Upper part of the page. The '~' is needed because \\
+% only works if a paragraph has started.
+
+
+\textsc{\LARGE Universidad Autónoma de Querétaro}\\[0.3 cm]
+\includegraphics[width=0.15\textwidth]{./uaqlogo}~\\[0.45cm]
+\textsc{\Large Facultad de Ingeniería \\ \large{Ingeniería en Automatización}}\\[0.5 cm]
+\textsc{\large Protocolo de Investigación \\ (Agosto 2021 - Noviembre 2021)}\\[0.5cm]
+
+{ 
+\huge \bfseries
+% Desarrollo de metodología y sistema de acondicionamiento de señal para los elementos de un sistema de clasificación de botellas PET post-consumo.
+Desarrollo de un sistema de acondicionamiento de señal para determinar elementos en un sistema de clasificación para botellas PET post-consumo
+% Metodología para determinar los elementos de un sistema de clasificación de botellas PET post-consumo
+\\[0.4cm] }
+%\vspace*{2cm}
+\vspace*{0.5cm}
+
+
+
+% Author and supervisor
+\large \textbf{Presenta:} Javier Iván Luna Ramos \\\vspace*{0.5cm}
+\textbf{Director:} M.I. Luis Alberto Ángeles Hurtado$^{1}$\\\vspace*{0.5cm}
+%\textbf{Co Director:} Dr. Sebastian Salazar Colores$^{1}$\\\vspace*{0.5cm}
+\textbf{Co-Director:} Dr. Juvenal Rodríguez Reséndiz$^{1}$\\\vspace*{0.5cm}
+\textbf{Vocal:} M.I. Juan Pablo Ramírez Vázquez $^{1,3}$\\\vspace*{0.5cm}
+\textbf{Suplente:} M.C. Hugo Torres Salinas $^{2}$\\\vspace*{0.5cm}
+% \textbf{Suplente:} XXXX$^{1}$\\\vspace*{0.5cm}
+% \textbf{Suplente:} XXXX$^{1}$\\\vspace*{0.5cm}
+\raggedright
+$^{1}$ Universidad Autónoma de Querétaro, Facultad de Ingeniería.\\
+$^{2}$ Universidad Autónoma de Querétaro, Facultad de Informática.\\
+$^{3}$ IPN, CICATA Unidad Querétaro.
+
+\vfill
+\centering
+% Bottom of the page
+% {\large \today}
+%{\large 5 de diciembre de 2020}
+\end{center}
+\end{titlepage}
+
+% \newpage
+%%%%
+\hypersetup{linkcolor=black}
+% \newpage
+% 
+\section*{Datos Generales}
+\subsection*{Título del proyecto de Tesis}
+Metodología para determinar los elementos de un sistema de clasificación de botellas PET post-consumo
+\subsection*{Nombre del alumno}
+Javier Iván Luna Ramos
+
+\subsection*{Número de expediente}
+252273
+
+\subsection*{Programa de Estudios}
+Ingeniería en Automatización línea terminal en Electrónica y Sistemas Embebidos
+\subsection*{Director de Tesis}
+Luis Alberto Ángeles Hurtado
+
+\subsection*{Co-director}
+Juvenal Rodríguez Reséndiz
+
+\subsection*{Lugar donde se realizará la investigación}
+Facultad de Ingeniería ``UAQ''
+
+\subsection*{Línea de investigación}
+Automatización
+
+\subsection*{Tipo de investigación}
+Tecnológica (diseño y prueba experimental)
+
+\subsection*{Horario de trabajo:}
+Lunes a Viernes de 15:00 Hrs-16:00 Hrs  
+
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+\linenumbers
+\section{Introducción}
+
+El presente documento data sobre una metodología que se propone llevar a cabo para seleccionar los componentes y elementos que se pueden llegar a utilizar para el diseño y experimentación de un sistema clasificador de botellas ``PET'' post-consumo bajo la premisa de que debe tener un costo asequible para centros de acopio.
+Para ello hay que entender primero cada uno de los términos involucrados.
+La metodología es la \textit{parte de la lógica que estudia los fundamentos y los métodos generales de las disciplinas científicas}.
+Ahora, el método, según Descartes, se define como las \textit{reglas ciertas y fáciles gracias a las cuales quien las observe exactamente no tomará nunca lo falso por lo verdadero, y llegará, sin gasto inútil del esfuerzo de su espíritu, al verdadero conocimiento de todo aquello de que sea capaz, mediante un aumento gradual de su ciencia} \cite{quillet1974tomo6}.
+Por otra parte, un sistema se define como el conjunto de elementos que están ordenadamente relacionados entre sí y contribuyen a determinado objetivo \cite{quillet1974tomo8}.
+De está definición se puede asumir que los elementos son las partes que componen a un sistema y que trabajan en conjunto para el funcionamiento del mismo.
+Siguiendo esta analogía, un elemento se define como \textit{la parte que, junto con otras, constituye la base de una cosa o un conjunto de cosas materiales o inmateriales} \cite{OxfordDictionary}.
+
+Los plásticos se definen como polímeros, en función de su estructura y su comportamiento, cuando son expuestos a la temperatura pueden clasificarse en termoplásticos, termofijos y elastómeros.
+Los termoplásticos, al estar compuestos por cadenas lineales y ramificadas, se funden al ser sometidos al calor y pueden adoptar nuevas formas.
+Esta propiedad es fundamental para el reciclaje, pues permite recuperar los materiales y volver a utilizarlos mediante procesos físicos simples, como el calentamiento.
+Dado que aproximadamente el 80 \% de los plásticos que se producen son termoplásticos, se tienen que clasificar correctamente para poder ser reciclados \cite{morillas2014reciclaje}.
+Existen más de 100 tipos de plásticos, siendo siete los más usados \cite{pelaez2018plan} y los que más se reciclan: polipropileno, polietileno, policloruro de vinilo, poliestireno, tereftalato de polietileno y el policarbonato \cite{garrain2008analisis}.
+Se identifican por un número dentro de un triángulo que facilita su identificación, y fueron codificados por la Sociedad industrial del plástico en 1980 \cite{Ramli2008}, véase la Tabla \ref{Sımbolos}.
+
+Comercialmente existen empresas que fabrican y distribuyen sistemas de clasificación de polímeros, ver Tabla \ref{Sistemas}, como el sistema de \textit{BottleSort}.
+Este sistema es capaz de identificar el ``PET'' transparente del ``PET'' verde \cite{Milgrom1994}, \cite{Bruno2000}.
+El sistema \textit{Poly-Sort}, es similar a \textit{BottleSort}, comienza separando las botellas en orden individual \cite{Bruno2000}, \cite{Association2008}.
+Otro sistema automático para la separación de resinas de plástico es \textit{Near infrared refrectance spectroscopy} es un método de identificación de dos filtros \cite{Scott1995156}, \cite{Masoumi2012}.
+Otro tipo de sistema radica en el campo del reflejo y transmisión de rayos-x, es similar al método de \textit{infrared spectroscopic} y al sistema ``VS-2'' que tiene una capacidad eficiente \cite{Bruno2000}, \cite{Foundation2015}.
+Cada uno de los métodos descritos  utilizan y proporcionan ventajas y desventajas que ayudan a diferenciar la mejor opción para desarrollar un sistema de clasificación y de costo asequible.
+
+%-hasta donde esta el estado del arte
+Existen diferentes metodologías para el diseño y el desarrollo de tecnología.
+En ingeniería, la heurística es un método basado en la experiencia que puede utilizarse como ayuda para resolver problemas de diseño.
+La heurística abarca desde la elaboración de cálculos de los recursos necesarios hasta la planeación y las mejores condiciones de operación de los sistemas. 
+Mediante el uso de heurísticas, es posible resolver más rápidamente problemas conocidos o similares a otros conocidos. 
+Existen varios métodos heurísticos disponibles para los ingenieros como, por ejemplo, el análisis modal de fallas y efectos. 
+Dichos métodos dependen de un grupo de ingenieros experimentados que evalúan los problemas y fallas, los ordenan según su importancia y recomiendan soluciones \cite{beuchot1999}, \cite{breyer2011}. 
+Otros métodos que se utilizan son las \textit{Core Tools}. 
+Son un conjunto de herramientas principalmente usadas en el sector automotriz también conocidas como ``APQP'', ``PPAP'', ``AMEF'', ``SPC'' y ``MSA''.
+Estas herramientas son procesos desarrollados conjuntamente por \textit{Chrysler}, \textit{Ford} y \textit{General Motors} para diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
+
+Un sensor es un dispositivo que detecta energía, presión, etc., a partir una acción externa por un medio, proporciona una señal de salida transducible que puede estar en función de la variable medida \cite{areny2005sensores}.
+Los sensores son parte fundamental de todo sistema que se desea automatizar dado que permiten imponer límites y/o condiciones en el sistema en cuestión para obtener un funcionamiento deseado, sin embargo, dado que los sensores por sí mismos no pueden ofrecer una señal perfecta, es decir, sin ruido ni efectos secundarios que alteren la precisión de esta, es necesario recurrir a un sistema de acondicionamiento para dicha señal.
+Los acondicionadores de señal, se pueden definir como circuitos electrónicos que modifican las características de una señal eléctrica \cite{RAE2021}. 
+Se pueden componer de adaptadores o amplificadores, en sentido amplio, son los elementos del sistema de medida que ofrecen, a partir de un conjunto de elementos pasivos y activos la señal de salida del sensor electrónico, una señal apta que permita una interpretación mediante un equipo de instrumentación estándar \cite{areny2005sensores}.
+
+%-alusión al objetivo sin mencionar el método
+Cada una de las metodologías de diseño para identificar los elementos en una experimentación tienen diferentes características.
+En este trabajo se plantea una combinación de los métodos, técnicas y tecnologías para proponer una metodología para clasificar botellas ``PET'' post-consumo \cite{Association2008}.
+
+\section{Justificación}
+
+El crecimiento de la población a nivel mundial contribuye al aumento de materiales sólidos tanto los que se pueden reciclar y los que no se reciclan. 
+La adecuada clasificación de los plásticos representa una actividad económica para personas físicas y morales que contribuyen en la recolección, traslado y proceso de los diferentes materiales.
+El crecimiento de la producción de plástico a nivel mundial alcanzó los 280 millones de toneladas en 2011, 322 millones de toneladas en 2015, y se estima que para 2021 rondará los 400 a 414 millones de toneladas \cite{Grigore2017}, \cite{Sahin2018}.
+
+%- De la línea 260 a la línea 275 fue tomado del protocolo del maestro Luis Hurtado.
+En México se generan más de 44 millones de toneladas anuales de residuos, y se espera que la cifra se incremente a 65 millones para el año 2030.
+La mitad de nuestros residuos son orgánicos, y la otra mitad son sólidos, e incluyen plástico, papel, cartón, vidrio y aluminio.
+El 90{$\%$} de estos desperdicios se arrojan a tiraderos de cielo abierto o a rellenos sanitarios lo que provoca contaminación del aire y el suelo.
+Los plásticos reciclados son materiales muy utilizados a nivel global en México de todos estos residuos que se producen solo el 5{$\%$} se recicla o valoriza lo que equivaldría a unas 2.2 millones de toneladas anuales \cite{SEMARNAT2019}, \cite{Angeles2021}.
+
+En México existen organismos dedicados a la recolección y reciclado de plásticos
+desde 1992, incluido el ``PET''.
+Las organizaciones más importantes son: La Asociación
+para Promover el Reciclaje de ``PET'', ``APREPET'', Ecología y Compromiso Empresarial ``ECOCE'' y el Instituto Nacional de Recicladores ``INARE'' \cite{floresproblema}.
+
+Estás instituciones a menudo realizan programas de recolección dirigidas a la población para después proceder a la parte del reciclaje de plásticos, el problema es que este proceso es muy tardado debido a que tiene que pasar a través de otras instituciones como centros de acopio para después proceder al reciclaje que se llevará a cabo en una industria dedicada a ello.
+
+%-De la línea 255 a la 258 fue tomado del artículo del maestro Luis Hurtado
+% El 17 de mayo de 2021, a través de un comunicado de prensa de la Industria Mexicana de Coca-Cola, se informó que generan más de 2,900 empleos directos y más de 35 mil indirectos dentro de la cadena de reciclaje.
+La gran cantidad de botellas de plástico que se generan en el mundo requiere de sistemas que detecten las propiedades de los envases y descarten otros materiales a gran velocidad. Existen tecnologías automatizadas para clasificar las botellas de plástico.
+Estas tecnologías no se aplican a la mayoría de los plásticos debido a la variedad de tamaños, formas, revestimientos, pintura de los plásticos, grosor y opacidad de los mismos, lo que dificulta el uso de técnicas de clasificación \cite{kang2005electronic}, \cite{Angeles2021}.
+
+Las empresas y principalmente la ciudadanía deben seguir contribuyendo a que se recolecten más materiales solidos a través de los centros de acopio, solo para México se procesan 85 mil toneladas al año de plástico ``PET'', el equivalente a 4,100 millones de botellas.
+Con la adecuada recolección se evita el 87{$\%$} de emisiones de gases de efecto invernadero frente a la producción de resina virgen, lo que equivale a 101,350 toneladas anuales de dióxido de carbono ($CO_2$) cantidad que se evitaría si todos los automóviles de la ciudad de México dejaran de circular durante dos días \cite{SEMARNAT2019}.
+
+La clasificación manual no es una opción rentable para separar en grandes cantidades.
+Existen presentaciones de plásticos que se comercializan cada día, las cuales no tienen la nomenclatura que las identifique. 
+En consecuencia si no se cuenta con sistemas automatizados se opta por diferentes técnicas para poder identificar el tipo de plástico. 
+Se raspa el plástico para comprobar su dureza así como observar si no existen otros plásticos mezclados. 
+Se muerde el plástico para determinar la dureza del material. 
+Se le da pequeños golpes con la mano al plástico para escuchar que sonido emite o se quemar el plástico para observar el color del humo así como el olor que desprende al ser quemado \cite{Angeles2021}.
+
+\section{Descripción del problema}
+
+En México, es fácilmente comprobado con sólo salir a la calle y observar que en las carreteras o en la misma banqueta de una colonia hay diversos polímeros y botellas de plástico tiradas en el suelo, a esto se le agrega que muchas de estás botellas pese a que terminen en los contenedores de basura no son recicladas de manera correcta debido a que no hay una metodología clara que permita realizar esta tarea de manera rápida y sencilla.
+Si bien es cierto que no todos los materiales producidos con ``PET'' son reutilizables vale la pena aclarar que el ``PET'' es el plástico más utilizado y más propenso a ser reciclado de una manera más sencilla, sin embargo, es un proceso complejo y que requiere de mucha labor.
+Es en esta premisa en la cual recae este proyecto, permitir la clasificación del ``PET'' de una forma rápida, eficiente y automática con el fin de realizar la ardua labor de la separación del ``PET'' en una tarea más sencilla y simple.
+
+%-De la línea 283 a la línea 288 fue tomado del protocolo del maestro Luis Hurtado.
+Los centros de acopio que abastecen de material a diversas empresas en todo el mundo se encuentran con la falta de maquinaria y métodos que les permitan tener resultados más favorables en los precios y costes; 
+Por lo que se han implementado varias técnicas manuales que dependen de la interpretación del observador.
+El material en la mayoría de los casos se encuentra revuelto y se almacena en super-sacos o contenedores de manera que manualmente se clasifican al 100{$\%$} debido a que estos materiales suelen estar contaminados con líquidos dentro de las botellas, materiales orgánicos, pintura, etiquetas de ``PVC'', aceites etc. 
+
+Para poder enfrentar esta problemática consideramos que, se debe tener una metodología para poder experimentar y proponer mejoras para facilitar el proceso de automatización. 
+Se debe de poder identificar los mejores diseños a través de métodos que ayuden a reducir el coste en el proceso de implementación de un sistema tecnológico.
+Se debe de promover el desarrollo e implementación de nuevas técnicas de separación de plásticos.
+Para ello se busca la implementación de una metodología que nos permita seleccionar los elementos que van a componer al sistema cumpliendo con las premisas previamente descritas.
+
+\section{Fundamentación teórica}
+
+Partiendo del concepto de sistema, como un conjunto de partes coordinadas y de reglas o principios sobre una materia racionalmente enlazadas entre sí y en interacción para alcanzar un conjunto de objetivos \cite{RAE}, \cite{Johansen2004}. 
+Se puede afirmar que el conjunto de partes de un sistema es fundamental para que se alcancen sus metas más aun si se trata de sistemas de medición. 
+Para evaluar el conjunto de partes de un sistema se utiliza estadística con la finalidad de recolectar datos que representen el comportamiento de los componentes. 
+Por otro lado los datos son representaciones simbólicas de los eventos que se presentan en cualquier sistema y se pueden obtener por medio de la observación, por transductores, sensores y modelos matemáticos \cite{crisci1983introduccion}. 
+Por lo que al buscar que los sistemas sean asequibles se deben de considerar más factores de interacción en el sistema.
+Asequible se refiere a lo que se puede alcanzar, obtener o lograr, lo que se pretenda o desea \cite{RAE2021}.
+Es difícil diferenciar entre los tipos de resinas que se utilizan y las diferentes presentaciones que circulan el mercado mundial ver Tabla \ref{Sımbolos}, esta fue una de las razones para que la Sociedad industrial del plástico instituyera un sistema de etiquetado en 1980 \cite{Ramli2008}. 
+El sistema crea un conjunto de códigos para cada uno de los 6 tipos de resinas más comunes. 
+Estos códigos se pueden encontrar en la mayoría de las presentaciones bajo las botellas \cite{Rotheiser2009}.
+El ``PET'' actualmente es uno de los materiales más utilizados en el día a día de los seres humanos siendo este el material base para todo tipo de productos, por ejemplo; 
+Botellas de agua o cualquier otro líquido, envolturas de productos de consumo humano o de productos desechables, bolsas de plástico, etc.
+De lo anterior se entiende que debido a la alta presencia de este material en la vida actual del ser humano es necesario recurrir a la labor de la reutilización o reciclaje en la Figura \ref{PETCICLO} se ilustra el procesos que puede llevar una botella de ``PET'' para ser reciclada.
+
+% ##########################################################################################
+\begin{table}[h]
+    \centering
+    \caption{Símbolos para identificar el tipo de plástico reciclado \cite{Ramli2008}.}
+    \label{Sımbolos}
+    \begin{center}
+    \begin{tabular}{ c c c c c c c }
+        \hline
+        \includegraphics[trim = {31mm 225mm 165mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} & 
+        \includegraphics[trim = {52mm 225mm 142mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} & 
+        \includegraphics[trim = {74mm 225mm 120mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
+        \includegraphics[trim = {96mm 225mm 98mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
+        \includegraphics[trim = {118mm 225mm 76mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
+        \includegraphics[trim = {140mm 225mm 54mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
+        \includegraphics[trim = {162mm 225mm 32mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} \\
+            ``PET'' & ``HDPE'' & ``PVC'' & ``LDPE'' & ``PP'' & ``PS'' & OTROS \\ 
+            
+    \end{tabular}
+    \begin{tabular}{l c c c c c c}
+        PET:\textit{Polyethylene Terephthalate} & & & & & & HDPE: \textit{High Density Polyethylene}\\
+        PVC:\textit{Polyvinyl Chloride} & & & & & & LDPE: \textit{Low Density Polyethylene}\\
+        PP:\textit{Polypropylene} & & & & & & PS: \textit{Polystyrene}\\
+        \hline
+    \end{tabular}
+    \end{center}
+    
+\end{table}
+% ##########################################################################################
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.70\textwidth]{img/PROCRES.png}
+    %\includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.9]{img/PROCRES.PNG}
+    \caption{Proceso de recolección y reciclaje del ``PET'' \cite{floresproblema}}
+    \label{PETCICLO}
+\end{figure}
+
+\subsection{Metodologías para el diseño y el desarrollo de tecnología}
+
+La heurística es una técnica o procedimiento práctico, para resolver problemas. 
+Alternativamente, \textit{Lakatos} lo define como un conjunto de reglas metodológicas no necesariamente forzosas, positivas y negativas, que sugieren o establecen cómo proceder y qué problemas evitar a la hora de generar soluciones y elaborar hipótesis. 
+La base de la heurística está en la experiencia de resolver problemas y en ver cómo otros lo hacen. 
+Consecuentemente se dice que hay búsquedas ciegas, búsquedas heurísticas (basadas en la experiencia) y búsquedas racionales.
+
+Dado que las heurísticas pueden equivocarse, es fundamental conocer los casos en los que son aplicables y los límites a su uso.
+En general, en la ingeniería deben considerarse como ayudas o apoyos para hacer estimaciones rápidas y diseños preliminares, pero no como justificaciones finales de un diseño o proyecto u otros \cite{beuchot1999}, \cite{breyer2011}.
+
+% Agregar información sobre las core tools
+Las \textit{Core Tools} son un conjunto de herramientas principalmente usadas en el sector automotriz también conocidas como ``APQP'', ``PPAP'', ``AMEF'', ``SPC'' y ``MSA''.
+Estas herramientas son procesos para diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades \cite{olmedo2017}.
+
+\subsection{Sistemas actuales de clasificación para botellas de plástico}
+
+En los últimos nueve años se ha utilizado \textit{Machine learning}, siendo así un conjunto de algoritmos de clasificación de aprendizaje automático basado en la teoría del aprendizaje estadístico, esta modalidad se puede entender como algoritmos que aprenden de los datos ingresados por una persona \cite{1527552} y son implementados en diversas aplicaciones. 
+En la Figura \ref{Ejemplo} se muestra el proceso completo de clasificación utilizando aprendizaje estadístico. El sistema cuenta con retroalimentación \cite{Association2008} para clasificar con una mejor precisión. 
+Existen diversos sistemas que difieren del que se muestra en la Figura \ref{Ejemplo}.
+
+%#############################################
+\begin{figure}[h]
+    \centering
+    \includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.68]{img/Vg_fig_11.pdf}
+    \caption{Ejemplo de un diagrama de flujo del proceso de clasificación de botellas de plástico \cite{Association2008}.}
+    \label{Ejemplo}
+\end{figure}
+%############################################
+
+\subsection{Tendencias recientes para mejorar la detección en los plásticos reciclables}
+
+Las investigaciones recientes plantean nuevos métodos como el principio del procesamiento de imágenes ver Figura \ref{NIR4} utilizando combinaciones de varias técnicas como análisis de componentes principales, espectroscopia \cite{Rani2019} y transformada \textit{Hough} \cite{Duda197211}. 
+Una de las limitantes de este método son las condiciones al momento de tomar la fotografía, la variación en la luz, resolución, fondo y la distancia de la cámara para obtener una precisión mayor a 95{$\%$} \cite{Prasad2012}.
+
+%#############################################
+\begin{figure}[h]
+    \centering
+    \includegraphics[trim = {14mm 208mm 34mm 16mm},clip,scale=.72]{img/Vg_fig_24.pdf}
+    \caption{Cámara fotográfica para la detección de botellas de color \cite{Wang2019170}.}
+    \label{NIR4}
+\end{figure}
+%############################################
+
+\subsection{Sensores para la identificación de polímeros}
+
+La implementación de sensores basados en espectroscopia permite tener una gran ventaja al momento de clasificar los diferentes plásticos que se manejan en la industria puesto que permiten realizar esta tarea sin ser invasivo con los plásticos, sin emitir contaminantes. 
+Tienen muy pocas limitaciones para el tamaño del material que se va a separar y permiten hacerlo en grandes cantidades \cite{wu2020auto}.
+Algunas de las tecnologías de espectroscopia que pueden ser aplicadas para la separación de plásticos son, por ejemplo, la espectroscopia de infrarrojo cercano o \textit{near-infrared spectroscopy} ``NIR''; 
+Espectroscopia de \textit{Raman};
+Espectroscopia de ruptura inducida por láser o \textit{laser induced breakdown spectroscopy} ``LIBS'' y fluorescencia de rayos-X o \textit{X-ray fluorescence} ``XRF'' \cite{wu2020auto}.
+En este caso como únicamente se busca separar botellas de ``PET'' se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre 800 $nm$ y 2500 $nm$ aunque un rango de entre 800 $nm$ y 1100 $nm$ es más que suficiente para la detección y diferenciación entre el ``PET'' transparente y el de color.
+Esta tecnología en conjunto con una cámara que pueda generar imágenes hiper-espectrales y contenga un dispositivo de carga acoplada puede ser más que suficiente para realizar la clasificación de las botellas de ``PET'' \cite{wu2020auto}.
+
+Los sensores infrarrojos se basan en fotodiodos que pueden estar construidos a partir de cuatro elementos químicos como el silicio ``Si'', el indio ``In'', el galio ``Ga'' o el arsénico ``As'', sin embargo, cabe aclarar que se pueden adquirir fotodiodos hechos a partir de únicamente silicio y fotodiodos construidos a partir arseniuro de indio y galio ``InGaAs''.
+Cada material y fotodiodo tiene un distinto rango de operación ver Figura \ref{NIRRange} lo cual nos permite decidir que tipo de diodo es el ideal para la tarea que se desea realizar.
+
+%######################################################
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/WVERNG.pdf}
+    \caption{Rango de operación de los fotodiodos ``InGaAs'' \cite{kk2015ingaas}.}
+    \label{NIRRange}
+\end{figure}
+%######################################################
+
+Basándonos en la gráfica de la Figura \ref{NIRRange} y en el hecho de que el rango necesario para detectar los colores del ``PET'' es de entre los 800 $nm$ y 1100 $nm$ podemos asumir que un fotodiodo de silicio correspondiente al tipo ``S1337-BR'' \cite{kk2015ingaas} es suficiente para el sistema en cuestión, sin embargo, se debe considerar la frecuencia a la cual va a operar el sistema, el área fotosensible que ofrece el sensor y la variedad de modelos que se disponen, considerando estos factores es más factible utilizar un diodo construido a base de arseniuro de indio y galio.
+%######################################################
+\begin{figure}[H]
+    \centering
+ \includegraphics[trim = {0mm 20mm 0mm 30mm},clip,scale=.58]{img/PINTABLEDIODES2.pdf}
+    \caption{Rangos de detección de diodos construidos de ``InGaAs'' \cite{kk2015ingaas}.}
+    \label{PINDiodes}
+\end{figure}
+%######################################################
+
+Dada la tabla en la Figura \ref{PINDiodes} podemos observar los diferentes modelos de diodos construidos a partir de ``InGaAs'', sus modelos de referencia y el rango de detección que poseen, con esta información es sencillo seleccionar una serie de construcción. 
+%################################################################
+\begin{table}[H]
+\centering
+\caption{Características de la serie ``G10899''\cite{kk2015ingaas}.}
+\label{G10899CAS}
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Modelo & Área fotosensible & Voltaje en reversa & Enfriamiento & \textit{Fc} $[MHz]$\\ 
+    \hline 
+    G10899-003K  & $\Phi$0.3 $mm$ &  5 $V$   & Ninguno & 150 - 300 $[MHz]$\\
+    \hline 
+    G10899-005K  & $\Phi$0.5 $mm$ &  5 $V$   & Ninguno & 75 - 150 $[MHz]$\\
+    \hline 
+    G10899-01K   & $\Phi$1 $mm$ &  5 $V$   & Ninguno & 25 - 45 $[MHz]$\\
+    \hline 
+    G10899-02K   & $\Phi$2 $mm$ &  2 $V$   & Ninguno & 4 - 10 $[MHz]$\\
+    \hline 
+    G10899-03K   & $\Phi$3 $mm$ &  2 $V$   & Ninguno & 2 - 5 $[MHz]$\\
+    \hline 
+\end{tabular} 
+%\vspace{0.5cm}
+\end{table}
+%######################################################################
+
+%################################################################
+\begin{table}[H]
+\centering
+\caption{Características de la serie ``G12180''\cite{kk2015ingaas}.}
+\label{G12180CAS}
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Modelo & Área fotosensible & Voltaje en reversa & Enfriamiento & \textit{Fc} $[MHz]$\\ 
+    \hline 
+    G10899-003A  & $\Phi$0.3 $mm$ &  20 $V$   & Ninguno & 450 - 600 $[MHz]$\\
+    \hline 
+    G10899-005A  & $\Phi$0.5 $mm$ &  20 $V$   & Ninguno & 160 - 200 $[MHz]$\\
+    \hline 
+    G10899-010A   & $\Phi$1 $mm$ &  10 $V$   & Ninguno & 25 - 60 $[MHz]$\\
+    \hline 
+    G10899-020A   & $\Phi$2 $mm$ &  5 $V$   & Ninguno & 4 - 13 $[MHz]$\\
+    \hline 
+    G10899-030A   & $\Phi$3 $mm$ &  5 $V$   & Ninguno & 2.5 - 7 $[MHz]$\\
+    \hline
+    G10899-050A   & $\Phi$5 $mm$ &  2 $V$   & Ninguno & 0.5 - 3 $[MHz]$\\
+    \hline
+    G10899-110A  & $\Phi$1 $mm$ &  5 $V$   & TE de una etapa & 20 - 40 $[MHz]$\\
+    \hline 
+    G10899-120A  & $\Phi$2 $mm$ &  5 $V$   & TE de una etapa & 4 - 13 $[MHz]$\\
+    \hline 
+    G10899-130A   & $\Phi$3 $mm$ &  5 $V$   & TE de una etapa & 2.5 - 7 $[MHz]$\\
+    \hline 
+    G10899-150A   & $\Phi$5 $mm$ &  2 $V$   & TE de una etapa & 0.5 - 3 $[MHz]$\\
+    \hline 
+    G10899-210A   & $\Phi$1 $mm$ &  5 $V$   & TE de doble etapa & 20 - 40 $[MHz]$\\
+    \hline
+    G10899-220A   & $\Phi$2 $mm$ &  5 $V$   & TE de doble etapa & 4 - 13 $[MHz]$\\
+    \hline 
+    G10899-230A   & $\Phi$3 $mm$ &  5 $V$   & TE de doble etapa & 2.5 - 7 $[MHz]$\\
+    \hline 
+    G10899-250A   & $\Phi$5 $mm$ &  2 $V$   & TE de doble etapa & 0.5 - 3 $[MHz]$\\
+    \hline 
+\end{tabular} 
+%\vspace{0.5cm}
+\end{table}
+%######################################################################
+
+En las tablas ver tabla \ref{G10899CAS} y ver tabla \ref{G12180CAS} se muestran los modelos que pertenecen a las respectivas series de fotodiodos y sus características generales, sin embargo, cabe destacar que la serie ``G10899'' \cite{kk2015ingaas} tiene un rango de operación de entre 800 $nm$ y los 1700 $nm$ mientras que la serie ``G12180'' \cite{kk2015ingaas} tiene un rango menor de entre 900 $nm$ y 1700 $nm$, si bien esta diferencia de 100 $nm$ podría o no representar un cambio en la precisión considerable se compensa con el hecho de que la serie ``G12180'' \cite{kk2015ingaas} tiene más opciones que permiten obtener resultados diferentes en cuestiones de eficiencia y velocidad que son factores importantes para la realización del sistema de clasificación, por lo que de momento estas dos series son consideradas aptas para la tarea que se desea llevar a cabo.
+
+\subsubsection{Sistema de acondicionamiento de señal}
+Los sistemas de acondicionamiento de señales usualmente consisten en circuitos electrónicos que ejercen funciones como amplificación, cambio de nivel \textit{(level shifting)}, filtrado, acople de impedancias y modulación \cite{pallas2012sensors}.
+Normalmente alguna de las etapas que componen al sistema de acondicionamiento consiste en la conversión de la señal analógica, proveniente del sensor, a una señal digital \textit{(ADC)} por sus siglas en inglés \cite{pallas2012sensors}.
+
+Se deben considerar también las características que se muestran a continuación:
+\begin{itemize}
+    \item Configuración general de entrada y salida del sensor.
+    \item Exactitud, precisión y sensibilidad.
+    \item Linealidad y resolución
+\end{itemize}
+En función de estás características se procede con el diseño particular del sistema de acondicionamiento para el sensor en cuestión \cite{pallas2012sensors}.
+
+\subsubsection{Procesamiento de los datos de los sensores}
+
+Existen varios métodos para la extracción y manejo de los datos provenientes de los sensores basados en espectroscopia infrarroja dado que es una tarea compleja.
+Algunos de esto métodos son; \textit{Principal Component Analysis} ``PCA'' \cite{serranti2013classification}, \textit{Linear Discriminant Analysis} ``LDA'' \cite{de1999selecting}, y \textit{Support Vector Machine} ``SVM'' \cite{noble2006support}.
+Los métodos de arriba se consideraran para identificar si los elementos que compondrán el sistema automatizado cumplen con criterios de diseño asequible.
+
+\begin{table}[h]
+    \caption{Sistemas comerciales para la clasificación de diferentes tipos de plásticos reciclables \cite{Angeles2021}. }
+    \label{Sistemas}
+    \begin{tabular}{c m{33 em}}
+         \hline
+           Sistema & Ventajas \\  
+         \hline
+           1 & Considera el tamaño de la botella, remueve contaminantes, trabaja con 16 sensores de rayos infrarrojos, clasificación en 5 milisegundos, identifica color, utiliza un sistema neumático expulsando las botellas. \\
+           2 & Utiliza una cámara de color, separa las botellas en orden individual, remueve contaminantes, velocidad de detección de 15 veces por segundo e identificación de 19 milisegundos, identifica tipos de colores en las botellas. \\
+          
+          3 &Alta detección al utilizar el reflejo de rayos x y de sensores infrarrojos por medio de espectroscopia este método es recomendado para detectar PCV. Analiza de 200 veces por segundo, separa 2 a 3 botellas por segundo. \\
+          %&4 & & &  \\
+         \hline
+    \end{tabular}
+    \begin{tabular}{l}
+            1 - \textit{BottleSort}, 2- \textit{Poly-Sort}, 3- \textit{Near infrared spectroscopic} y VS-2 \\
+         \end{tabular}
+\end{table}
+% \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Premisas para identificar los elementos de un sistema de clasificación de botellas de plástico}
+
+%-alusión a la hipótesis 
+\begin{itemize}
+    \item Existen metodologías que combinadas pueden ayudar a determinar los elementos necesarios para un sistema de clasificación de botellas ``PET''.
+    \item Proponiendo solo un sensor de ``InGaAs'' podemos identificar que elementos mecánicos, eléctricos y electrónicos son necesarios.
+    \item La combinación de los métodos, como ``PCA'' así como tecnologías en la adquisición de datos son suficientes para proponer una metodología para clasificar botellas ``PET'' post-consumo.
+\end{itemize}
+
+\section{Hipótesis}
+% Al utilizar y combinar diferentes metodologías ya existentes se pueda desarrollar una sola metodología que permita seleccionar de manera objetiva, teórica y correcta los componentes que formarán parte de un sistema de clasificación de botellas de ``PET'' post-consumo con el fin de obtener el correcto y más óptimo funcionamiento posible permitiendo que se obtenga un sistema de clasificación confiable y viable.
+
+% Propuesta para la hipótesis
+
+Mediante la combinación de tecnologías previas para la clasificación de botellas  ``PET'' post-consumo se puede desarrollar una nueva metodología basada en las características de los diodos ``InGaAs''  y en su interacción con elementos mecánicos, eléctricos y electrónicos que permita proponer un sistema asequible. 
+
+% Al combinar diferentes metodologías ya existentes se puede desarrollar una nueva que permita seleccionar los elementos que interactuaran con un sistema de clasificación de botellas de ``PET'' post-consumo, basándose en las características de los diodos ``InGaAs'' para obtener el correcto funcionamiento considerando la interacción de elementos mecánicos, eléctricos y electrónicos permitiendo que se obtenga un sistema de clasificación asequible, confiable y viable.
+
+% Propuesta de Juan Pablo
+% Al implementar una metodología sistemática es posible determinar los elementos que interactuarán con un sistema de clasificación de botellas “PET” Post-consumo. A partir de conocer las características de los diodos “InGaAs” y su interacción con los elementos mecánicos, eléctricos y electrónicos se obtendrá un sistema de clasificación novedoso.
+
+\section{Objetivo}
+% Desarrollar una metodología especifica en función de metodologías ya existentes que permita seleccionar los componentes con las características idóneas y suficientes para el correcto funcionamiento de un sistema de clasificación de botellas de ``PET'' post-consumo.
+
+% Objetivo general
+Desarrollar e implementar una metodología que permita seleccionar los componentes significativos que contribuyen al correcto funcionamiento de un sistema de clasificación de “PET” Post-consumo utilizando tecnologías previas en un periodo de un año y medio aproximadamente.
+
+\subsection{Objetivos específicos }
+\begin{itemize}
+    \item Diseñar y desarrollar un sistema de acondicionamiento de señal para el diodo de ``InGaAs''.
+    \item Justificar a partir de una metodología los elementos eléctricos y electrónicos que interactuarán en el sistema.
+    \item Determinar una metodología a partir de las características de los diodos ``InGaAs'' para seleccionar los elementos mecánicos.
+    \item Comparar el comportamiento del diodo ``InGaAs'' con los distintos elementos electrónicos y eléctricos del sistema.
+\end{itemize}
+
+\section{Metodología}
+
+Por el método de la observación y el análisis estadístico se llevara acabo este trabajo de investigación. 
+El estudio y la recolección de los datos se realizaron en la ciudad de Querétaro, en los laboratorios de automatización de la facultad de ingeniería ``UAQ''. 
+El período de investigación y recolección de los datos se llevara acabo en enero de 2022 y se estima que termine el análisis en diciembre de 2022, véase \ref{CronAct}. 
+Para empezar con la metodología de una mejor forma se definirá el nivel de abstracción inicial para el diseño eléctrico, y mecánico, se realizara una descomposición jerárquica, definiendo la estructura de nuevos niveles jerárquicos, estableciendo los niveles de potencia y control para desarrollar la arquitectura necesaria, y finalmente, seleccionar la tecnología que se va a utilizar.
+
+\subsection{Diseño y desarrollo del sistema de acondicionamiento de señal para el diodo de ``InGaAs''.}
+Para realizar el sistema de acondicionamiento de señal, primero se requiere conocer los rangos de operación del diodo y las características que este posee para trabajar bajo distintas condiciones ambientales.
+Para ello es necesario consultar la hoja de datos y obtener el tipo de señal de salida que el diodo envía y que será procesada para que sea una señal limpia y que permita tener errores mínimos en la medición.
+
+
+\subsubsection{Definición del mensurando para la medición de la longitud de onda en el diodo ``InGaAs''}
+
+Para la medición de la longitud de onda se considera al mensurando como la corriente eléctrica que pasa por un foto-diodo de ``InGaAs'', la medición es de manera indirecta debido a las propiedades del sensor que al variar la iluminancia que pasa por el material expuesto se refleja y cambia la longitud de onda en el foto-diodo y su resistencia cambia.
+Al variar la resistencia del foto-diodo debido al cambio de iluminancia y al \textbf{V} inducido, la \textbf{I} cambiará, dependiendo de esta variación se puede calcular la longitud de onda. Si la relación entre \textbf{V} e \textbf{I} es lineal, decimos que estamos en presencia de un material o componente óhmico y la relación que describe este comportamiento se conoce como ley de Ohm.
+
+\subsubsection{Justificación para el desarrollo de un sistema de acondicionamiento de señal para el diodo de ``InGaAs''}
+Dado que se trabajará con un diodo de ``InGaAs'' por si sólo entonces se requiere de un sistema que permita al controlador interpretar los datos provenientes del diodo de una manera más sencilla y exacta con el fin de obtener una mayor presición en la clasificación del ``PET''. 
+Para esto se estudiarán las propiedades del diodo, el tipo de salida que envía al realizar una medición y su comportamiento con diferentes elementos como amplificadores operacionales y filtros y en función de ello comenzar con la selección de componentes para las etapas de amplificación y filtrado de la señal de salida del sensor.
+
+\subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
+
+De manera general se requiere utilizar un microcontrolador para ejecutar todas las tareas que el sistema de clasificación requiera y también se debe considerar el apartado de potencia puesto que se utilizara cuando menos un motor y una banda transportadora.
+
+Un microcontrolador es un componente electrónico que en una sola pastilla o circuito integrado incluye la memoria, puertos y algunos periféricos \cite{del1999sistemas}.
+Para la selección de este componente es necesario considerar aspectos de frecuencia de operación, número de entradas y salidas digitales, número de puertos de conversión A/D, número de \textit{TIMERS} disponibles, etc. \cite{del1999sistemas}.
+Así mismo, se planea considerar el tipo de conectores y elementos necesarios para realizar una etapa de potencia ideal para que el sistema de clasificación funcione correctamente manteniendo la seguridad como premisa principal.
+Dado que se utilizará al diodo de ``InGaAs'' como componente principal para el trabajo de espectroscopia, se deben considerar aquellos factores de ruido que puedan provocar fallas en su funcionamiento, para ello es crucial identificar dichos factores y determinar cual sería la manera más idónea para eliminarlos con el fin de permitir que el diodo y sus futuras etapas de amplificación y de filtrado funcionen correctamente mediante la información que del elemento. 
+Dicha información puede ser obtenida mediante la hoja de datos característica del dispositivo y esto puede ser realizado de manera similar con cada componente que vaya a formar parte del sistema, ya sea en la parte de control o en la parte de potencia.
+Otro factor a considerar es el hecho de que cada componente funciona de manera diferente en función del entorno que lo rodea puesto que todo semiconductor puede verse afectado en su función debido a la temperatura exterior \cite{malvino1991principios}.
+Por ende, será necesario utilizar instrumentos de medición como voltímetros, amperímetros u otro equipo que nos permita analizar e identificar posibles alteraciones en el funcionamiento esperado para poder realizar las correcciones necesarias con el fin de obtener el funcionamiento deseado en el sistema.
+
+% Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de 5v para la entrada y otro de 24v para la activación de las bobinas de las electroválvulas.
+% Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre 5v y 30v de corriente directa y de 125v a 250v de corriente alterna con corrientes de hasta 10A. 
+% El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $64$ dolares que equivalen a $1328$ pesos mexicanos mientras que el precio de la Nucleo STM32F446 es de $15.82$ dolares que equivalen a $328$ pesos mexicanos, esto sin contar los costos de envío.
+
+\subsection{Determinación de una metodología para el diseño mecánico}
+
+% \subsection{Diseño mecánico}
+
+% De manera general la parte mecánica del sistema de clasificación se compone de una banda transportadora, un motor para dicha banda transportadora y un sistema que permita sostener el sistema eléctrico-electrónico encargado de realizar en forma la clasificación.
+De manera general se propone para la parte mecánica del sistema de clasificación una banda transportadora, un motor para dicha banda transportadora y un sistema que permita sostener el sistema eléctrico-electrónico encargado de realizar en forma la clasificación.
+
+La determinación de estos objetos se propone realizarse en función de las características de las botellas de ``PET'' y del espacio del que se dispone para el sistema de clasificación.
+Otro factor a considerar para esta metodología es el espacio de los eléctricos y electrónicos que se utilizaran tanto en el funcionamiento del sensor como en el funcionamiento de elementos previamente mencionados como el motor o la banda transportadora, como el fin de que se mantenga una distribución de cables y conexiones discreta y manteniendo el mínimo requerimiento de seguridad.
+
+Dado que se trabajará con espectroscopia y se planea el uso de una cámara entonces también es otro factor a considerar puesto que se requiere de una fuente de luz estable y constante, para ello la implementación de una estructura aislada sobre la estructura principal es indispensable, en ese sentido, dentro de la metodología debe indicarse que factores permiten el aislamiento de una sección de factores externos como la luz y/o las vibraciones que se puedan presentar en otras secciones del sistema.
+
+Finalmente para la parte que se encargará en forma de separar las botellas de ``PET'' se propone la implementación de pistones neumáticos.
+Para esta implementación en la metodología es necesario considerar factores como longitud, peso, velocidad de accionamiento, tipo de accionamiento y la presión mínima que requiere el pistón para ejecutar la tarea de manera óptima \cite{sole2012neumatica}.
+
+Todo esto se realizará en función de las características de cada elemento mecánico, eléctrico y electrónico que pueda formar parte del sistema de clasificación, así mismo, se utilizarán herramientas como las \textit{Core Tools} que son herramientas que en la industria automotriz permiten diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
+
+
+% Para poder identificar si los elementos son los adecuados.
+% Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de ``PET'' a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
+% Con esto y teniendo en cuenta que la clasificación en la sección de sensores de realizara de botella en botella entonces el peso en la banda transportadora no pasaría de 5kg, por ende, no es necesario recurrir a un motor muy potente ni a una tensión alta en la banda para poder desplazar el contenido.
+
+%Por otro lado, suponiendo de que las botellas caerán a través de un embudo a la banda transportadora entonces se debe considerar por mera seguridad que estás salgan eyectadas hacía los laterales, siendo este el caso se deben colocar paredes de un metal que sea ligero pero lo suficientemente resistente para que no se deforme debido a los impactos y permita que las botellas se mantengan dentro de la banda transportadora en todo momento. 
+% Para ello se podría usar aluminio como material principal dado que es un metal que si bien no se vende puro sino en aleación con algún otro metal sigue siendo barato y ligero en comparación con otros metales como el acero, de esta manera el costo no se elevaría demasiado y se sigue manteniendo el factor de seguridad.
+
+% La segunda sección de la banda transportadora sería la sección de identificación la cual se puede realizar mediante sensores o cámaras o una combinación de ambos dispositivos, en cualquiera de los casos el sistema empleado debe ser capaz de clasificar las botellas de manera rápida con el fin de tener una tasa mínima de 3 botellas por minuto.
+
+% Después de la sección de identificación sigue la sección de clasificación en la cual las botellas serán removidas de la banda transportadora y pasarán a contenedores en función de sus características previamente identificadas.
+% Esta clasificación puede realizarse mediante pistones neumáticos que se accionen mediante sus respectivas electroválvulas, las cuales son fáciles de controlar puesto que únicamente se activarían si las características de la botella identificadas en la sección previa cumplen con lo estipulado.
+% Para esta última parte se debe considerar que se requiere de un suministro constante de aire comprimido para los pistones neumáticos, está presión debe ser de al menos $0.08MPa$, a menos que se requiera un control más estricto sobre el accionamiento se pueden utilizar pistones de simple efecto con retorno de muelle, de lo contrario se debe optar por pistones de doble efecto para controlar tanto el accionamiento como el regreso mediante un electroválvula de $\frac{5}{2}$ monoestable.
+
+\subsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
+
+Se busca minimizar los factores de ruido que con la interacción de todos los factores anteriormente descritos se obtenga la velocidad máxima y mínima que no afecte la eficiencia en la clasificación ver Figura \ref{diseño04} \cite{gutierrez2004analisis}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[trim = {31mm 145mm 13mm 20mm},clip,scale=0.65]{img/Vg_fig_18.pdf}
+    \caption{Factores y variables en el diseño de experimentos para la interacción de todo el sistema.}
+    \label{diseño04}
+\end{figure}
+
+% ###############################################
+\subsubsection{Análisis de componentes principales para la identificación de los elementos}
+
+El método de ``PCA'' se utilizara para explicar la cantidad máxima de varianza con el menor número de componentes.
+``PCA'' analizara los elementos principales de múltiples características, exponer la naturaleza resaltando sus principales características, acortando las dimensiones de los datos. 
+``PCA'' establecerá un método para disminuir la dimensión de los datos.
+El análisis de componentes principales se utilizará para describir la variación en los conjuntos de variables correlacionadas reduciendo la complejidad ayudando a la interpretación de los datos y la reducción del ruido o variables que se tienen que monitorear.
+% ###############################################
+
+\subsection{Cronograma del plan de trabajo}
+
+\begin{figure}[H]
+    \centering
+ \includegraphics[trim = {0mm 20mm 0mm 15mm},clip,scale=.50]{img/CronogramaPT.pdf}
     \caption{Cronograma de actividades \cite{kk2015ingaas}.}
     \label{CronAct}
 \end{figure}
