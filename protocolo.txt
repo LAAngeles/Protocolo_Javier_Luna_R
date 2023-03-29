@@ -160,7 +160,7 @@ Lunes a Viernes de 15:00 Hrs-16:00 Hrs
 \newpage
 \linenumbers
 \section{Introducción}
-%- Este es un comentario de prueba.
+
 El presente documento data sobre una metodología que se propone llevar a cabo para seleccionar los componentes y elementos que se pueden llegar a utilizar para el diseño y experimentación de un sistema clasificador de botellas ``PET'' post-consumo bajo la premisa de que debe tener un costo asequible para centros de acopio.
 Para ello hay que entender primero cada uno de los términos involucrados.
 La metodología es la \textit{parte de la lógica que estudia los fundamentos y los métodos generales de las disciplinas científicas}.
