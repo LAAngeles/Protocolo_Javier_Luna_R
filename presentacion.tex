@@ -1,0 +1,804 @@
+\documentclass[10pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\setbeamertemplate{caption}[numbered] % enúmera las figuras
+
+
+\usetheme[
+%%% option passed to the outer theme
+%    progressstyle=fixedCircCnt,   % fixedCircCnt, movingCircCnt (moving is deault)
+  ]{Feather}
+  
+% If you want to change the colors of the various elements in the theme, edit and uncomment the following lines
+
+
+% Change the bar colors:
+%\setbeamercolor{Feather}{fg=red!20,bg=red}
+
+% Change the color of the structural elements:
+%\setbeamercolor{structure}{fg=red}
+
+% Change the frame title text color:
+%\setbeamercolor{frametitle}{fg=blue}
+
+% Change the normal text color background:
+%\setbeamercolor{normal text}{fg=black,bg=gray!10}
+
+%-------------------------------------------------------
+% INCLUDE PACKAGES
+%-------------------------------------------------------
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+
+%-------------------------------------------------------
+% DEFFINING AND REDEFINING COMMANDS
+%----------------------------------------------------
+\newcommand{\mat}[1] {\mathbf{#1}}
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+\renewcommand{\figurename}{Fig.}
+% colored hyperlinks
+\newcommand{\chref}[2]{
+  \href{#1}{{\usebeamercolor[bg]{Feather}#2}}
+}
+
+%-------------------------------------------------------
+% INFORMATION IN THE TITLE PAGE
+%-------------------------------------------------------
+
+\title[] % [] is optional - is placed on the bottom of the sidebar on every slide
+{ % is placed on the title page
+      \textbf{Procesamiento de señales de electroencefalograma usando redes neuronales para aplicaciones en sistemas BCI}
+}
+
+\subtitle[Procesamiento de señales de electroencefalograma usando redes neuronales para aplicaciones en sistemas BCI]
+{
+      \textbf{}
+}
+
+\author[C.J. Ortiz Echeverri]
+{   Presenta:\\   
+    MSc. César Javier Ortiz Echeverri  \\
+    Director:\\
+    Dr. Juvenal Rodríguez Reséndiz\\
+    Codirector:\\
+    Dr. Roberto Augusto Gómez Loenzo
+      {}
+}
+
+\institute[]
+{Universidad Autónoma de Querétaro, Facultad de Informática \\
+  
+  %there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
+}
+
+\date{\today}
+
+%-------------------------------------------------------
+% THE BODY OF THE PRESENTATION
+%-------------------------------------------------------
+
+\begin{document}
+
+%-------------------------------------------------------
+% THE TITLEPAGE
+%-------------------------------------------------------
+
+{\1% % this is the name of the PDF file for the background
+\begin{frame}[plain,noframenumbering] % the plain option removes the header from the title page, noframenumbering removes the numbering of this frame only
+  \titlepage % call the title page information from above
+\end{frame}}
+
+
+\begin{frame}{Contenido}{}
+\tableofcontents
+\end{frame}
+
+% --------------------------------------------------------------------------------------------------------------
+\section{Introducción}
+\begin{frame}{Introducción}
+Interfaz Cerebro-Computadora (BCI por sus siglas en inglés).
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=1.2]{Figures/introduccion}
+\caption{Interfaz Cerebro-Computadora.}
+\label{introduccion}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Introducción}
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=1.1]{Figures/BCI_etapas}
+\caption{Etapas principales en un BCI.}
+\label{BCI}
+\end{figure}  
+\end{frame}
+
+
+
+
+
+\subsection{Motivación}
+\begin{frame}{Motivación}
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.6]{Figures/motivacion.pdf}
+\caption{Datos del INEGI (2010).}
+\label{inegi}
+\end{figure}
+
+Según el Instituto Nacional de Geografía y Estadística (INEGI), al año 2010, en México, las personas que tienen algún tipo de discapacidad son 5 millones 739 mil 270, lo que representa 5.1\% de la población total.
+
+\end{frame}
+
+\subsection{Objetivos}
+\begin{frame}{Objetivos}
+
+Estudiar diferentes configuraciones de algoritmos de separación de fuentes ciegas y redes neuronales en implementaciones de BCI.
+
+\begin{itemize}
+\item Estudiar las características estadísticas de las señales MI-EEG.
+\item Estudiar los fundamentos matemáticos de los algoritmos de BSS.
+\item Diseñar una metodología para analizar el comportamiento de los algoritmos propuestos.
+\item Implementar la etapa de extracción de características basadas en descriptores en el dominio del tiempo y la frecuencia.
+\item Implementar etapas de clasificación basasdas en estrategias de \textit{Machine learning}.
+\end{itemize}
+\end{frame}
+
+
+
+
+%-------------------------------------------------------
+
+\section{Estado del arte}
+
+\begin{frame}{Estado del arte}
+
+\begin{table}[h]
+\centering
+\caption{Publicaciones relacionadas con BCI-MI}
+\label{MI1}
+\resizebox{\textwidth}{!}{ 
+\begin{tabular}{lllll}
+\hline
+Autor           & Año & Método                                   & Clasificador   \\                         
+\hline
+
+1. Thomas~et~al. & 2009 & Banco de filtros-Patrones espaciales   & Máquinas de soporte vectorial          \\
+2. Chin et~al.   & 2009 & Banco de filtros-Patrones espaciales   & Bayesianos             \\
+3. Lu~et~al.     & 2010 & Patrones espaciales regularizados      & Análisis de discriminantes Fisher           \\
+4. Wang~et al.   & 2012 & Análisis de componentes independientes & Análisis de discriminantes Fisher         \\
+5. Zhang~et~al.  & 2013 &                                        & Análisis de discriminantes lineales           \\
+6. Park~et~al.   & 2013 & Descomposición empírica                & Máquinas de soporte vectorial          \\
+7. Aghaei~et~al. & 2016 & Patrones espaciales                    & Bayesianos              \\ 
+8. Siuly~et~al.  & 2016 & Localización óptima                    & Bayesianos                           \\
+9. Kervic~et al. & 2017 & Análisis de componentes principales    & k-vecino cercano                     \\         
+10.Taran~et~al.  & 2018 & transformada wavelet ajustable         & Máquinas de soporte vectorial   \\
+11.Taran~et~al.  & 2018 & Descomposición empírica                & Máquinas de soporte vectorial   \\
+12.Islam~et~al.  & 2018 & Mapeo tangente espacial                & Máquinas de soporte vectorial          \\
+13.Luo~et~al.    & 2018 & Descriptores espacio-temporales        & Máquinas de soporte vectorial          \\ 
+14.Zhoua~et~al.  & 2019 & Análsis de componentes independientes  & análsis trial a trial                  \\
+15.Guan~et~al.   & 2019 & Árboles de decisión                    & k-vecino cercano                       \\
+\hline
+\end{tabular}}
+\end{table}
+\end{frame}
+
+\begin{frame}{Estado del arte}
+
+
+\begin{table}[h]
+\centering
+\caption{\label{tabla 2}BCI-MI usando arquitecturas de deep learning.}
+\label{DeepL}
+\resizebox{\textwidth}{!}{ 
+\begin{tabular}{lllll}
+\hline
+Autor                & Año & Forma de los datos de entrada      & Arquitectura       \\                         
+\hline
+1. X. An~et~al.       & 2014 & Series de tiempo                 & Red de creencias profundas\\
+2. G. Xu~et~al.       & 2016 & mapas tiempo-frecuencia STFT     & Red convolucional pre-entrenada \\
+3. Z. Tayeb~et~al.    & 2016 & mapas tiempo-frecuencia STFT     & Red convolucional y recurrente \\
+4. Z. Yin, J. Zhang   & 2017 & Densidad espectral               & Autodecodificador de supresión de ruido apilado \\
+5. N. Lu~et~al.       & 2017 & Espectros de frecuencia          & Máquina de Boltzmann restringida \\
+6. Y. Tabar~et~al.    & 2017 & mapas tiempo-frecuencia STFT     & Red convolucional \\
+7. Z. Tang~et~al.     & 2017 & Series de tiempo                 & Red convolucional \\
+8. Z. Jiao~et~al.     & 2018 & mapas tiempo-frecuencia STFT     & Red convolucional \\
+9. S.Chaudhary~et~al. & 2018 & mapas tiempo-frecuencia STFT/CWT & Red convolucional profunda (\emph{ALexNet}) \\
+10.Ruffini~et~al.     & 2018 & mapas tiempo-frecuencia STFT     & Red convolucional y recurrente \\
+11. Z. Zhang~et~al.   & 2019 & mapas tiempo-frecuencia CWT      & Red convolucional\\
+12.M.Dai~et~al.       & 2019 & mapas tiempo-frecuencia STFT     & Red convolucional y  autodecodificador variacional \\
+
+\hline
+\end{tabular}}
+\end{table}
+
+ 
+\end{frame}
+
+
+
+%-------------------------------------------------------
+
+\section{Separación de Fuentes Ciegas}
+
+\begin{frame}{Separación de Fuentes Ciegas}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.65]{Figures/BSS}
+\caption{Mezcla de fuentes.}
+\label{BSS}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Separación de Fuentes Ciegas}
+Separación de Fuentes Ciegas (BSS por sus siglas en inglés)
+\begin{equation}
+\begin{split}
+x_{1}(t) &= a_{11}s_{1}+a_{12}s_{2}, \\
+x_{2}(t) &= a_{21}s_{1}+a_{22}s_{2}
+\end{split}
+\end{equation}  
+
+Expresado en forma matricial 
+\begin{equation}
+\vect{x}(t) = \mat{A}\vect{s}(t)
+\end{equation}
+
+\noindent Donde $\vect{x}(t)$ es el vector de las señales mezcladas, $\mat{A}$ es la matriz de mezcla. BSS consiste en encontrar una matriz $\mat{B}$ que en un caso ideal $\mat{B}=\mat{A}^{-1}$ 
+
+\begin{equation}
+\vect{s}(t) = \mat{B}\vect{x}(t)
+\end{equation}
+
+\end{frame}
+
+\begin{frame}{Separación de Fuentes Ciegas}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{Figures/BSS1}
+\caption{Blanqueamiento y rotación.}
+\label{BSS1}
+\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}{Separación de Fuentes Ciegas}
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.6]{Figures/whiteningMatrix}
+\caption{Matriz de covarianza (a) original (b) blanqueada.}
+\label{whiteningMatrix}
+\end{figure}
+
+\begin{equation}
+\vect{z(t)} = \mat{W}\vect{x(t)}
+\end{equation}
+
+
+\begin{equation}
+\mat{R_z}= \mathbb{E}\left(\vect{z}\vect{z}^T\right)=\mat{I}
+\end{equation}
+
+
+
+\end{frame}
+
+\begin{frame}{Separación de Fuentes Ciegas}
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.4]{Figures/whiteExmaple.pdf}
+\caption{Blanqueamiento para dos señales (a) fuentes originales (b) distribución de las fuentes originales (c) fuentes mezcladas (d) distribución fuentes mezcladas (e) fuentes blanqueadas (f) distribución fuentes blanqueadas. }
+\label{whitening}
+\end{figure}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{Separación de Fuentes Ciegas}
+
+\begin{equation}
+\vect{s}(t) = \mat{B}\vect{x}(t)
+\end{equation}
+
+\begin{equation}
+\vect{z(t)} = \mat{W}\vect{x(t)}
+\end{equation}
+
+\noindent se puede definir una matriz de correlación $\mat{R}_{x(\tau)}$ expresada como
+
+\begin{equation}
+\mat{R}_{x(\tau)}= \mat{A}\mat{R}_{s(\tau)}\mat{A}^T
+\end{equation}
+  
+\begin{equation}
+\mat{R}_{z(\tau)}=\mat{W}\mat{R}_{x(\tau)}\mat{W}^T=\mat{J} {\Sigma_2} \mat{J}^T
+\end{equation}
+
+
+\noindent En donde ${\Sigma_2}$ es una matriz diagonal y $\mat{J}$ es una matriz ortogonal. 
+
+
+
+\begin{equation}
+\mat{B} = \mat{J}^T\mat{W}
+\end{equation} 
+
+\end{frame}
+
+
+\begin{frame}{Separación de Fuentes Ciegas}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.6]{Figures/SOBI}
+\caption{Algoritmo SOBI basado en diagonalización de aproximación conjunta de eigen-matrices.}
+\label{SOBI}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Separación de Fuentes Ciegas}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.6]{Figures/ICA}
+\caption{Algoritmo ICA basado en la distribución de densidad de probabilidad.}
+\label{ICA}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Separación de Fuentes Ciegas}
+
+
+$p_1(s_1)$ y $p_2(s_2)$ dos densidades de probabilidad de dos componentes, $\vect{s}$.
+Kullback-Leibler mide la diferencia entre la densidad y el producto de las densidades marginales.
+
+\begin{equation}
+    D(p_1|p_2)=\int_{-\infty}^{\infty}p_1(s_1)\log\left(\frac{p_1(s_1)}{p_2(s_2)}\right) 
+\end{equation} 
+
+Las variables aleatorias se consideran estadísticamente independientes si y sólo si
+\begin{equation}
+p(\vect{s})=p_{s}(s_{1},s_{2},...,s_{n})=p_{1}(s_{1})p_{2}(s_{2})...p_{n}(s_{n})=\prod_i{p_i(s_i)}
+\end{equation}
+    
+    
+\end{frame}
+
+
+
+
+\begin{frame}{Separación de Fuentes Ciegas}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{Figures/rotationExample.pdf}
+\caption{Rotación para dos señales (a) fuentes originales (b) distribución de las fuentes originales (c) fuentes mezcladas (d) distribución fuentes mezcladas (e) fuentes blanqueadas (f) distribución fuentes blanqueadas. }
+\label{SOS}
+\end{figure}
+\end{frame}
+
+\section{Metodología}
+
+\begin{frame}{Metodología}
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.65]{Figures/sortedFFT.pdf}
+\caption{Criterio de ordenamiento de BSS.}
+\label{sortedfft}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Experimentación}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.6]{Figures/dataset.pdf}
+\caption{Base de datos usada.}
+\label{SOBI}
+\end{figure}
+\end{frame}
+
+
+
+
+
+%-------------------------------------------------------
+\section{Extracción y clasificación de características}
+
+\begin{frame}{Extracción y clasificación de características}
+
+\begin{table}[h]
+\caption{descriptores en el dominio del tiempo}
+\centering
+\resizebox{0.5\textwidth}{!}{
+\label{T1}  
+\begin{tabular}{lll}
+\hline
+Descriptor              & Ecuación                              \\
+\hline
+1. Cruce por cero    &   $Z(i)=\frac{1}{2L}\sum_i^L|sgn[x_i(n)]-sgn[x_i(n-1)]|^2$\\\\
+
+2. Energía            &   $E(i)=\frac{1}{L}\sum_i^L|x_i(n)|^2 $ \\\\
+                    
+3. Entropía &   $H(i)=-\sum_{j=1}^k{e_jlog_2(e_j)}$  \\\\
+\hline
+\end{tabular}}
+
+\begin{table}[h]
+\centering
+\caption{descriptores en el dominio de la frecuencia}
+\resizebox{0.5\textwidth}{!}{
+\label{T2}  
+\begin{tabular}{ll}
+\hline
+Descriptor              & Ecuación                              \\
+\hline
+4. Centroide espectral &  $C_i=\frac{\sum_1^{W_{fl}}kX_i(k) }{\sum_1^{W_{fl}}X_i(k)}$\\\\
+5. Dispersión espectral   &  $S_i=\sqrt{\frac{\sum_1^{W_{fl}}(k-C_i)^2X_i(k) }{\sum_1^{W_{fl}}X_i(k)}}$  \\\\
+6. Entropía espectral  &  $H(i)=-\sum_{f=0}^{L-1}{n_flog_2(n_f)}$          \\\\
+7. Flujo espectral     &  $Fl_{(i,i-1)}=-\sum_{f=1}^{Wf_L}{(EN_i(k)-EN_{i-1}(k))^2}$ \\\\
+8. Desplazamiento espectral  &  $\sum_{k=1}^m{X_i(k)}=C\sum_{k=1}^{Wf_L}{X_i(k)}$ \\\\
+9. Coeficientes Cepstrales Frecuencia Mel        &   $c_m=\sum_{k=1}^{L}{(log(O_k))cos\left[m\left(k-\frac{1}{2}\right)\frac{\pi}{L}\right]}$\\\\
+\hline
+\end{tabular}}
+\end{table}
+
+\end{table}
+\end{frame}
+
+
+\begin{frame}{Extracción y clasificación de características}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.65]{Figures/MFCC}
+\caption{Coeficientes Cepstrales Frecuencia Mel (MFCC).}
+\end{figure}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{Extracción y clasificación de características}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.35]{Figures/clasificacion.eps}
+\caption{mapa de descriptores y MLP.}
+\label{clasificacion}
+\end{figure}
+
+\begin{itemize}
+    \item Grupo 1: dominio del tiempo.
+    \item Grupo 2: dominio de la frecuencia.
+    \item Grupo 3: MFCC.
+\end{itemize}
+
+
+
+
+\begin{table}[H]
+\caption{porcentaje de clasificación sin aplicar BSS.}
+\centering
+\resizebox{0.5\textwidth}{!}{
+\label{noBSS} % Give a unique label
+\begin{tabular}{lllll|c}
+\hline\noalign{\smallskip}
+Sujeto    & Grupo 1 & Grupo 2  & Grupo 3      & Todos  & Tiempo por cada trial (s) \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+IVa-aa     & 52.5    & 50.7     & 40.6         & 53.0 & 0.1190\\
+IVa-al     & 50.6    & 66.7     & 38.7         & 47.6 & 0.1200\\
+IVa-av     & 62.2    & 21.7     & \textbf{91.5}& 72.5 & 0.1222\\
+IVa-aw     & 50.5    & 45.4     & 35.0         & 44.2 & 0.1194\\
+IVa-ay     & 52.2    & 26.3     & 61.3         & 23.3 & 0.1219\\
+\hline\noalign{\smallskip}
+media       & 53.6    & 42.1     & 53.4         & 48.1 & 0.1204 \\
+des. std        & 3.9     & 15.3     & 19.3         & 14.4 & 0.0015 \\
+\noalign{\smallskip}\hline
+\end{tabular}}
+\end{table}
+
+\end{frame}
+
+
+
+
+\begin{frame}{Extracción y clasificación de características}
+    
+
+\begin{table}[H]
+\caption{Porcentaje de clasificación usando SOBI}
+\centering
+\resizebox{0.5\textwidth}{!}{
+\label{SOBI1} % Give a unique label
+\begin{tabular}{lllll|c}
+\hline\noalign{\smallskip}
+Sujeto    & Grupo 1 & Grupo 2  & Grupo 3      & Todos  & Tiempo por cada trial (s) \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+IVa-aa     & 67.0    & 82.3    & 65.9   & 78.4 & 0.2079\\
+IVa-al     & 89.6    & 78.5    & 61.5   & 77.3 & 0.1607\\
+IVa-av     & 55.9    & 66.7    & 70.1   & 85.9 & 0.1621\\
+IVa-aw     & 72.1    & 83.2    & 75.3   & 81.3 & 0.1614\\
+IVa-ay     & 56.4    & 80.7    & 72.5   & 78.5 & 0.1600
+\\
+\hline\noalign{\smallskip}
+media    & 68.2   & \textbf{78.3}     & 69.0   & \textbf{78.5} & 0.1704 \\
+des. std & 13.8   & 6.7      & 5.4    & 6.0  & 0.0209\\
+\noalign{\smallskip}\hline
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\caption{Porcentaje de clasificación usando ICA}
+\centering
+\resizebox{0.5\textwidth}{!}{
+\label{ICA1} % Give a unique label
+\begin{tabular}{lllll|c}
+\hline\noalign{\smallskip}
+Sujeto    & Grupo 1 & Grupo 2  & Grupo 3      & Todos  & Tiempo por cada trial (s) \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+IVa-aa     & 78.5    & 90.3    & 76.0    & 91.1 & 1.4750\\
+IVa-al     & 78.8    & 88.7    & 96.5    & 90.7 & 1.4464\\
+IVa-av     & 78.1    & 87.6    & 92.2    & 91.0 & 1.4536\\
+IVa-aw     & 88.3    & 89.2    & 92.8    & 92.3 & 1.4464\\
+IVa-ay     & 89.4    & 90.1    & 90.4    & 89.0 & 1.4500\\
+\\
+\hline\noalign{\smallskip}
+media    & 82.6    & 89.2    & \textbf{89.6} & \textbf{90.8} & 1.4543\\
+des. std        & 5.7    & 1.0      & 7.9     & 1.2  & 0.0120\\
+\noalign{\smallskip}\hline
+\end{tabular}}
+\end{table}
+
+
+\end{frame}
+
+
+\begin{frame}{Extracción y clasificación de características}
+
+\begin{equation}
+W_x(a,\tau)=\frac{1}{\sqrt{|a|}} \int_{-\infty}^{\infty} x(t)\psi^{\ast}\left(\frac{t-\tau}{a}\right)\,dt,
+\end{equation}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.5]{Figures/morletCWT.pdf}
+\caption{(a) Onda senoidal (b) señal de EEG.}
+\label{CWT1}
+\end{figure}
+    
+\end{frame}
+
+
+
+\begin{frame}{Extracción y clasificación de características}
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.6]{Figures/CNN_esquema.pdf}
+\caption{Esquema de una Red Neuronal Convolucional.}
+\label{CNN}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}{Extracción y clasificación de características}
+
+\begin{table}[h!]
+\caption{Arquitectura propuesta}
+\centering
+\resizebox{0.7\textwidth}{!}{
+\renewcommand{\arraystretch}{1.2}
+
+\begin{tabular}{c|l|cc|l}
+\hline
+Capa & Operación                      & Kernel  & Stride  &  Salida\\ 
+\hline
+1     & Conv2D $\rightarrow 250$       & $(3,1)$ & $(2,2)$ &  (63,256,250)\\
+      & Activation$\rightarrow ReLU$   &         &         &  (63,256,250)\\
+      & Max-pooling$\rightarrow(4,4)$  &         &         &  (15,64,250)\\
+\hline
+2     & Conv2D $\rightarrow 150$       & $(1,2)$ & $(1,1)$ &  (15,63,150)\\
+      & Activación$\rightarrow ReLU$   &         &         &  (15,63,150)\\
+      & Max-pooling$\rightarrow(3,3)$  &         &         &  (5,21,150)\\
+\hline
+3     & Aplanado                        &         &         &  (15750)\\
+      & Densa$\rightarrow2048$         &         &         &  (2048)\\
+      & Activación$\rightarrow ReLU$   &         &         &  (2048)\\
+      & Dropout$\rightarrow 0.4$       &         &         &  (2048)\\      
+\hline
+4     & Dense$\rightarrow2$            &         &         &  (2)\\
+      & Activación$\rightarrow softmax$&         &         &  (2)\\
+\hline
+\end{tabular}}
+\label{architecture}
+\end{table}
+    
+\end{frame}
+
+
+
+
+\begin{frame}{Extracción y clasificación de características}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{Figures/methodCNN}
+\caption{Metodología propuesta usando CNN.}
+\label{methodCNN}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.27]{Figures/CWT}
+\caption{Mapas de CWT (a) Una fuente, (b) Todas las fuentes.}
+\label{CWT}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Red Neuronal Convolucional (CNN)}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.75]{Figures/train_test}
+\caption{(a) sin BSS, (b) ICA no ordenado, (c) SOBI ordenado, (d) ICA ordenado (30 epochs).}
+\label{train_test}
+\end{figure}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Red Neuronal Convolucional (CNN)}
+
+\begin{table}[h]
+\caption{clasificación 10-validación cruzada }
+\resizebox{0.8\textwidth}{!}{%
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{l|cccccccccc|c|c}
+\textbf{Sujeto}    & & & & &\textbf{Clasificación}\\
+\hline
+       & k=1  & k=2  & k=3  & k=4  & k=5  & k=6  & k=7  & k=8  & k=9  & k=10 &Promedio & des. std\\ 
+\hline
+aa &94.79&100.00&96.87&89.58&100.00&100.00&100.00 &98.95 &98.95&98.95 &97.81 & 3.34\\
+al &91.66 &94.79 &94.79 &98.95 &85.41 &87.50 &97.91 &100.00&98.95 &94.79 &94.47 & 4.96\\
+av &95.83 &97.91 &100.00&98.95 &97.91 &88.54 &68.75 &100.00&100.00&100.00&94.78 & 9.79\\
+aw &98.75 &92.50 &95.00 &99.37 &99.37 &91.87 &100.00&98.75 &76.87 &88.12 &94.06 & 7.26\\
+ay &85.41 &97.91 &85.41 &79.16 &96.87 &95.83 &95.83 &100.00 &96.87&88.54 &92.18 & 6.98\\
+\hline
+Promedio    &      &      &      &      &      &      &      &       &     &      &\textbf{94.66} & 6.46\\
+        \hline
+    \end{tabular}}
+    
+    \label{kfoldcross1}
+\end{table}
+
+
+\begin{table}[h]
+\caption{Comparación con otros trabajos reportados que usan la misma base de datos.}
+\resizebox{0.5\textwidth}{!}{%
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lllcc}
+\textbf{Autor}& \textbf{Método}& \textbf{Clasificador} & \textbf{Clasificación} (\%) & \textbf{Año}\\
+\hline
+Lu et al.    & R-CSP                 & R-CSP       & 83.90         & 2010\\
+Siuly et al. & CT                     & LS-SVM     & 88.32         & 2011\\
+Zhang et al. & Z-score                & LDA        & 81.10         & 2013\\
+Siuly et al. & OA                     & NB         & 96.36         & 2016\\
+Kevric et al.& MSPCA, WPD, HOS        & k-NN       & 92.80         & 2017\\
+Taran et al. & TQWT                   & LS-SVM     & 96.89         & 2018\\
+Propuesto     & fastICA Ordenado-CWT     & CNN        & \textbf{94.21}& 2019\\
+\hline
+\end{tabular}}
+\label{works}
+\end{table}
+ 
+ 
+ 
+    
+\end{frame}
+
+
+
+
+
+
+\section{Análisis de resultados}
+
+
+\section{Conclusiones}
+
+\begin{frame}{Conclusiones}
+
+\begin{itemize}
+
+    \item Uso de BSS para mejorar resolución espacial ordenado de acuerdo a características frecuenciales de las señales de MI-EEG.
+    \item Representaciones tensoriales tiempo-frecuencia-espacio son adecuadas para la búsqueda de características relevantes en las señales EEG. 
+    \item Contribución en el estudio de arquitecturas usadas en \textit{deep learning} en señales EEG.
+    \item MFCC como posibles descriptores para EEG.
+\end{itemize}
+    
+\end{frame}
+
+
+\section{Trabajos futuros}
+
+\begin{frame}{Trabajos futuros}
+
+\begin{itemize}
+    
+    \item Buscar nuevas representaciones tensoriales de las señales de entrada para las CNN.
+    \item Estudiar las zonas de mayor influencia en las imágenes de CWT para mejorar el diseño en la CNN.
+    \item Usar aumento de datos (\textit{data augmentation}) para buscar una mejor generalización en el aprendizaje. 
+    \item Probar una arquitectura de \textit{deep learning} end-to-end sin usar BSS.
+    \item Ajustar los parámetros del algoritmo SOBI para usar SOS en lugar de HOS.
+    \item Ajustar los coeficientes MFCC para señales de EEG.
+    \item Implementar algoritmos en sistemas embebidos para aplicaciones reales de BCI.
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Artículos indexados en el JCR realizados durante el doctorado}
+
+\begin{enumerate}
+
+\item C. J Ortiz-Echeverri, S. Salazar-Colores, J. Rodríguez-Reséndiz, and R. A. Gómez Loenzo (2019). \textbf{A New Approach for Motor Imagery Classification based on Sorted Blind Source Separation, Continuous Wavelet Transform, and Convolutional Neural
+Network}. Sensors, 19(20):4541.
+
+
+\item Ortiz‐Echeverri, C. J., Rodríguez‐Reséndiz, J., and Garduño‐Aparicio, M. (2018). \textbf{An approach to STFT and CWT learning through music hands‐on labs}. Computer Applications in Engineering Education, 26(6), 2026-2035.
+
+ \item  Salazar-Colores, S., Ramos-Arreguín, J.-M., Ortiz Echeverri, C. J., Cabal-Yepez, E., Pedraza-Ortega, J.-C., and Rodríguez-Resendiz, J. (2018). \textbf{"Image dehazing using morphological opening, dilation and Gaussian filtering"}. Signal, Image and Video Processing. https://doi.org/10.1007/s11760-018-1286-9.
+ 
+ \end{enumerate}
+    
+\end{frame}
+
+\begin{frame}{Articulos presentados en congresos internacionales}
+\begin{enumerate}
+\item C. J. Ortiz-Echeverri, O. Paredees, S. Salazar-Colores, J. Rodríguez-Reséndiz, and R. Romo-Vázquez. \textbf{Comparative Study of time and Frequency features for EEG Classification.} In 2019 VIII Congreso Latinoamericano de Ingeniería Biomédica, Springer.
+
+\item  C. J. Ortiz-Echeverri, K. D. Pérez , G. Galindo, and J. Rodríguez-Reséndiz (2018, May). \textbf{Blind source separation problem algorithms for audio and biomedical signals}. In 2018 XIV International Engineering Congress (CONIIN) (pp. 1-7). IEEE.
+
+
+\item C. J. Ortiz-Echeverri, G. Galindo-Burgos, J.A. García-Hernández, G. Macías-Bobadilla, and J. Rodríguez-Reséndiz. \textbf{Music Classification using time-frequency descriptors and Multilayer Perceptron}. In 2019 XV International Engineering Congress (CONIIN) 
+\end{enumerate}
+    
+\end{frame}
+
+\begin{frame}{}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.75]{Figures/gracias.pdf}
+
+\label{train_test}
+\end{figure}
+
+\end{frame}
+
+
+
+%------------------------------------------------------
+
+
+
+
+
+\end{document}
