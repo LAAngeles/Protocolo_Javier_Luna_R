@@ -5,6 +5,40 @@
 \usepackage[spanish,mexico]{babel}
 % \usepackage[spanish]{babel}
 %\usepackage[latin1]{inputenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Add packages and commands here. 
+\usepackage{chngpage} % ajustar \begin{adjustwidth}{2cm}{0cm}
+%=================================================================
+\UseRawInputEncoding
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour}, commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=right,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+%"mystyle" code listing set
+\lstset{style=mystyle}
+%=================================================================
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{lineno}
 \usepackage{times}
 \usepackage{url}
@@ -157,6 +191,7 @@ Lunes a Viernes de 15:00 Hrs-16:00 Hrs
 \tableofcontents
 \listoffigures
 \listoftables
+\lstlistoflistings
 \newpage
 \linenumbers
 \section{Introducción}
@@ -646,15 +681,241 @@ El análisis de componentes principales se utilizará para describir la variaci�
 
 %\newpage
 \section{Resultados esperados}
-\begin{itemize}
-    \item Obtener una metodología basada en el funcionamiento de los diodos de ``InGaAs''.
-    \item Desarrollar un sistema de acondicionamiento de señal para diodo de ``InGaAs''.
-    \item Simular el comportamiento del diodo de ``InGaAs'' y los componentes mecánicos para la automatización.
-    \item Aplicar herramientas estadísticas como ``PCA'' poder determinar los elementos para el sistema de clasificación.
-    \item Buscar la obtención de un artículo ``JCR''.
-    \item Comprobar que con la metodología obtenida se da la opción para la realización de un diseño asequible.
-    \item Generar una presentación de un plan de negocios.
-\end{itemize}
+% 
+% 
+\subsection{Diseño mecánico y sistema de control}
+
+\subsubsection{Diseño eléctrico del sistema de clasificación}
+
+En la figura \ref{fig:Imagen17} se ilustra el moto reductor que se utilizo, con 1750 revoluciones por minuto y con un reductor de cien a uno lo que equivale a dar dieciocho vueltas en un minuto.
+% 
+% 
+%############################################
+\begin{figure}[h]
+
+    \begin{subfigure}{0.5\textwidth}
+        \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen17.jpg} 
+        % \caption{}
+        \label{fig:subim1}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen18.jpg}
+        % \caption{}
+        \label{fig:subim2}
+    \end{subfigure}
+
+    \caption{Moto-reductor en el sistema mecánico.}
+    \label{fig:Imagen17}
+\end{figure}
+%############################################
+% 
+% 
+En las figuras \ref{fig:Imagen13}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor.
+Tiene cinco botones uno de paro de emergencia. 
+Dos de arranca de color verde uno para ir al frente y otro para reversa.
+Dos botones de dos polos dos tiros para dar pulsos ya sea de frente o de reversa.
+% 
+% 
+%############################################
+\begin{figure}[h]
+
+    \begin{subfigure}{0.5\textwidth}
+        \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen13.jpg} 
+        % \caption{}
+        \label{fig:subim1}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen14.jpg}
+        % \caption{}
+        \label{fig:subim2}
+    \end{subfigure}
+
+    \caption{Pruebas de las conexiones en la etapa de potencia.}
+    \label{fig:Imagen13}
+\end{figure}
+%############################################
+% 
+% 
+\subsubsection{Programa de arranque de motores}
+
+Para que la experimentación y la adquisición de todos los datos se desarrollo una página web que junto con el servidor del ``PLC'' funcionan para activar y desactivar los motores de la banda transportadora y del sistema de identificación.
+Por recomendación del fabricante se recomienda utilizar el navegador web ``Firefox''.
+En la Tabla \ref{tab:motor_DB} se detallan los tipos de variables que se utilizaron para el motor 1 y para el motor 2.
+Físicamente cada ``PLC'' tiene un numero limitado de entradas y eso dificulta la automatización cuando se requieren de muchas entradas. 
+La finalidad principal de hacer una pagina web para controlar las entradas de los motores es por las ventajas que proporciona al poder definir n cantidad de entradas y procesar esa información internamente con el ``PLC''. 
+En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el sistema mecánico para funcionar.
+
+\begin{table}[h]
+    \centering
+    \caption{motor\_ DB[DB1] y motor\_ DB\_Dos[DB3]}
+    \begin{adjustwidth}{2cm}{0cm}
+        \begin{tabular}{c c c c c}
+             \hline
+            id & Nombre & Tipo de dato & Nombre & Tipo de dato \\
+             \hline
+              & Entrada &  \\
+             \hline
+            1 & reset & Bool & reset & Bool\\
+            2 & start & Bool& start & Bool\\
+            3 & inicioAdelante & Bool& inicioAdelante & Bool\\
+            4 & stop & Bool& stop & Bool\\
+            5 & inicioAtras & Bool& inicioAtras & Bool\\
+            6 & pasoAdelante & Bool& pasoAdelante & Bool\\
+            7 & pasoAtras & Bool& pasoAtras & Bool\\
+             \hline
+             & Salida &  \\
+             \hline
+            8 & adelante & Bool& adelante & Bool\\
+            9 & atras & Bool& atras & Bool\\
+            10 & Enable & Bool& Enable & Bool\\
+             \hline
+            & Estática &  \\
+             \hline
+            11 & R\_Trig\_reset & R\_TRIG& R\_Trig\_reset & R\_TRIG\\
+            12 & Step & Array[0..2]& Step & Array[0..2]\\
+            13 & pulso & Array[0..2]& pulso & Array[0..2]\\
+            \hline
+        \end{tabular}
+    \end{adjustwidth}
+    \label{tab:motor_DB}
+\end{table}
+% 
+\begin{table}[h]
+    \centering
+    \caption{TestDB[DB2]}
+    \begin{adjustwidth}{5cm}{0cm}
+        \begin{tabular}{c c c}
+             \hline
+            id & Nombre & Tipo de dato \\
+             \hline
+              & Estática &  \\
+             \hline
+            1 & ResetWeb & Bool\\
+            2 & StartWeb & Bool\\
+            3 & InicioAdelanteWeb &	Bool\\
+            4 & StopWeb & Bool\\
+            5 & InicioAtrasWeb & Bool\\
+            6 & pasoAdelanteWeb & Bool\\
+            7 & pasoAtrasWeb & Bool\\
+            8 & ResetWeb\_2 & Bool\\
+            9 & StartWeb\_2 & Bool\\
+            10 & InicioAdelanteWeb\_2 & Bool\\
+            11 & StopWeb\_2 & Bool\\
+            12 & InicioAtrasWeb\_2 &	Bool\\
+            13 & pasoAdelanteWeb\_2 & Bool\\
+            14 & pasoAtrasWeb\_2 & Bool\\
+            \hline
+        \end{tabular}
+    \end{adjustwidth}
+    \label{tab:TestDB}
+\end{table}
+% 
+% 
+En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servidor web con el PLC.
+%
+%
+\begin{figure}[h]
+    \centering
+    \includegraphics{img/webPLC.JPG}
+    \caption{Diagrama de bloques del PLC para el servidor web.}
+    \label{fig:webPLC.JPG}
+\end{figure}
+% 
+% 
+En las siguientes Figuras \ref{fig:network_1-2}, \ref{fig:network-3}, \ref{fig:FB_network-1}, \ref{fig:FB_network-2}, \ref{fig:FB_network-3}, \ref{fig:FB_network-4}, \ref{fig:FB_network-5}, \ref{fig:FB_network-6}.
+se describen el programa que se utilizo para controlar los motores.
+%############################################
+\begin{figure}[h]
+    \begin{subfigure}{0.5\textwidth}
+        \includegraphics[width=0.9\linewidth, height=9cm]{img/network-1.png} 
+        \caption{Red 1 del motor número uno.}
+        \label{img:network-1}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \includegraphics[width=0.9\linewidth, height=9cm]{img/network-2.png}
+        \caption{Red 2 del motor número dos.}
+        \label{img:network-2}
+    \end{subfigure}
+
+    \caption{Descripción los bloques de código que controlan los motores.}
+    \label{fig:network_1-2}
+\end{figure}
+%############################################
+La función de sistema ``WWW'' se llama en el OB1.
+Esta función inicializa el servidor web de la CPU.
+La llamada cíclica de la función en el OB1 permite la interacción entre el servidor web y el controlador.
+El Web DB (DB 333) está conectado a la función ``WWW''. 
+La base de datos web y la base de datos de fragmentos almacenan la estructura de las páginas definidas por el usuario, véase la Figura \ref{fig:network-3}. 
+% 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth, height=4cm]{img/network-3.png}
+    \caption{Red 3, Esta función de bloque inicializa el servidor web de la CPU.}
+    \label{fig:network-3}
+\end{figure}
+%
+En la Figura \ref{fig:FB_network-1} se describe la primer red del bloque de función que se determino en el ``PLC''. 
+Consta de un disparador que se activa cuando el ``PLC'' hace su primer escaneo del sistema y sirve para inicializar todas las redes del programa.
+% 
+\begin{figure}[h]
+    \centering
+    \includegraphics{img/FB_network-1.png}
+    \caption{Red 1 del bloque de función del motor.}
+    \label{fig:FB_network-1}
+\end{figure}
+%
+En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez que se ejecuto la red 1, la cual espera a que se active el paso cero con el botón de \textbf{star}.
+% 
+\begin{figure}[h]
+    \centering
+    \includegraphics{img/FB_network-2.png}
+    \caption{Red 2 Acción paso cero si esta en alto indica que el motor esta listo para arrancar.}
+    \label{fig:FB_network-2}
+\end{figure}
+%
+\begin{figure}[h]
+    \centering
+    \includegraphics{img/FB_network-3.png}
+    \caption{Red 3 Transición del paso cero, la cual indica que si el botón de inicio esta activado todos los botones se habilitan para el accionamiento del motor.}
+    \label{fig:FB_network-3}
+\end{figure}
+%
+\begin{figure}[h]
+    \centering
+    \includegraphics{img/FB_network-4.png}
+    \caption{Red 4 Acción paso uno, con dos botones se acciona el motor para adelante o para atrás.}
+    \label{fig:FB_network-4}
+\end{figure}
+%
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=.9]{img/FB_network-5.png}
+    \caption{Red 5 Acción uno, con dos botones se puede activar el motor con pulsos.}
+    \label{fig:FB_network-5}
+\end{figure}
+%
+%
+\begin{figure}[h]
+    \centering
+    \includegraphics{img/FB_network-6.png}
+    \caption{Red 6 Transición paso uno, con esta red se define un botón de paro total o mejor conocido como paro de emergencia.}
+    \label{fig:FB_network-6}
+\end{figure}
+% 
+% 
+
+% 
+% \begin{itemize}
+%     \item Obtener una metodología basada en el funcionamiento de los diodos de ``InGaAs''.
+%     \item Desarrollar un sistema de acondicionamiento de señal para diodo de ``InGaAs''.
+%     \item Simular el comportamiento del diodo de ``InGaAs'' y los componentes mecánicos para la automatización.
+%     \item Aplicar herramientas estadísticas como ``PCA'' poder determinar los elementos para el sistema de clasificación.
+%     \item Buscar la obtención de un artículo ``JCR''.
+%     \item Comprobar que con la metodología obtenida se da la opción para la realización de un diseño asequible.
+%     \item Generar una presentación de un plan de negocios.
+% \end{itemize}
+% 
+% 
 % \subsection{Factibilidad e impacto social}
 
 % \subsection{Aporte Tecnológico}
@@ -666,7 +927,28 @@ El análisis de componentes principales se utilizará para describir la variaci�
 %     \item \textbf{PET}. ”\textit{Polyethylene Terephthalate}”
 %     \item \textbf{HDPE}. ”\textit{High Density Polyethylene}”
 % \end{itemize}
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\section[\appendixname~\thesection]{Apéndice}
 
+\begin{lstlisting}[language=c, caption=Codigo de ejemplo en c., label=listing:c] 
+    
+#include <stdio.h>
+
+int main()
+{
+    printf( "Hola mundo." );
+
+    return 0;
+}
+\end{lstlisting}
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% 
 \newpage
 
 \clearpage

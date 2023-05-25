@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="public/css/styles.css" rel="stylesheet" type="text/css">
+    <script src="public/js/index.js"></script>
+    <script src="public/js/motorDos.js"></script>
+    <!-- <script type="text/javascript" src="script/jquery-2.1.3.min.js"></script> -->
+    <!-- <script type="text/javascript" src="script/S7_framework_0.1.7.js"></script> -->
+
+    <title>ConveyorBelt</title>
+</head>
+<body>
+    
+    <!-- Declaración de variables del PLC -->
+    <!-- AWP_In_Variable Name='"TestDB".ResetWeb' -->
+    <!-- AWP_In_Variable Name='"TestDB".StartWeb' -->
+    <!-- AWP_In_Variable Name='"TestDB".InicioAdelanteWeb' -->
+    <!-- AWP_In_Variable Name='"TestDB".StopWeb' -->
+    <!-- AWP_In_Variable Name='"TestDB".InicioAtrasWeb' -->
+    <!-- AWP_In_Variable Name='"TestDB".pasoAdelanteWeb' -->
+    <!-- AWP_In_Variable Name='"TestDB".pasoAtrasWeb' -->
+    
+    <div class="centerDiv">
+        <div>
+            <h1 class="">Pruebas con la banda trasportadora y el sistema de identificación,
+                controlado por un PLC Siemens y una página web.</h1>
+        </div>
+    </div>
+
+    <div class="centerDiv">
+        <div>
+            <table>
+                <tr>
+                    <th colspan="5" style="text-align: center">Motor 1</th>
+                </tr>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Nombre</th>
+                    <th>Valor actual</th>
+                    <th>Nuevo valor</th>
+                    <th>Botón</th>
+                </tr>
+                <tr>
+                    <th colspan="5" style="text-align: left">Variables del Motor 1</th>
+                </tr>
+                <!-- ResetWeb -->
+                <tr>
+                    <td>BOOL</td>
+                    <td>"TestDB".ResetWeb</td>
+                    <td><input type="text" id="valueResetWeb" value=:="TestDB".ResetWeb:></td>
+                    <form>
+                        <td>
+                            <input type="number" name='"TestDB".ResetWeb' min="0" max="1" value="1">
+                        </td>
+                        <td>
+                            <input type="submit" value="Enviar">
+                        </td>
+                    </form>
+                    <form id="resetForm">
+                        <input type="hidden" name='"TestDB".ResetWeb' value="0">
+                    </form>
+                </tr>
+                <!-- StartWeb -->
+                <tr>
+                    <td>BOOL</td>
+                    <td>"TestDB".StartWeb</td>
+                    <td><input type="text" id="valueStartWeb" value=:="TestDB".StartWeb:></td>
+                    <form>
+                        <td>
+                            <input type="number" name='"TestDB".StartWeb' min="0" max="1" value="1">
+                        </td>
+                        <td>
+                            <input type="submit" value="Enviar">
+                        </td>
+                    </form>
+                    <form id="resetFormStartWeb">
+                        <input type="hidden" name='"TestDB".StartWeb' value="0">
+                    </form>
+                </tr>
+                <!-- InicioAdelanteWeb -->
+                <tr>
+                    <td>BOOL</td>
+                    <td>"TestDB".InicioAdelanteWeb</td>
+                    <td><input type="text" id="valueInicioAdelanteWeb" value=:="TestDB".InicioAdelanteWeb:></td>
+                    <form>
+                        <td>
+                            <input type="number" name='"TestDB".InicioAdelanteWeb' min="0" max="1" value="1">
+                        </td>
+                        <td>
+                            <input type="submit" value="Enviar">
+                        </td>
+                    </form>
+                    <form id="resetFormInicioAdelanteWeb">
+                        <input type="hidden" name='"TestDB".InicioAdelanteWeb' value="0">
+                    </form>
+                </tr>
+                <!-- StopWeb -->
+                <tr>
+                    <td>BOOL</td>
+                    <td>"TestDB".StopWeb</td>
+                    <td><input type="text" id="valueStopWeb" value=:="TestDB".StopWeb:></td>
+                    <form>
+                        <td>
+                            <input type="number" name='"TestDB".StopWeb' min="0" max="1" value="1">
+                        </td>
+                        <td>
+                            <input type="submit" value="Enviar">
+                        </td>
+                    </form>
+                    <form id="resetFormStopWeb">
+                        <input type="hidden" name='"TestDB".StopWeb' value="0">
+                    </form>
+                </tr>
+                <!-- InicioAtrasWeb -->
+                <tr>
+                    <td>BOOL</td>
+                    <td>"TestDB".InicioAtrasWeb</td>
+                    <td><input type="text" id="valueInicioAtrasWeb" value=:="TestDB".InicioAtrasWeb:></td>
+                    <form>
+                        <td>
+                            <input type="number" name='"TestDB".InicioAtrasWeb' min="0" max="1" value="1">
+                        </td>
+                        <td>
+                            <input type="submit" value="Enviar">
+                        </td>
+                    </form>
+                    <form id="resetFormInicioAtrasWeb">
+                        <input type="hidden" name='"TestDB".InicioAtrasWeb' value="0">
+                    </form>
+                </tr>
+                <!-- pasoAdelanteWeb -->
+                <tr>
+                    <td>BOOL</td>
+                    <td>"TestDB".pasoAdelanteWeb</td>
+                    <td><input type="text" value=:="TestDB".pasoAdelanteWeb:></td>
+                    <form id="formPasoAdelanteWeb">
+                        <td>
+                            <input type="number" name='"TestDB".pasoAdelanteWeb' min="0" max="1" value="1">
+                        </td>
+                        <td>
+                            <input type="submit" id="submitPasoAdelanteWeb" value="Enviar">
+                        </td>
+                    </form>
+                    <form id="resetFormpasoAdelanteWeb">
+                        <input type="hidden" name='"TestDB".pasoAdelanteWeb' value="0">
+                    </form>
+                </tr>
+                <!-- pasoAtrasWeb -->
+                <tr>
+                    <td>BOOL</td>
+                    <td>"TestDB".pasoAtrasWeb</td>
+                    <td><input type="text" value=:="TestDB".pasoAtrasWeb:></td>
+                    <form id="formPasoAtrasWeb">
+                        <td>
+                            <input type="number" name='"TestDB".pasoAtrasWeb' min="0" max="1" value="1">
+                        </td>
+                        <td>
+                            <input type="submit" id="submitpasoAtrasWeb" value="Enviar">
+                        </td>
+                    </form>
+                    <form id="resetFormpasoAtrasWeb">
+                        <input type="hidden" name='"TestDB".pasoAtrasWeb' value="0">
+                    </form>
+                </tr>
+            </table>
+        </div>
+    
+    <!-- Motor 2 -->
+    <!-- Declaración de variables del PLC -->
+    
+    <!-- AWP_In_Variable Name='"TestDB".ResetWeb_2' -->
+    <!-- AWP_In_Variable Name='"TestDB".StartWeb_2' -->
+    <!-- AWP_In_Variable Name='"TestDB".InicioAdelanteWeb_2' -->
+    <!-- AWP_In_Variable Name='"TestDB".StopWeb_2' -->
+    <!-- AWP_In_Variable Name='"TestDB".InicioAtrasWeb_2' -->
+    <!-- AWP_In_Variable Name='"TestDB".pasoAdelanteWeb_2' -->
+    <!-- AWP_In_Variable Name='"TestDB".pasoAtrasWeb_2' -->
+        <div>
+            <table>
+                <tr>
+                    <th colspan="5" style="text-align: center">Motor 2</th>
+                </tr>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Nombre</th>
+                    <th>Valor ActualCurrent Value</th>
+                    <th>Nuevo Valor</th>
+                    <th>Botón</th>
+                </tr>
+                <tr>
+                    <th colspan="5" style="text-align: left">Variables del Motor 2</th>
+                </tr>
+                <!-- ResetWeb_2 -->
+                <tr>
+                    <td>BOOL</td>
+                    <td>"TestDB".ResetWeb_2</td>
+                    <td><input type="text" id="valueResetWeb_2" value=:="TestDB".ResetWeb_2:></td>
+                    <form>
+                        <td>
+                            <input type="number" name='"TestDB".ResetWeb_2' min="0" max="1" value="1">
+                        </td>
+                        <td>
+                            <input type="submit" value="Enviar">
+                        </td>
+                    </form>
+                    <form id="resetForm_2">
+                        <input type="hidden" name='"TestDB".ResetWeb_2' value="0">
+                    </form>
+                </tr>
+                <!-- StartWeb_2 -->
+                <tr>
+                    <td>BOOL</td>
+                    <td>"TestDB".StartWeb_2</td>
+                    <td><input type="text" id="valueStartWeb_2" value=:="TestDB".StartWeb_2:></td>
+                    <form>
+                        <td>
+                            <input type="number" name='"TestDB".StartWeb_2' min="0" max="1" value="1">
+                        </td>
+                        <td>
+                            <input type="submit" value="Enviar">
+                        </td>
+                    </form>
+                    <form id="resetFormStartWeb_2">
+                        <input type="hidden" name='"TestDB".StartWeb_2' value="0">
+                    </form>
+                </tr>
+                <!-- InicioAdelanteWeb_2 -->
+                <tr>
+                    <td>BOOL</td>
+                    <td>"TestDB".InicioAdelanteWeb_2</td>
+                    <td><input type="text" id="valueInicioAdelanteWeb_2" value=:="TestDB".InicioAdelanteWeb_2:></td>
+                    <form>
+                        <td>
+                            <input type="number" name='"TestDB".InicioAdelanteWeb_2' min="0" max="1" value="1">
+                        </td>
+                        <td>
+                            <input type="submit" value="Enviar">
+                        </td>
+                    </form>
+                    <form id="resetFormInicioAdelanteWeb_2">
+                        <input type="hidden" name='"TestDB".InicioAdelanteWeb_2' value="0">
+                    </form>
+                </tr>
+                <!-- StopWeb_2 -->
+                <tr>
+                    <td>BOOL</td>
+                    <td>"TestDB".StopWeb_2</td>
+                    <td><input type="text" id="valueStopWeb_2" value=:="TestDB".StopWeb_2:></td>
+                    <form>
+                        <td>
+                            <input type="number" name='"TestDB".StopWeb_2' min="0" max="1" value="1">
+                        </td>
+                        <td>
+                            <input type="submit" value="Enviar">
+                        </td>
+                    </form>
+                    <form id="resetFormStopWeb_2">
+                        <input type="hidden" name='"TestDB".StopWeb_2' value="0">
+                    </form>
+                </tr>
+                <!-- InicioAtrasWeb_2 -->
+                <tr>
+                    <td>BOOL</td>
+                    <td>"TestDB".InicioAtrasWeb_2</td>
+                    <td><input type="text" id="valueInicioAtrasWeb_2" value=:="TestDB".InicioAtrasWeb_2:></td>
+                    <form>
+                        <td>
+                            <input type="number" name='"TestDB".InicioAtrasWeb_2' min="0" max="1" value="1">
+                        </td>
+                        <td>
+                            <input type="submit" value="Enviar">
+                        </td>
+                    </form>
+                    <form id="resetFormInicioAtrasWeb_2">
+                        <input type="hidden" name='"TestDB".InicioAtrasWeb_2' value="0">
+                    </form>
+                </tr>
+                <!-- pasoAdelanteWeb_2 -->
+                <tr>
+                    <td>BOOL</td>
+                    <td>"TestDB".pasoAdelanteWeb_2</td>
+                    <td><input type="text" value=:="TestDB".pasoAdelanteWeb_2:></td>
+                    <form id="formPasoAdelanteWeb_2">
+                        <td>
+                            <input type="number" name='"TestDB".pasoAdelanteWeb_2' min="0" max="1" value="1">
+                        </td>
+                        <td>
+                            <input type="submit" id="submitPasoAdelanteWeb_2" value="Enviar">
+                        </td>
+                    </form>
+                    <form id="resetFormpasoAdelanteWeb_2">
+                        <input type="hidden" name='"TestDB".pasoAdelanteWeb_2' value="0">
+                    </form>
+                </tr>
+                <!-- pasoAtrasWeb_2 -->
+                <tr>
+                    <td>BOOL</td>
+                    <td>"TestDB".pasoAtrasWeb_2</td>
+                    <td><input type="text" value=:="TestDB".pasoAtrasWeb_2:></td>
+                    <form id="formPasoAtrasWeb_2">
+                        <td>
+                            <input type="number" name='"TestDB".pasoAtrasWeb_2' min="0" max="1" value="1">
+                        </td>
+                        <td>
+                            <input type="submit" id="submitpasoAtrasWeb_2" value="Enviar">
+                        </td>
+                    </form>
+                    <form id="resetFormpasoAtrasWeb_2">
+                        <input type="hidden" name='"TestDB".pasoAtrasWeb_2' value="0">
+                    </form>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
