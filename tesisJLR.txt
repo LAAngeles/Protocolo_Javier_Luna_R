@@ -49,6 +49,7 @@
 \usepackage{color}
 \usepackage{babelbib}
 % \usepackage{subfig}
+\usepackage{caption}
 \usepackage{subcaption} %paquete para tener multiple imagenes
 \usepackage{amsmath,amssymb,amsthm} 
 % assumes amsmath package installed
@@ -101,7 +102,6 @@ urlcolor=blue,
 \renewcommand{\baselinestretch}{1.15}
 
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
-
 \setlength {\marginparwidth }{2cm} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand\thesection{\Roman{section}} %  letters for sections
@@ -235,7 +235,7 @@ texto y por sus atinados comentarios para mejorarlo.
 \justifying
 \pagenumbering{arabic}
 
-El presente documento data sobre una metodología que se propone llevar a cabo para seleccionar los componentes y elementos que se pueden llegar a utilizar para el diseño y experimentación de un sistema clasificador de botellas ``PET'' post-consumo bajo la premisa de que debe tener un costo asequible para centros de acopio.
+El presente documento data sobre una metodología que se propone llevar a cabo para seleccionar los componentes y elementos que se pueden llegar a utilizar para el diseño y experimentación de un sistema clasificador de botellas PET post-consumo bajo la premisa de que debe tener un costo asequible para centros de acopio.
 Para ello hay que entender primero cada uno de los términos involucrados.
 La metodología es la \textit{parte de la lógica que estudia los fundamentos y los métodos generales de las disciplinas científicas}.
 Ahora, el método, según Descartes, se define como las \textit{reglas ciertas y fáciles gracias a las cuales quien las observe exactamente no tomará nunca lo falso por lo verdadero, y llegará, sin gasto inútil del esfuerzo de su espíritu, al verdadero conocimiento de todo aquello de que sea capaz, mediante un aumento gradual de su ciencia} \cite{quillet1974tomo6}.
@@ -256,10 +256,10 @@ Existen más de 100 tipos de plásticos, siendo siete los más usados \cite{pela
 Se identifican por un número dentro de un triángulo que facilita su identificación, y fueron codificados por la Sociedad industrial del plástico en 1980 \cite{Ramli2008}, véase la Tabla \ref{Sımbolos}.
 
 Comercialmente existen empresas que fabrican y distribuyen sistemas de clasificación de polímeros, ver Tabla \ref{Sistemas}, como el sistema de \textit{BottleSort}.
-Este sistema es capaz de identificar el ``PET'' transparente del ``PET'' verde \cite{Milgrom1994}, \cite{Bruno2000}.
+Este sistema es capaz de identificar el PET transparente del PET verde \cite{Milgrom1994}, \cite{Bruno2000}.
 El sistema \textit{Poly-Sort}, es similar a \textit{BottleSort}, comienza separando las botellas en orden individual \cite{Bruno2000}, \cite{Association2008}.
 Otro sistema automático para la separación de resinas de plástico es \textit{Near infrared refrectance spectroscopy} es un método de identificación de dos filtros \cite{Scott1995156}, \cite{Masoumi2012}.
-Otro tipo de sistema radica en el campo del reflejo y transmisión de rayos-x, es similar al método de \textit{infrared spectroscopic} y al sistema ``VS-2'' que tiene una capacidad eficiente \cite{Bruno2000}, \cite{Foundation2015}.
+Otro tipo de sistema radica en el campo del reflejo y transmisión de rayos-x, es similar al método de \textit{infrared spectroscopic} y al sistema VS-2 que tiene una capacidad eficiente \cite{Bruno2000}, \cite{Foundation2015}.
 Cada uno de los métodos descritos  utilizan y proporcionan ventajas y desventajas que ayudan a diferenciar la mejor opción para desarrollar un sistema de clasificación y de costo asequible.
 
 %-hasta donde esta el estado del arte
@@ -270,12 +270,12 @@ Mediante el uso de heurísticas, es posible resolver más rápidamente problemas
 Existen varios métodos heurísticos disponibles para los ingenieros como, por ejemplo, el análisis modal de fallas y efectos. 
 Dichos métodos dependen de un grupo de ingenieros experimentados que evalúan los problemas y fallas, los ordenan según su importancia y recomiendan soluciones \cite{beuchot1999}, \cite{breyer2011}. 
 Otros métodos que se utilizan son las \textit{Core Tools}. 
-Son un conjunto de herramientas principalmente usadas en el sector automotriz también conocidas como ``APQP'', ``PPAP'', ``AMEF'', ``SPC'' y ``MSA''.
+Son un conjunto de herramientas principalmente usadas en el sector automotriz también conocidas como APQP, PPAP, AMEF, SPC y MSA.
 Estas herramientas son procesos desarrollados conjuntamente por \textit{Chrysler}, \textit{Ford} y \textit{General Motors} para diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
 
 %-alusión al objetivo sin mencionar el método
 Cada una de las metodologías de diseño para identificar los elementos en una experimentación tienen diferentes características.
-En este trabajo se plantea una combinación de los métodos, técnicas y tecnologías para desarrollar una metodología que clasifique botellas ``PET'' post-consumo.
+En este trabajo se plantea una combinación de los métodos, técnicas y tecnologías para desarrollar una metodología que clasifique botellas PET post-consumo.
 % 
 % 
 \newpage
@@ -292,12 +292,10 @@ La mitad de nuestros residuos son orgánicos, y la otra mitad son sólidos, e in
 El 90{$\%$} de estos desperdicios se arrojan a tiraderos de cielo abierto o a rellenos sanitarios lo que provoca contaminación del aire y el suelo.
 Los plásticos reciclados son materiales muy utilizados a nivel global. 
 En México de todos estos residuos que se producen solo el 5{$\%$} se recicla o valoriza lo que equivaldría a unas 2.2 millones de toneladas anuales \cite{SEMARNAT2019}, \cite{Angeles2021}.
-
 En México existen organismos dedicados a la recolección y reciclado de plásticos
-desde 1992, incluido el ``PET''.
+desde 1992, incluido el PET.
 Las organizaciones más importantes son: La Asociación
-para Promover el Reciclaje de ``PET'', ``APREPET'', Ecología y Compromiso Empresarial ``ECOCE'' y el Instituto Nacional de Recicladores ``INARE'' \cite{floresproblema}.
-
+para Promover el Reciclaje de PET, APREPET, Ecología y Compromiso Empresarial ECOCE y el Instituto Nacional de Recicladores INARE \cite{floresproblema}.
 Estás instituciones a menudo realizan programas de recolección dirigidas a la población para después proceder a la parte del reciclaje de plásticos. 
 Un problema es que este proceso es muy tardado debido a que tiene que pasar a través de otras instituciones como centros de acopio para después proceder al reciclaje que se llevará a cabo en una industria dedicada a ello.
 
@@ -307,7 +305,7 @@ La gran cantidad de botellas de plástico que se generan en el mundo requiere de
 Existen tecnologías automatizadas para clasificar las botellas de plástico.
 Estas tecnologías no se aplican a la mayoría de los plásticos debido a la variedad de tamaños, formas, revestimientos, pintura de los plásticos, grosor y opacidad de los mismos, lo que dificulta el uso de técnicas de clasificación \cite{kang2005electronic}, \cite{Angeles2021}.
 
-Las empresas y principalmente la ciudadanía deben seguir contribuyendo a que se recolecten más materiales solidos a través de los centros de acopio, solo para México se procesan 85 mil toneladas al año de plástico ``PET'', el equivalente a 4,100 millones de botellas.
+Las empresas y principalmente la ciudadanía deben seguir contribuyendo a que se recolecten más materiales solidos a través de los centros de acopio, solo para México se procesan 85 mil toneladas al año de plástico PET, el equivalente a 4,100 millones de botellas.
 Con la adecuada recolección se evita el 87{$\%$} de emisiones de gases de efecto invernadero frente a la producción de resina virgen, lo que equivale a 101,350 toneladas anuales de dióxido de carbono ($CO_2$) cantidad que se evitaría si todos los automóviles de la ciudad de México dejaran de circular durante dos días \cite{SEMARNAT2019}.
 
 La clasificación manual no es una opción rentable para separar en grandes cantidades.
@@ -323,13 +321,13 @@ Se le da pequeños golpes con la mano al plástico para escuchar que sonido emit
 \justifying
 
 En México, es fácilmente comprobado con sólo salir a la calle y observar que en las carreteras o en la misma banqueta de una colonia hay diversos polímeros y botellas de plástico tiradas en el suelo, a esto se le agrega que muchas de estás botellas pese a que terminen en los contenedores de basura no son recicladas de manera correcta debido a que no hay una metodología clara que permita realizar esta tarea de manera rápida y sencilla.
-Si bien es cierto que no todos los materiales producidos con ``PET'' son reutilizables vale la pena aclarar que el ``PET'' es el plástico más utilizado y más propenso a ser reciclado de una manera más sencilla, sin embargo, es un proceso complejo y que requiere de mucha labor.
-Es en esta premisa en la cual recae este proyecto, permitir la clasificación del ``PET'' de una forma rápida, eficiente y automática con el fin de realizar la ardua labor de la separación del ``PET'' en una tarea más sencilla y simple.
+Si bien es cierto que no todos los materiales producidos con PET son reutilizables vale la pena aclarar que el PET es el plástico más utilizado y más propenso a ser reciclado de una manera más sencilla, sin embargo, es un proceso complejo y que requiere de mucha labor.
+Es en esta premisa en la cual recae este proyecto, permitir la clasificación del PET de una forma rápida, eficiente y automática con el fin de realizar la ardua labor de la separación del PET en una tarea más sencilla y simple.
 
 %-De la línea 283 a la línea 288 fue tomado del protocolo del maestro Luis Hurtado.
 Los centros de acopio que abastecen de material a diversas empresas en todo el mundo se encuentran con la falta de maquinaria y métodos que les permitan tener resultados más favorables en los precios y costes; 
 Por lo que se han implementado varias técnicas manuales que dependen de la interpretación del observador.
-El material en la mayoría de los casos se encuentra revuelto y se almacena en super-sacos o contenedores de manera que manualmente se clasifican al 100{$\%$} debido a que estos materiales suelen estar contaminados con líquidos dentro de las botellas, materiales orgánicos, pintura, etiquetas de ``PVC'', aceites etc. 
+El material en la mayoría de los casos se encuentra revuelto y se almacena en super-sacos o contenedores de manera que manualmente se clasifican al 100{$\%$} debido a que estos materiales suelen estar contaminados con líquidos dentro de las botellas, materiales orgánicos, pintura, etiquetas de PVC, aceites etc. 
 
 Para poder enfrentar esta problemática consideramos que, se debe tener una metodología para poder experimentar y proponer mejoras para facilitar el proceso de automatización. 
 Se debe de poder identificar los mejores diseños a través de métodos que ayuden a reducir el coste en el proceso de implementación de un sistema tecnológico.
@@ -350,11 +348,12 @@ Asequible se refiere a lo que se puede alcanzar, obtener o lograr, lo que se pre
 Es difícil diferenciar entre los tipos de resinas que se utilizan y las diferentes presentaciones que circulan el mercado mundial ver Tabla \ref{Sımbolos}, esta fue una de las razones para que la sociedad industrial del plástico instituyera un sistema de etiquetado en 1980 \cite{Ramli2008}. 
 El sistema crea un conjunto de códigos para cada uno de los seis tipos de resinas más comunes. 
 Estos códigos se pueden encontrar en la mayoría de las presentaciones bajo las botellas \cite{Rotheiser2009}.
-El ``PET'' actualmente es uno de los materiales más utilizados en el día a día de los seres humanos siendo este el material base para todo tipo de productos, por ejemplo; 
+El PET actualmente es uno de los materiales más utilizados en el día a día de los seres humanos siendo este el material base para todo tipo de productos, por ejemplo; 
 Botellas de agua o cualquier otro líquido, envolturas de productos de consumo humano o de productos desechables, bolsas de plástico, etc.
-De lo anterior se entiende que debido a la alta presencia de este material en la vida actual del ser humano es necesario recurrir a la labor de la reutilización o reciclaje en la Figura \ref{PETCICLO} se ilustra el procesos que puede llevar una botella de ``PET'' para ser reciclada.
+De lo anterior se entiende que debido a la alta presencia de este material en la vida actual del ser humano es necesario recurrir a la labor de la reutilización o reciclaje en la Figura \ref{PETCICLO} se ilustra el procesos que puede llevar una botella de PET para ser reciclada.
 
 % ##########################################################################################
+{\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
     \centering
     \caption{Símbolos para identificar el tipo de plástico reciclado \cite{Ramli2008}.}
@@ -369,7 +368,7 @@ De lo anterior se entiende que debido a la alta presencia de este material en la
         \includegraphics[trim = {118mm 225mm 76mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
         \includegraphics[trim = {140mm 225mm 54mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} &
         \includegraphics[trim = {162mm 225mm 32mm 31mm},clip,scale=0.78]{img/Vg_fig01.pdf} \\
-            ``PET'' & ``HDPE'' & ``PVC'' & ``LDPE'' & ``PP'' & ``PS'' & OTROS \\ 
+            PET & HDPE & PVC & LDPE & PP & PS & OTROS \\ 
             
     \end{tabular}
     \begin{tabular}{l c c c c c c}
@@ -381,16 +380,17 @@ De lo anterior se entiende que debido a la alta presencia de este material en la
     \end{center}
     
 \end{table}
+}
 % ##########################################################################################
-
+{\renewcommand{\baselinestretch}{1.15}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.70\textwidth]{img/PROCRES.png}
     %\includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.9]{img/PROCRES.PNG}
-    \caption{Proceso de recolección y reciclaje del ``PET'' \cite{floresproblema}}
+    \caption{Proceso de recolección y reciclaje del PET \cite{floresproblema}}
     \label{PETCICLO}
 \end{figure}
-
+}
 \subsection{Metodologías para el diseño y el desarrollo de tecnología}
 
 La heurística es una técnica o procedimiento práctico, para resolver problemas. 
@@ -402,7 +402,7 @@ Dado que las heurísticas pueden equivocarse, es fundamental conocer los casos e
 En general, en la ingeniería deben considerarse como ayudas o apoyos para hacer estimaciones rápidas y diseños preliminares, pero no como justificaciones finales de un diseño o proyecto u otros \cite{beuchot1999}, \cite{breyer2011}.
 
 % Agregar información sobre las core tools
-Las \textit{Core Tools} son un conjunto de herramientas principalmente usadas en el sector automotriz también conocidas como ``APQP'', ``PPAP'', ``AMEF'', ``SPC'' y ``MSA''.
+Las \textit{Core Tools} son un conjunto de herramientas principalmente usadas en el sector automotriz también conocidas como APQP, PPAP, AMEF, SPC y MSA.
 Estas herramientas son procesos para diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades \cite{olmedo2017}.
 
 \subsection{Sistemas actuales de clasificación para botellas de plástico}
@@ -413,12 +413,14 @@ El sistema cuenta con retroalimentación \cite{Association2008} para clasificar 
 Existen diversos sistemas que difieren del que se muestra en la Figura \ref{Ejemplo}.
 
 %#############################################
+{\renewcommand{\baselinestretch}{1.15}
 \begin{figure}[H]
     \centering
     \includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.68]{img/Vg_fig_11.pdf}
     \caption{Ejemplo de un diagrama de flujo del proceso de clasificación de botellas de plástico \cite{Association2008}.}
     \label{Ejemplo}
 \end{figure}
+}
 %############################################
 
 \subsection{Tendencias recientes para mejorar la detección en los plásticos reciclables}
@@ -427,114 +429,124 @@ Las investigaciones recientes plantean nuevos métodos como el principio del pro
 Una de las limitantes de este método son las condiciones al momento de tomar la fotografía, la variación en la luz, resolución, fondo y la distancia de la cámara para obtener una precisión mayor a 95{$\%$} \cite{Prasad2012}.
 
 %#############################################
+{\renewcommand{\baselinestretch}{1.15}
 \begin{figure}[H]
     \centering
     \includegraphics[trim = {14mm 208mm 34mm 16mm},clip,scale=.72]{img/Vg_fig_24.pdf}
     \caption{Cámara fotográfica para la detección de botellas de color \cite{Wang2019170}.}
     \label{NIR4}
 \end{figure}
+}
 %############################################
 
 \subsection{Sensores para la identificación de polímeros}
 
 La implementación de sensores basados en espectroscopia permite tener una gran ventaja al momento de clasificar los diferentes plásticos que se manejan en la industria puesto que permiten realizar esta tarea sin ser invasivo con los plásticos, sin emitir contaminantes. 
 Tienen muy pocas limitaciones para el tamaño del material que se va a separar y permiten hacerlo en grandes cantidades \cite{wu2020auto}.
-Algunas de las tecnologías de espectroscopia que pueden ser aplicadas para la separación de plásticos son, por ejemplo, la espectroscopia de infrarrojo cercano o \textit{near-infrared spectroscopy} ``NIR''; 
+Algunas de las tecnologías de espectroscopia que pueden ser aplicadas para la separación de plásticos son, por ejemplo, la espectroscopia de infrarrojo cercano o \textit{near-infrared spectroscopy} NIR; 
 Espectroscopia de \textit{Raman};
-Espectroscopia de ruptura inducida por láser o \textit{laser induced breakdown spectroscopy} ``LIBS'' y fluorescencia de rayos-X o \textit{X-ray fluorescence} ``XRF'' \cite{wu2020auto}.
-En este caso como únicamente se busca separar botellas de ``PET'' se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre 800 $nm$ y 2500 $nm$ aunque un rango de entre 800 $nm$ y 1100 $nm$ es más que suficiente para la detección y diferenciación entre el ``PET'' transparente y el de color.
-Esta tecnología en conjunto con una cámara que pueda generar imágenes hiper-espectrales y contenga un dispositivo de carga acoplada puede ser más que suficiente para realizar la clasificación de las botellas de ``PET'' \cite{wu2020auto}.
+Espectroscopia de ruptura inducida por láser o \textit{laser induced breakdown spectroscopy} LIBS y fluorescencia de rayos-X o \textit{X-ray fluorescence} XRF \cite{wu2020auto}.
+En este caso como únicamente se busca separar botellas de PET se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre 800 $nm$ y 2500 $nm$ aunque un rango de entre 800 $nm$ y 1100 $nm$ es más que suficiente para la detección y diferenciación entre el PET transparente y el de color.
+Esta tecnología en conjunto con una cámara que pueda generar imágenes hiper-espectrales y contenga un dispositivo de carga acoplada puede ser más que suficiente para realizar la clasificación de las botellas de PET \cite{wu2020auto}.
 
-Los sensores infrarrojos se basan en fotodiodos que pueden estar construidos a partir de cuatro elementos químicos como el silicio ``Si'', el indio ``In'', el galio ``Ga'' o el arsénico ``As'', sin embargo, cabe aclarar que se pueden adquirir fotodiodos hechos a partir de únicamente silicio y fotodiodos construidos a partir arseniuro de indio y galio ``InGaAs''.
+Los sensores infrarrojos se basan en fotodiodos que pueden estar construidos a partir de cuatro elementos químicos como el silicio Si, el indio In, el galio Ga o el arsénico As, sin embargo, cabe aclarar que se pueden adquirir fotodiodos hechos a partir de únicamente silicio y fotodiodos construidos a partir arseniuro de indio y galio InGaAs.
 Cada material y fotodiodo tiene un distinto rango de operación ver Figura \ref{NIRRange}, lo cual nos permite decidir que tipo de diodo es el ideal para la tarea que se desea realizar.
 
 %######################################################
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{img/WVERNG.pdf}
-    \caption{Rango de operación de los fotodiodos ``InGaAs'' \cite{kk2015ingaas}.}
+    \caption{Rango de operación de los fotodiodos InGaAs \cite{kk2015ingaas}.}
     \label{NIRRange}
 \end{figure}
 %######################################################
 
-Basándonos en la gráfica de la Figura \ref{NIRRange} y en el hecho de que el rango necesario para detectar los colores del ``PET'' es de entre los 800 $nm$ y 1100 $nm$ podemos asumir que un fotodiodo de silicio correspondiente al tipo ``S1337-BR'' \cite{kk2015ingaas} es suficiente para el sistema en cuestión, sin embargo, se debe considerar la frecuencia a la cual va a operar el sistema, el área fotosensible que ofrece el sensor y la variedad de modelos que se disponen, considerando estos factores es más factible utilizar un diodo construido a base de arseniuro de indio y galio.
+Basándonos en la gráfica de la Figura \ref{NIRRange} y en el hecho de que el rango necesario para detectar los colores del PET es de entre los 800 $nm$ y 1100 $nm$ podemos asumir que un fotodiodo de silicio correspondiente al tipo S1337-BR'' \cite{kk2015ingaas} es suficiente para el sistema en cuestión, sin embargo, se debe considerar la frecuencia a la cual va a operar el sistema, el área fotosensible que ofrece el sensor y la variedad de modelos que se disponen, considerando estos factores es más factible utilizar un diodo construido a base de arseniuro de indio y galio.
 %######################################################
+{\renewcommand{\baselinestretch}{1.15}
 \begin{figure}[H]
     \centering
  \includegraphics[trim = {0mm 20mm 0mm 30mm},clip,scale=.58]{img/PINTABLEDIODES2.pdf}
-    \caption{Rangos de detección de diodos construidos de ``InGaAs'' \cite{kk2015ingaas}.}
+    \caption{Rangos de detección de diodos construidos de InGaAs \cite{kk2015ingaas}.}
     \label{PINDiodes}
 \end{figure}
+}
 %######################################################
 
-Dada la tabla en la Figura \ref{PINDiodes} podemos observar los diferentes modelos de diodos construidos a partir de ``InGaAs'', sus modelos de referencia y el rango de detección que poseen, con esta información es sencillo seleccionar una serie de construcción. 
+Dada la tabla en la Figura \ref{PINDiodes} podemos observar los diferentes modelos de diodos construidos a partir de InGaAs, sus modelos de referencia y el rango de detección que poseen, con esta información es sencillo seleccionar una serie de construcción. 
 %################################################################
+{\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
-\centering
-\caption{Características de la serie ``G10899''\cite{kk2015ingaas}.}
-\label{G10899CAS}
-\begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Modelo & Área fotosensible & Voltaje en reversa & Enfriamiento & \textit{Fc} $[MHz]$\\ 
-    \hline 
-    G10899-003K  & $\Phi$0.3 $mm$ &  5 $V$   & Ninguno & 150 - 300 $[MHz]$\\
-    \hline 
-    G10899-005K  & $\Phi$0.5 $mm$ &  5 $V$   & Ninguno & 75 - 150 $[MHz]$\\
-    \hline 
-    G10899-01K   & $\Phi$1 $mm$ &  5 $V$   & Ninguno & 25 - 45 $[MHz]$\\
-    \hline 
-    G10899-02K   & $\Phi$2 $mm$ &  2 $V$   & Ninguno & 4 - 10 $[MHz]$\\
-    \hline 
-    G10899-03K   & $\Phi$3 $mm$ &  2 $V$   & Ninguno & 2 - 5 $[MHz]$\\
-    \hline 
-\end{tabular} 
-%\vspace{0.5cm}
-\end{table}
+    \centering
+    \caption{Características de la serie G10899 \cite{kk2015ingaas}.}
+    \label{G10899CAS}
+    \begin{adjustwidth}{-0.9 cm}{0cm}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        Modelo & Área fotosensible & Voltaje en reversa & Enfriamiento & \textit{Fc} $[MHz]$\\ 
+        \hline 
+        G10899-003K  & $\Phi$0.3 $mm$ &  5 $V$   & Ninguno & 150 - 300 $[MHz]$\\
+        \hline 
+        G10899-005K  & $\Phi$0.5 $mm$ &  5 $V$   & Ninguno & 75 - 150 $[MHz]$\\
+        \hline 
+        G10899-01K   & $\Phi$1 $mm$ &  5 $V$   & Ninguno & 25 - 45 $[MHz]$\\
+        \hline 
+        G10899-02K   & $\Phi$2 $mm$ &  2 $V$   & Ninguno & 4 - 10 $[MHz]$\\
+        \hline 
+        G10899-03K   & $\Phi$3 $mm$ &  2 $V$   & Ninguno & 2 - 5 $[MHz]$\\
+        \hline 
+    \end{tabular} 
+    \end{adjustwidth}
+    \end{table}
+}
 %######################################################################
 
 %################################################################
+{\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
-\centering
-\caption{Características de la serie ``G12180''\cite{kk2015ingaas}.}
-\label{G12180CAS}
-\begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Modelo & Área fotosensible & Voltaje en reversa & Enfriamiento & \textit{Fc} $[MHz]$\\ 
-    \hline 
-    G10899-003A  & $\Phi$0.3 $mm$ &  20 $V$   & Ninguno & 450 - 600 $[MHz]$\\
-    \hline 
-    G10899-005A  & $\Phi$0.5 $mm$ &  20 $V$   & Ninguno & 160 - 200 $[MHz]$\\
-    \hline 
-    G10899-010A   & $\Phi$1 $mm$ &  10 $V$   & Ninguno & 25 - 60 $[MHz]$\\
-    \hline 
-    G10899-020A   & $\Phi$2 $mm$ &  5 $V$   & Ninguno & 4 - 13 $[MHz]$\\
-    \hline 
-    G10899-030A   & $\Phi$3 $mm$ &  5 $V$   & Ninguno & 2.5 - 7 $[MHz]$\\
-    \hline
-    G10899-050A   & $\Phi$5 $mm$ &  2 $V$   & Ninguno & 0.5 - 3 $[MHz]$\\
-    \hline
-    G10899-110A  & $\Phi$1 $mm$ &  5 $V$   & TE de una etapa & 20 - 40 $[MHz]$\\
-    \hline 
-    G10899-120A  & $\Phi$2 $mm$ &  5 $V$   & TE de una etapa & 4 - 13 $[MHz]$\\
-    \hline 
-    G10899-130A   & $\Phi$3 $mm$ &  5 $V$   & TE de una etapa & 2.5 - 7 $[MHz]$\\
-    \hline 
-    G10899-150A   & $\Phi$5 $mm$ &  2 $V$   & TE de una etapa & 0.5 - 3 $[MHz]$\\
-    \hline 
-    G10899-210A   & $\Phi$1 $mm$ &  5 $V$   & TE de doble etapa & 20 - 40 $[MHz]$\\
-    \hline
-    G10899-220A   & $\Phi$2 $mm$ &  5 $V$   & TE de doble etapa & 4 - 13 $[MHz]$\\
-    \hline 
-    G10899-230A   & $\Phi$3 $mm$ &  5 $V$   & TE de doble etapa & 2.5 - 7 $[MHz]$\\
-    \hline 
-    G10899-250A   & $\Phi$5 $mm$ &  2 $V$   & TE de doble etapa & 0.5 - 3 $[MHz]$\\
-    \hline 
-\end{tabular} 
-%\vspace{0.5cm}
-\end{table}
+    \centering
+    \caption{Características de la serie G12180 \cite{kk2015ingaas}.}
+    \label{G12180CAS}
+    \begin{adjustwidth}{-1.2cm}{0cm}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        Modelo & Área fotosensible & Voltaje en reversa & Enfriamiento & \textit{Fc} $[MHz]$\\ 
+        \hline 
+        G10899-003A  & $\Phi$0.3 $mm$ &  20 $V$   & Ninguno & 450 - 600 $[MHz]$\\
+        \hline 
+        G10899-005A  & $\Phi$0.5 $mm$ &  20 $V$   & Ninguno & 160 - 200 $[MHz]$\\
+        \hline 
+        G10899-010A   & $\Phi$1 $mm$ &  10 $V$   & Ninguno & 25 - 60 $[MHz]$\\
+        \hline 
+        G10899-020A   & $\Phi$2 $mm$ &  5 $V$   & Ninguno & 4 - 13 $[MHz]$\\
+        \hline 
+        G10899-030A   & $\Phi$3 $mm$ &  5 $V$   & Ninguno & 2.5 - 7 $[MHz]$\\
+        \hline
+        G10899-050A   & $\Phi$5 $mm$ &  2 $V$   & Ninguno & 0.5 - 3 $[MHz]$\\
+        \hline
+        G10899-110A  & $\Phi$1 $mm$ &  5 $V$   & TE de una etapa & 20 - 40 $[MHz]$\\
+        \hline 
+        G10899-120A  & $\Phi$2 $mm$ &  5 $V$   & TE de una etapa & 4 - 13 $[MHz]$\\
+        \hline 
+        G10899-130A   & $\Phi$3 $mm$ &  5 $V$   & TE de una etapa & 2.5 - 7 $[MHz]$\\
+        \hline 
+        G10899-150A   & $\Phi$5 $mm$ &  2 $V$   & TE de una etapa & 0.5 - 3 $[MHz]$\\
+        \hline 
+        G10899-210A   & $\Phi$1 $mm$ &  5 $V$   & TE de doble etapa & 20 - 40 $[MHz]$\\
+        \hline
+        G10899-220A   & $\Phi$2 $mm$ &  5 $V$   & TE de doble etapa & 4 - 13 $[MHz]$\\
+        \hline 
+        G10899-230A   & $\Phi$3 $mm$ &  5 $V$   & TE de doble etapa & 2.5 - 7 $[MHz]$\\
+        \hline 
+        G10899-250A   & $\Phi$5 $mm$ &  2 $V$   & TE de doble etapa & 0.5 - 3 $[MHz]$\\
+        \hline 
+    \end{tabular} 
+    \end{adjustwidth}
+    \end{table}
+}
 %######################################################################
 
-En la tabla \ref{G10899CAS} y tabla \ref{G12180CAS} se muestran los modelos que pertenecen a las respectivas series de fotodiodos y sus características generales, sin embargo, cabe destacar que la serie ``G10899'' \cite{kk2015ingaas} tiene un rango de operación de entre 800 $nm$ y los 1700 $nm$ mientras que la serie ``G12180'' \cite{kk2015ingaas} tiene un rango menor de entre 900 $nm$ y 1700 $nm$, si bien esta diferencia de 100 $nm$ podría o no representar un cambio en la precisión considerable se compensa con el hecho de que la serie ``G12180'' \cite{kk2015ingaas} tiene más opciones que permiten obtener resultados diferentes en cuestiones de eficiencia y velocidad que son factores importantes para la realización del sistema de clasificación, por lo que de momento estas dos series son consideradas aptas para la tarea que se desea llevar a cabo.
+En la tabla \ref{G10899CAS} y tabla \ref{G12180CAS} se muestran los modelos que pertenecen a las respectivas series de fotodiodos y sus características generales, sin embargo, cabe destacar que la serie G10899 \cite{kk2015ingaas} tiene un rango de operación de entre 800 $nm$ y los 1700 $nm$ mientras que la serie G12180 \cite{kk2015ingaas} tiene un rango menor de entre 900 $nm$ y 1700 $nm$, si bien esta diferencia de 100 $nm$ podría o no representar un cambio en la precisión considerable se compensa con el hecho de que la serie G12180 \cite{kk2015ingaas} tiene más opciones que permiten obtener resultados diferentes en cuestiones de eficiencia y velocidad que son factores importantes para la realización del sistema de clasificación, por lo que de momento estas dos series son consideradas aptas para la tarea que se desea llevar a cabo.
 
 \subsubsection{Sistema de acondicionamiento de señal}
 Los sistemas de acondicionamiento de señales usualmente consisten en circuitos electrónicos que ejercen funciones como amplificación, cambio de nivel \textit{(level shifting)}, filtrado, acople de impedancias y modulación \cite{pallas2012sensors}.
@@ -551,13 +563,15 @@ En función de estás características se procede con el diseño particular del 
 \subsubsection{Procesamiento de los datos de los sensores}
 
 Existen varios métodos para la extracción y manejo de los datos provenientes de los sensores basados en espectroscopia infrarroja dado que es una tarea compleja.
-Algunos de esto métodos son; \textit{Principal Component Analysis} ``PCA'' \cite{serranti2013classification}, \textit{Linear Discriminant Analysis} ``LDA'' \cite{de1999selecting}, y \textit{Support Vector Machine} ``SVM'' \cite{noble2006support}.
+Algunos de esto métodos son; \textit{Principal Component Analysis} PCA \cite{serranti2013classification}, \textit{Linear Discriminant Analysis} LDA \cite{de1999selecting}, y \textit{Support Vector Machine} SVM \cite{noble2006support}.
 Los métodos de arriba se consideraran para identificar si los elementos que compondrán el sistema automatizado cumplen con criterios de diseño asequible.
-
+% 
+% 
+{\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
     \caption{Sistemas comerciales para la clasificación de diferentes tipos de plásticos reciclables \cite{Angeles2021}. }
     \label{Sistemas}
-    \begin{tabular}{c m{33 em}}
+    \begin{tabular}{c m{31 em}}
          \hline
            Sistema & Ventajas \\  
          \hline
@@ -572,6 +586,7 @@ Los métodos de arriba se consideraran para identificar si los elementos que com
             1 - \textit{BottleSort}, 2- \textit{Poly-Sort}, 3- \textit{Near infrared spectroscopic} y VS-2 \\
          \end{tabular}
 \end{table}
+}
 % \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -579,9 +594,9 @@ Los métodos de arriba se consideraran para identificar si los elementos que com
 
 %-alusión a la hipótesis 
 \begin{itemize}
-    \item Existen metodologías que combinadas pueden ayudar a determinar los elementos necesarios para un sistema de clasificación de botellas ``PET''.
-    \item Proponiendo solo un sensor de ``InGaAs'' podemos identificar que elementos mecánicos, eléctricos y electrónicos son necesarios.
-    \item La combinación de los métodos, como ``PCA'' así como tecnologías en la adquisición de datos son suficientes para proponer una metodología para clasificar botellas ``PET'' post-consumo.
+    \item Existen metodologías que combinadas pueden ayudar a determinar los elementos necesarios para un sistema de clasificación de botellas PET.
+    \item Proponiendo solo un sensor de InGaAs podemos identificar que elementos mecánicos, eléctricos y electrónicos son necesarios.
+    \item La combinación de los métodos, como PCA así como tecnologías en la adquisición de datos son suficientes para proponer una metodología para clasificar botellas PET post-consumo.
 \end{itemize}
 % 
 % 
@@ -590,13 +605,13 @@ Los métodos de arriba se consideraran para identificar si los elementos que com
 \centering{\section{HIPÓTESIS}}
 \justifying
 
-% Al utilizar y combinar diferentes metodologías ya existentes se pueda desarrollar una sola metodología que permita seleccionar de manera objetiva, teórica y correcta los componentes que formarán parte de un sistema de clasificación de botellas de ``PET'' post-consumo con el fin de obtener el correcto y más óptimo funcionamiento posible permitiendo que se obtenga un sistema de clasificación confiable y viable.
+% Al utilizar y combinar diferentes metodologías ya existentes se pueda desarrollar una sola metodología que permita seleccionar de manera objetiva, teórica y correcta los componentes que formarán parte de un sistema de clasificación de botellas de PET post-consumo con el fin de obtener el correcto y más óptimo funcionamiento posible permitiendo que se obtenga un sistema de clasificación confiable y viable.
 
 % Propuesta para la hipótesis
 
-Mediante la combinación de tecnologías existentes para la clasificación de botellas  ``PET'' post-consumo se puede desarrollar una nueva metodología basada en las características de los diodos ``InGaAs'' y en su interacción con elementos mecánicos, eléctricos y electrónicos que permita desarrollar un sistema asequible. 
+Mediante la combinación de tecnologías existentes para la clasificación de botellas  PET post-consumo se puede desarrollar una nueva metodología basada en las características de los diodos InGaAs y en su interacción con elementos mecánicos, eléctricos y electrónicos que permita desarrollar un sistema asequible. 
 
-% Al combinar diferentes metodologías ya existentes se puede desarrollar una nueva que permita seleccionar los elementos que interactuaran con un sistema de clasificación de botellas de ``PET'' post-consumo, basándose en las características de los diodos ``InGaAs'' para obtener el correcto funcionamiento considerando la interacción de elementos mecánicos, eléctricos y electrónicos permitiendo que se obtenga un sistema de clasificación asequible, confiable y viable.
+% Al combinar diferentes metodologías ya existentes se puede desarrollar una nueva que permita seleccionar los elementos que interactuaran con un sistema de clasificación de botellas de PET post-consumo, basándose en las características de los diodos InGaAs para obtener el correcto funcionamiento considerando la interacción de elementos mecánicos, eléctricos y electrónicos permitiendo que se obtenga un sistema de clasificación asequible, confiable y viable.
 
 % Propuesta de Juan Pablo
 % Al implementar una metodología sistemática es posible determinar los elementos que interactuarán con un sistema de clasificación de botellas “PET” Post-consumo. A partir de conocer las características de los diodos “InGaAs” y su interacción con los elementos mecánicos, eléctricos y electrónicos se obtendrá un sistema de clasificación novedoso.
@@ -605,17 +620,17 @@ Mediante la combinación de tecnologías existentes para la clasificación de bo
 \newpage
 \centering{\section{OBJETIVO}}
 \justifying
-% Desarrollar una metodología especifica en función de metodologías ya existentes que permita seleccionar los componentes con las características idóneas y suficientes para el correcto funcionamiento de un sistema de clasificación de botellas de ``PET'' post-consumo.
+% Desarrollar una metodología especifica en función de metodologías ya existentes que permita seleccionar los componentes con las características idóneas y suficientes para el correcto funcionamiento de un sistema de clasificación de botellas de PET post-consumo.
 
 % Objetivo general
 Desarrollar e implementar una metodología que permita seleccionar los componentes significativos que contribuyen al correcto funcionamiento de un sistema de clasificación de “PET” post-consumo utilizando tecnologías previas en un periodo de un año y medio aproximadamente.
 
 \subsection{Objetivos específicos }
 \begin{itemize}
-    \item Diseñar y desarrollar un sistema de acondicionamiento de señal para el diodo de ``InGaAs''.
+    \item Diseñar y desarrollar un sistema de acondicionamiento de señal para el diodo de InGaAs.
     \item Justificar a partir de una metodología los elementos eléctricos y electrónicos que interactuarán en el sistema.
-    \item Determinar una metodología a partir de las características de los diodos ``InGaAs'' para seleccionar los elementos mecánicos.
-    \item Comparar el comportamiento del diodo ``InGaAs'' con los distintos elementos electrónicos y eléctricos del sistema.
+    \item Determinar una metodología a partir de las características de los diodos InGaAs para seleccionar los elementos mecánicos.
+    \item Comparar el comportamiento del diodo InGaAs con los distintos elementos electrónicos y eléctricos del sistema.
 \end{itemize}
 % 
 % 
@@ -624,33 +639,35 @@ Desarrollar e implementar una metodología que permita seleccionar los component
 \justifying
 
 Por el método de la observación y el análisis estadístico se llevara acabo este trabajo de investigación. 
-El estudio y la recolección de los datos se realizarán en la ciudad de Querétaro, en los laboratorios de automatización de la facultad de ingeniería ``UAQ''. 
+El estudio y la recolección de los datos se realizarán en la ciudad de Querétaro, en los laboratorios de automatización de la facultad de ingeniería UAQ. 
 El período de investigación se llevara acabo a partir de enero de 2022 y se estima que se termine el desarrollo en febrero de 2023, véase \ref{CronAct}. 
 Para empezar con la metodología de una mejor forma se definirá el nivel de abstracción inicial para el diseño eléctrico, y mecánico, se realizara una descomposición jerárquica, definiendo la estructura de nuevos niveles jerárquicos, estableciendo los niveles de potencia y control para desarrollar la arquitectura necesaria, y finalmente, seleccionar la tecnología que se va a utilizar.
+% 
+% 
+\subsection{Diseño y desarrollo del sistema de acondicionamiento de señal para el diodo de InGaAs}
 
-\subsection{Diseño y desarrollo del sistema de acondicionamiento de señal para el diodo de ``InGaAs''.}
 Para realizar el sistema de acondicionamiento de señal, primero se requiere conocer los rangos de operación del diodo y las características que este posee para trabajar bajo distintas condiciones ambientales.
 Para ello es necesario consultar la hoja de datos y obtener el tipo de señal de salida que el diodo envía y que será procesada para que sea una señal limpia y que permita tener errores mínimos en la medición.
 
 
-\subsubsection{Definición del mensurando para la medición de la longitud de onda en el diodo ``InGaAs''}
+\subsubsection{Definición del mensurando para la medición de la longitud de onda en el diodo InGaAs}
 
-Para la medición de la longitud de onda se considera al mensurando como la corriente eléctrica que pasa por un foto-diodo de ``InGaAs'', la medición es de manera indirecta debido a las propiedades del sensor que al variar la iluminancia que pasa por el material expuesto se refleja y cambia la longitud de onda en el foto-diodo y su resistencia cambia.
+Para la medición de la longitud de onda se considera al mensurando como la corriente eléctrica que pasa por un foto-diodo de InGaAs, la medición es de manera indirecta debido a las propiedades del sensor que al variar la iluminancia que pasa por el material expuesto se refleja y cambia la longitud de onda en el foto-diodo y su resistencia cambia.
 Al variar la resistencia del foto-diodo debido al cambio de iluminancia y al \textbf{V} inducido, la \textbf{I} cambiará, dependiendo de esta variación y se puede calcular la longitud de onda. 
 Si la relación entre \textbf{V} e \textbf{I} es lineal, decimos que estamos en presencia de un material o componente óhmico y la relación que describe este comportamiento se conoce como ley de Ohm.
 
-\subsubsection{Justificación para el desarrollo de un sistema de acondicionamiento de señal para el diodo de ``InGaAs''}
-Dado que se trabajará con un diodo de ``InGaAs'' por si sólo entonces se requiere de un sistema que permita al controlador interpretar los datos provenientes del diodo de una manera más sencilla y exacta con el fin de obtener una mayor precisión en la clasificación del ``PET''. 
+\subsubsection{Justificación para el desarrollo de un sistema de acondicionamiento de señal para el diodo de InGaAs}
+
+Dado que se trabajará con un diodo de InGaAs por si sólo entonces se requiere de un sistema que permita al controlador interpretar los datos provenientes del diodo de una manera más sencilla y exacta con el fin de obtener una mayor precisión en la clasificación del PET. 
 Para esto se estudiarán las propiedades del diodo, el tipo de salida que envía al realizar una medición y su comportamiento con diferentes elementos como amplificadores operacionales, filtros y en función de ello comenzar con la selección de componentes para las etapas de amplificación y filtrado de la señal de salida del sensor.
 
 \subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
 
 De manera general se requiere utilizar un microcontrolador para ejecutar todas las tareas que el sistema de clasificación requiera y también se debe considerar el apartado de potencia puesto que se utilizara cuando menos un motor y una banda transportadora.
-
 Un microcontrolador es un componente electrónico que en una sola pastilla o circuito integrado incluye la memoria, puertos y algunos periféricos \cite{del1999sistemas}.
 Para la selección de este componente es necesario considerar aspectos de frecuencia de operación, número de entradas y salidas digitales, número de puertos de conversión A/D, número de \textit{TIMERS} disponibles, etc. \cite{del1999sistemas}.
 Así mismo, se planea considerar el tipo de conectores y elementos necesarios para realizar una etapa de potencia ideal para que el sistema de clasificación funcione correctamente manteniendo la seguridad como premisa principal.
-Dado que se utilizará al diodo de ``InGaAs'' como componente principal para el trabajo de espectroscopia, se deben considerar aquellos factores de ruido que puedan provocar fallas en su funcionamiento, para ello es crucial identificar dichos factores y determinar cual sería la manera más idónea para eliminarlos con el fin de permitir que el diodo y sus futuras etapas de amplificación y de filtrado funcionen correctamente mediante la información que del elemento. 
+Dado que se utilizará al diodo de InGaAs como componente principal para el trabajo de espectroscopia, se deben considerar aquellos factores de ruido que puedan provocar fallas en su funcionamiento, para ello es crucial identificar dichos factores y determinar cual sería la manera más idónea para eliminarlos con el fin de permitir que el diodo y sus futuras etapas de amplificación y de filtrado funcionen correctamente mediante la información que del elemento. 
 Dicha información puede ser obtenida mediante la hoja de datos característica del dispositivo y esto puede ser realizado de manera similar con cada componente que vaya a formar parte del sistema, ya sea en la parte de control o en la parte de potencia.
 Otro factor a considerar es el hecho de que cada componente funciona de manera diferente en función del entorno que lo rodea puesto que todo semiconductor puede verse afectado en su función debido a la temperatura exterior \cite{malvino1991principios}.
 Por ende, será necesario utilizar instrumentos de medición como voltímetros, amperímetros u otro equipo que nos permita analizar e identificar posibles alteraciones en el funcionamiento esperado para poder realizar las correcciones necesarias con el fin de obtener el funcionamiento deseado en el sistema.
@@ -666,12 +683,12 @@ Por ende, será necesario utilizar instrumentos de medición como voltímetros, 
 % De manera general la parte mecánica del sistema de clasificación se compone de una banda transportadora, un motor para dicha banda transportadora y un sistema que permita sostener el sistema eléctrico-electrónico encargado de realizar en forma la clasificación.
 De manera general se propone para la parte mecánica del sistema de clasificación una banda transportadora, un motor para dicha banda transportadora y un sistema que permita sostener el sistema eléctrico-electrónico encargado de realizar en forma la clasificación, véase la Figura \ref{fig:imgMecanico}.
 
-La determinación de estos objetos se propone realizarse en función de las características de las botellas de ``PET'' y del espacio del que se dispone para el sistema de clasificación.
+La determinación de estos objetos se propone realizarse en función de las características de las botellas de PET y del espacio del que se dispone para el sistema de clasificación.
 Otro factor a considerar para esta metodología es el espacio de los eléctricos y electrónicos que se utilizaran tanto en el funcionamiento del sensor como en el funcionamiento de elementos previamente mencionados como el motor o la banda transportadora, como el fin de que se mantenga una distribución de cables y conexiones discreta y manteniendo el mínimo requerimiento de seguridad.
 
 Dado que se trabajará con espectroscopia y se planea el uso de una cámara entonces también es otro factor a considerar puesto que se requiere de una fuente de luz estable y constante, para ello la implementación de una estructura aislada sobre la estructura principal es indispensable, en ese sentido, dentro de la metodología debe indicarse que factores permiten el aislamiento de una sección de factores externos como la luz y/o las vibraciones que se puedan presentar en otras secciones del sistema.
 
-Finalmente para la parte que se encargará en forma de separar las botellas de ``PET'' se propone la implementación de pistones neumáticos.
+Finalmente para la parte que se encargará en forma de separar las botellas de PET se propone la implementación de pistones neumáticos.
 Para esta implementación en la metodología es necesario considerar factores como longitud, peso, velocidad de accionamiento, tipo de accionamiento y la presión mínima que requiere el pistón para ejecutar la tarea de manera óptima \cite{sole2012neumatica}.
 
 Todo esto se realizará en función de las características de cada elemento mecánico, eléctrico y electrónico que pueda formar parte del sistema de clasificación, así mismo, se utilizarán herramientas como las \textit{Core Tools} que son herramientas que en la industria automotriz permiten diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
@@ -679,14 +696,15 @@ Todo esto se realizará en función de las características de cada elemento mec
 %############################################
 \begin{figure}[H]
 
-    \begin{subfigure}{0.5\textwidth}
+    \begin{subfigure}{0.49\textwidth}
         \includegraphics[width=0.9\linewidth, height=7cm]{img/Desing00_05-azul.JPG} 
-        % \caption{}
+        \caption{Vista lateral del sistema de identificación.}
         \label{fig:subim1}
     \end{subfigure}
-    \begin{subfigure}{0.5\textwidth}
-        \includegraphics[width=0.9\linewidth, height=8cm]{img/Desing00_00-azul.JPG}
-        % \caption{}
+    \hfill
+    \begin{subfigure}{0.49\textwidth}
+        \includegraphics[width=0.9\linewidth, height=7cm]{img/Desing00_00-azul.JPG}
+        \caption{Vista general del sistema.}
         \label{fig:subim2}
     \end{subfigure}
 
@@ -697,7 +715,7 @@ Todo esto se realizará en función de las características de cada elemento mec
 %############################################
 
 % Para poder identificar si los elementos son los adecuados.
-% Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de ``PET'' a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
+% Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de PET a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
 % Con esto y teniendo en cuenta que la clasificación en la sección de sensores de realizara de botella en botella entonces el peso en la banda transportadora no pasaría de 5kg, por ende, no es necesario recurrir a un motor muy potente ni a una tensión alta en la banda para poder desplazar el contenido.
 
 %Por otro lado, suponiendo de que las botellas caerán a través de un embudo a la banda transportadora entonces se debe considerar por mera seguridad que estás salgan eyectadas hacía los laterales, siendo este el caso se deben colocar paredes de un metal que sea ligero pero lo suficientemente resistente para que no se deforme debido a los impactos y permita que las botellas se mantengan dentro de la banda transportadora en todo momento. 
@@ -723,20 +741,11 @@ Se busca minimizar los factores de ruido que con la interacción de todos los fa
 % ###############################################
 \subsubsection{Análisis de componentes principales para la identificación de los elementos}
 
-El método de ``PCA'' se utilizara para explicar la cantidad máxima de varianza con el menor número de componentes.
-``PCA'' analizara los elementos principales de múltiples características, exponiendo su naturaleza y resaltando sus principales características, acortando las dimensiones de los datos. 
-% ``PCA'' establecerá un método para disminuir la dimensión de los datos.
+El método de PCA se utilizara para explicar la cantidad máxima de varianza con el menor número de componentes.
+PCA analizara los elementos principales de múltiples características, exponiendo su naturaleza y resaltando sus principales características, acortando las dimensiones de los datos. 
+% PCA establecerá un método para disminuir la dimensión de los datos.
 El análisis de componentes principales se utilizará para describir la variación en los conjuntos de variables correlacionadas reduciendo la complejidad ayudando a la interpretación de los datos y la reducción del ruido o variables que se tienen que monitorear.
 % ###############################################
-
-\subsection{Cronograma del plan de trabajo}
-
-\begin{figure}[H]
-    \centering
- \includegraphics[trim = {0mm 20mm 0mm 15mm},clip,scale=.50]{img/CronogramaPT.pdf}
-    \caption{Cronograma de actividades.}
-    \label{CronAct}
-\end{figure}
 % 
 % 
 \newpage
@@ -757,12 +766,13 @@ En la figura \ref{fig:Imagen17} se ilustra el moto reductor que se utilizo, con 
 %############################################
 \begin{figure}[H]
 
-    \begin{subfigure}{0.5\textwidth}
+    \begin{subfigure}{0.49\textwidth}
         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen17.jpg} 
         % \caption{}
         \label{fig:subim1}
     \end{subfigure}
-    \begin{subfigure}{0.5\textwidth}
+    \hfill
+    \begin{subfigure}{0.49\textwidth}
         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen18.jpg}
         % \caption{}
         \label{fig:subim2}
@@ -783,12 +793,13 @@ Dos botones de dos polos dos tiros para dar pulsos ya sea de frente o de reversa
 %############################################
 \begin{figure}[H]
 
-    \begin{subfigure}{0.5\textwidth}
+    \begin{subfigure}{0.49\textwidth}
         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen13.jpg} 
         % \caption{}
         \label{fig:subim1}
     \end{subfigure}
-    \begin{subfigure}{0.5\textwidth}
+    \hfill
+    \begin{subfigure}{0.49\textwidth}
         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen14.jpg}
         % \caption{}
         \label{fig:subim2}
@@ -802,13 +813,13 @@ Dos botones de dos polos dos tiros para dar pulsos ya sea de frente o de reversa
 % 
 \subsubsection{Programa de arranque de motores}
 
-Para que la experimentación y la adquisición de todos los datos se desarrollo una página web que junto con el servidor del ``PLC'' funcionan para activar y desactivar los motores de la banda transportadora y del sistema de identificación.
-Por recomendación del fabricante se recomienda utilizar el navegador web ``Firefox''.
+Para que la experimentación y la adquisición de todos los datos se desarrollo una página web que junto con el servidor del PLC funcionan para activar y desactivar los motores de la banda transportadora y del sistema de identificación.
+Por recomendación del fabricante se recomienda utilizar el navegador web Firefox.
 En la Tabla \ref{tab:motor_DB} se detallan los tipos de variables que se utilizaron para el motor 1 y para el motor 2.
-Físicamente cada ``PLC'' tiene un numero limitado de entradas y eso dificulta la automatización cuando se requieren de muchas entradas. 
-La finalidad principal de hacer una pagina web para controlar las entradas de los motores es por las ventajas que proporciona al poder definir n cantidad de entradas y procesar esa información internamente con el ``PLC''. 
+Físicamente cada PLC tiene un numero limitado de entradas y eso dificulta la automatización cuando se requieren de muchas entradas. 
+La finalidad principal de hacer una pagina web para controlar las entradas de los motores es por las ventajas que proporciona al poder definir n cantidad de entradas y procesar esa información internamente con el PLC. 
 En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el sistema mecánico para funcionar.
-
+{\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
     \centering
     \caption{motor\_ DB[DB1] y motor\_ DB\_Dos[DB3]}
@@ -843,7 +854,9 @@ En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el si
     \end{adjustwidth}
     \label{tab:motor_DB}
 \end{table}
-% 
+}
+%
+{\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
     \centering
     \caption{TestDB[DB2]}
@@ -873,6 +886,7 @@ En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el si
     \end{adjustwidth}
     \label{tab:TestDB}
 \end{table}
+}
 % 
 % 
 En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servidor web con el PLC.
@@ -890,12 +904,13 @@ En las siguientes Figuras \ref{fig:network_1-2}, \ref{fig:network-3}, \ref{fig:F
 se describen el programa que se utilizo para controlar los motores.
 %############################################
 \begin{figure}[H]
-    \begin{subfigure}{0.5\textwidth}
+    \begin{subfigure}{0.49\textwidth}
         \includegraphics[width=0.9\linewidth, height=9cm]{img/network-1.png} 
         \caption{Red 1 del motor número uno.}
         \label{img:network-1}
     \end{subfigure}
-    \begin{subfigure}{0.5\textwidth}
+    \hfill
+    \begin{subfigure}{0.49\textwidth}
         \includegraphics[width=0.9\linewidth, height=9cm]{img/network-2.png}
         \caption{Red 2 del motor número dos.}
         \label{img:network-2}
@@ -905,10 +920,10 @@ se describen el programa que se utilizo para controlar los motores.
     \label{fig:network_1-2}
 \end{figure}
 %############################################
-La función de sistema ``WWW'' se llama en el OB1.
+La función de sistema WWW se llama en el OB1.
 Esta función inicializa el servidor web de la CPU.
 La llamada cíclica de la función en el OB1 permite la interacción entre el servidor web y el controlador.
-El Web DB (DB 333) está conectado a la función ``WWW''. 
+El Web DB (DB 333) está conectado a la función WWW. 
 La base de datos web y la base de datos de fragmentos almacenan la estructura de las páginas definidas por el usuario, véase la Figura \ref{fig:network-3}. 
 % 
 \begin{figure}[H]
@@ -918,8 +933,8 @@ La base de datos web y la base de datos de fragmentos almacenan la estructura de
     \label{fig:network-3}
 \end{figure}
 %
-En la Figura \ref{fig:FB_network-1} se describe la primer red del bloque de función que se determino en el ``PLC''. 
-Consta de un disparador que se activa cuando el ``PLC'' hace su primer escaneo del sistema y sirve para inicializar todas las redes del programa.
+En la Figura \ref{fig:FB_network-1} se describe la primer red del bloque de función que se determino en el PLC. 
+Consta de un disparador que se activa cuando el PLC hace su primer escaneo del sistema y sirve para inicializar todas las redes del programa.
 % 
 \begin{figure}[H]
     \centering
@@ -970,11 +985,11 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 
 % 
 % \begin{itemize}
-%     \item Obtener una metodología basada en el funcionamiento de los diodos de ``InGaAs''.
-%     \item Desarrollar un sistema de acondicionamiento de señal para diodo de ``InGaAs''.
-%     \item Simular el comportamiento del diodo de ``InGaAs'' y los componentes mecánicos para la automatización.
-%     \item Aplicar herramientas estadísticas como ``PCA'' poder determinar los elementos para el sistema de clasificación.
-%     \item Buscar la obtención de un artículo ``JCR''.
+%     \item Obtener una metodología basada en el funcionamiento de los diodos de InGaAs.
+%     \item Desarrollar un sistema de acondicionamiento de señal para diodo de InGaAs.
+%     \item Simular el comportamiento del diodo de InGaAs y los componentes mecánicos para la automatización.
+%     \item Aplicar herramientas estadísticas como PCA poder determinar los elementos para el sistema de clasificación.
+%     \item Buscar la obtención de un artículo JCR.
 %     \item Comprobar que con la metodología obtenida se da la opción para la realización de un diseño asequible.
 %     \item Generar una presentación de un plan de negocios.
 % \end{itemize}
@@ -992,7 +1007,385 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 %     \item \textbf{HDPE}. ”\textit{High Density Polyethylene}”
 % \end{itemize}
 % 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Diseño mecánico y sistema de control}
+
+\subsubsection{Diseño eléctrico del sistema de clasificación}
+
+
+En la figura \ref{fig:Imagen117} se ilustra el moto reductor que se utilizo, con 1750 revoluciones por minuto y con un reductor de cien a uno lo que equivale a dar dieciocho vueltas en un minuto.
+%
+%############################################
+\begin{figure}[h]
+    % \begin{subfigure}{0.5\textwidth}
+    \centering
+        \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.2]{img/MOTOREDUCTOR.pdf} 
+\end{figure}
+
+En la figura \ref{fig:Imagen17} se ilustra el moto reductor que se utilizo, con 1750 revoluciones por minuto y con un reductor de cien a uno lo que equivale a dar dieciocho vueltas en un minuto.
 % 
+% 
+%############################################
+% \begin{figure}[H]
+
+%     \begin{subfigure}{0.5\textwidth}
+%         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen17.jpg} 
+
+%         % \caption{}
+%         \label{fig:subim1}
+%     \end{subfigure}
+%     \hfill
+%     \begin{subfigure}{0.5\textwidth}
+
+%     \centering
+%         \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.2]{img/MOTOREDUCTOR2.pdf} 
+
+%         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen18.jpg}
+
+%         % \caption{}
+%         \label{fig:subim2}
+%     \end{subfigure}
+%     \hfill
+
+%     \caption{Motor utilizado}
+%     \label{fig:Imagen117}
+
+%     \caption{Moto-reductor en el sistema mecánico.}
+%     \label{fig:Imagen17}
+
+% \end{figure}
+%############################################
+% 
+% 
+
+En las figuras \ref{fig:subim1} y \ref{fig:subim2}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor.
+Consta de 5 botones; 2 botones habilitadores de cada motor que son parte del ''PLC´´, 2 botones para indicar el giro del motor y 1 botón de paro total.
+% 
+% 
+%############################################
+\begin{figure}[H]
+    \centering
+    \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.5,angle=-90]{img/MOTOR_ConnectionDiag.pdf} 
+    \caption{Diagrama de conexiones para el motor.}
+    \label{fig:subim1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[trim = {1mm 1mm 30mm 1mm},clip,scale=0.5,angle=-90]{img/MOTOR_ConnectionPDiag.pdf} 
+    \caption{Diagrama de conexiones de potencia.}
+    \label{fig:subim2}
+\end{figure}
+
+En las figuras \ref{fig:Imagen13}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor.
+Tiene cinco botones uno de paro de emergencia. 
+Dos de arranca de color verde uno para ir al frente y otro para reversa.
+Dos botones de dos polos dos tiros para dar pulsos ya sea de frente o de reversa.
+% 
+% 
+%############################################
+\begin{figure}[H]
+    \begin{subfigure}{0.49\textwidth}
+        \includegraphics[width=\textwidth, height=8cm]{img/Imagen13.jpg} 
+        % \caption{}
+        \label{fig:subim1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.49\textwidth}
+        \includegraphics[width=\textwidth, height=8cm]{img/Imagen14.jpg}
+        % \caption{}
+        \label{fig:subim2}
+    \end{subfigure}
+
+    \caption{Pruebas de las conexiones en la etapa de potencia.}
+    \label{fig:Imagen13}
+
+\end{figure}
+%############################################
+% 
+% 
+\subsubsection{Programa de arranque de motores}
+
+Para que la experimentación y la adquisición de todos los datos se desarrollo una página web que junto con el servidor del PLC funcionan para activar y desactivar los motores de la banda transportadora y del sistema de identificación.
+
+Por recomendación del fabricante, se recomienda utilizar el navegador web Firefox.
+
+Por recomendación del fabricante se recomienda utilizar el navegador web Firefox.
+
+En la Tabla \ref{tab:motor_DB} se detallan los tipos de variables que se utilizaron para el motor 1 y para el motor 2.
+Físicamente cada PLC tiene un numero limitado de entradas y eso dificulta la automatización cuando se requieren de muchas entradas. 
+La finalidad principal de hacer una pagina web para controlar las entradas de los motores es por las ventajas que proporciona al poder definir n cantidad de entradas y procesar esa información internamente con el PLC. 
+En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el sistema mecánico para funcionar.
+
+{\renewcommand{\baselinestretch}{1.15}
+\begin{table}[H]
+    \centering
+    \caption{motor\_ DB[DB1] y motor\_ DB\_Dos[DB3]}
+    \begin{adjustwidth}{2cm}{0cm}
+        \begin{tabular}{c c c c c}
+             \hline
+            id & Nombre & Tipo de dato & Nombre & Tipo de dato \\
+             \hline
+              & Entrada &  \\
+             \hline
+            1 & reset & Bool & reset & Bool\\
+            2 & start & Bool& start & Bool\\
+            3 & inicioAdelante & Bool& inicioAdelante & Bool\\
+            4 & stop & Bool& stop & Bool\\
+            5 & inicioAtras & Bool& inicioAtras & Bool\\
+            6 & pasoAdelante & Bool& pasoAdelante & Bool\\
+            7 & pasoAtras & Bool& pasoAtras & Bool\\
+             \hline
+             & Salida &  \\
+             \hline
+            8 & adelante & Bool& adelante & Bool\\
+            9 & atras & Bool& atras & Bool\\
+            10 & Enable & Bool& Enable & Bool\\
+             \hline
+            & Estática &  \\
+             \hline
+            11 & R\_Trig\_reset & R\_TRIG& R\_Trig\_reset & R\_TRIG\\
+            12 & Step & Array[0..2]& Step & Array[0..2]\\
+            13 & pulso & Array[0..2]& pulso & Array[0..2]\\
+            \hline
+        \end{tabular}
+    \end{adjustwidth}
+    \label{tab:motor_DB}
+\end{table}
+}
+%
+{\renewcommand{\baselinestretch}{1.15}
+\begin{table}[H]
+    \centering
+    \caption{TestDB[DB2]}
+    \begin{adjustwidth}{5cm}{0cm}
+        \begin{tabular}{c c c}
+             \hline
+            id & Nombre & Tipo de dato \\
+             \hline
+              & Estática &  \\
+             \hline
+            1 & ResetWeb & Bool\\
+            2 & StartWeb & Bool\\
+            3 & InicioAdelanteWeb &	Bool\\
+            4 & StopWeb & Bool\\
+            5 & InicioAtrasWeb & Bool\\
+            6 & pasoAdelanteWeb & Bool\\
+            7 & pasoAtrasWeb & Bool\\
+            8 & ResetWeb\_2 & Bool\\
+            9 & StartWeb\_2 & Bool\\
+            10 & InicioAdelanteWeb\_2 & Bool\\
+            11 & StopWeb\_2 & Bool\\
+            12 & InicioAtrasWeb\_2 &	Bool\\
+            13 & pasoAdelanteWeb\_2 & Bool\\
+            14 & pasoAtrasWeb\_2 & Bool\\
+            \hline
+        \end{tabular}
+    \end{adjustwidth}
+    \label{tab:TestDB}
+\end{table}
+}
+% 
+% 
+En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servidor web con el PLC.
+%
+%
+\begin{figure}[h]
+    \centering
+     \includegraphics[trim = {1mm 40mm 1mm 50mm},clip,scale=0.60]{img/PLC_WEBSERVER.pdf}
+    \caption{Diseño del \textit{Web Server}.}
+    \label{fig:webPLC.JPG}
+\end{figure}
+%
+%############################################
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.65,angle=-90]{img/PLC_GRAFCET.pdf}
+    \caption{\textit{Grafcet} utilizado para realizar el código del PLC.}
+    \label{fig:grafcet}
+\end{figure}
+
+%############################################
+% 
+En las siguientes Figuras \ref{fig:grafcet}, \ref{fig:network-1}, \ref{fig:network-2} \ref{fig:network_3-4}, \ref{fig:network-5}, \ref{fig:FCM1_network-1}, \ref{fig:FCM1_network-2}, \ref{fig:FCM1_network-3}, \ref{fig:FCM1_network-4}, \ref{fig:FCM1_network-5}
+se describen el programa que se utilizo para controlar los motores.
+%############################################
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.50]{img/PLCODE_Network1.pdf}
+    \caption{Diagrama de bloques del PLC para el servidor web.}
+    \label{fig:grafcet}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics{img/webPLC.JPG}
+    \caption{Diagrama de bloques del PLC para el servidor web.}
+    \label{fig:webPLC.JPG}
+\end{figure}
+% 
+% 
+En las siguientes Figuras \ref{fig:network_1-2}, \ref{fig:network-3}, \ref{fig:FB_network-1}, \ref{fig:FB_network-2}, \ref{fig:FB_network-3}, \ref{fig:FB_network-4}, \ref{fig:FB_network-5}, \ref{fig:FB_network-6}.
+se describen el programa que se utilizo para controlar los motores.
+% 
+% 
+\begin{figure}[H]
+    \begin{subfigure}{0.5\textwidth}
+        \includegraphics[width=0.9\linewidth, height=8cm]{img/network-1.png} 
+        \caption{Red 1 del motor número uno.}
+        \label{img:network-1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.4\textwidth}
+        \includegraphics[width=0.9\linewidth, height=8cm]{img/network-2.png}
+        \caption{Red 2 del motor número dos.}
+        \label{img:network-2}
+    \end{subfigure}
+
+    \caption{Descripción los bloques de código que controlan los motores.}
+    \label{fig:network_1-2}
+\end{figure}
+
+%############################################
+La función de sistema WWW se llama en el OB1.
+Esta función inicializa el servidor web de la CPU.
+La llamada cíclica de la función en el OB1 permite la interacción entre el servidor web y el controlador.
+El Web DB (DB 333) está conectado a la función WWW. 
+
+La base de datos web y la base de datos de fragmentos almacenan la estructura de las páginas definidas por el usuario, véase la Figura \ref{fig:network-1}.
+% 
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {1mm 30mm 1mm 1mm},clip,scale=0.5]{img/PLCODE_Network1.pdf}
+    \caption{Red 1, inicialización del proceso y el \textit{Web Server} mediante el \textit{First Scan} del PLC.}
+    \label{fig:network-1}
+\end{figure}
+%
+En la Figura \ref{fig:network-1} se describe la primer red del bloque de función que se determino en el PLC. 
+
+La base de datos web y la base de datos de fragmentos almacenan la estructura de las páginas definidas por el usuario, véase la Figura \ref{fig:network-3}.
+% 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth, height=4cm]{img/network-3.png}
+    \caption{Red 3, Esta función de bloque inicializa el servidor web de la CPU.}
+    \label{fig:network-3}
+\end{figure}
+%
+En la Figura \ref{fig:FB_network-1} se describe la primer red del bloque de función que se determino en el PLC. 
+
+Consta de un disparador que se activa cuando el PLC hace su primer escaneo del sistema y sirve para inicializar todas las redes del programa.
+% 
+\begin{figure}[H]
+    \centering
+
+     \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.5]{img/PLCODE_Network2.pdf}
+    \caption{Red 2, habilitador de los motores para proceder a su funcionamiento.}
+    \label{fig:network-2}
+\end{figure}
+%
+En la Figura \ref{fig:network-2} se describe la acción que se toma una vez que se ejecuto la red 0, la cual espera a que se active el paso cero con el botón de \textbf{start}.
+% 
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {1mm 30mm 1mm 1mm},clip,scale=0.5]{img/PLCODE_Network3_4.pdf}
+    \caption{Red 3 y 4, \textit{Function Block} del motor 1 y 2 que continen el control.}
+    \label{fig:network_3-4}
+
+    \includegraphics{img/FB_network-1.png}
+    \caption{Red 1 del bloque de función del motor.}
+    \label{fig:FB_network-1}
+\end{figure}
+%
+En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez que se ejecuto la red 1, la cual espera a que se active el paso cero con el botón de \textbf{star}.
+% 
+\begin{figure}[H]
+    \centering
+    \includegraphics{img/FB_network-2.png}
+    \caption{Red 2 Acción paso cero si esta en alto indica que el motor esta listo para arrancar.}
+    \label{fig:FB_network-2}
+
+\end{figure}
+%
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}{0.5\textwidth}
+    \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.3]{img/PLCODE_Network5P1.pdf}
+    \caption{Red 5, primer eslabón}
+    \end{subfigure}
+    \hfill
+    % \centering
+    \begin{subfigure}{0.4\textwidth}
+    \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.3]{img/PLCODE_Network5P2.pdf}
+    \caption{Red 5, segundo eslabón.}
+    \end{subfigure}
+    
+    \caption{Red 5, botón \textit{Reset} para reiniciar el proceso.}
+    \label{fig:network-5}
+\end{figure}
+%
+\begin{figure}[H]
+    \centering
+      \includegraphics[trim = {1mm 70mm 1mm 70mm},clip,scale=0.5]{img/PLCFCM1_Network1.pdf}
+    \caption{Red 1, \textit{Function Block} del motor, habilitador}
+    \label{fig:FCM1_network-1}
+
+    \includegraphics{img/FB_network-3.png}
+    \caption{Red 3 Transición del paso cero, la cual indica que si el botón de inicio esta activado todos los botones se habilitan para el accionamiento del motor.}
+    \label{fig:FB_network-3}
+
+\end{figure}
+%
+\begin{figure}[H]
+    \centering
+
+      \includegraphics[trim = {1mm 15mm 1mm 15mm},clip,scale=0.5]{img/PLCFCM1_Network2.pdf}
+    \caption{Red 2, Acción paso uno, con dos botones se acciona el motor para adelante o para atrás.}
+    \label{fig:FCM1_network-2}
+
+    \includegraphics{img/FB_network-4.png}
+    \caption{Red 4 Acción paso uno, con dos botones se acciona el motor para adelante o para atrás.}
+    \label{fig:FB_network-4}
+
+\end{figure}
+%
+\begin{figure}[H]
+    \centering
+      \includegraphics[trim = {1mm 30mm 1mm 20mm},clip,scale=0.5]{img/PLCFCM1_Network3.pdf}
+    \caption{Red 3, accionamiento del giro en sentido horario del motor, con bloqueo.}
+    \label{fig:FCM1_network-3}
+\end{figure}
+%
+\begin{figure}[H]
+    \centering
+      \includegraphics[trim = {1mm 30mm 1mm 1mm},clip,scale=0.5]{img/PLCFCM1_Network4.pdf}
+    \caption{Red 4, accionamiento del giro en sentido anti-horario del motor, con bloqueo.}
+    \label{fig:FCM1_network-4}
+\end{figure}
+%
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {1mm 30mm 1mm 1mm},clip,scale=0.5]{img/PLCFCM1_Network5.pdf}
+    \caption{Red 5, Transición paso uno, con esta red se define un botón de paro total o mejor conocido como paro de emergencia.}
+    \label{fig:FCM1_network-5}
+
+    \includegraphics[scale=.9]{img/FB_network-5.png}
+    \caption{Red 5 Acción uno, con dos botones se puede activar el motor con pulsos.}
+    \label{fig:FB_network-5}
+\end{figure}
+%
+%
+\begin{figure}[H]
+    \centering
+    \includegraphics{img/FB_network-6.png}
+    \caption{Red 6 Transición paso uno, con esta red se define un botón de paro total o mejor conocido como paro de emergencia.}
+    \label{fig:FB_network-6}
+
+\end{figure}
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 % 
 \newpage
