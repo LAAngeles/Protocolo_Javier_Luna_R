@@ -3,11 +3,8 @@
 \renewcommand{\familydefault}{\sfdefault} % Arial font
 \setlength{\parindent}{16mm} % sangria de 1.6 cm
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage[left=2.5cm,top=2cm,right=2cm,nohead,foot=.5cm]{geometry}
+\usepackage[left=3cm,top=3cm,right=3cm,nohead,foot=2.5cm]{geometry}
 \usepackage[spanish,mexico]{babel}
-% \usepackage[spanish]{babel}
-%\usepackage[latin1]{inputenc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Add packages and commands here. 
 \usepackage{chngpage} % ajustar \begin{adjustwidth}{2cm}{0cm}
