@@ -52,7 +52,7 @@
 \usepackage{subcaption} %paquete para tener multiple imagenes
 \usepackage{amsmath,amssymb,amsthm} 
 % assumes amsmath package installed
-%\usepackage[document]{ragged2e}
+\usepackage[document]{ragged2e}
 \usepackage{hyperref}
 \hypersetup{
 colorlinks=true,
@@ -111,90 +111,51 @@ urlcolor=blue,
 \begin{document}
 \includepdf[pages=1]{img/portadaExternaTesis.pdf}
 \includepdf[pages=1]{img/portadaInternaDeTesis.pdf}
-%\pagestyle{empty} %No headings for the first pages.
 
-
-%\includegraphics[width=0.05\textwidth]{./logo.jpg}~\\[1cm]
-
-\begin{titlepage}
-\begin{center}
-
-% Upper part of the page. The '~' is needed because \\
-% only works if a paragraph has started.
-
-
-\textsc{\LARGE Universidad Autónoma de Querétaro}\\[0.3 cm]
-\includegraphics[width=0.15\textwidth]{./uaqlogo}~\\[0.45cm]
-\textsc{\Large Facultad de Ingeniería \\ \large{Ingeniería en Automatización}}\\[0.5 cm]
-\textsc{\large Protocolo de Investigación \\ (Enero 2022 - Agosto 2022)}\\[0.5cm]
-
-{ 
-\huge \bfseries
-% Desarrollo de metodología y sistema de acondicionamiento de señal para los elementos de un sistema de clasificación de botellas PET post-consumo.
-Desarrollo de un sistema de acondicionamiento de señal para determinar elementos en un sistema de clasificación para botellas PET post-consumo
-% Metodología para determinar los elementos de un sistema de clasificación de botellas PET post-consumo
-\\[0.4cm] }
-%\vspace*{2cm}
-\vspace*{0.5cm}
-
-
-
-% Author and supervisor
-\large \textbf{Presenta:} Javier Iván Luna Ramos \\\vspace*{0.5cm}
-\textbf{Director:} M.I. Luis Alberto Ángeles Hurtado$^{1}$\\\vspace*{0.5cm}
-%\textbf{Co Director:} Dr. Sebastian Salazar Colores$^{1}$\\\vspace*{0.5cm}
-\textbf{Co-Director:} Dr. Juvenal Rodríguez Reséndiz$^{1}$\\\vspace*{0.5cm}
-\textbf{Vocal:} M.I. Juan Pablo Ramírez Vázquez $^{1,3}$\\\vspace*{0.5cm}
-\textbf{Suplente:} M.C. Hugo Torres Salinas $^{2}$\\\vspace*{0.5cm}
-% \textbf{Suplente:} XXXX$^{1}$\\\vspace*{0.5cm}
-% \textbf{Suplente:} XXXX$^{1}$\\\vspace*{0.5cm}
-\raggedright
-$^{1}$ Universidad Autónoma de Querétaro, Facultad de Ingeniería.\\
-$^{2}$ Universidad Autónoma de Querétaro, Facultad de Informática.\\
-$^{3}$ IPN, CICATA Unidad Querétaro.
-
-\vfill
-\centering
-% Bottom of the page
-% {\large \today}
-%{\large 5 de diciembre de 2020}
-\end{center}
-\end{titlepage}
-
-% \newpage
-%%%%
 \hypersetup{linkcolor=black}
-% \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{section}{Resumen}
+\centering{\section*{RESUMEN}}
+\justifying
+\pagenumbering{roman}
+
+Es la sección más leída de una publicación y permite que la comunidad científica
+se entere del trabajo para luego leer el trabajo en detalle; además es la única
+sección de un trabajo escrito que aparecerá en publicaciones de citación como los
+Biological Abstracts, el Science Citation Index, y otras. No debe ser mayor de una
+cuartilla a renglón seguido sin sangría. Cada revista o institución define la
+extensión del resumen; en el caso de las tesis para obtener cualquier grado de la
+Universidad Autónoma de Querétaro (UAQ) tendrá un máximo de 350 palabras,
+tanto en español como en inglés. Se escribe a manera de un solo párrafo,
+separando ideas solo con punto y seguido. Debe ser muy conciso, conteniendo el
+objetivo del trabajo, una descripción breve y detallada de la metodología para que
+se pueda tener una buena idea de cómo se realizó el trabajo indicando: el diseño
+experimental empleado, las características de los sujetos experimentales (cuando
+aplique), las condiciones de las instalaciones si se considera indispensable;
+describir claramente los tratamientos evaluados y las variables de respuesta que
+se analizaron, así como los análisis estadísticos efectuados. Los resultados deben
+presentarse claramente, no en forma de cuadro, sino como texto indicando si hubo
+o no diferencia estadística y a qué nivel de significancia. Debe contener una
+opinión a modo de conclusión sobre los resultados. Si no fue un trabajo
+experimental y se trata de una recopilación de literatura, indicar los temas que se
+trataron y hasta cuantos años fue revisada; también es importante indicar por qué
+fueron escogidos esos temas, y a manera de discusión en este tipo de
+recopilaciones, se deberá presentar lo que otros autores han concluido, pero
+también debe de presentarse la opinión que sobre el tema se formó el autor de la
+recopilación, y cual es su conclusión sobre el tema. En ambos casos, en la
+discusión es donde se presenta el aporte que el investigador está haciendo al
+conocimiento. En la UAQ se requiere también un resumen en inglés el cual debe
+apegarse lo más posible al texto en español. Al final del resumen se presentarán
+(entre paréntesis) un mínimo de tres palabras clave; el número máximo de
+palabras clave queda a criterio del autor. Se escriben entre paréntesis. La versión
+en inglés de este resumen deberá ser avalada por escrito por la Facultad de
+Lenguas y Letras de la UAQ.
 % 
-\section*{Datos Generales}
-\subsection*{Título del proyecto de Tesis}
-Desarrollo de un sistema de acondicionamiento de señal para determinar elementos en un sistema de clasificación para botellas PET post-consumo
-\subsection*{Nombre del alumno}
-Javier Iván Luna Ramos
-
-\subsection*{Número de expediente}
-252273
-
-\subsection*{Programa de Estudios}
-Ingeniería en Automatización línea terminal en Electrónica y Sistemas Embebidos
-\subsection*{Director de Tesis}
-Luis Alberto Ángeles Hurtado
-
-\subsection*{Co-director}
-Juvenal Rodríguez Reséndiz
-
-\subsection*{Lugar donde se realizará la investigación}
-Facultad de Ingeniería ``UAQ''
-
-\subsection*{Línea de investigación}
-Automatización
-
-\subsection*{Tipo de investigación}
-Tecnológica (diseño y prueba experimental)
-
-\subsection*{Horario de trabajo:}
-Lunes a Viernes de 15:00 Hrs-16:00 Hrs  
-
+% 
+\\\\
+(\textbf{Palabras clave:} guía, referencia, tesis)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
 \tableofcontents
 \listoffigures
 \listoftables
