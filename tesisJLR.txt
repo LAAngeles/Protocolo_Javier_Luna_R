@@ -75,6 +75,7 @@ urlcolor=blue,
 \usepackage{array}
 \usepackage{amsmath}
 \usepackage{tabularx}
+\usepackage{pdfpages} % \includepdf[pages=-]{myfile.pdf}
 \usepackage{bm,upgreek}
 \usepackage{afterpage}
 \usepackage{gensymb}
