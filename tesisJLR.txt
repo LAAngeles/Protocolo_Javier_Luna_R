@@ -231,7 +231,9 @@ texto y por sus atinados comentarios para mejorarlo.
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % 
-\section{Introducción}
+\centering{\section{INTRODUCCIÓN}}
+\justifying
+\pagenumbering{arabic}
 
 El presente documento data sobre una metodología que se propone llevar a cabo para seleccionar los componentes y elementos que se pueden llegar a utilizar para el diseño y experimentación de un sistema clasificador de botellas ``PET'' post-consumo bajo la premisa de que debe tener un costo asequible para centros de acopio.
 Para ello hay que entender primero cada uno de los términos involucrados.
@@ -274,8 +276,11 @@ Estas herramientas son procesos desarrollados conjuntamente por \textit{Chrysler
 %-alusión al objetivo sin mencionar el método
 Cada una de las metodologías de diseño para identificar los elementos en una experimentación tienen diferentes características.
 En este trabajo se plantea una combinación de los métodos, técnicas y tecnologías para desarrollar una metodología que clasifique botellas ``PET'' post-consumo.
-
-\section{Justificación}
+% 
+% 
+\newpage
+\centering{\section{JUSTIFICACIÓN}}
+\justifying
 
 El crecimiento de la población a nivel mundial contribuye al aumento de materiales sólidos tanto los que se pueden reciclar y los que no se reciclan. 
 La adecuada clasificación de los plásticos representa una actividad económica para personas físicas y morales que contribuyen en la recolección, traslado y proceso de los diferentes materiales.
@@ -311,8 +316,11 @@ En consecuencia si no se cuenta con sistemas automatizados se opta por diferente
 Se raspa el plástico para comprobar su dureza así como observar si no existen otros plásticos mezclados. 
 Se muerde el plástico para determinar la dureza del material. 
 Se le da pequeños golpes con la mano al plástico para escuchar que sonido emite o se quemar el plástico para observar el color del humo así como el olor que desprende al ser quemado \cite{Angeles2021}.
-
-\section{Descripción del problema}
+% 
+% 
+\newpage
+\centering{\section{DESCRIPCIÓN DEL PROBLEMA}}
+\justifying
 
 En México, es fácilmente comprobado con sólo salir a la calle y observar que en las carreteras o en la misma banqueta de una colonia hay diversos polímeros y botellas de plástico tiradas en el suelo, a esto se le agrega que muchas de estás botellas pese a que terminen en los contenedores de basura no son recicladas de manera correcta debido a que no hay una metodología clara que permita realizar esta tarea de manera rápida y sencilla.
 Si bien es cierto que no todos los materiales producidos con ``PET'' son reutilizables vale la pena aclarar que el ``PET'' es el plástico más utilizado y más propenso a ser reciclado de una manera más sencilla, sin embargo, es un proceso complejo y que requiere de mucha labor.
@@ -327,8 +335,11 @@ Para poder enfrentar esta problemática consideramos que, se debe tener una meto
 Se debe de poder identificar los mejores diseños a través de métodos que ayuden a reducir el coste en el proceso de implementación de un sistema tecnológico.
 Se debe de promover el desarrollo e implementación de nuevas técnicas de separación de plásticos.
 Para ello se busca la implementación de una metodología que nos permita seleccionar los elementos que van a componer al sistema cumpliendo con las premisas previamente descritas.
-
-\section{Fundamentación teórica}
+% 
+% 
+\newpage
+\centering{\section{FUNDAMENTACIÓN TEÓRICA}}
+\justifying
 
 Partiendo del concepto de sistema, como un conjunto de partes coordinadas y de reglas o principios sobre una materia racionalmente enlazadas entre sí y en interacción para alcanzar un conjunto de objetivos \cite{RAE}, \cite{Johansen2004}. 
 Se puede afirmar que el conjunto de partes de un sistema es fundamental para que se alcancen sus metas más aun si se trata de sistemas de medición. 
@@ -572,8 +583,13 @@ Los métodos de arriba se consideraran para identificar si los elementos que com
     \item Proponiendo solo un sensor de ``InGaAs'' podemos identificar que elementos mecánicos, eléctricos y electrónicos son necesarios.
     \item La combinación de los métodos, como ``PCA'' así como tecnologías en la adquisición de datos son suficientes para proponer una metodología para clasificar botellas ``PET'' post-consumo.
 \end{itemize}
+% 
+% 
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\centering{\section{HIPÓTESIS}}
+\justifying
 
-\section{Hipótesis}
 % Al utilizar y combinar diferentes metodologías ya existentes se pueda desarrollar una sola metodología que permita seleccionar de manera objetiva, teórica y correcta los componentes que formarán parte de un sistema de clasificación de botellas de ``PET'' post-consumo con el fin de obtener el correcto y más óptimo funcionamiento posible permitiendo que se obtenga un sistema de clasificación confiable y viable.
 
 % Propuesta para la hipótesis
@@ -584,8 +600,11 @@ Mediante la combinación de tecnologías existentes para la clasificación de bo
 
 % Propuesta de Juan Pablo
 % Al implementar una metodología sistemática es posible determinar los elementos que interactuarán con un sistema de clasificación de botellas “PET” Post-consumo. A partir de conocer las características de los diodos “InGaAs” y su interacción con los elementos mecánicos, eléctricos y electrónicos se obtendrá un sistema de clasificación novedoso.
-
-\section{Objetivo}
+% 
+% 
+\newpage
+\centering{\section{OBJETIVO}}
+\justifying
 % Desarrollar una metodología especifica en función de metodologías ya existentes que permita seleccionar los componentes con las características idóneas y suficientes para el correcto funcionamiento de un sistema de clasificación de botellas de ``PET'' post-consumo.
 
 % Objetivo general
@@ -598,8 +617,11 @@ Desarrollar e implementar una metodología que permita seleccionar los component
     \item Determinar una metodología a partir de las características de los diodos ``InGaAs'' para seleccionar los elementos mecánicos.
     \item Comparar el comportamiento del diodo ``InGaAs'' con los distintos elementos electrónicos y eléctricos del sistema.
 \end{itemize}
-
-\section{Metodología}
+% 
+% 
+\newpage
+\centering{\section{    METODOLOGÍA}}
+\justifying
 
 Por el método de la observación y el análisis estadístico se llevara acabo este trabajo de investigación. 
 El estudio y la recolección de los datos se realizarán en la ciudad de Querétaro, en los laboratorios de automatización de la facultad de ingeniería ``UAQ''. 
@@ -715,9 +737,14 @@ El análisis de componentes principales se utilizará para describir la variaci�
     \caption{Cronograma de actividades.}
     \label{CronAct}
 \end{figure}
-
-%\newpage
-\section{Resultados esperados}
+% 
+% 
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{    \linespread{5}  \linespread{5}      RESULTADOS}
+\centering{\section{      RESULTADOS}}
+\justifying
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 % 
 \subsection{Diseño mecánico y sistema de control}
@@ -966,9 +993,39 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 % \end{itemize}
 % 
 % 
+% 
+% 
+\newpage
+\centering{\section{    DISCUSIÓN}}
+\justifying
+
+
+% 
+% 
+\newpage
+\centering{\section{CONCLUSIONES}}
+\justifying
+
+% 
+% 
+\newpage
+\renewcommand{\refname}{\centering{REFERENCIAS}}
+\addcontentsline{toc}{section}{REFERENCIAS}
+% \bibliographystyle{unsrt}
+\bibliographystyle{apalike}
+\bibliography{tesis} 
+
+% \clearpage
+% \bibliographystyle{unsrt}
+% \addcontentsline{toc}{section}{Referencias}
+% \bibliography{tesis.bib} 
+% 
+% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
-\section[\appendixname~\thesection]{Apéndice}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section[\appendixname~\thesection]{Apéndice}
+\centering{\section[\appendixautorefname{}]{APÉNDICE}}
 
 \begin{lstlisting}[language=c, caption=Codigo de ejemplo en c., label=listing:c] 
     
@@ -986,11 +1043,57 @@ int main()
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 % 
+\addcontentsline{toc}{section}{ABREVIATURAS}
+\centering{\section*{ABREVIATURAS}}
+\justifying
+
+\noindent 
+\begin{tabular}{@{}ll}
+ANOVA & Análisis de variación\\
+CC  & Centros de acopio\\
+{$CO_2$} & Dióxido de carbono\\
+DIL40 & 40 PINS dual-in-line package\\
+DOE & Diseño de experimentos\\ 
+F & F Relación \\
+FPGA & Arreglos de compuertas lógicas programables en sitio \\
+gl & Grados de libertad\\
+HDPE & Polietileno de alta densidad \\
+IMER & Industria Mexicana de Reciclaje S.A. de C.V.\\
+JPG & Grupo Conjunto de Expertos Fotográficos\\
+LCD & Pantalla de cristal líquido\\
+LDA & Análisis discriminante lineal\\
+LDPE & Polietileno de baja densidad\\
+LED & Diodo emisor de luz\\
+MS & Cuadrado medio\\
+mL & Mililitros\\
+NC & Normalmente cerrada\\
+NIRS & Espectroscopia de infrarrojo cercano\\
+No.  & Número\\
+PC1 & Primer componente principal\\
+PC2 & Segundo componente principal\\
+PCA & Análisis de componentes principales\\
+PCB & placa de circuito impreso\\
+PET & Tereftalato de polietileno
+\end{tabular}
+% 
+% 
 \newpage
+\justifying
+\noindent
+\begin{tabular}{@{}ll}
+PIC & Controlador de interfaz de periféricos\\
+PIB & Producto Interno Bruto\\
+PLC & Controlador lógico programable\\
+PP & Polipropileno\\
+PVC & Cloruro de polivinilo\\
+PS & Poliestireno\\
+RGB & Rojo verde azul \\
+SVM & Máquinas de vectores soporte\\
+SS & Suma de cuadrados\\
+USE & Universal serial bus
+\end{tabular}
 
-\clearpage
-\bibliographystyle{unsrt}
-\addcontentsline{toc}{section}{Referencias}
-\bibliography{tesis.bib} 
-
+% }
+% 
+% 
 \end{document}
