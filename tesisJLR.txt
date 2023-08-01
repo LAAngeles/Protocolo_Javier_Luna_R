@@ -109,8 +109,6 @@ urlcolor=blue,
 \renewcommand*{\thesubsubsection}{\null{}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-% \includepdf[pages=1]{img/portadaExternaTesis.pdf}
-% \includepdf[pages=1]{img/portadaInternaDeTesis.pdf}
 \includepdf[pages=1]{img/portadaExternaJILR.pdf}
 \includepdf[pages=1]{img/portadaInternaDeTesisJILR.pdf}
 
