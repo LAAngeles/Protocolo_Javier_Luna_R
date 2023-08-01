@@ -154,14 +154,83 @@ Lenguas y Letras de la UAQ.
 % 
 \\\\
 (\textbf{Palabras clave:} guía, referencia, tesis)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % 
+% 
+\newpage
+\addcontentsline{toc}{section}{Summary}
+\centering{\section*{SUMMARY}}
+\justifying
+
+This is the section of a scientific publication that is read more frequently, and it is
+the quickest way to know what the paper is about in order to decide if the whole
+article is read later on; besides, this is the only section of a paper that will appear in
+citation publications such as Biological Abstracts, Citation Index, and others. It
+must be no longer that one page, single spaced. Each institution defines the length
+of this summary; in the case of the Universidad Autónoma de Querétaro (UAQ) no
+more than 350 words will be allowed, both in English and in Spanish. It is written as
+a single paragraph, separating ideas only by periods. It must be concise including
+the objective, a brief and detailed description of the methodology in order to
+understand how the research was made, including: experimental design and
+statistical analyses conducted, characteristics of the experimental subject (if
+applicable), description of the research facilities if it is considered necessary;
+treatments, as well as the response variables to be evaluated, must be clearly
+described. Results must be clearly presented, not as a table, indicating statistical
+differences and level of significance. It must have the opinion of the author as a
+concluding remark. If the study was not an experimental one but a literature review,
+it must indicate the reasons for choosing the subject and relating matters and
+which years were reviewed; as a discussion. The author must include his own
+conclusions. In both cases, it is in the discussion section where new knowledge is
+presented. At the UAQ, it is required to present a summary in both, English and
+Spanish. The translation must be as close as possible to the original language. A
+minimum of three key words must be presented at the end of the summary in
+brackets; the maximum number of key words will be determined by the author. The
+English version of the summary must be certified in writting by the Faculty of
+Languages of the UAQ.
+% 
+\\\\
+(\textbf{Key words:} guide, references, thesis)
+% 
+% 
+\newpage
+\addcontentsline{toc}{section}{Dedicatorias}
+\centering{\section*{DEDICATORIAS}}
+\justifying
+\textbf{A los alumnos de los posgrados de la
+Universidad Autónoma de Querétaro
+Las dedicatorias son opcionales.}
+% 
+% 
+\newpage
+\addcontentsline{toc}{section}{Agradecimientos}
+\centering{\section*{AGRADECIMIENTOS}}
+\justifying
+En la preparación de este manual se recogieron las opiniones desinteresadas de
+los Directores y Coordinadores de Investigación y Posgrado de todas las
+Facultades de la Universidad Autónoma de Querétaro, así como de
+investigadores, académicos y personal administrativo de la misma.
+En particular, la Dirección de Servicios Escolares y la Dirección de Investigación y
+Posgrado, agradecen al Mtro. Francisco Perusquía Monroy el haber revisado el
+texto y por sus atinados comentarios para mejorarlo.
+% 
+% 
+\newpage
+\renewcommand\contentsname{\centering ÍNDICE}
 \tableofcontents
+\newpage
+\renewcommand\listfigurename{\centering ÍNDICE DE FIGURAS}
+\addcontentsline{toc}{section}{Índice de figuras}
 \listoffigures
+\renewcommand\listtablename{\centering ÍNDICE DE TABLAS}
+\addcontentsline{toc}{section}{Índice de tablas}
+\newpage
 \listoftables
-\lstlistoflistings
+% \lstlistoflistings
 \newpage
 \linenumbers
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
 \section{Introducción}
 
 El presente documento data sobre una metodología que se propone llevar a cabo para seleccionar los componentes y elementos que se pueden llegar a utilizar para el diseño y experimentación de un sistema clasificador de botellas ``PET'' post-consumo bajo la premisa de que debe tener un costo asequible para centros de acopio.
