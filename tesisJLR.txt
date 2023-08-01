@@ -1,5 +1,8 @@
 \documentclass[letterpaper,12pt,openright,oneside]{article}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\familydefault}{\sfdefault} % Arial font
+\setlength{\parindent}{16mm} % sangria de 1.6 cm
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[left=2.5cm,top=2cm,right=2cm,nohead,foot=.5cm]{geometry}
 \usepackage[spanish,mexico]{babel}
