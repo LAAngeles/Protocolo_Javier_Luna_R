@@ -355,7 +355,7 @@ Botellas de agua o cualquier otro líquido, envolturas de productos de consumo h
 De lo anterior se entiende que debido a la alta presencia de este material en la vida actual del ser humano es necesario recurrir a la labor de la reutilización o reciclaje en la Figura \ref{PETCICLO} se ilustra el procesos que puede llevar una botella de ``PET'' para ser reciclada.
 
 % ##########################################################################################
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \caption{Símbolos para identificar el tipo de plástico reciclado \cite{Ramli2008}.}
     \label{Sımbolos}
@@ -383,7 +383,7 @@ De lo anterior se entiende que debido a la alta presencia de este material en la
 \end{table}
 % ##########################################################################################
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.70\textwidth]{img/PROCRES.png}
     %\includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.9]{img/PROCRES.PNG}
@@ -413,7 +413,7 @@ El sistema cuenta con retroalimentación \cite{Association2008} para clasificar 
 Existen diversos sistemas que difieren del que se muestra en la Figura \ref{Ejemplo}.
 
 %#############################################
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.68]{img/Vg_fig_11.pdf}
     \caption{Ejemplo de un diagrama de flujo del proceso de clasificación de botellas de plástico \cite{Association2008}.}
@@ -427,7 +427,7 @@ Las investigaciones recientes plantean nuevos métodos como el principio del pro
 Una de las limitantes de este método son las condiciones al momento de tomar la fotografía, la variación en la luz, resolución, fondo y la distancia de la cámara para obtener una precisión mayor a 95{$\%$} \cite{Prasad2012}.
 
 %#############################################
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[trim = {14mm 208mm 34mm 16mm},clip,scale=.72]{img/Vg_fig_24.pdf}
     \caption{Cámara fotográfica para la detección de botellas de color \cite{Wang2019170}.}
@@ -554,7 +554,7 @@ Existen varios métodos para la extracción y manejo de los datos provenientes d
 Algunos de esto métodos son; \textit{Principal Component Analysis} ``PCA'' \cite{serranti2013classification}, \textit{Linear Discriminant Analysis} ``LDA'' \cite{de1999selecting}, y \textit{Support Vector Machine} ``SVM'' \cite{noble2006support}.
 Los métodos de arriba se consideraran para identificar si los elementos que compondrán el sistema automatizado cumplen con criterios de diseño asequible.
 
-\begin{table}[h]
+\begin{table}[H]
     \caption{Sistemas comerciales para la clasificación de diferentes tipos de plásticos reciclables \cite{Angeles2021}. }
     \label{Sistemas}
     \begin{tabular}{c m{33 em}}
@@ -677,7 +677,7 @@ Para esta implementación en la metodología es necesario considerar factores co
 Todo esto se realizará en función de las características de cada elemento mecánico, eléctrico y electrónico que pueda formar parte del sistema de clasificación, así mismo, se utilizarán herramientas como las \textit{Core Tools} que son herramientas que en la industria automotriz permiten diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
 
 %############################################
-\begin{figure}[h]
+\begin{figure}[H]
 
     \begin{subfigure}{0.5\textwidth}
         \includegraphics[width=0.9\linewidth, height=7cm]{img/Desing00_05-azul.JPG} 
@@ -713,7 +713,7 @@ Todo esto se realizará en función de las características de cada elemento mec
 
 Se busca minimizar los factores de ruido que con la interacción de todos los factores anteriormente descritos se obtenga la velocidad máxima y mínima que no afecte la eficiencia en la clasificación ver Figura \ref{diseño04} \cite{gutierrez2004analisis}.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[trim = {31mm 145mm 13mm 20mm},clip,scale=0.85]{img/Vg_fig_18.pdf}
     \caption{Factores y variables en el diseño de experimentos para la interacción de todo el sistema.}
@@ -755,7 +755,7 @@ En la figura \ref{fig:Imagen17} se ilustra el moto reductor que se utilizo, con 
 % 
 % 
 %############################################
-\begin{figure}[h]
+\begin{figure}[H]
 
     \begin{subfigure}{0.5\textwidth}
         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen17.jpg} 
@@ -781,7 +781,7 @@ Dos botones de dos polos dos tiros para dar pulsos ya sea de frente o de reversa
 % 
 % 
 %############################################
-\begin{figure}[h]
+\begin{figure}[H]
 
     \begin{subfigure}{0.5\textwidth}
         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen13.jpg} 
@@ -809,7 +809,7 @@ Físicamente cada ``PLC'' tiene un numero limitado de entradas y eso dificulta l
 La finalidad principal de hacer una pagina web para controlar las entradas de los motores es por las ventajas que proporciona al poder definir n cantidad de entradas y procesar esa información internamente con el ``PLC''. 
 En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el sistema mecánico para funcionar.
 
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \caption{motor\_ DB[DB1] y motor\_ DB\_Dos[DB3]}
     \begin{adjustwidth}{2cm}{0cm}
@@ -844,7 +844,7 @@ En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el si
     \label{tab:motor_DB}
 \end{table}
 % 
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \caption{TestDB[DB2]}
     \begin{adjustwidth}{5cm}{0cm}
@@ -878,7 +878,7 @@ En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el si
 En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servidor web con el PLC.
 %
 %
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics{img/webPLC.JPG}
     \caption{Diagrama de bloques del PLC para el servidor web.}
@@ -889,7 +889,7 @@ En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servi
 En las siguientes Figuras \ref{fig:network_1-2}, \ref{fig:network-3}, \ref{fig:FB_network-1}, \ref{fig:FB_network-2}, \ref{fig:FB_network-3}, \ref{fig:FB_network-4}, \ref{fig:FB_network-5}, \ref{fig:FB_network-6}.
 se describen el programa que se utilizo para controlar los motores.
 %############################################
-\begin{figure}[h]
+\begin{figure}[H]
     \begin{subfigure}{0.5\textwidth}
         \includegraphics[width=0.9\linewidth, height=9cm]{img/network-1.png} 
         \caption{Red 1 del motor número uno.}
@@ -911,7 +911,7 @@ La llamada cíclica de la función en el OB1 permite la interacción entre el se
 El Web DB (DB 333) está conectado a la función ``WWW''. 
 La base de datos web y la base de datos de fragmentos almacenan la estructura de las páginas definidas por el usuario, véase la Figura \ref{fig:network-3}. 
 % 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth, height=4cm]{img/network-3.png}
     \caption{Red 3, Esta función de bloque inicializa el servidor web de la CPU.}
@@ -921,7 +921,7 @@ La base de datos web y la base de datos de fragmentos almacenan la estructura de
 En la Figura \ref{fig:FB_network-1} se describe la primer red del bloque de función que se determino en el ``PLC''. 
 Consta de un disparador que se activa cuando el ``PLC'' hace su primer escaneo del sistema y sirve para inicializar todas las redes del programa.
 % 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics{img/FB_network-1.png}
     \caption{Red 1 del bloque de función del motor.}
@@ -930,28 +930,28 @@ Consta de un disparador que se activa cuando el ``PLC'' hace su primer escaneo d
 %
 En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez que se ejecuto la red 1, la cual espera a que se active el paso cero con el botón de \textbf{star}.
 % 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics{img/FB_network-2.png}
     \caption{Red 2 Acción paso cero si esta en alto indica que el motor esta listo para arrancar.}
     \label{fig:FB_network-2}
 \end{figure}
 %
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics{img/FB_network-3.png}
     \caption{Red 3 Transición del paso cero, la cual indica que si el botón de inicio esta activado todos los botones se habilitan para el accionamiento del motor.}
     \label{fig:FB_network-3}
 \end{figure}
 %
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics{img/FB_network-4.png}
     \caption{Red 4 Acción paso uno, con dos botones se acciona el motor para adelante o para atrás.}
     \label{fig:FB_network-4}
 \end{figure}
 %
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=.9]{img/FB_network-5.png}
     \caption{Red 5 Acción uno, con dos botones se puede activar el motor con pulsos.}
@@ -959,7 +959,7 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 \end{figure}
 %
 %
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics{img/FB_network-6.png}
     \caption{Red 6 Transición paso uno, con esta red se define un botón de paro total o mejor conocido como paro de emergencia.}
