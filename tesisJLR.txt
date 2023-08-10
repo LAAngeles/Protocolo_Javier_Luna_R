@@ -3,7 +3,8 @@
 \renewcommand{\familydefault}{\sfdefault} % Arial font
 \setlength{\parindent}{16mm} % sangria de 1.6 cm
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[left=3cm,top=3cm,right=3cm,nohead,foot=2.5cm]{geometry}
+% \usepackage[left=3cm,top=3cm,right=3cm,nohead,foot=2.5cm]{geometry}
+\usepackage[left=4cm,top=3cm,right=2cm,nohead,foot=3cm]{geometry}
 \usepackage[spanish,mexico]{babel}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Add packages and commands here. 
@@ -114,10 +115,102 @@ urlcolor=blue,
 
 \hypersetup{linkcolor=black}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{section}{Dedicatorias}
+\centering{\section*{DEDICATORIAS}}
+\justifying
+\pagenumbering{roman}
+
+\textbf{A los alumnos de los posgrados de la
+Universidad Autónoma de Querétaro
+Las dedicatorias son opcionales.}
+% 
+% 
+\newpage
+\addcontentsline{toc}{section}{Agradecimientos}
+\centering{\section*{AGRADECIMIENTOS}}
+\justifying
+En la preparación de este manual se recogieron las opiniones desinteresadas de
+los Directores y Coordinadores de Investigación y Posgrado de todas las
+Facultades de la Universidad Autónoma de Querétaro, así como de
+investigadores, académicos y personal administrativo de la misma.
+En particular, la Dirección de Servicios Escolares y la Dirección de Investigación y
+Posgrado, agradecen al Mtro. Francisco Perusquía Monroy el haber revisado el
+texto y por sus atinados comentarios para mejorarlo.
+% 
+% 
+\newpage
+\renewcommand\contentsname{\centering ÍNDICE}
+\tableofcontents
+\newpage
+\renewcommand\listtablename{\centering ÍNDICE DE TABLAS}
+\addcontentsline{toc}{section}{Índice de tablas}
+\listoftables
+\newpage
+\renewcommand\listfigurename{\centering ÍNDICE DE FIGURAS}
+\addcontentsline{toc}{section}{Índice de figuras}
+\listoffigures
+% \lstlistoflistings
+\newpage
+\linenumbers
+% 
+% 
+\addcontentsline{toc}{section}{Abreviaturas}
+\centering{\section*{ABREVIATURAS}}
+\justifying
+
+\noindent 
+\begin{tabular}{@{}ll}
+ANOVA & Análisis de variación\\
+CC  & Centros de acopio\\
+{$CO_2$} & Dióxido de carbono\\
+DIL40 & 40 PINS dual-in-line package\\
+DOE & Diseño de experimentos\\ 
+F & F Relación \\
+FPGA & Arreglos de compuertas lógicas programables en sitio \\
+gl & Grados de libertad\\
+HDPE & Polietileno de alta densidad \\
+IMER & Industria Mexicana de Reciclaje S.A. de C.V.\\
+JPG & Grupo Conjunto de Expertos Fotográficos\\
+LCD & Pantalla de cristal líquido\\
+LDA & Análisis discriminante lineal\\
+LDPE & Polietileno de baja densidad\\
+LED & Diodo emisor de luz\\
+MS & Cuadrado medio\\
+mL & Mililitros\\
+NC & Normalmente cerrada\\
+NIRS & Espectroscopia de infrarrojo cercano\\
+No.  & Número\\
+PC1 & Primer componente principal\\
+PC2 & Segundo componente principal\\
+PCA & Análisis de componentes principales\\
+PCB & placa de circuito impreso\\
+PET & Tereftalato de polietileno
+\end{tabular}
+% 
+% 
+\newpage
+\justifying
+\noindent
+\begin{tabular}{@{}ll}
+PIC & Controlador de interfaz de periféricos\\
+PIB & Producto Interno Bruto\\
+PLC & Controlador lógico programable\\
+PP & Polipropileno\\
+PVC & Cloruro de polivinilo\\
+PS & Poliestireno\\
+RGB & Rojo verde azul \\
+SVM & Máquinas de vectores soporte\\
+SS & Suma de cuadrados\\
+USE & Universal serial bus
+\end{tabular}
+
+% }
+% 
+% 
+\newpage
 \addcontentsline{toc}{section}{Resumen}
 \centering{\section*{RESUMEN}}
 \justifying
-\pagenumbering{roman}
 
 Es la sección más leída de una publicación y permite que la comunidad científica
 se entere del trabajo para luego leer el trabajo en detalle; además es la única
@@ -157,8 +250,8 @@ Lenguas y Letras de la UAQ.
 % 
 % 
 \newpage
-\addcontentsline{toc}{section}{Summary}
-\centering{\section*{SUMMARY}}
+\addcontentsline{toc}{section}{Abstract}
+\centering{\section*{ABSTRACT}}
 \justifying
 
 This is the section of a scientific publication that is read more frequently, and it is
@@ -192,43 +285,6 @@ Languages of the UAQ.
 % 
 % 
 \newpage
-\addcontentsline{toc}{section}{Dedicatorias}
-\centering{\section*{DEDICATORIAS}}
-\justifying
-\textbf{A los alumnos de los posgrados de la
-Universidad Autónoma de Querétaro
-Las dedicatorias son opcionales.}
-% 
-% 
-\newpage
-\addcontentsline{toc}{section}{Agradecimientos}
-\centering{\section*{AGRADECIMIENTOS}}
-\justifying
-En la preparación de este manual se recogieron las opiniones desinteresadas de
-los Directores y Coordinadores de Investigación y Posgrado de todas las
-Facultades de la Universidad Autónoma de Querétaro, así como de
-investigadores, académicos y personal administrativo de la misma.
-En particular, la Dirección de Servicios Escolares y la Dirección de Investigación y
-Posgrado, agradecen al Mtro. Francisco Perusquía Monroy el haber revisado el
-texto y por sus atinados comentarios para mejorarlo.
-% 
-% 
-\newpage
-\renewcommand\contentsname{\centering ÍNDICE}
-\tableofcontents
-\newpage
-\renewcommand\listfigurename{\centering ÍNDICE DE FIGURAS}
-\addcontentsline{toc}{section}{Índice de figuras}
-\listoffigures
-\renewcommand\listtablename{\centering ÍNDICE DE TABLAS}
-\addcontentsline{toc}{section}{Índice de tablas}
-\newpage
-\listoftables
-% \lstlistoflistings
-\newpage
-\linenumbers
-% 
-% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % 
 \centering{\section{INTRODUCCIÓN}}
@@ -1418,6 +1474,7 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 \appendix
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \section[\appendixname~\thesection]{Apéndice}
+\newpage
 \centering{\section[\appendixautorefname{}]{APÉNDICE}}
 
 \begin{lstlisting}[language=c, caption=Codigo de ejemplo en c., label=listing:c] 
@@ -1436,57 +1493,5 @@ int main()
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 % 
-\addcontentsline{toc}{section}{ABREVIATURAS}
-\centering{\section*{ABREVIATURAS}}
-\justifying
 
-\noindent 
-\begin{tabular}{@{}ll}
-ANOVA & Análisis de variación\\
-CC  & Centros de acopio\\
-{$CO_2$} & Dióxido de carbono\\
-DIL40 & 40 PINS dual-in-line package\\
-DOE & Diseño de experimentos\\ 
-F & F Relación \\
-FPGA & Arreglos de compuertas lógicas programables en sitio \\
-gl & Grados de libertad\\
-HDPE & Polietileno de alta densidad \\
-IMER & Industria Mexicana de Reciclaje S.A. de C.V.\\
-JPG & Grupo Conjunto de Expertos Fotográficos\\
-LCD & Pantalla de cristal líquido\\
-LDA & Análisis discriminante lineal\\
-LDPE & Polietileno de baja densidad\\
-LED & Diodo emisor de luz\\
-MS & Cuadrado medio\\
-mL & Mililitros\\
-NC & Normalmente cerrada\\
-NIRS & Espectroscopia de infrarrojo cercano\\
-No.  & Número\\
-PC1 & Primer componente principal\\
-PC2 & Segundo componente principal\\
-PCA & Análisis de componentes principales\\
-PCB & placa de circuito impreso\\
-PET & Tereftalato de polietileno
-\end{tabular}
-% 
-% 
-\newpage
-\justifying
-\noindent
-\begin{tabular}{@{}ll}
-PIC & Controlador de interfaz de periféricos\\
-PIB & Producto Interno Bruto\\
-PLC & Controlador lógico programable\\
-PP & Polipropileno\\
-PVC & Cloruro de polivinilo\\
-PS & Poliestireno\\
-RGB & Rojo verde azul \\
-SVM & Máquinas de vectores soporte\\
-SS & Suma de cuadrados\\
-USE & Universal serial bus
-\end{tabular}
-
-% }
-% 
-% 
 \end{document}
