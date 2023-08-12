@@ -307,15 +307,15 @@ Se pueden componer de adaptadores o amplificadores, en sentido amplio, son los e
 Los plásticos se definen como polímeros, en función de su estructura y su comportamiento, cuando son expuestos a la temperatura pueden clasificarse en termoplásticos, termofijos y elastómeros.
 Los termoplásticos, al estar compuestos por cadenas lineales y ramificadas, se funden al ser sometidos al calor y pueden adoptar nuevas formas.
 Esta propiedad es fundamental para el reciclaje, pues permite recuperar los materiales y volver a utilizarlos mediante procesos físicos simples, como el calentamiento.
-Dado que aproximadamente el 80 \% de los plásticos que se producen son termoplásticos, se tienen que clasificar correctamente para poder ser reciclados \cite{morillas2014reciclaje}.
+Dado que aproximadamente el 80\% de los plásticos que se producen son termoplásticos, se tienen que clasificar correctamente para poder ser reciclados \cite{morillas2014reciclaje}.
 Existen más de 100 tipos de plásticos, siendo siete los más usados \cite{pelaez2018plan} y los que más se reciclan: polipropileno, polietileno, policloruro de vinilo, poliestireno, tereftalato de polietileno y el policarbonato \cite{garrain2008analisis}.
 Se identifican por un número dentro de un triángulo que facilita su identificación, y fueron codificados por la Sociedad industrial del plástico en 1980 \cite{Ramli2008}, véase la Tabla \ref{Sımbolos}.
 
 Comercialmente existen empresas que fabrican y distribuyen sistemas de clasificación de polímeros, ver Tabla \ref{Sistemas}, como el sistema de \textit{BottleSort}.
 Este sistema es capaz de identificar el PET transparente del PET verde \cite{Milgrom1994}, \cite{Bruno2000}.
-El sistema \textit{Poly-Sort}, es similar a \textit{BottleSort}, comienza separando las botellas en orden individual \cite{Bruno2000}, \cite{Association2008}.
-Otro sistema automático para la separación de resinas de plástico es \textit{Near infrared refrectance spectroscopy} es un método de identificación de dos filtros \cite{Scott1995156}, \cite{Masoumi2012}.
-Otro tipo de sistema radica en el campo del reflejo y transmisión de rayos-x, es similar al método de \textit{infrared spectroscopic} y al sistema VS-2 que tiene una capacidad eficiente \cite{Bruno2000}, \cite{Foundation2015}.
+El sistema \textit{Poly-Sort}, es similar a \textit{BottleSort}, comienza separando las botellas en orden individual \cite{Bruno2000, Association2008}.
+Otro sistema automático para la separación de resinas de plástico es \textit{Near infrared refrectance spectroscopy} es un método de identificación de dos filtros \cite{Scott1995156, Masoumi2012}.
+Otro tipo de sistema radica en el campo del reflejo y transmisión de rayos-x, es similar al método de \textit{infrared spectroscopic} y al sistema VS-2 que tiene una capacidad eficiente \cite{Bruno2000, Foundation2015}.
 Cada uno de los métodos descritos  utilizan y proporcionan ventajas y desventajas que ayudan a diferenciar la mejor opción para desarrollar un sistema de clasificación y de costo asequible.
 
 %-hasta donde esta el estado del arte
@@ -324,7 +324,7 @@ En ingeniería, la heurística es un método basado en la experiencia que puede 
 La heurística abarca desde la elaboración de cálculos de los recursos necesarios hasta la planeación y las mejores condiciones de operación de los sistemas. 
 Mediante el uso de heurísticas, es posible resolver más rápidamente problemas conocidos o similares a otros conocidos. 
 Existen varios métodos heurísticos disponibles para los ingenieros como, por ejemplo, el análisis modal de fallas y efectos. 
-Dichos métodos dependen de un grupo de ingenieros experimentados que evalúan los problemas y fallas, los ordenan según su importancia y recomiendan soluciones \cite{beuchot1999}, \cite{breyer2011}. 
+Dichos métodos dependen de un grupo de ingenieros experimentados que evalúan los problemas y fallas, los ordenan según su importancia y recomiendan soluciones \cite{beuchot1999, breyer2011}. 
 Otros métodos que se utilizan son las \textit{Core Tools}. 
 Son un conjunto de herramientas principalmente usadas en el sector automotriz también conocidas como APQP, PPAP, AMEF, SPC y MSA.
 Estas herramientas son procesos desarrollados conjuntamente por \textit{Chrysler}, \textit{Ford} y \textit{General Motors} para diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
@@ -340,18 +340,17 @@ En este trabajo se plantea una combinación de los métodos, técnicas y tecnolo
 
 El crecimiento de la población a nivel mundial contribuye al aumento de materiales sólidos tanto los que se pueden reciclar y los que no se reciclan. 
 La adecuada clasificación de los plásticos representa una actividad económica para personas físicas y morales que contribuyen en la recolección, traslado y proceso de los diferentes materiales.
-El crecimiento de la producción de plástico a nivel mundial alcanzó los 280 millones de toneladas en 2011, 322 millones de toneladas en 2015, y se estima que para 2021 rondará los 400 a 414 millones de toneladas \cite{Grigore2017}, \cite{Sahin2018}.
+El crecimiento de la producción de plástico a nivel mundial alcanzó los 280 millones de toneladas en 2011, 322 millones de toneladas en 2015, y se estima que para 2021 rondará los 400 a 414 millones de toneladas \cite{Grigore2017, Sahin2018}.
 
 %- De la línea 260 a la línea 275 fue tomado del protocolo del maestro Luis Hurtado.
 En México se generan más de 44 millones de toneladas anuales de residuos, y se espera que la cifra se incremente a 65 millones para el año 2030.
 La mitad de nuestros residuos son orgánicos, y la otra mitad son sólidos, e incluyen plástico, papel, cartón, vidrio y aluminio.
-El 90{$\%$} de estos desperdicios se arrojan a tiraderos de cielo abierto o a rellenos sanitarios lo que provoca contaminación del aire y el suelo.
+El 90\% de estos desperdicios se arrojan a tiraderos de cielo abierto o a rellenos sanitarios lo que provoca contaminación del aire y el suelo.
 Los plásticos reciclados son materiales muy utilizados a nivel global. 
-En México de todos estos residuos que se producen solo el 5{$\%$} se recicla o valoriza lo que equivaldría a unas 2.2 millones de toneladas anuales \cite{SEMARNAT2019}, \cite{Angeles2021}.
+En México de todos estos residuos que se producen solo el 5\% se recicla o valoriza lo que equivaldría a unas 2.2 millones de toneladas anuales \cite{SEMARNAT2019, Angeles2021}.
 En México existen organismos dedicados a la recolección y reciclado de plásticos
 desde 1992, incluido el PET.
-Las organizaciones más importantes son: La Asociación
-para Promover el Reciclaje de PET, APREPET, Ecología y Compromiso Empresarial ECOCE y el Instituto Nacional de Recicladores INARE \cite{floresproblema}.
+Las organizaciones más importantes son: La Asociación para Promover el Reciclaje de PET, APREPET, Ecología y Compromiso Empresarial ECOCE y el Instituto Nacional de Recicladores INARE \cite{floresproblema}.
 Estás instituciones a menudo realizan programas de recolección dirigidas a la población para después proceder a la parte del reciclaje de plásticos. 
 Un problema es que este proceso es muy tardado debido a que tiene que pasar a través de otras instituciones como centros de acopio para después proceder al reciclaje que se llevará a cabo en una industria dedicada a ello.
 
@@ -359,10 +358,10 @@ Un problema es que este proceso es muy tardado debido a que tiene que pasar a tr
 % El 17 de mayo de 2021, a través de un comunicado de prensa de la Industria Mexicana de Coca-Cola, se informó que generan más de 2,900 empleos directos y más de 35 mil indirectos dentro de la cadena de reciclaje.
 La gran cantidad de botellas de plástico que se generan en el mundo requiere de sistemas que detecten las propiedades de los envases y descarten otros materiales a gran velocidad. 
 Existen tecnologías automatizadas para clasificar las botellas de plástico.
-Estas tecnologías no se aplican a la mayoría de los plásticos debido a la variedad de tamaños, formas, revestimientos, pintura de los plásticos, grosor y opacidad de los mismos, lo que dificulta el uso de técnicas de clasificación \cite{kang2005electronic}, \cite{Angeles2021}.
+Estas tecnologías no se aplican a la mayoría de los plásticos debido a la variedad de tamaños, formas, revestimientos, pintura de los plásticos, grosor y opacidad de los mismos, lo que dificulta el uso de técnicas de clasificación \cite{kang2005electronic, Angeles2021}.
 
 Las empresas y principalmente la ciudadanía deben seguir contribuyendo a que se recolecten más materiales solidos a través de los centros de acopio, solo para México se procesan 85 mil toneladas al año de plástico PET, el equivalente a 4,100 millones de botellas.
-Con la adecuada recolección se evita el 87{$\%$} de emisiones de gases de efecto invernadero frente a la producción de resina virgen, lo que equivale a 101,350 toneladas anuales de dióxido de carbono ($CO_2$) cantidad que se evitaría si todos los automóviles de la ciudad de México dejaran de circular durante dos días \cite{SEMARNAT2019}.
+Con la adecuada recolección se evita el 87\% de emisiones de gases de efecto invernadero frente a la producción de resina virgen, lo que equivale a 101,350 toneladas anuales de dióxido de carbono ($CO_2$) cantidad que se evitaría si todos los automóviles de la ciudad de México dejaran de circular durante dos días \cite{SEMARNAT2019}.
 
 La clasificación manual no es una opción rentable para separar en grandes cantidades.
 Existen presentaciones de plásticos que se comercializan cada día, las cuales no tienen la nomenclatura que las identifique. 
@@ -383,7 +382,7 @@ Es en esta premisa en la cual recae este proyecto, permitir la clasificación de
 %-De la línea 283 a la línea 288 fue tomado del protocolo del maestro Luis Hurtado.
 Los centros de acopio que abastecen de material a diversas empresas en todo el mundo se encuentran con la falta de maquinaria y métodos que les permitan tener resultados más favorables en los precios y costes; 
 Por lo que se han implementado varias técnicas manuales que dependen de la interpretación del observador.
-El material en la mayoría de los casos se encuentra revuelto y se almacena en super-sacos o contenedores de manera que manualmente se clasifican al 100{$\%$} debido a que estos materiales suelen estar contaminados con líquidos dentro de las botellas, materiales orgánicos, pintura, etiquetas de PVC, aceites etc. 
+El material en la mayoría de los casos se encuentra revuelto y se almacena en super-sacos o contenedores de manera que manualmente se clasifican al 100\% debido a que estos materiales suelen estar contaminados con líquidos dentro de las botellas, materiales orgánicos, pintura, etiquetas de PVC, aceites etc. 
 
 Para poder enfrentar esta problemática consideramos que, se debe tener una metodología para poder experimentar y proponer mejoras para facilitar el proceso de automatización. 
 Se debe de poder identificar los mejores diseños a través de métodos que ayuden a reducir el coste en el proceso de implementación de un sistema tecnológico.
@@ -395,19 +394,19 @@ Para ello se busca la implementación de una metodología que nos permita selecc
 \centering{\section{FUNDAMENTACIÓN TEÓRICA}}
 \justifying
 
-Partiendo del concepto de sistema, como un conjunto de partes coordinadas y de reglas o principios sobre una materia racionalmente enlazadas entre sí y en interacción para alcanzar un conjunto de objetivos \cite{RAE}, \cite{Johansen2004}. 
+Partiendo del concepto de sistema, como un conjunto de partes coordinadas y de reglas o principios sobre una materia racionalmente enlazadas entre sí y en interacción para alcanzar un conjunto de objetivos \cite{Johansen2004, RAE}. 
 Se puede afirmar que el conjunto de partes de un sistema es fundamental para que se alcancen sus metas más aun si se trata de sistemas de medición. 
-Para evaluar el conjunto de partes de un sistema se utiliza estadística con la finalidad de recolectar datos que representen el comportamiento de los componentes. 
+Para evaluar el conjunto de partes de un sistema se utiliza estadística con la finalidad de recolectar datos que representen el comportamiento de los componentes.
 Por otro lado los datos son representaciones simbólicas de los eventos que se presentan en cualquier sistema y se pueden obtener por medio de la observación, por transductores, sensores y modelos matemáticos \cite{crisci1983introduccion}. 
 Por lo que al buscar que los sistemas sean asequibles se deben de considerar más factores de interacción en el sistema.
 Asequible se refiere a lo que se puede alcanzar, obtener o lograr, lo que se pretenda o desea \cite{RAE2021}.
-Es difícil diferenciar entre los tipos de resinas que se utilizan y las diferentes presentaciones que circulan el mercado mundial ver Tabla \ref{Sımbolos}, esta fue una de las razones para que la sociedad industrial del plástico instituyera un sistema de etiquetado en 1980 \cite{Ramli2008}. 
+Es difícil diferenciar entre los tipos de resinas que se utilizan y las diferentes presentaciones que circulan el mercado mundial, ver Tabla \ref{Sımbolos}, esta fue una de las razones para que la sociedad industrial del plástico instituyera un sistema de etiquetado en 1980 \cite{Ramli2008}. 
 El sistema crea un conjunto de códigos para cada uno de los seis tipos de resinas más comunes. 
 Estos códigos se pueden encontrar en la mayoría de las presentaciones bajo las botellas \cite{Rotheiser2009}.
 El PET actualmente es uno de los materiales más utilizados en el día a día de los seres humanos siendo este el material base para todo tipo de productos, por ejemplo; 
 Botellas de agua o cualquier otro líquido, envolturas de productos de consumo humano o de productos desechables, bolsas de plástico, etc.
 De lo anterior se entiende que debido a la alta presencia de este material en la vida actual del ser humano es necesario recurrir a la labor de la reutilización o reciclaje en la Figura \ref{PETCICLO} se ilustra el procesos que puede llevar una botella de PET para ser reciclada.
-
+% 
 % ##########################################################################################
 {\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
@@ -437,7 +436,8 @@ De lo anterior se entiende que debido a la alta presencia de este material en la
     
 \end{table}
 }
-% ##########################################################################################
+% 
+% 
 {\renewcommand{\baselinestretch}{1.15}
 \begin{figure}[H]
     \centering
@@ -447,6 +447,8 @@ De lo anterior se entiende que debido a la alta presencia de este material en la
     \label{PETCICLO}
 \end{figure}
 }
+% 
+% 
 \subsection{Metodologías para el diseño y el desarrollo de tecnología}
 
 La heurística es una técnica o procedimiento práctico, para resolver problemas. 
@@ -455,20 +457,21 @@ La base de la heurística está en la experiencia de resolver problemas y en ver
 Consecuentemente se dice que hay búsquedas ciegas, búsquedas heurísticas (basadas en la experiencia) y búsquedas racionales.
 
 Dado que las heurísticas pueden equivocarse, es fundamental conocer los casos en los que son aplicables y los límites a su uso.
-En general, en la ingeniería deben considerarse como ayudas o apoyos para hacer estimaciones rápidas y diseños preliminares, pero no como justificaciones finales de un diseño o proyecto u otros \cite{beuchot1999}, \cite{breyer2011}.
+En general, en la ingeniería deben considerarse como ayudas o apoyos para hacer estimaciones rápidas y diseños preliminares, pero no como justificaciones finales de un diseño o proyecto u otros \cite{beuchot1999, breyer2011}.
 
 % Agregar información sobre las core tools
 Las \textit{Core Tools} son un conjunto de herramientas principalmente usadas en el sector automotriz también conocidas como APQP, PPAP, AMEF, SPC y MSA.
 Estas herramientas son procesos para diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades \cite{olmedo2017}.
-
+% 
+% 
 \subsection{Sistemas actuales de clasificación para botellas de plástico}
 
 En la última década se ha utilizado el aprendizaje automático, siendo así un conjunto de algoritmos de clasificación basado en la teoría del aprendizaje estadístico, esta modalidad se puede entender como algoritmos que aprenden de los datos ingresados por una persona \cite{1527552} y son implementados en diversas aplicaciones. 
 En la Figura \ref{Ejemplo} se muestra el proceso completo de clasificación utilizando aprendizaje estadístico. 
-El sistema cuenta con retroalimentación \cite{Association2008} para clasificar con una mejor precisión. 
+El sistema cuenta con retroalimentación para clasificar con una mejor precisión \cite{Association2008}. 
 Existen diversos sistemas que difieren del que se muestra en la Figura \ref{Ejemplo}.
-
-%#############################################
+% 
+%
 {\renewcommand{\baselinestretch}{1.15}
 \begin{figure}[H]
     \centering
@@ -477,14 +480,14 @@ Existen diversos sistemas que difieren del que se muestra en la Figura \ref{Ejem
     \label{Ejemplo}
 \end{figure}
 }
-%############################################
-
+%
+%
 \subsection{Tendencias recientes para mejorar la detección en los plásticos reciclables}
 
 Las investigaciones recientes plantean nuevos métodos como el principio del procesamiento de imágenes ver Figura \ref{NIR4}, utilizando combinaciones de varias técnicas como análisis de componentes principales, espectroscopia \cite{Rani2019} y transformada \textit{Hough} \cite{Duda197211}. 
-Una de las limitantes de este método son las condiciones al momento de tomar la fotografía, la variación en la luz, resolución, fondo y la distancia de la cámara para obtener una precisión mayor a 95{$\%$} \cite{Prasad2012}.
-
-%#############################################
+Una de las limitantes de este método son las condiciones al momento de tomar la fotografía, la variación en la luz, resolución, fondo y la distancia de la cámara para obtener una precisión mayor a 95\% \cite{Prasad2012}.
+% 
+%
 {\renewcommand{\baselinestretch}{1.15}
 \begin{figure}[H]
     \centering
@@ -493,8 +496,8 @@ Una de las limitantes de este método son las condiciones al momento de tomar la
     \label{NIR4}
 \end{figure}
 }
-%############################################
-
+%
+%
 \subsection{Sensores para la identificación de polímeros}
 
 La implementación de sensores basados en espectroscopia permite tener una gran ventaja al momento de clasificar los diferentes plásticos que se manejan en la industria puesto que permiten realizar esta tarea sin ser invasivo con los plásticos, sin emitir contaminantes. 
@@ -502,23 +505,24 @@ Tienen muy pocas limitaciones para el tamaño del material que se va a separar y
 Algunas de las tecnologías de espectroscopia que pueden ser aplicadas para la separación de plásticos son, por ejemplo, la espectroscopia de infrarrojo cercano o \textit{near-infrared spectroscopy} NIR; 
 Espectroscopia de \textit{Raman};
 Espectroscopia de ruptura inducida por láser o \textit{laser induced breakdown spectroscopy} LIBS y fluorescencia de rayos-X o \textit{X-ray fluorescence} XRF \cite{wu2020auto}.
-En este caso como únicamente se busca separar botellas de PET se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre 800 $nm$ y 2500 $nm$ aunque un rango de entre 800 $nm$ y 1100 $nm$ es más que suficiente para la detección y diferenciación entre el PET transparente y el de color.
+En este caso como se busca separar botellas de PET se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre 800 $nm$ y 2500 $nm$ aunque un rango de entre 800 $nm$ y 1100 $nm$ es más que suficiente para la detección y diferenciación entre el PET transparente y el de color.
 Esta tecnología en conjunto con una cámara que pueda generar imágenes hiper-espectrales y contenga un dispositivo de carga acoplada puede ser más que suficiente para realizar la clasificación de las botellas de PET \cite{wu2020auto}.
 
 Los sensores infrarrojos se basan en fotodiodos que pueden estar construidos a partir de cuatro elementos químicos como el silicio Si, el indio In, el galio Ga o el arsénico As, sin embargo, cabe aclarar que se pueden adquirir fotodiodos hechos a partir de únicamente silicio y fotodiodos construidos a partir arseniuro de indio y galio InGaAs.
 Cada material y fotodiodo tiene un distinto rango de operación ver Figura \ref{NIRRange}, lo cual nos permite decidir que tipo de diodo es el ideal para la tarea que se desea realizar.
-
-%######################################################
+% 
+%
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{img/WVERNG.pdf}
     \caption{Rango de operación de los fotodiodos InGaAs \cite{kk2015ingaas}.}
     \label{NIRRange}
 \end{figure}
-%######################################################
-
+%
+%
 Basándonos en la gráfica de la Figura \ref{NIRRange} y en el hecho de que el rango necesario para detectar los colores del PET es de entre los 800 $nm$ y 1100 $nm$ podemos asumir que un fotodiodo de silicio correspondiente al tipo S1337-BR'' \cite{kk2015ingaas} es suficiente para el sistema en cuestión, sin embargo, se debe considerar la frecuencia a la cual va a operar el sistema, el área fotosensible que ofrece el sensor y la variedad de modelos que se disponen, considerando estos factores es más factible utilizar un diodo construido a base de arseniuro de indio y galio.
-%######################################################
+% 
+%
 {\renewcommand{\baselinestretch}{1.15}
 \begin{figure}[H]
     \centering
@@ -527,10 +531,11 @@ Basándonos en la gráfica de la Figura \ref{NIRRange} y en el hecho de que el r
     \label{PINDiodes}
 \end{figure}
 }
-%######################################################
-
-Dada la tabla en la Figura \ref{PINDiodes} podemos observar los diferentes modelos de diodos construidos a partir de InGaAs, sus modelos de referencia y el rango de detección que poseen, con esta información es sencillo seleccionar una serie de construcción. 
-%################################################################
+%
+%
+Dada el cuadro en la Figura \ref{PINDiodes} podemos observar los diferentes modelos de diodos construidos a partir de InGaAs, sus modelos de referencia y el rango de detección que poseen, con esta información es sencillo seleccionar una serie de construcción. 
+% 
+% 
 {\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
     \centering
@@ -555,9 +560,8 @@ Dada la tabla en la Figura \ref{PINDiodes} podemos observar los diferentes model
     \end{adjustwidth}
     \end{table}
 }
-%######################################################################
-
-%################################################################
+%
+%
 {\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
     \centering
@@ -600,22 +604,28 @@ Dada la tabla en la Figura \ref{PINDiodes} podemos observar los diferentes model
     \end{adjustwidth}
     \end{table}
 }
-%######################################################################
-
-En la tabla \ref{G10899CAS} y tabla \ref{G12180CAS} se muestran los modelos que pertenecen a las respectivas series de fotodiodos y sus características generales, sin embargo, cabe destacar que la serie G10899 \cite{kk2015ingaas} tiene un rango de operación de entre 800 $nm$ y los 1700 $nm$ mientras que la serie G12180 \cite{kk2015ingaas} tiene un rango menor de entre 900 $nm$ y 1700 $nm$, si bien esta diferencia de 100 $nm$ podría o no representar un cambio en la precisión considerable se compensa con el hecho de que la serie G12180 \cite{kk2015ingaas} tiene más opciones que permiten obtener resultados diferentes en cuestiones de eficiencia y velocidad que son factores importantes para la realización del sistema de clasificación, por lo que de momento estas dos series son consideradas aptas para la tarea que se desea llevar a cabo.
-
+% 
+% 
+En la Tabla \ref{G10899CAS} y Tabla \ref{G12180CAS} se muestran los modelos que pertenecen a las respectivas series de fotodiodos y sus características generales, sin embargo, cabe destacar que la serie G10899 \cite{kk2015ingaas} tiene un rango de operación de entre 800 $nm$ y los 1700 $nm$ mientras que la serie G12180 \cite{kk2015ingaas} tiene un rango menor de entre 900 $nm$ y 1700 $nm$, si bien esta diferencia de 100 $nm$ podría o no representar un cambio en la precisión considerable se compensa con el hecho de que la serie G12180 \cite{kk2015ingaas} tiene más opciones que permiten obtener resultados diferentes en cuestiones de eficiencia y velocidad que son factores importantes para la realización del sistema de clasificación, por lo que de momento estas dos series son consideradas aptas para la tarea que se desea llevar a cabo.
+% 
+% 
 \subsubsection{Sistema de acondicionamiento de señal}
+
 Los sistemas de acondicionamiento de señales usualmente consisten en circuitos electrónicos que ejercen funciones como amplificación, cambio de nivel \textit{(level shifting)}, filtrado, acople de impedancias y modulación \cite{pallas2012sensors}.
 Normalmente alguna de las etapas que componen al sistema de acondicionamiento consiste en la conversión de la señal analógica, proveniente del sensor, a una señal digital \textit{(ADC)} por sus siglas en inglés \cite{pallas2012sensors}.
-
 Se deben considerar también las características que se muestran a continuación:
+% 
+% 
 \begin{itemize}
     \item Configuración general de entrada y salida del sensor.
     \item Exactitud, precisión y sensibilidad.
     \item Linealidad y resolución.
 \end{itemize}
+% 
+% 
 En función de estás características se procede con el diseño particular del sistema de acondicionamiento para el sensor en cuestión \cite{pallas2012sensors}.
-
+% 
+% 
 \subsubsection{Procesamiento de los datos de los sensores}
 
 Existen varios métodos para la extracción y manejo de los datos provenientes de los sensores basados en espectroscopia infrarroja dado que es una tarea compleja.
@@ -643,12 +653,12 @@ Los métodos de arriba se consideraran para identificar si los elementos que com
          \end{tabular}
 \end{table}
 }
-% \newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% 
+% 
 \subsection{Premisas para identificar los elementos de un sistema de clasificación de botellas de plástico}
-
 %-alusión a la hipótesis 
+% 
+% 
 \begin{itemize}
     \item Existen metodologías que combinadas pueden ayudar a determinar los elementos necesarios para un sistema de clasificación de botellas PET.
     \item Proponiendo solo un sensor de InGaAs podemos identificar que elementos mecánicos, eléctricos y electrónicos son necesarios.
@@ -656,8 +666,8 @@ Los métodos de arriba se consideraran para identificar si los elementos que com
 \end{itemize}
 % 
 % 
-\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \centering{\section{HIPÓTESIS}}
 \justifying
 
@@ -679,9 +689,12 @@ Mediante la combinación de tecnologías existentes para la clasificación de bo
 % Desarrollar una metodología especifica en función de metodologías ya existentes que permita seleccionar los componentes con las características idóneas y suficientes para el correcto funcionamiento de un sistema de clasificación de botellas de PET post-consumo.
 
 % Objetivo general
-Desarrollar e implementar una metodología que permita seleccionar los componentes significativos que contribuyen al correcto funcionamiento de un sistema de clasificación de “PET” post-consumo utilizando tecnologías previas en un periodo de un año y medio aproximadamente.
-
-\subsection{Objetivos específicos }
+Desarrollar e implementar una metodología que permita seleccionar los componentes significativos que contribuyen al correcto funcionamiento de un sistema de clasificación de PET post-consumo utilizando tecnologías para un sistema de acondicionamiento de señal.
+% 
+% 
+\subsection{Objetivos específicos}
+% 
+% 
 \begin{itemize}
     \item Diseñar y desarrollar un sistema de acondicionamiento de señal para el diodo de InGaAs.
     \item Justificar a partir de una metodología los elementos eléctricos y electrónicos que interactuarán en el sistema.
@@ -1458,8 +1471,10 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 % 
 % 
 \newpage
-\renewcommand{\refname}{\centering{REFERENCIAS}}
-\addcontentsline{toc}{section}{REFERENCIAS}
+\centering{\section{REFERENCIAS}}
+% \renewcommand{\refname}{\centering{REFERENCIAS}}
+\renewcommand{\refname}{\centering{}}
+% \addcontentsline{toc}{section}{REFERENCIAS}
 % \bibliographystyle{unsrt}
 \bibliographystyle{apalike}
 \bibliography{tesis} 
