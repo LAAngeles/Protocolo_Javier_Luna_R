@@ -492,7 +492,8 @@ Una de las limitantes de este método son las condiciones al momento de tomar la
 \begin{figure}[H]
     \centering
     \includegraphics[trim = {14mm 208mm 34mm 16mm},clip,scale=.72]{img/Vg_fig_24.pdf}
-    \caption{Cámara fotográfica para la detección de botellas de color \cite{Wang2019170}.}
+    % \caption{Cámara fotográfica para la detección de botellas de color \cite{Wang2019170}.}
+    \caption{Cámara fotográfica para la detección de botellas de color [Wang et al., 2019].}
     \label{NIR4}
 \end{figure}
 }
@@ -687,9 +688,8 @@ Mediante la combinación de tecnologías existentes para la clasificación de bo
 \centering{\section{OBJETIVO}}
 \justifying
 % Desarrollar una metodología especifica en función de metodologías ya existentes que permita seleccionar los componentes con las características idóneas y suficientes para el correcto funcionamiento de un sistema de clasificación de botellas de PET post-consumo.
-
 % Objetivo general
-Desarrollar e implementar una metodología que permita seleccionar los componentes significativos que contribuyen al correcto funcionamiento de un sistema de clasificación de PET post-consumo utilizando tecnologías para un sistema de acondicionamiento de señal.
+Desarrollar e implementar una metodología que permita seleccionar los componentes significativos que contribuyen al correcto funcionamiento de un sistema de clasificación de PET post-consumo utilizando tecnologías para un sistema de acondicionamiento de señal.\\
 % 
 % 
 \subsection{Objetivos específicos}
@@ -697,9 +697,9 @@ Desarrollar e implementar una metodología que permita seleccionar los component
 % 
 \begin{itemize}
     \item Diseñar y desarrollar un sistema de acondicionamiento de señal para el diodo de InGaAs.
-    \item Justificar a partir de una metodología los elementos eléctricos y electrónicos que interactuarán en el sistema.
     \item Determinar una metodología a partir de las características de los diodos InGaAs para seleccionar los elementos mecánicos.
-    \item Comparar el comportamiento del diodo InGaAs con los distintos elementos electrónicos y eléctricos del sistema.
+    \item Justificar a partir de la metodología propuesta los elementos eléctricos y electrónicos que interactuarán en el sistema.
+    % \item Comparar el comportamiento del diodo InGaAs con los distintos elementos electrónicos y eléctricos del sistema.
 \end{itemize}
 % 
 % 
@@ -708,61 +708,29 @@ Desarrollar e implementar una metodología que permita seleccionar los component
 \justifying
 
 Por el método de la observación y el análisis estadístico se llevara acabo este trabajo de investigación. 
-El estudio y la recolección de los datos se realizarán en la ciudad de Querétaro, en los laboratorios de automatización de la facultad de ingeniería UAQ. 
-El período de investigación se llevara acabo a partir de enero de 2022 y se estima que se termine el desarrollo en febrero de 2023, véase \ref{CronAct}. 
-Para empezar con la metodología de una mejor forma se definirá el nivel de abstracción inicial para el diseño eléctrico, y mecánico, se realizara una descomposición jerárquica, definiendo la estructura de nuevos niveles jerárquicos, estableciendo los niveles de potencia y control para desarrollar la arquitectura necesaria, y finalmente, seleccionar la tecnología que se va a utilizar.
+El estudio y la recolección de los datos se realizo en la ciudad de Querétaro, en los laboratorios de automatización de la facultad de ingeniería UAQ. 
+El período de investigación se llevo acabo a partir de enero de 2022 y se termino el desarrollo en febrero de 2023. 
+Para empezar con la metodología de una mejor forma se definió el nivel de abstracción inicial para el diseño eléctrico, y mecánico, se realizo una descomposición jerárquica, definiendo la estructura de nuevos niveles jerárquicos, estableciendo los niveles de potencia y control para desarrollar la arquitectura necesaria, y finalmente, seleccionar la tecnología que se va a utilizar.\\
 % 
 % 
 \subsection{Diseño y desarrollo del sistema de acondicionamiento de señal para el diodo de InGaAs}
 
-Para realizar el sistema de acondicionamiento de señal, primero se requiere conocer los rangos de operación del diodo y las características que este posee para trabajar bajo distintas condiciones ambientales.
-Para ello es necesario consultar la hoja de datos y obtener el tipo de señal de salida que el diodo envía y que será procesada para que sea una señal limpia y que permita tener errores mínimos en la medición.
-
-
+Para realizar el sistema de acondicionamiento de señal, primero se definieron los rangos de operación del diodo y las características que este posee para trabajar bajo distintas condiciones ambientales.
+Para ello se consulto la hoja de datos para obtener el tipo de señal de salida que el diodo envía y que será procesada para que sea una señal limpia y que permita tener errores mínimos en la medición.
+% 
+% 
 \subsubsection{Definición del mensurando para la medición de la longitud de onda en el diodo InGaAs}
 
-Para la medición de la longitud de onda se considera al mensurando como la corriente eléctrica que pasa por un foto-diodo de InGaAs, la medición es de manera indirecta debido a las propiedades del sensor que al variar la iluminancia que pasa por el material expuesto se refleja y cambia la longitud de onda en el foto-diodo y su resistencia cambia.
-Al variar la resistencia del foto-diodo debido al cambio de iluminancia y al \textbf{V} inducido, la \textbf{I} cambiará, dependiendo de esta variación y se puede calcular la longitud de onda. 
-Si la relación entre \textbf{V} e \textbf{I} es lineal, decimos que estamos en presencia de un material o componente óhmico y la relación que describe este comportamiento se conoce como ley de Ohm.
+Para la medición de la longitud de onda se considero al mensurando como la corriente eléctrica que pasa por un foto-diodo de InGaAs, la medición es de manera indirecta debido a las propiedades del sensor que al variar la iluminancia que pasa por el material expuesto se refleja y cambia la longitud de onda en el foto-diodo y su resistencia cambia.
+Al variar la resistencia del foto-diodo debido al cambio de iluminancia y al V inducido, la I cambiará, dependiendo de esta variación y se puede calcular la longitud de onda. 
+Si la relación entre V e I es lineal, decimos que estamos en presencia de un material o componente óhmico y la relación que describe este comportamiento se conoce como ley de Ohm.
+% 
+%  
+\subsection{Determinación de una metodología mediante las características del diodo InGaAs para seleccionar los elementos mecánicos}
 
-\subsubsection{Justificación para el desarrollo de un sistema de acondicionamiento de señal para el diodo de InGaAs}
-
-Dado que se trabajará con un diodo de InGaAs por si sólo entonces se requiere de un sistema que permita al controlador interpretar los datos provenientes del diodo de una manera más sencilla y exacta con el fin de obtener una mayor precisión en la clasificación del PET. 
-Para esto se estudiarán las propiedades del diodo, el tipo de salida que envía al realizar una medición y su comportamiento con diferentes elementos como amplificadores operacionales, filtros y en función de ello comenzar con la selección de componentes para las etapas de amplificación y filtrado de la señal de salida del sensor.
-
-\subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
-
-De manera general se requiere utilizar un microcontrolador para ejecutar todas las tareas que el sistema de clasificación requiera y también se debe considerar el apartado de potencia puesto que se utilizara cuando menos un motor y una banda transportadora.
-Un microcontrolador es un componente electrónico que en una sola pastilla o circuito integrado incluye la memoria, puertos y algunos periféricos \cite{del1999sistemas}.
-Para la selección de este componente es necesario considerar aspectos de frecuencia de operación, número de entradas y salidas digitales, número de puertos de conversión A/D, número de \textit{TIMERS} disponibles, etc. \cite{del1999sistemas}.
-Así mismo, se planea considerar el tipo de conectores y elementos necesarios para realizar una etapa de potencia ideal para que el sistema de clasificación funcione correctamente manteniendo la seguridad como premisa principal.
-Dado que se utilizará al diodo de InGaAs como componente principal para el trabajo de espectroscopia, se deben considerar aquellos factores de ruido que puedan provocar fallas en su funcionamiento, para ello es crucial identificar dichos factores y determinar cual sería la manera más idónea para eliminarlos con el fin de permitir que el diodo y sus futuras etapas de amplificación y de filtrado funcionen correctamente mediante la información que del elemento. 
-Dicha información puede ser obtenida mediante la hoja de datos característica del dispositivo y esto puede ser realizado de manera similar con cada componente que vaya a formar parte del sistema, ya sea en la parte de control o en la parte de potencia.
-Otro factor a considerar es el hecho de que cada componente funciona de manera diferente en función del entorno que lo rodea puesto que todo semiconductor puede verse afectado en su función debido a la temperatura exterior \cite{malvino1991principios}.
-Por ende, será necesario utilizar instrumentos de medición como voltímetros, amperímetros u otro equipo que nos permita analizar e identificar posibles alteraciones en el funcionamiento esperado para poder realizar las correcciones necesarias con el fin de obtener el funcionamiento deseado en el sistema.
-
-% Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de 5v para la entrada y otro de 24v para la activación de las bobinas de las electroválvulas.
-% Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre 5v y 30v de corriente directa y de 125v a 250v de corriente alterna con corrientes de hasta 10A. 
-% El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $64$ dolares que equivalen a $1328$ pesos mexicanos mientras que el precio de la Nucleo STM32F446 es de $15.82$ dolares que equivalen a $328$ pesos mexicanos, esto sin contar los costos de envío.
-
-\subsection{Determinación de una metodología para el diseño mecánico}
-
-% \subsection{Diseño mecánico}
-
-% De manera general la parte mecánica del sistema de clasificación se compone de una banda transportadora, un motor para dicha banda transportadora y un sistema que permita sostener el sistema eléctrico-electrónico encargado de realizar en forma la clasificación.
 De manera general se propone para la parte mecánica del sistema de clasificación una banda transportadora, un motor para dicha banda transportadora y un sistema que permita sostener el sistema eléctrico-electrónico encargado de realizar en forma la clasificación, véase la Figura \ref{fig:imgMecanico}.
-
-La determinación de estos objetos se propone realizarse en función de las características de las botellas de PET y del espacio del que se dispone para el sistema de clasificación.
-Otro factor a considerar para esta metodología es el espacio de los eléctricos y electrónicos que se utilizaran tanto en el funcionamiento del sensor como en el funcionamiento de elementos previamente mencionados como el motor o la banda transportadora, como el fin de que se mantenga una distribución de cables y conexiones discreta y manteniendo el mínimo requerimiento de seguridad.
-
-Dado que se trabajará con espectroscopia y se planea el uso de una cámara entonces también es otro factor a considerar puesto que se requiere de una fuente de luz estable y constante, para ello la implementación de una estructura aislada sobre la estructura principal es indispensable, en ese sentido, dentro de la metodología debe indicarse que factores permiten el aislamiento de una sección de factores externos como la luz y/o las vibraciones que se puedan presentar en otras secciones del sistema.
-
-Finalmente para la parte que se encargará en forma de separar las botellas de PET se propone la implementación de pistones neumáticos.
-Para esta implementación en la metodología es necesario considerar factores como longitud, peso, velocidad de accionamiento, tipo de accionamiento y la presión mínima que requiere el pistón para ejecutar la tarea de manera óptima \cite{sole2012neumatica}.
-
-Todo esto se realizará en función de las características de cada elemento mecánico, eléctrico y electrónico que pueda formar parte del sistema de clasificación, así mismo, se utilizarán herramientas como las \textit{Core Tools} que son herramientas que en la industria automotriz permiten diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
-
-%############################################
+% 
+% 
 \begin{figure}[H]
 
     \begin{subfigure}{0.49\textwidth}
@@ -781,8 +749,18 @@ Todo esto se realizará en función de las características de cada elemento mec
     \label{fig:imgMecanico}
     
 \end{figure}
-%############################################
+% 
+% 
+La determinación de estos objetos se propone realizarse en función de las características de las botellas de PET y del espacio del que se dispone para el sistema de clasificación.
+Otro factor a considerar para esta metodología es el espacio de los eléctricos y electrónicos que se utilizaran tanto en el funcionamiento del sensor como en el funcionamiento de elementos previamente mencionados como el motor o la banda transportadora, como el fin de que se mantenga una distribución de cables y conexiones discreta y manteniendo el mínimo requerimiento de seguridad.
 
+Dado que se trabajará con espectroscopia es otro factor a considerar puesto que se requiere de una fuente de luz estable y constante, para ello se implemento de una estructura aislada sobre la estructura. 
+En ese sentido, dentro de la metodología se indican que factores permiten el aislamiento de una sección de variables externas como la luz y/o las vibraciones que se puedan presentar en otras secciones del sistema.
+
+Finalmente para la parte que se encargará en forma de separar las botellas de PET se propone la implementación de pistones neumáticos.
+Para esta implementación en la metodología es necesario considerar factores como longitud, peso, velocidad de accionamiento, tipo de accionamiento y la presión mínima que requiere el pistón para ejecutar la tarea de manera óptima \cite{sole2012neumatica}.
+
+Todo esto se realizó en función de las características de cada elemento mecánico, eléctrico y electrónico que pueda formar parte del sistema de clasificación, así mismo, se utilizaron herramientas como las \textit{Core Tools} que son herramientas que en la industria automotriz permiten diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
 % Para poder identificar si los elementos son los adecuados.
 % Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de PET a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
 % Con esto y teniendo en cuenta que la clasificación en la sección de sensores de realizara de botella en botella entonces el peso en la banda transportadora no pasaría de 5kg, por ende, no es necesario recurrir a un motor muy potente ni a una tensión alta en la banda para poder desplazar el contenido.
@@ -796,7 +774,7 @@ Todo esto se realizará en función de las características de cada elemento mec
 % Esta clasificación puede realizarse mediante pistones neumáticos que se accionen mediante sus respectivas electroválvulas, las cuales son fáciles de controlar puesto que únicamente se activarían si las características de la botella identificadas en la sección previa cumplen con lo estipulado.
 % Para esta última parte se debe considerar que se requiere de un suministro constante de aire comprimido para los pistones neumáticos, está presión debe ser de al menos $0.08MPa$, a menos que se requiera un control más estricto sobre el accionamiento se pueden utilizar pistones de simple efecto con retorno de muelle, de lo contrario se debe optar por pistones de doble efecto para controlar tanto el accionamiento como el regreso mediante un electroválvula de $\frac{5}{2}$ monoestable.
 
-\subsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
+\subsubsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
 
 Se busca minimizar los factores de ruido que con la interacción de todos los factores anteriormente descritos se obtenga la velocidad máxima y mínima que no afecte la eficiencia en la clasificación ver Figura \ref{diseño04} \cite{gutierrez2004analisis}.
 
@@ -815,11 +793,30 @@ PCA analizara los elementos principales de múltiples características, exponien
 % PCA establecerá un método para disminuir la dimensión de los datos.
 El análisis de componentes principales se utilizará para describir la variación en los conjuntos de variables correlacionadas reduciendo la complejidad ayudando a la interpretación de los datos y la reducción del ruido o variables que se tienen que monitorear.
 % ###############################################
+\subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
+
+De manera general se requiere utilizar un microcontrolador para ejecutar todas las tareas que el sistema de clasificación requiera y también se debe considerar el apartado de potencia puesto que se utilizara cuando menos un motor y una banda transportadora.
+Un microcontrolador es un componente electrónico que en una sola pastilla o circuito integrado incluye la memoria, puertos y algunos periféricos \cite{del1999sistemas}.
+Para la selección de este componente es necesario considerar aspectos de frecuencia de operación, número de entradas y salidas digitales, número de puertos de conversión A/D, número de \textit{TIMERS} disponibles, etc. \cite{del1999sistemas}.
+Así mismo, se planea considerar el tipo de conectores y elementos necesarios para realizar una etapa de potencia ideal para que el sistema de clasificación funcione correctamente manteniendo la seguridad como premisa principal.
+Dado que se utilizará al diodo de InGaAs como componente principal para el trabajo de espectroscopia, se deben considerar aquellos factores de ruido que puedan provocar fallas en su funcionamiento, para ello es crucial identificar dichos factores y determinar cual sería la manera más idónea para eliminarlos con el fin de permitir que el diodo y sus futuras etapas de amplificación y de filtrado funcionen correctamente mediante la información que del elemento. 
+Dicha información puede ser obtenida mediante la hoja de datos característica del dispositivo y esto puede ser realizado de manera similar con cada componente que vaya a formar parte del sistema, ya sea en la parte de control o en la parte de potencia.
+Otro factor a considerar es el hecho de que cada componente funciona de manera diferente en función del entorno que lo rodea puesto que todo semiconductor puede verse afectado en su función debido a la temperatura exterior \cite{malvino1991principios}.
+Por ende, será necesario utilizar instrumentos de medición como voltímetros, amperímetros u otro equipo que nos permita analizar e identificar posibles alteraciones en el funcionamiento esperado para poder realizar las correcciones necesarias con el fin de obtener el funcionamiento deseado en el sistema.
+
+% Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de 5v para la entrada y otro de 24v para la activación de las bobinas de las electroválvulas.
+% Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre 5v y 30v de corriente directa y de 125v a 250v de corriente alterna con corrientes de hasta 10A. 
+% El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $64$ dolares que equivalen a $1328$ pesos mexicanos mientras que el precio de la Nucleo STM32F446 es de $15.82$ dolares que equivalen a $328$ pesos mexicanos, esto sin contar los costos de envío.
 % 
 % 
+\subsubsection{Justificación para el desarrollo de un sistema de acondicionamiento de señal para el diodo de InGaAs}
+
+Dado que se trabajará con un diodo de InGaAs por si sólo entonces se requiere de un sistema que permita al controlador interpretar los datos provenientes del diodo de una manera más sencilla y exacta con el fin de obtener una mayor precisión en la clasificación del PET. 
+Para esto se estudiarán las propiedades del diodo, el tipo de salida que envía al realizar una medición y su comportamiento con diferentes elementos como amplificadores operacionales, filtros y en función de ello comenzar con la selección de componentes para las etapas de amplificación y filtrado de la señal de salida del sensor.
+% 
+%
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{    \linespread{5}  \linespread{5}      RESULTADOS}
 \centering{\section{      RESULTADOS}}
 \justifying
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
