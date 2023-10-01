@@ -621,8 +621,8 @@ Para ello se consulto la hoja de datos para obtener el tipo de señal de salida 
 
 Para la medición de la longitud de onda se considero al mensurando como la corriente eléctrica que pasa por un foto-diodo de InGaAs, la medición es de manera indirecta debido a las propiedades del sensor que al variar la iluminancia que pasa por el material expuesto se refleja y cambia la longitud de onda en el foto-diodo y su resistencia cambia.
 Al variar la resistencia del foto-diodo debido al cambio de iluminancia y al voltaje inducido, la corriente cambiará, dependiendo de esta variación se puede calcular la longitud de onda. 
-% 
-%  
+%
+%
 \subsection{Determinación de una metodología mediante las características del diodo InGaAs para seleccionar los elementos mecánicos}
 
 De manera general se propone para la parte mecánica del sistema de clasificación una banda transportadora, un motor para dicha banda transportadora y un sistema que permita sostener el sistema eléctrico-electrónico encargado de realizar en forma la clasificación, véase la Figura \ref{fig:imgMecanico}.
@@ -658,31 +658,21 @@ Finalmente para la parte que se encargará en forma de separar las botellas de P
 Para esta implementación en la metodología es necesario considerar factores como longitud, peso, velocidad de accionamiento, tipo de accionamiento y la presión mínima que requiere el pistón para ejecutar la tarea de manera óptima \cite{sole2012neumatica}.
 
 Todo esto se realizó en función de las características de cada elemento mecánico, eléctrico y electrónico que pueda formar parte del sistema de clasificación, así mismo, se utilizaron herramientas como las \textit{Core Tools} que son herramientas que en la industria automotriz permiten diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
-% Para poder identificar si los elementos son los adecuados.
-% Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de PET a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
-% Con esto y teniendo en cuenta que la clasificación en la sección de sensores de realizara de botella en botella entonces el peso en la banda transportadora no pasaría de 5kg, por ende, no es necesario recurrir a un motor muy potente ni a una tensión alta en la banda para poder desplazar el contenido.
-
-%Por otro lado, suponiendo de que las botellas caerán a través de un embudo a la banda transportadora entonces se debe considerar por mera seguridad que estás salgan eyectadas hacía los laterales, siendo este el caso se deben colocar paredes de un metal que sea ligero pero lo suficientemente resistente para que no se deforme debido a los impactos y permita que las botellas se mantengan dentro de la banda transportadora en todo momento. 
-% Para ello se podría usar aluminio como material principal dado que es un metal que si bien no se vende puro sino en aleación con algún otro metal sigue siendo barato y ligero en comparación con otros metales como el acero, de esta manera el costo no se elevaría demasiado y se sigue manteniendo el factor de seguridad.
-
-% La segunda sección de la banda transportadora sería la sección de identificación la cual se puede realizar mediante sensores o cámaras o una combinación de ambos dispositivos, en cualquiera de los casos el sistema empleado debe ser capaz de clasificar las botellas de manera rápida con el fin de tener una tasa mínima de 3 botellas por minuto.
-
-% Después de la sección de identificación sigue la sección de clasificación en la cual las botellas serán removidas de la banda transportadora y pasarán a contenedores en función de sus características previamente identificadas.
-% Esta clasificación puede realizarse mediante pistones neumáticos que se accionen mediante sus respectivas electroválvulas, las cuales son fáciles de controlar puesto que únicamente se activarían si las características de la botella identificadas en la sección previa cumplen con lo estipulado.
-% Para esta última parte se debe considerar que se requiere de un suministro constante de aire comprimido para los pistones neumáticos, está presión debe ser de al menos $0.08MPa$, a menos que se requiera un control más estricto sobre el accionamiento se pueden utilizar pistones de simple efecto con retorno de muelle, de lo contrario se debe optar por pistones de doble efecto para controlar tanto el accionamiento como el regreso mediante un electroválvula de $\frac{5}{2}$ monoestable.
-
+% 
+% 
 \subsubsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
 
-Se busca minimizar los factores de ruido que con la interacción de todos los factores anteriormente descritos se obtenga la velocidad máxima y mínima que no afecte la eficiencia en la clasificación ver Figura \ref{diseño04} \cite{gutierrez2004analisis}.
-
+Se busca minimizar los factores de ruido que con la interacción de todos los factores anteriormente descritos se obtenga la velocidad máxima y mínima que no afecte la eficiencia en la detección ver Figura \ref{diseño04} \cite{gutierrez2004analisis}.
+% 
+% 
 \begin{figure}[H]
     \centering
-    \includegraphics[trim = {31mm 145mm 13mm 20mm},clip,scale=0.85]{img/Vg_fig_18.pdf}
+    \includegraphics[trim = {41mm 155mm 13mm 20mm},clip,scale=0.85]{img/Vg_fig_18.pdf}
     \caption{Factores y variables en el diseño de experimentos para la interacción de todo el sistema.}
     \label{diseño04}
 \end{figure}
-
-% ###############################################
+% 
+% 
 \subsubsection{Análisis de componentes principales para la identificación de los elementos}
 
 El método de PCA se utilizara para explicar la cantidad máxima de varianza con el menor número de componentes.
@@ -693,24 +683,20 @@ El análisis de componentes principales se utilizará para describir la variaci�
 % 
 \subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
 
-De manera general se requiere utilizar un microcontrolador para ejecutar todas las tareas que el sistema de clasificación requiera y también se debe considerar el apartado de potencia puesto que se utilizara cuando menos un motor y una banda transportadora.
+De manera general se requiere utilizar por lo menos un microcontrolador para ejecutar todas las tareas que el sistema de clasificación requiera y también se debe considerar el apartado de potencia puesto que se utilizara cuando menos un motor y una banda transportadora.
 Un microcontrolador es un componente electrónico que en una sola pastilla o circuito integrado incluye la memoria, puertos y algunos periféricos \cite{del1999sistemas}.
 Para la selección de este componente es necesario considerar aspectos de frecuencia de operación, número de entradas y salidas digitales, número de puertos de conversión A/D, número de \textit{TIMERS} disponibles, etc. \cite{del1999sistemas}.
 Así mismo, se planea considerar el tipo de conectores y elementos necesarios para realizar una etapa de potencia ideal para que el sistema de clasificación funcione correctamente manteniendo la seguridad como premisa principal.
 Dado que se utilizará al diodo de InGaAs como componente principal para el trabajo de espectroscopia, se deben considerar aquellos factores de ruido que puedan provocar fallas en su funcionamiento, para ello es crucial identificar dichos factores y determinar cual sería la manera más idónea para eliminarlos con el fin de permitir que el diodo y sus futuras etapas de amplificación y de filtrado funcionen correctamente mediante la información que del elemento. 
-Dicha información puede ser obtenida mediante la hoja de datos característica del dispositivo y esto puede ser realizado de manera similar con cada componente que vaya a formar parte del sistema, ya sea en la parte de control o en la parte de potencia.
+Dicha información puede ser obtenida mediante la hoja de datos así como cada característica del dispositivo y esto puede ser realizado de manera similar con cada componente que vaya a formar parte del sistema, ya sea en la parte de control o en la parte de potencia.
 Otro factor a considerar es el hecho de que cada componente funciona de manera diferente en función del entorno que lo rodea puesto que todo semiconductor puede verse afectado en su función debido a la temperatura exterior \cite{malvino1991principios}.
 Por ende, será necesario utilizar instrumentos de medición como voltímetros, amperímetros u otro equipo que nos permita analizar e identificar posibles alteraciones en el funcionamiento esperado para poder realizar las correcciones necesarias con el fin de obtener el funcionamiento deseado en el sistema.
-
-% Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de 5v para la entrada y otro de 24v para la activación de las bobinas de las electroválvulas.
-% Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre 5v y 30v de corriente directa y de 125v a 250v de corriente alterna con corrientes de hasta 10A. 
-% El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $64$ dolares que equivalen a $1328$ pesos mexicanos mientras que el precio de la Nucleo STM32F446 es de $15.82$ dolares que equivalen a $328$ pesos mexicanos, esto sin contar los costos de envío.
 % 
 % 
 \subsubsection{Justificación para el desarrollo de un sistema de acondicionamiento de señal para el diodo de InGaAs}
 
 Dado que se trabajará con un diodo de InGaAs por si sólo entonces se requiere de un sistema que permita al controlador interpretar los datos provenientes del diodo de una manera más sencilla y exacta con el fin de obtener una mayor precisión en la clasificación del PET. 
-Para esto se estudiarán las propiedades del diodo, el tipo de salida que envía al realizar una medición y su comportamiento con diferentes elementos como amplificadores operacionales, filtros y en función de ello comenzar con la selección de componentes para las etapas de amplificación y filtrado de la señal de salida del sensor.
+Para esto se estudiaron las propiedades del diodo, el tipo de salida que envía al realizar una medición y su comportamiento con diferentes elementos como amplificadores operacionales, filtros y en función de ello comenzar con la selección de componentes para las etapas de amplificación y filtrado de la señal de salida del sensor.
 % 
 %
 \newpage
@@ -831,9 +817,38 @@ En la Tabla \ref{G10899CAS} y Tabla \ref{G12180CAS} se muestran los modelos que 
 % 
 \subsection{Determinación de una metodología mediante las características del diodo InGaAs para seleccionar los elementos mecánicos}
 
+% Para poder identificar si los elementos son los adecuados.
+% Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de PET a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
+% Con esto y teniendo en cuenta que la clasificación en la sección de sensores de realizara de botella en botella entonces el peso en la banda transportadora no pasaría de 5kg, por ende, no es necesario recurrir a un motor muy potente ni a una tensión alta en la banda para poder desplazar el contenido.
+
+%Por otro lado, suponiendo de que las botellas caerán a través de un embudo a la banda transportadora entonces se debe considerar por mera seguridad que estás salgan eyectadas hacía los laterales, siendo este el caso se deben colocar paredes de un metal que sea ligero pero lo suficientemente resistente para que no se deforme debido a los impactos y permita que las botellas se mantengan dentro de la banda transportadora en todo momento. 
+% Para ello se podría usar aluminio como material principal dado que es un metal que si bien no se vende puro sino en aleación con algún otro metal sigue siendo barato y ligero en comparación con otros metales como el acero, de esta manera el costo no se elevaría demasiado y se sigue manteniendo el factor de seguridad.
+
+% La segunda sección de la banda transportadora sería la sección de identificación la cual se puede realizar mediante sensores o cámaras o una combinación de ambos dispositivos, en cualquiera de los casos el sistema empleado debe ser capaz de clasificar las botellas de manera rápida con el fin de tener una tasa mínima de 3 botellas por minuto.
+
+% Después de la sección de identificación sigue la sección de clasificación en la cual las botellas serán removidas de la banda transportadora y pasarán a contenedores en función de sus características previamente identificadas.
+% Esta clasificación puede realizarse mediante pistones neumáticos que se accionen mediante sus respectivas electroválvulas, las cuales son fáciles de controlar puesto que únicamente se activarían si las características de la botella identificadas en la sección previa cumplen con lo estipulado.
+% Para esta última parte se debe considerar que se requiere de un suministro constante de aire comprimido para los pistones neumáticos, está presión debe ser de al menos $0.08MPa$, a menos que se requiera un control más estricto sobre el accionamiento se pueden utilizar pistones de simple efecto con retorno de muelle, de lo contrario se debe optar por pistones de doble efecto para controlar tanto el accionamiento como el regreso mediante un electroválvula de $\frac{5}{2}$ monoestable.
+% 
+% 
+\subsubsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
+
+
+% 
+% 
+\subsubsection{Análisis de componentes principales para la identificación de los elementos}
+
+
 % 
 % 
 \subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
+
+Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de 5v para la entrada y otro de 24v para la activación de las bobinas de las electroválvulas.
+Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre 5v y 30v de corriente directa y de 125v a 250v de corriente alterna con corrientes de hasta 10A. 
+El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $64$ dolares que equivalen a $1328$ pesos mexicanos mientras que el precio de la Nucleo STM32F446 es de $15.82$ dolares que equivalen a $328$ pesos mexicanos, esto sin contar los costos de envío.
+% 
+% 
+\subsubsection{Justificación para el desarrollo de un sistema de acondicionamiento de señal para el diodo de InGaAs}
 
 % 
 % 
