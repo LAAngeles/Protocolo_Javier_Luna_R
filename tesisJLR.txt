@@ -7,9 +7,6 @@
 \usepackage[left=4cm,top=3cm,right=2cm,nohead,foot=3cm]{geometry}
 \usepackage[spanish,mexico]{babel}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage{chngpage} % ajustar \begin{adjustwidth}{2cm}{0cm}
-
 % Add packages and commands here. 
 \usepackage{chngpage} % ajustar \begin{adjustwidth}{2cm}{0cm}
 %=================================================================
@@ -42,7 +39,6 @@
 %"mystyle" code listing set
 \lstset{style=mystyle}
 %=================================================================
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{lineno}
 \usepackage{times}
@@ -869,15 +865,6 @@ El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cual
 % 
 \subsubsection{Diseño eléctrico del sistema de clasificación}
 
-
-En la figura \ref{fig:Imagen117} se ilustra el moto reductor que se utilizo, con 1750 revoluciones por minuto y con un reductor de cien a uno lo que equivale a dar dieciocho vueltas en un minuto.
-%
-%############################################
-\begin{figure}[h]
-    \begin{subfigure}{0.5\textwidth}
-    \centering
-        \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.2]{img/MOTOREDUCTOR.pdf} 
-
 En la figura \ref{fig:Imagen17} se ilustra el moto reductor que se utilizo, con 1750 revoluciones por minuto y con un reductor de cien a uno lo que equivale a dar dieciocho vueltas en un minuto.
 % 
 % 
@@ -886,48 +873,22 @@ En la figura \ref{fig:Imagen17} se ilustra el moto reductor que se utilizo, con 
 
     \begin{subfigure}{0.49\textwidth}
         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen17.jpg} 
-
         % \caption{}
         \label{fig:subim1}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.49\textwidth}
         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen18.jpg}
-
         % \caption{}
         \label{fig:subim2}
     \end{subfigure}
 
-
-    \caption{Motor utilizado}
-    \label{fig:Imagen117}
-
     \caption{Moto-reductor en el sistema mecánico.}
     \label{fig:Imagen17}
-
 \end{figure}
 %############################################
 % 
 % 
-
-En las figuras \ref{fig:subim1} y \ref{fig:subim2}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor.
-Consta de 5 botones; 2 botones habilitadores de cada motor que son parte del ''PLC´´, 2 botones para indicar el giro del motor y 1 botón de paro total.
-% 
-% 
-%############################################
-\begin{figure}[H]
-    \centering
-    \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.5,angle=-90]{img/MOTOR_ConnectionDiag.pdf} 
-    \caption{Diagrama de conexiones para el motor.}
-    \label{fig:subim1}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[trim = {1mm 1mm 30mm 1mm},clip,scale=0.5,angle=-90]{img/MOTOR_ConnectionPDiag.pdf} 
-    \caption{Diagrama de conexiones de potencia.}
-    \label{fig:subim2}
-
 En las figuras \ref{fig:Imagen13}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor.
 Tiene cinco botones uno de paro de emergencia. 
 Dos de arranca de color verde uno para ir al frente y otro para reversa.
@@ -951,7 +912,6 @@ Dos botones de dos polos dos tiros para dar pulsos ya sea de frente o de reversa
 
     \caption{Pruebas de las conexiones en la etapa de potencia.}
     \label{fig:Imagen13}
-
 \end{figure}
 %############################################
 % 
@@ -1039,33 +999,6 @@ En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servi
 %
 \begin{figure}[H]
     \centering
-
-     \includegraphics[trim = {1mm 40mm 1mm 50mm},clip,scale=0.60]{img/PLC_WEBSERVER.pdf}
-    \caption{Diseño del \textit{Web Server}.}
-    \label{fig:webPLC.JPG}
-\end{figure}
-%
-%############################################
-\begin{figure}[h]
-    \centering
-     \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.65,angle=-90]{img/PLC_GRAFCET.pdf}
-    \caption{\textit{Grafcet} utilizado para realizar el código del PLC.}
-    \label{fig:grafcet}
-\end{figure}
-
-%############################################
-% 
-En las siguientes Figuras \ref{fig:grafcet}, \ref{fig:network-1}, \ref{fig:network-2} \ref{fig:network_3-4}, \ref{fig:network-5}, \ref{fig:FCM1_network-1}, \ref{fig:FCM1_network-2}, \ref{fig:FCM1_network-3}, \ref{fig:FCM1_network-4}, \ref{fig:FCM1_network-5}
-se describen el programa que se utilizo para controlar los motores.
-%############################################
-\begin{figure}[h]
-    \centering
-     \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.50]{img/PLCODE_Network1.pdf}
-    \caption{Diagrama de bloques del PLC para el servidor web.}
-    \label{fig:grafcet}
-\end{figure}
-
-
     \includegraphics{img/webPLC.JPG}
     \caption{Diagrama de bloques del PLC para el servidor web.}
     \label{fig:webPLC.JPG}
@@ -1091,7 +1024,6 @@ se describen el programa que se utilizo para controlar los motores.
     \caption{Descripción los bloques de código que controlan los motores.}
     \label{fig:network_1-2}
 \end{figure}
-
 %############################################
 La función de sistema WWW se llama en el OB1.
 Esta función inicializa el servidor web de la CPU.
@@ -1111,20 +1043,6 @@ Consta de un disparador que se activa cuando el PLC hace su primer escaneo del s
 % 
 \begin{figure}[H]
     \centering
-
-     \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.5]{img/PLCODE_Network2.pdf}
-    \caption{Red 2, habilitador de los motores para proceder a su funcionamiento.}
-    \label{fig:network-2}
-\end{figure}
-%
-En la Figura \ref{fig:network-2} se describe la acción que se toma una vez que se ejecuto la red 0, la cual espera a que se active el paso cero con el botón de \textbf{start}.
-% 
-\begin{figure}[h]
-    \centering
-     \includegraphics[trim = {1mm 30mm 1mm 1mm},clip,scale=0.5]{img/PLCODE_Network3_4.pdf}
-    \caption{Red 3 y 4, \textit{Function Block} del motor 1 y 2 que continen el control.}
-    \label{fig:network_3-4}
-
     \includegraphics{img/FB_network-1.png}
     \caption{Red 1 del bloque de función del motor.}
     \label{fig:FB_network-1}
@@ -1137,72 +1055,24 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
     \includegraphics{img/FB_network-2.png}
     \caption{Red 2 Acción paso cero si esta en alto indica que el motor esta listo para arrancar.}
     \label{fig:FB_network-2}
-
-\end{figure}
-%
-\begin{figure}[h]
-    \centering
-
-    \begin{subfigure}{0.5\textwidth}
-    \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.3]{img/PLCODE_Network5P1.pdf}
-    \caption{Red 5, primer eslabón}
-    \end{subfigure}
-    \centering
-    \begin{subfigure}{0.5\textwidth}
-    \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.3]{img/PLCODE_Network5P2.pdf}
-    \caption{Red 5, segundo eslabón.}
-    \end{subfigure}
-    
-    \caption{Red 5, botón \textit{Reset} para reiniciar el proceso.}
-    \label{fig:network-5}
 \end{figure}
 %
 \begin{figure}[H]
     \centering
-      \includegraphics[trim = {1mm 70mm 1mm 70mm},clip,scale=0.5]{img/PLCFCM1_Network1.pdf}
-    \caption{Red 1, \textit{Function Block} del motor, habilitador}
-    \label{fig:FCM1_network-1}
-
     \includegraphics{img/FB_network-3.png}
     \caption{Red 3 Transición del paso cero, la cual indica que si el botón de inicio esta activado todos los botones se habilitan para el accionamiento del motor.}
     \label{fig:FB_network-3}
-
 \end{figure}
 %
 \begin{figure}[H]
     \centering
-
-      \includegraphics[trim = {1mm 15mm 1mm 15mm},clip,scale=0.5]{img/PLCFCM1_Network2.pdf}
-    \caption{Red 2, Acción paso uno, con dos botones se acciona el motor para adelante o para atrás.}
-    \label{fig:FCM1_network-2}
-
     \includegraphics{img/FB_network-4.png}
     \caption{Red 4 Acción paso uno, con dos botones se acciona el motor para adelante o para atrás.}
     \label{fig:FB_network-4}
-
-\end{figure}
-%
-\begin{figure}[h]
-    \centering
-
-      \includegraphics[trim = {1mm 30mm 1mm 20mm},clip,scale=0.5]{img/PLCFCM1_Network3.pdf}
-    \caption{Red 3, accionamiento del giro en sentido horario del motor, con bloqueo.}
-    \label{fig:FCM1_network-3}
 \end{figure}
 %
 \begin{figure}[H]
     \centering
-      \includegraphics[trim = {1mm 30mm 1mm 1mm},clip,scale=0.5]{img/PLCFCM1_Network4.pdf}
-    \caption{Red 4, accionamiento del giro en sentido anti-horario del motor, con bloqueo.}
-    \label{fig:FCM1_network-4}
-\end{figure}
-%
-\begin{figure}[h]
-    \centering
-     \includegraphics[trim = {1mm 30mm 1mm 1mm},clip,scale=0.5]{img/PLCFCM1_Network5.pdf}
-    \caption{Red 5, Transición paso uno, con esta red se define un botón de paro total o mejor conocido como paro de emergencia.}
-    \label{fig:FCM1_network-5}
-
     \includegraphics[scale=.9]{img/FB_network-5.png}
     \caption{Red 5 Acción uno, con dos botones se puede activar el motor con pulsos.}
     \label{fig:FB_network-5}
@@ -1214,7 +1084,6 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
     \includegraphics{img/FB_network-6.png}
     \caption{Red 6 Transición paso uno, con esta red se define un botón de paro total o mejor conocido como paro de emergencia.}
     \label{fig:FB_network-6}
-
 \end{figure}
 % 
 % 
