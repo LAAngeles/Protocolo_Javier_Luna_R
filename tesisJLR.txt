@@ -816,6 +816,12 @@ Dada el cuadro en la Figura \ref{PINDiodes} podemos observar los diferentes mode
 En la Tabla \ref{G10899CAS} y Tabla \ref{G12180CAS} se muestran los modelos que pertenecen a las respectivas series de fotodiodos y sus características generales, sin embargo, cabe destacar que la serie G10899 \cite{kk2015ingaas} tiene un rango de operación de entre 800 $nm$ y los 1700 $nm$ mientras que la serie G12180 \cite{kk2015ingaas} tiene un rango menor de entre 900 $nm$ y 1700 $nm$, si bien esta diferencia de 100 $nm$ podría o no representar un cambio en la precisión considerable se compensa con el hecho de que la serie G12180 \cite{kk2015ingaas} tiene más opciones que permiten obtener resultados diferentes en cuestiones de eficiencia y velocidad que son factores importantes para la realización del sistema de clasificación, por lo que de momento estas dos series son consideradas aptas para la tarea que se desea llevar a cabo.
 % 
 %
+\subsubsection{BPW21R como método de aproximación al comportamiento del diodo InGaAs}
+Con la finalidad de obtener un acercamiento al comportamiento del diodo InGaAs, se realizaron pruebas con el circuito diseñado y propuesto para operar y acondicionar la señal de dicho diodo, esto se realizó con un diodo \textbf{BPW21R}.
+
+El \textbf{BPW21R} es un fotodiodo de silicio de tipo PN con un sellado hermético en un formato TO-5, especialmente diseñado para aplicaciones de alta precisión y lineales \cite{bpw21r2006vishay}.
+% 
+% 
 \subsubsection{Definición del mensurando para la medición de la longitud de onda con el diodo InGaAs}
 % 
 % 
