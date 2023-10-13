@@ -813,9 +813,39 @@ En la Tabla \ref{G10899CAS} y Tabla \ref{G12180CAS} se muestran los modelos que 
 % 
 %
 \subsubsection{BPW21R como método de aproximación al comportamiento del diodo InGaAs}
+
 Con la finalidad de obtener un acercamiento al comportamiento del diodo InGaAs, se realizaron pruebas con el circuito diseñado y propuesto para operar y acondicionar la señal de dicho diodo, esto se realizó con un diodo \textbf{BPW21R}.
 
 El \textbf{BPW21R} es un fotodiodo de silicio de tipo PN con un sellado hermético en un formato TO-5, especialmente diseñado para aplicaciones de alta precisión y lineales \cite{bpw21r2006vishay}.
+
+Los fotodiodos son dispositivos sensibles a la luz, dependiendo de la cantidad de luz que reciban y el ángulo de entrada de la misma al sensor de captura, la corriente que emite el fotodiodo será mayor o menor.
+
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {26mm 215mm 26mm 40mm},clip,scale=1]{img/ElectricalPro_BPW21R_PDF.pdf}
+    \caption{Características eléctricas del fotodiodo BPW21R \cite{bpw21r2006vishay}.}
+    \label{fig:ElecproBPW21R}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {26mm 190mm 26mm 40mm},clip,scale=1]{img/OpticalPro_BPW21R_PDF.pdf}
+    \caption{Características ópticas del fotodiodo BPW21R \cite{bpw21r2006vishay}.}
+    \label{fig:OpticproBPW21R}
+\end{figure}
+
+En la Figura \ref{fig:ElecproBPW21R} se observan las propiedades eléctricas del fotodiodo, los parámetros más importantes son los siguientes: \textbf{Reverse Dark Current} $[I_{ro}]$ \cite{SymbolsandTherms2008vishay} y \textbf{Dark Resistance} $[R_{D}]$ \cite{SymbolsandTherms2008vishay}, porque son parámetros que permiten predecir hasta cierto punto el comportamiento del fotodiodo y, en función de ello, diseñar un circuito que sea capaz de adecuar su señal para poder trabajarla.
+Estos parámetros van de la mano debido a que, como su nombre indica, son valores que se obtienen cuando el diodo esta operando en completa oscuridad y son importantes dado que influyen directamente en la medición final que se obtiene cuando el diodo se encuentra operando bajo condiciones de luz.
+
+Lo anterior se comprobó durante la experimentación. En la figura \ref{fig:OpticproBPW21R} se observa el parámetro \textbf{Reverse Light Current} $[I_{ra}]$ \cite{SymbolsandTherms2008vishay}; este parámetro se refiere a la corriente que fluye en función de la cantidad de luz que capta el dispositivo y su valor se obtiene mediante la ecuación \ref{RevDarkCurr}:
+
+\begin{equation} \label{RevDarkCurr}
+    \centering
+    I_{ra} = I_{ro}+I_{ph}
+\end{equation}
+
+Donde se observa a $[I_{ph}]$ que es el parte de la corriente de salida que emite el diodo debido a que esta captando luz. Dada la Figura \ref{fig:OpticproBPW21R}, el valor de la \textbf{Reverse Light Current} es de $9_{\mu A}$ como valor típico \cite{bpw21r2006vishay}, resultado de la suma de la \textbf{Reverse Dark Current} y de la \textbf{Photocurrent} $[I_{ph}]$.
+Este valor se comprobó mediante la experimentación dado que con una resistencia de $1M\Omega$, se obtuvieron $8V$ a la salida del amplificador de transimpedancia, con lo cual, al aplicar ley de Ohm, se obtiene un valor de corriente de aproximadamente $8_{\mu A}$.
 % 
 % 
 \subsubsection{Definición del mensurando para la medición de la longitud de onda con el diodo InGaAs}
