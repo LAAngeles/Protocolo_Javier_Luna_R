@@ -167,7 +167,6 @@ CC  & Centros de acopio\\
 DIL40 & 40 PINS dual-in-line package\\
 DOE & Diseño de experimentos\\ 
 F & F Relación \\
-FPGA & Arreglos de compuertas lógicas programables en sitio \\
 gl & Grados de libertad\\
 HDPE & Polietileno de alta densidad \\
 IMER & Industria Mexicana de Reciclaje S.A. de C.V.\\
@@ -181,29 +180,35 @@ mL & Mililitros\\
 NC & Normalmente cerrada\\
 NIRS & Espectroscopia de infrarrojo cercano\\
 No.  & Número\\
-PC1 & Primer componente principal\\
-PC2 & Segundo componente principal\\
 PCA & Análisis de componentes principales\\
 PCB & placa de circuito impreso\\
-PET & Tereftalato de polietileno
-\end{tabular}
-% 
-% 
-\newpage
-\justifying
-\noindent
-\begin{tabular}{@{}ll}
+PET & Tereftalato de polietileno\\
 PIC & Controlador de interfaz de periféricos\\
 PIB & Producto Interno Bruto\\
 PLC & Controlador lógico programable\\
 PP & Polipropileno\\
 PVC & Cloruro de polivinilo\\
 PS & Poliestireno\\
-RGB & Rojo verde azul \\
 SVM & Máquinas de vectores soporte\\
 SS & Suma de cuadrados\\
 USE & Universal serial bus
 \end{tabular}
+% 
+% 
+% \newpage
+% \justifying
+% \noindent
+% \begin{tabular}{@{}ll}
+% PIC & Controlador de interfaz de periféricos\\
+% PIB & Producto Interno Bruto\\
+% PLC & Controlador lógico programable\\
+% PP & Polipropileno\\
+% PVC & Cloruro de polivinilo\\
+% PS & Poliestireno\\
+% SVM & Máquinas de vectores soporte\\
+% SS & Suma de cuadrados\\
+% USE & Universal serial bus
+% \end{tabular}
 
 % }
 % 
