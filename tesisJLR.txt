@@ -653,13 +653,13 @@ De manera general se propuso para la parte mecánica del sistema de clasificaci�
     \begin{subfigure}{0.49\textwidth}
         \includegraphics[width=0.9\linewidth, height=7cm]{img/Desing00_05-azul.JPG} 
         \caption{Vista lateral del sistema de identificación.}
-        \label{fig:subim1}
+        \label{fig:Desing00_05-azul}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.49\textwidth}
         \includegraphics[width=0.9\linewidth, height=7cm]{img/Desing00_00-azul.JPG}
         \caption{Vista general del sistema.}
-        \label{fig:subim2}
+        \label{fig:Desing00_00-azul}
     \end{subfigure}
 
     \caption{Sistema mecánico de detección, (Elaboración propia).}
@@ -685,14 +685,6 @@ Se busco minimizar los factores de ruido que con la interacción de todos los fa
     \caption{Factores y variables en el diseño de experimentos para la interacción de todo el sistema.}
     \label{diseño04}
 \end{figure}
-% 
-% 
-% \subsubsection{Análisis de componentes principales para la identificación de los elementos}
-
-% El método de PCA se utilizo para explicar la cantidad máxima de varianza con el menor número de componentes.
-% PCA analiza los elementos principales de múltiples características, exponiendo su naturaleza y resaltando sus principales características, acortando las dimensiones de los datos. 
-% % PCA establecerá un método para disminuir la dimensión de los datos.
-% El análisis de componentes principales se utilizo para describir la variación en los conjuntos de variables correlacionadas reduciendo la complejidad ayudando a la interpretación de los datos y la reducción del ruido o variables que se tienen que monitorear.
 % 
 % 
 \newpage
@@ -858,305 +850,23 @@ Este valor se comprobó mediante la experimentación dado que con una resistenci
 Finalmente para la parte que se encargará en forma de separar las botellas de PET se propone la implementación de pistones neumáticos.
 Para esta implementación en la metodología es necesario considerar factores como longitud, peso, velocidad de accionamiento, tipo de accionamiento y la presión mínima que requiere el pistón para ejecutar la tarea de manera óptima \cite{sole2012neumatica}.
 Todo esto se realizó en función de las características de cada elemento mecánico, eléctrico y electrónico que pueda formar parte del sistema de clasificación, así mismo, se utilizaron herramientas como las \textit{Core Tools} que son herramientas que en la industria automotriz permiten diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
-
-% Para poder identificar si los elementos son los adecuados.
-% Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de PET a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
-% Con esto y teniendo en cuenta que la clasificación en la sección de sensores de realizara de botella en botella entonces el peso en la banda transportadora no pasaría de 5kg, por ende, no es necesario recurrir a un motor muy potente ni a una tensión alta en la banda para poder desplazar el contenido.
-
-%Por otro lado, suponiendo de que las botellas caerán a través de un embudo a la banda transportadora entonces se debe considerar por mera seguridad que estás salgan eyectadas hacía los laterales, siendo este el caso se deben colocar paredes de un metal que sea ligero pero lo suficientemente resistente para que no se deforme debido a los impactos y permita que las botellas se mantengan dentro de la banda transportadora en todo momento. 
-% Para ello se podría usar aluminio como material principal dado que es un metal que si bien no se vende puro sino en aleación con algún otro metal sigue siendo barato y ligero en comparación con otros metales como el acero, de esta manera el costo no se elevaría demasiado y se sigue manteniendo el factor de seguridad.
-
-% La segunda sección de la banda transportadora sería la sección de identificación la cual se puede realizar mediante sensores o cámaras o una combinación de ambos dispositivos, en cualquiera de los casos el sistema empleado debe ser capaz de clasificar las botellas de manera rápida con el fin de tener una tasa mínima de 3 botellas por minuto.
-
-% Después de la sección de identificación sigue la sección de clasificación en la cual las botellas serán removidas de la banda transportadora y pasarán a contenedores en función de sus características previamente identificadas.
-% Esta clasificación puede realizarse mediante pistones neumáticos que se accionen mediante sus respectivas electroválvulas, las cuales son fáciles de controlar puesto que únicamente se activarían si las características de la botella identificadas en la sección previa cumplen con lo estipulado.
-% Para esta última parte se debe considerar que se requiere de un suministro constante de aire comprimido para los pistones neumáticos, está presión debe ser de al menos $0.08MPa$, a menos que se requiera un control más estricto sobre el accionamiento se pueden utilizar pistones de simple efecto con retorno de muelle, de lo contrario se debe optar por pistones de doble efecto para controlar tanto el accionamiento como el regreso mediante un electroválvula de $\frac{5}{2}$ monoestable.
-% 
-% 
-\subsubsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
-
-
-% 
-% 
-\subsubsection{Análisis de componentes principales para la identificación de los elementos}
-
-
-% 
-% 
-
-% 
-% 
-\subsection{Diseño mecánico y sistema de control}
-
-
-% 
-% 
-\subsubsection{Diseño eléctrico del sistema de clasificación}
-
-En la figura \ref{fig:Imagen17} se ilustra el moto reductor que se utilizo, con 1750 revoluciones por minuto y con un reductor de cien a uno lo que equivale a dar dieciocho vueltas en un minuto.
-% 
-% 
-%############################################
-\begin{figure}[H]
-
-    \begin{subfigure}{0.49\textwidth}
-        \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen17.jpg} 
-        % \caption{}
-        \label{fig:subim1}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.49\textwidth}
-        \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen18.jpg}
-        % \caption{}
-        \label{fig:subim2}
-    \end{subfigure}
-
-    \caption{Moto-reductor en el sistema mecánico.}
-    \label{fig:Imagen17}
-\end{figure}
-%############################################
-% 
-% 
-En las figuras \ref{fig:Imagen13}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor.
-Tiene cinco botones uno de paro de emergencia. 
-Dos de arranca de color verde uno para ir al frente y otro para reversa.
-Dos botones de dos polos dos tiros para dar pulsos ya sea de frente o de reversa.
-% 
-% 
-%############################################
-\begin{figure}[H]
-
-    \begin{subfigure}{0.49\textwidth}
-        \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen13.jpg} 
-        % \caption{}
-        \label{fig:subim1}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.49\textwidth}
-        \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen14.jpg}
-        % \caption{}
-        \label{fig:subim2}
-    \end{subfigure}
-
-    \caption{Pruebas de las conexiones en la etapa de potencia.}
-    \label{fig:Imagen13}
-\end{figure}
-%############################################
-% 
-% 
-\subsubsection{Programa de arranque de motores}
-
-Para que la experimentación y la adquisición de todos los datos se desarrollo una página web que junto con el servidor del PLC funcionan para activar y desactivar los motores de la banda transportadora y del sistema de identificación.
-Por recomendación del fabricante se recomienda utilizar el navegador web Firefox.
-En la Tabla \ref{tab:motor_DB} se detallan los tipos de variables que se utilizaron para el motor 1 y para el motor 2.
-Físicamente cada PLC tiene un numero limitado de entradas y eso dificulta la automatización cuando se requieren de muchas entradas. 
-La finalidad principal de hacer una pagina web para controlar las entradas de los motores es por las ventajas que proporciona al poder definir n cantidad de entradas y procesar esa información internamente con el PLC. 
-En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el sistema mecánico para funcionar.
-{\renewcommand{\baselinestretch}{1.15}
-\begin{table}[H]
-    \centering
-    \caption{motor\_ DB[DB1] y motor\_ DB\_Dos[DB3]}
-    \begin{adjustwidth}{2cm}{0cm}
-        \begin{tabular}{c c c c c}
-             \hline
-            id & Nombre & Tipo de dato & Nombre & Tipo de dato \\
-             \hline
-              & Entrada &  \\
-             \hline
-            1 & reset & Bool & reset & Bool\\
-            2 & start & Bool& start & Bool\\
-            3 & inicioAdelante & Bool& inicioAdelante & Bool\\
-            4 & stop & Bool& stop & Bool\\
-            5 & inicioAtras & Bool& inicioAtras & Bool\\
-            6 & pasoAdelante & Bool& pasoAdelante & Bool\\
-            7 & pasoAtras & Bool& pasoAtras & Bool\\
-             \hline
-             & Salida &  \\
-             \hline
-            8 & adelante & Bool& adelante & Bool\\
-            9 & atras & Bool& atras & Bool\\
-            10 & Enable & Bool& Enable & Bool\\
-             \hline
-            & Estática &  \\
-             \hline
-            11 & R\_Trig\_reset & R\_TRIG& R\_Trig\_reset & R\_TRIG\\
-            12 & Step & Array[0..2]& Step & Array[0..2]\\
-            13 & pulso & Array[0..2]& pulso & Array[0..2]\\
-            \hline
-        \end{tabular}
-    \end{adjustwidth}
-    \label{tab:motor_DB}
-\end{table}
-}
-%
-{\renewcommand{\baselinestretch}{1.15}
-\begin{table}[H]
-    \centering
-    \caption{TestDB[DB2]}
-    \begin{adjustwidth}{5cm}{0cm}
-        \begin{tabular}{c c c}
-             \hline
-            id & Nombre & Tipo de dato \\
-             \hline
-              & Estática &  \\
-             \hline
-            1 & ResetWeb & Bool\\
-            2 & StartWeb & Bool\\
-            3 & InicioAdelanteWeb &	Bool\\
-            4 & StopWeb & Bool\\
-            5 & InicioAtrasWeb & Bool\\
-            6 & pasoAdelanteWeb & Bool\\
-            7 & pasoAtrasWeb & Bool\\
-            8 & ResetWeb\_2 & Bool\\
-            9 & StartWeb\_2 & Bool\\
-            10 & InicioAdelanteWeb\_2 & Bool\\
-            11 & StopWeb\_2 & Bool\\
-            12 & InicioAtrasWeb\_2 &	Bool\\
-            13 & pasoAdelanteWeb\_2 & Bool\\
-            14 & pasoAtrasWeb\_2 & Bool\\
-            \hline
-        \end{tabular}
-    \end{adjustwidth}
-    \label{tab:TestDB}
-\end{table}
-}
-% 
-% 
-En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servidor web con el PLC.
-%
-%
-\begin{figure}[H]
-    \centering
-    \includegraphics{img/webPLC.JPG}
-    \caption{Diagrama de bloques del PLC para el servidor web.}
-    \label{fig:webPLC.JPG}
-\end{figure}
-% 
-% 
-En las siguientes Figuras \ref{fig:network_1-2}, \ref{fig:network-3}, \ref{fig:FB_network-1}, \ref{fig:FB_network-2}, \ref{fig:FB_network-3}, \ref{fig:FB_network-4}, \ref{fig:FB_network-5}, \ref{fig:FB_network-6}.
-se describen el programa que se utilizo para controlar los motores.
-%############################################
-\begin{figure}[H]
-    \begin{subfigure}{0.49\textwidth}
-        \includegraphics[width=0.9\linewidth, height=9cm]{img/network-1.png} 
-        \caption{Red 1 del motor número uno.}
-        \label{img:network-1}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.49\textwidth}
-        \includegraphics[width=0.9\linewidth, height=9cm]{img/network-2.png}
-        \caption{Red 2 del motor número dos.}
-        \label{img:network-2}
-    \end{subfigure}
-
-    \caption{Descripción los bloques de código que controlan los motores.}
-    \label{fig:network_1-2}
-\end{figure}
-%############################################
-La función de sistema WWW se llama en el OB1.
-Esta función inicializa el servidor web de la CPU.
-La llamada cíclica de la función en el OB1 permite la interacción entre el servidor web y el controlador.
-El Web DB (DB 333) está conectado a la función WWW. 
-La base de datos web y la base de datos de fragmentos almacenan la estructura de las páginas definidas por el usuario, véase la Figura \ref{fig:network-3}. 
-% 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\linewidth, height=4cm]{img/network-3.png}
-    \caption{Red 3, Esta función de bloque inicializa el servidor web de la CPU.}
-    \label{fig:network-3}
-\end{figure}
-%
-En la Figura \ref{fig:FB_network-1} se describe la primer red del bloque de función que se determino en el PLC. 
-Consta de un disparador que se activa cuando el PLC hace su primer escaneo del sistema y sirve para inicializar todas las redes del programa.
-% 
-\begin{figure}[H]
-    \centering
-    \includegraphics{img/FB_network-1.png}
-    \caption{Red 1 del bloque de función del motor.}
-    \label{fig:FB_network-1}
-\end{figure}
-%
-En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez que se ejecuto la red 1, la cual espera a que se active el paso cero con el botón de \textbf{star}.
-% 
-\begin{figure}[H]
-    \centering
-    \includegraphics{img/FB_network-2.png}
-    \caption{Red 2 Acción paso cero si esta en alto indica que el motor esta listo para arrancar.}
-    \label{fig:FB_network-2}
-\end{figure}
-%
-\begin{figure}[H]
-    \centering
-    \includegraphics{img/FB_network-3.png}
-    \caption{Red 3 Transición del paso cero, la cual indica que si el botón de inicio esta activado todos los botones se habilitan para el accionamiento del motor.}
-    \label{fig:FB_network-3}
-\end{figure}
-%
-\begin{figure}[H]
-    \centering
-    \includegraphics{img/FB_network-4.png}
-    \caption{Red 4 Acción paso uno, con dos botones se acciona el motor para adelante o para atrás.}
-    \label{fig:FB_network-4}
-\end{figure}
-%
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=.9]{img/FB_network-5.png}
-    \caption{Red 5 Acción uno, con dos botones se puede activar el motor con pulsos.}
-    \label{fig:FB_network-5}
-\end{figure}
-%
-%
-\begin{figure}[H]
-    \centering
-    \includegraphics{img/FB_network-6.png}
-    \caption{Red 6 Transición paso uno, con esta red se define un botón de paro total o mejor conocido como paro de emergencia.}
-    \label{fig:FB_network-6}
-\end{figure}
-% 
-% 
-
-% 
-% \begin{itemize}
-%     \item Obtener una metodología basada en el funcionamiento de los diodos de InGaAs.
-%     \item Desarrollar un sistema de acondicionamiento de señal para diodo de InGaAs.
-%     \item Simular el comportamiento del diodo de InGaAs y los componentes mecánicos para la automatización.
-%     \item Aplicar herramientas estadísticas como PCA poder determinar los elementos para el sistema de clasificación.
-%     \item Buscar la obtención de un artículo JCR.
-%     \item Comprobar que con la metodología obtenida se da la opción para la realización de un diseño asequible.
-%     \item Generar una presentación de un plan de negocios.
-% \end{itemize}
-% 
-% 
-% \subsection{Factibilidad e impacto social}
-
-% \subsection{Aporte Tecnológico}
-
-% \newpage
-% \section{Abreviaturas y Acrónimos}
-
-% \begin{itemize}
-%     \item \textbf{PET}. ”\textit{Polyethylene Terephthalate}”
-%     \item \textbf{HDPE}. ”\textit{High Density Polyethylene}”
-% \end{itemize}
-% 
-%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Diseño mecánico y sistema de control}
+% \subsubsection{Diseño mecánico y sistema de control}
 
 \subsubsection{Diseño eléctrico del sistema de clasificación}
 
-
-En la figura \ref{fig:Imagen117} se ilustra el moto reductor que se utilizo, con 1750 revoluciones por minuto y con un reductor de cien a uno lo que equivale a dar dieciocho vueltas en un minuto.
+En la figura \ref{fig:MOTOREDUCTOR} se ilustra el moto reductor que se utilizo, con 1750 revoluciones por minuto y con un reductor de cien a uno lo que equivale a dar dieciocho vueltas en un minuto.
 %
 %############################################
-\begin{figure}[h]
+\begin{figure}[H]
     % \begin{subfigure}{0.5\textwidth}
     \centering
         \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.2]{img/MOTOREDUCTOR.pdf} 
+        \caption{Moto-reductor en el sistema mecánico.}
+        \label{fig:MOTOREDUCTOR}
 \end{figure}
 
-En la figura \ref{fig:Imagen17} se ilustra el moto reductor que se utilizo, con 1750 revoluciones por minuto y con un reductor de cien a uno lo que equivale a dar dieciocho vueltas en un minuto.
+% En la figura \ref{fig:Imagen17} se ilustra el moto reductor que se utilizo, con 1750 revoluciones por minuto y con un reductor de cien a uno lo que equivale a dar dieciocho vueltas en un minuto.
 % 
 % 
 %############################################
@@ -1166,7 +876,7 @@ En la figura \ref{fig:Imagen17} se ilustra el moto reductor que se utilizo, con 
 %         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen17.jpg} 
 
 %         % \caption{}
-%         \label{fig:subim1}
+%         \label{fig:Imagen17}
 %     \end{subfigure}
 %     \hfill
 %     \begin{subfigure}{0.5\textwidth}
@@ -1192,7 +902,7 @@ En la figura \ref{fig:Imagen17} se ilustra el moto reductor que se utilizo, con 
 % 
 % 
 
-En las figuras \ref{fig:subim1} y \ref{fig:subim2}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor.
+En las figuras \ref{fig:MOTOR_ConnectionDiag} y \ref{fig:MOTOR_ConnectionPDiag2}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor.
 Consta de 5 botones; 2 botones habilitadores de cada motor que son parte del ''PLC´´, 2 botones para indicar el giro del motor y 1 botón de paro total.
 % 
 % 
@@ -1201,14 +911,14 @@ Consta de 5 botones; 2 botones habilitadores de cada motor que son parte del ''P
     \centering
     \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.5,angle=-90]{img/MOTOR_ConnectionDiag.pdf} 
     \caption{Diagrama de conexiones para el motor.}
-    \label{fig:subim1}
+    \label{fig:MOTOR_ConnectionDiag}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[trim = {1mm 1mm 30mm 1mm},clip,scale=0.5,angle=-90]{img/MOTOR_ConnectionPDiag.pdf} 
     \caption{Diagrama de conexiones de potencia.}
-    \label{fig:subim2}
+    \label{fig:MOTOR_ConnectionPDiag2}
 \end{figure}
 
 En las figuras \ref{fig:Imagen13}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor.
@@ -1222,13 +932,13 @@ Dos botones de dos polos dos tiros para dar pulsos ya sea de frente o de reversa
     \begin{subfigure}{0.49\textwidth}
         \includegraphics[width=\textwidth, height=8cm]{img/Imagen13.jpg} 
         % \caption{}
-        \label{fig:subim1}
+        \label{fig:Imagen_13}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.49\textwidth}
         \includegraphics[width=\textwidth, height=8cm]{img/Imagen14.jpg}
         % \caption{}
-        \label{fig:subim2}
+        \label{fig:Imagen14}
     \end{subfigure}
 
     \caption{Pruebas de las conexiones en la etapa de potencia.}
@@ -1328,7 +1038,7 @@ En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servi
     \centering
      \includegraphics[trim = {1mm 40mm 1mm 50mm},clip,scale=0.60]{img/PLC_WEBSERVER.pdf}
     \caption{Diseño del \textit{Web Server}.}
-    \label{fig:webPLC.JPG}
+    \label{fig:PLC_WEBSERVER.JPG}
 \end{figure}
 %
 %############################################
@@ -1336,19 +1046,19 @@ En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servi
     \centering
      \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.65,angle=-90]{img/PLC_GRAFCET.pdf}
     \caption{\textit{Grafcet} utilizado para realizar el código del PLC.}
-    \label{fig:grafcet}
+    \label{fig:PLC_GRAFCET}
 \end{figure}
 
 %############################################
 % 
-En las siguientes Figuras \ref{fig:grafcet}, \ref{fig:network-1}, \ref{fig:network-2} \ref{fig:network_3-4}, \ref{fig:network-5}, \ref{fig:FCM1_network-1}, \ref{fig:FCM1_network-2}, \ref{fig:FCM1_network-3}, \ref{fig:FCM1_network-4}, \ref{fig:FCM1_network-5}
+En las siguientes Figuras \ref{fig:PLCODE_Network1}, \ref{fig:network-1}, \ref{fig:network-2} \ref{fig:network_3-4}, \ref{fig:network-5}, \ref{fig:FCM1_network-1}, \ref{fig:FCM1_network-2}, \ref{fig:FCM1_network-3}, \ref{fig:FCM1_network-4}, \ref{fig:FCM1_network-5}
 se describen el programa que se utilizo para controlar los motores.
 %############################################
 \begin{figure}[H]
     \centering
      \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.50]{img/PLCODE_Network1.pdf}
     \caption{Diagrama de bloques del PLC para el servidor web.}
-    \label{fig:grafcet}
+    \label{fig:PLCODE_Network1}
 \end{figure}
 
 \begin{figure}[H]
@@ -1521,11 +1231,288 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 % 
+\subsubsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
+
+
+% 
+% 
+% \subsection{Diseño mecánico y sistema de control}
+% % 
+% % 
+% \subsubsection{Diseño eléctrico del sistema de clasificación}
+
+% En la figura \ref{fig:Imagen17} se ilustra el moto reductor que se utilizo, con 1750 revoluciones por minuto y con un reductor de cien a uno lo que equivale a dar dieciocho vueltas en un minuto.
+% % 
+% % 
+% %############################################
+% \begin{figure}[H]
+
+%     \begin{subfigure}{0.49\textwidth}
+%         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen17.jpg} 
+%         % \caption{}
+%         \label{fig:Imagen17}
+%     \end{subfigure}
+%     \hfill
+%     \begin{subfigure}{0.49\textwidth}
+%         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen18.jpg}
+%         % \caption{}
+%         \label{fig:subim2}
+%     \end{subfigure}
+
+%     \caption{Moto-reductor en el sistema mecánico.}
+%     \label{fig:Imagen17}
+% \end{figure}
+% %############################################
+% % 
+% % 
+% En las figuras \ref{fig:Imagen13}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor.
+% Tiene cinco botones uno de paro de emergencia. 
+% Dos de arranca de color verde uno para ir al frente y otro para reversa.
+% Dos botones de dos polos dos tiros para dar pulsos ya sea de frente o de reversa.
+% % 
+% % 
+% %############################################
+% \begin{figure}[H]
+
+%     \begin{subfigure}{0.49\textwidth}
+%         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen13.jpg} 
+%         % \caption{}
+%         \label{fig:Imagen13}
+%     \end{subfigure}
+%     \hfill
+%     \begin{subfigure}{0.49\textwidth}
+%         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen14.jpg}
+%         % \caption{}
+%         \label{fig:subim2}
+%     \end{subfigure}
+
+%     \caption{Pruebas de las conexiones en la etapa de potencia.}
+%     \label{fig:Imagen13}
+% \end{figure}
+% %############################################
+% % 
+% % 
+% \subsubsection{Programa de arranque de motores}
+
+% Para que la experimentación y la adquisición de todos los datos se desarrollo una página web que junto con el servidor del PLC funcionan para activar y desactivar los motores de la banda transportadora y del sistema de identificación.
+% Por recomendación del fabricante se recomienda utilizar el navegador web Firefox.
+% En la Tabla \ref{tab:motor_DB} se detallan los tipos de variables que se utilizaron para el motor 1 y para el motor 2.
+% Físicamente cada PLC tiene un numero limitado de entradas y eso dificulta la automatización cuando se requieren de muchas entradas. 
+% La finalidad principal de hacer una pagina web para controlar las entradas de los motores es por las ventajas que proporciona al poder definir n cantidad de entradas y procesar esa información internamente con el PLC. 
+% En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el sistema mecánico para funcionar.
+% {\renewcommand{\baselinestretch}{1.15}
+% \begin{table}[H]
+%     \centering
+%     \caption{motor\_ DB[DB1] y motor\_ DB\_Dos[DB3]}
+%     \begin{adjustwidth}{2cm}{0cm}
+%         \begin{tabular}{c c c c c}
+%              \hline
+%             id & Nombre & Tipo de dato & Nombre & Tipo de dato \\
+%              \hline
+%               & Entrada &  \\
+%              \hline
+%             1 & reset & Bool & reset & Bool\\
+%             2 & start & Bool& start & Bool\\
+%             3 & inicioAdelante & Bool& inicioAdelante & Bool\\
+%             4 & stop & Bool& stop & Bool\\
+%             5 & inicioAtras & Bool& inicioAtras & Bool\\
+%             6 & pasoAdelante & Bool& pasoAdelante & Bool\\
+%             7 & pasoAtras & Bool& pasoAtras & Bool\\
+%              \hline
+%              & Salida &  \\
+%              \hline
+%             8 & adelante & Bool& adelante & Bool\\
+%             9 & atras & Bool& atras & Bool\\
+%             10 & Enable & Bool& Enable & Bool\\
+%              \hline
+%             & Estática &  \\
+%              \hline
+%             11 & R\_Trig\_reset & R\_TRIG& R\_Trig\_reset & R\_TRIG\\
+%             12 & Step & Array[0..2]& Step & Array[0..2]\\
+%             13 & pulso & Array[0..2]& pulso & Array[0..2]\\
+%             \hline
+%         \end{tabular}
+%     \end{adjustwidth}
+%     \label{tab:motor_DB}
+% \end{table}
+% }
+% %
+% {\renewcommand{\baselinestretch}{1.15}
+% \begin{table}[H]
+%     \centering
+%     \caption{TestDB[DB2]}
+%     \begin{adjustwidth}{5cm}{0cm}
+%         \begin{tabular}{c c c}
+%              \hline
+%             id & Nombre & Tipo de dato \\
+%              \hline
+%               & Estática &  \\
+%              \hline
+%             1 & ResetWeb & Bool\\
+%             2 & StartWeb & Bool\\
+%             3 & InicioAdelanteWeb &	Bool\\
+%             4 & StopWeb & Bool\\
+%             5 & InicioAtrasWeb & Bool\\
+%             6 & pasoAdelanteWeb & Bool\\
+%             7 & pasoAtrasWeb & Bool\\
+%             8 & ResetWeb\_2 & Bool\\
+%             9 & StartWeb\_2 & Bool\\
+%             10 & InicioAdelanteWeb\_2 & Bool\\
+%             11 & StopWeb\_2 & Bool\\
+%             12 & InicioAtrasWeb\_2 &	Bool\\
+%             13 & pasoAdelanteWeb\_2 & Bool\\
+%             14 & pasoAtrasWeb\_2 & Bool\\
+%             \hline
+%         \end{tabular}
+%     \end{adjustwidth}
+%     \label{tab:TestDB}
+% \end{table}
+% }
+% % 
+% % 
+% En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servidor web con el PLC.
+% %
+% %
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics{img/webPLC.JPG}
+%     \caption{Diagrama de bloques del PLC para el servidor web.}
+%     \label{fig:webPLC.JPG}
+% \end{figure}
+% % 
+% % 
+% En las siguientes Figuras \ref{fig:network_1-2}, \ref{fig:network-3}, \ref{fig:FB_network-1}, \ref{fig:FB_network-2}, \ref{fig:FB_network-3}, \ref{fig:FB_network-4}, \ref{fig:FB_network-5}, \ref{fig:FB_network-6}.
+% se describen el programa que se utilizo para controlar los motores.
+% %############################################
+% \begin{figure}[H]
+%     \begin{subfigure}{0.49\textwidth}
+%         \includegraphics[width=0.9\linewidth, height=9cm]{img/network-1.png} 
+%         \caption{Red 1 del motor número uno.}
+%         \label{img:network-1}
+%     \end{subfigure}
+%     \hfill
+%     \begin{subfigure}{0.49\textwidth}
+%         \includegraphics[width=0.9\linewidth, height=9cm]{img/network-2.png}
+%         \caption{Red 2 del motor número dos.}
+%         \label{img:network-2}
+%     \end{subfigure}
+
+%     \caption{Descripción los bloques de código que controlan los motores.}
+%     \label{fig:network_1-2}
+% \end{figure}
+% %############################################
+% La función de sistema WWW se llama en el OB1.
+% Esta función inicializa el servidor web de la CPU.
+% La llamada cíclica de la función en el OB1 permite la interacción entre el servidor web y el controlador.
+% El Web DB (DB 333) está conectado a la función WWW. 
+% La base de datos web y la base de datos de fragmentos almacenan la estructura de las páginas definidas por el usuario, véase la Figura \ref{fig:network-3}. 
+% % 
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.9\linewidth, height=4cm]{img/network-3.png}
+%     \caption{Red 3, Esta función de bloque inicializa el servidor web de la CPU.}
+%     \label{fig:network-3}
+% \end{figure}
+% %
+% En la Figura \ref{fig:FB_network-1} se describe la primer red del bloque de función que se determino en el PLC. 
+% Consta de un disparador que se activa cuando el PLC hace su primer escaneo del sistema y sirve para inicializar todas las redes del programa.
+% % 
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics{img/FB_network-1.png}
+%     \caption{Red 1 del bloque de función del motor.}
+%     \label{fig:FB_network-1}
+% \end{figure}
+% %
+% En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez que se ejecuto la red 1, la cual espera a que se active el paso cero con el botón de \textbf{star}.
+% % 
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics{img/FB_network-2.png}
+%     \caption{Red 2 Acción paso cero si esta en alto indica que el motor esta listo para arrancar.}
+%     \label{fig:FB_network-2}
+% \end{figure}
+% %
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics{img/FB_network-3.png}
+%     \caption{Red 3 Transición del paso cero, la cual indica que si el botón de inicio esta activado todos los botones se habilitan para el accionamiento del motor.}
+%     \label{fig:FB_network-3}
+% \end{figure}
+% %
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics{img/FB_network-4.png}
+%     \caption{Red 4 Acción paso uno, con dos botones se acciona el motor para adelante o para atrás.}
+%     \label{fig:FB_network-4}
+% \end{figure}
+% %
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=.9]{img/FB_network-5.png}
+%     \caption{Red 5 Acción uno, con dos botones se puede activar el motor con pulsos.}
+%     \label{fig:FB_network-5}
+% \end{figure}
+% %
+% %
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics{img/FB_network-6.png}
+%     \caption{Red 6 Transición paso uno, con esta red se define un botón de paro total o mejor conocido como paro de emergencia.}
+%     \label{fig:FB_network-6}
+% \end{figure}
+% 
+% 
+
+% 
+% \begin{itemize}
+%     \item Obtener una metodología basada en el funcionamiento de los diodos de InGaAs.
+%     \item Desarrollar un sistema de acondicionamiento de señal para diodo de InGaAs.
+%     \item Simular el comportamiento del diodo de InGaAs y los componentes mecánicos para la automatización.
+%     \item Aplicar herramientas estadísticas como PCA poder determinar los elementos para el sistema de clasificación.
+%     \item Buscar la obtención de un artículo JCR.
+%     \item Comprobar que con la metodología obtenida se da la opción para la realización de un diseño asequible.
+%     \item Generar una presentación de un plan de negocios.
+% \end{itemize}
+% 
+% 
+% \subsection{Factibilidad e impacto social}
+
+% \subsection{Aporte Tecnológico}
+
+% \newpage
+% \section{Abreviaturas y Acrónimos}
+
+% \begin{itemize}
+%     \item \textbf{PET}. ”\textit{Polyethylene Terephthalate}”
+%     \item \textbf{HDPE}. ”\textit{High Density Polyethylene}”
+% \end{itemize}
+% 
+% 
 \newpage
 \centering{\section{    DISCUSIÓN}}
 \justifying
 
+Para poder identificar si los elementos son los adecuados.
+Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de PET a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
+Con esto y teniendo en cuenta que la clasificación en la sección de sensores de realizara de botella en botella entonces el peso en la banda transportadora no pasaría de 5kg, por ende, no es necesario recurrir a un motor muy potente ni a una tensión alta en la banda para poder desplazar el contenido.
 
+Por otro lado, suponiendo de que las botellas caerán a través de un embudo a la banda transportadora entonces se debe considerar por mera seguridad que estás salgan eyectadas hacía los laterales, siendo este el caso se deben colocar paredes de un metal que sea ligero pero lo suficientemente resistente para que no se deforme debido a los impactos y permita que las botellas se mantengan dentro de la banda transportadora en todo momento. 
+Para ello se podría usar aluminio como material principal dado que es un metal que si bien no se vende puro sino en aleación con algún otro metal sigue siendo barato y ligero en comparación con otros metales como el acero, de esta manera el costo no se elevaría demasiado y se sigue manteniendo el factor de seguridad.
+
+La segunda sección de la banda transportadora sería la sección de identificación la cual se puede realizar mediante sensores o cámaras o una combinación de ambos dispositivos, en cualquiera de los casos el sistema empleado debe ser capaz de clasificar las botellas de manera rápida con el fin de tener una tasa mínima de 3 botellas por minuto.
+
+Después de la sección de identificación sigue la sección de clasificación en la cual las botellas serán removidas de la banda transportadora y pasarán a contenedores en función de sus características previamente identificadas.
+Esta clasificación puede realizarse mediante pistones neumáticos que se accionen mediante sus respectivas electroválvulas, las cuales son fáciles de controlar puesto que únicamente se activarían si las características de la botella identificadas en la sección previa cumplen con lo estipulado.
+Para esta última parte se debe considerar que se requiere de un suministro constante de aire comprimido para los pistones neumáticos, está presión debe ser de al menos $0.08MPa$, a menos que se requiera un control más estricto sobre el accionamiento se pueden utilizar pistones de simple efecto con retorno de muelle, de lo contrario se debe optar por pistones de doble efecto para controlar tanto el accionamiento como el regreso mediante un electroválvula de $\frac{5}{2}$ monoestable.
+% 
+%
+\subsection{Análisis de componentes principales para la identificación de los elementos}
+
+El método de PCA se utilizo para explicar la cantidad máxima de varianza con el menor número de componentes.
+PCA analiza los elementos principales de múltiples características, exponiendo su naturaleza y resaltando sus principales características, acortando las dimensiones de los datos. 
+% PCA establecerá un método para disminuir la dimensión de los datos.
+El análisis de componentes principales se utilizo para describir la variación en los conjuntos de variables correlacionadas reduciendo la complejidad ayudando a la interpretación de los datos y la reducción del ruido o variables que se tienen que monitorear.
 % 
 % 
 \newpage
