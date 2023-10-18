@@ -814,6 +814,26 @@ Dicho circuito puede ser realizado con un modulo de relevadores los cuales típi
 El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $64$ dolares que equivalen a $1328$ pesos mexicanos mientras que el precio de la Nucleo STM32F446 es de $15.82$ dolares que equivalen a $328$ pesos mexicanos, esto sin contar los costos de envío.
 % 
 % 
+\subsection{Justificación para implementar un amplificador de transimpedancia}
+Un amplificador de transimpedancia es un tipo de configuración desarrollada para un amplificador operacional que permite tener una corriente en la entrada y obtener un voltaje equivalente en cierta proporción a la salida del amplificador.
+
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {26mm 90mm 26mm 60mm},clip,scale=.5]{img/TImpOP.pdf}
+    \caption{Diseño de un amplificador de transimpedancia.}
+    \label{fig:TIMPOPAMP}
+\end{figure}
+
+Acorde a la Figura \ref{fig:TIMPOPAMP}, el funcionamiento del amplificador de transimpedancia en conjunto al BPW21R comienza con la obtención de la corriente que fluye a través del fotodiodo como resultado de la captación de luz.
+Por regla general se sabe que idealmente las entradas del amplificador operacional tienden a tener el mismo voltaje, es por eso que una resistencia es colocada en realimentación, por que se busca que el voltaje en una de las terminales sea de $0V$ con el fin de que el análisis del circuito se reduzca al comportamiento de la ley de Ohm.
+
+Esto se explica suponiendo que el fotodiodo emite una corriente de $1_{\mu A}$, entonces si suministramos un voltaje de $1V$ que fluye a través de una resistencia de $1M\Omega$, al llegar al mismo nodo esas corrientes se ''anulan'', provocando que el voltaje en la entrada inversora del amplificador operacional sea de $0V$.
+
+Se optó por utilizar un amplificador de transimpedacia porque los valores de corriente que se pueden obtener del fotodiodo de prueba BPW21R y posiblemente del diodo de InGaAs, son del orden de los nanoamperios y microamperios.
+Se podría optar por utilizar un amplificador operacional en configuración de seguidor de voltaje teniendo una resistencia conocida, sin embargo, el problema es el mismo, al tratarse de una corriente muy pequeña y utilizar una resistencia muy grande únicamente en la entrada del OPAMP, se tienen problemas de impedancia que resultan en un mal funcionamiento del circuito debido a oscilaciones que resultan de las propias características del OPAMP.
+Estas oscilaciones también se dan en el amplificador de transimpedancia, pero son más sencillas de controlar mediante la adición de capacitores tanto en la realimentación del OPAMP, como en las propias terminales de alimentación o en paralelo con el fotodiodo.
+%
+%
 \subsubsection{BPW21R como método de aproximación al comportamiento del diodo InGaAs}
 
 Con la finalidad de obtener un acercamiento al comportamiento del diodo InGaAs, se realizaron pruebas con el circuito diseñado y propuesto para operar y acondicionar la señal de dicho diodo, esto se realizó con un diodo \textbf{BPW21R}.
@@ -839,7 +859,7 @@ Los fotodiodos son dispositivos sensibles a la luz, dependiendo de la cantidad d
 En la Figura \ref{fig:ElecproBPW21R} se observan las propiedades eléctricas del fotodiodo, los parámetros más importantes son los siguientes: \textbf{Reverse Dark Current} $[I_{ro}]$ y \textbf{Dark Resistance} $[R_{D}]$ \cite{SymbolsandTherms2008vishay}, porque son parámetros que permiten predecir hasta cierto punto el comportamiento del fotodiodo y, en función de ello, diseñar un circuito que sea capaz de adecuar su señal para poder trabajarla.
 Estos parámetros van de la mano debido a que, como su nombre indica, son valores que se obtienen cuando el diodo esta operando en completa oscuridad y son importantes dado que influyen directamente en la medición final que se obtiene cuando el diodo se encuentra operando bajo condiciones de luz.
 
-Lo anterior se comprobó durante la experimentación. En la figura \ref{fig:OpticproBPW21R} se observa el parámetro \textbf{Reverse Light Current} $[I_{ra}]$ \cite{SymbolsandTherms2008vishay}; este parámetro se refiere a la corriente que fluye en función de la cantidad de luz que capta el dispositivo y su valor se obtiene mediante la ecuación \ref{RevDarkCurr}:
+Lo anterior se comprobó durante la experimentación con el circuito mostrado en la Figura \ref{fig:TIMPOPAMP}. En la figura \ref{fig:OpticproBPW21R} se observa el parámetro \textbf{Reverse Light Current} $[I_{ra}]$ \cite{SymbolsandTherms2008vishay}; este parámetro se refiere a la corriente que fluye en función de la cantidad de luz que capta el dispositivo y su valor se obtiene mediante la ecuación \ref{RevDarkCurr}:
 
 \begin{equation} \label{RevDarkCurr}
     \centering
@@ -847,7 +867,7 @@ Lo anterior se comprobó durante la experimentación. En la figura \ref{fig:Opti
 \end{equation}
 
 Donde se observa a $[I_{ph}]$ que es el parte de la corriente de salida que emite el diodo debido a que esta captando luz. Dada la Figura \ref{fig:OpticproBPW21R}, el valor de la \textbf{Reverse Light Current} es de $9_{\mu A}$ como valor típico \cite{bpw21r2006vishay}, resultado de la suma de la \textbf{Reverse Dark Current} y de la \textbf{Photocurrent} $[I_{ph}]$.
-Este valor se comprobó mediante la experimentación dado que con una resistencia de $1M\Omega$, se obtuvieron $8V$ a la salida del amplificador de transimpedancia, con lo cual, al aplicar ley de Ohm, se obtiene un valor de corriente de aproximadamente $8_{\mu A}$.
+Este valor se comprobó mediante la experimentación dado que con una resistencia de $1M\Omega$, se obtuvieron $8V$ a la salida de un amplificador de transimpedancia, con lo cual, al aplicar ley de Ohm, se obtiene un valor de corriente de aproximadamente $8_{\mu A}$.
 % 
 % 
 \subsection{Determinación de una metodología mediante las características del diodo InGaAs para seleccionar los elementos mecánicos}
