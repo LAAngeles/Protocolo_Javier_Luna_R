@@ -12,7 +12,7 @@
 %=================================================================
 \UseRawInputEncoding
 \usepackage{listings}
-\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -110,7 +110,17 @@ urlcolor=blue,
 \renewcommand*{\thesubsubsection}{\null{}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+% 
+% 
+%%%%%%%%%%%%%%%%%% 
+\textcolor{Red}{\Huge Hay que cambiar la portada externa ya te había enviado un correo de como debería de estar si no lo encuentras me dices para volvértela a enviar}
+%%%%%%%%%%%%%%%%%%
 \includepdf[pages=1]{img/portadaExternaJILR.pdf}
+%%%%%%%%%%%%%%%%%% 
+\textcolor{Red}{\Huge La portada interna también hay que cambiarla ya no van los nombre de el directo ni de la directora de posgrado, también te envié un machote.}
+\\
+\colorbox{yellow}{\Large Por favor cambia mi grado y el de Hugo a doctor}
+%%%%%%%%%%%%%%%%%%
 \includepdf[pages=1]{img/portadaInternaDeTesisJILR.pdf}
 
 \hypersetup{linkcolor=black}
@@ -119,6 +129,8 @@ urlcolor=blue,
 \centering{\section*{DEDICATORIAS}}
 \justifying
 \pagenumbering{roman}
+
+\colorbox{yellow}{\Large Agrega tus dedicatorias.}
 
 \textbf{A los alumnos de los posgrados de la
 Universidad Autónoma de Querétaro
@@ -129,6 +141,9 @@ Las dedicatorias son opcionales.}
 \addcontentsline{toc}{section}{Agradecimientos}
 \centering{\section*{AGRADECIMIENTOS}}
 \justifying
+
+\colorbox{yellow}{\Large Agrega tus agradecimientos.}
+
 En la preparación de este manual se recogieron las opiniones desinteresadas de
 los Directores y Coordinadores de Investigación y Posgrado de todas las
 Facultades de la Universidad Autónoma de Querétaro, así como de
@@ -158,6 +173,8 @@ texto y por sus atinados comentarios para mejorarlo.
 \addcontentsline{toc}{section}{Abreviaturas}
 \centering{\section*{ABREVIATURAS}}
 \justifying
+
+\colorbox{yellow}{\Large Revisa esta sección.}
 
 \noindent 
 \begin{tabular}{@{}ll}
@@ -217,6 +234,7 @@ USE & Universal serial bus
 \addcontentsline{toc}{section}{Resumen}
 \centering{\section*{RESUMEN}}
 \justifying
+\colorbox{yellow}{\Large El resumen se hace cuando ya se termino la tesis.}
 
 Es la sección más leída de una publicación y permite que la comunidad científica
 se entere del trabajo para luego leer el trabajo en detalle; además es la única
@@ -845,14 +863,14 @@ Los fotodiodos son dispositivos sensibles a la luz, dependiendo de la cantidad d
 \begin{figure}[H]
     \centering
      \includegraphics[trim = {26mm 215mm 26mm 40mm},clip,scale=1]{img/ElectricalPro_BPW21R_PDF.pdf}
-    \caption{Características eléctricas del fotodiodo BPW21R \cite{bpw21r2006vishay}.}
+    \caption{Características eléctricas del fotodiodo BPW21R \cite{bpw21r2006vishay}. \textcolor{Red}{Hay que hacerlo una tabla y pasarlo a español, solo lo más importante}}
     \label{fig:ElecproBPW21R}
 \end{figure}
 
 \begin{figure}[H]
     \centering
      \includegraphics[trim = {26mm 190mm 26mm 40mm},clip,scale=1]{img/OpticalPro_BPW21R_PDF.pdf}
-    \caption{Características ópticas del fotodiodo BPW21R \cite{bpw21r2006vishay}.}
+    \caption{Características ópticas del fotodiodo BPW21R \cite{bpw21r2006vishay}. \textcolor{Red}{Hay que hacerlo una tabla y pasarlo a español solo lo más importante.}}
     \label{fig:OpticproBPW21R}
 \end{figure}
 
@@ -1062,7 +1080,7 @@ En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servi
 \begin{figure}[h]
     \centering
      \includegraphics[trim = {1mm 40mm 1mm 50mm},clip,scale=0.60]{img/PLC_WEBSERVER.pdf}
-    \caption{Diseño del \textit{Web Server}.}
+    \caption{Diseño de la página web con el \textit{Web Server}.}
     \label{fig:PLC_WEBSERVER.JPG}
 \end{figure}
 %
@@ -1082,13 +1100,13 @@ se describen el programa que se utilizo para controlar los motores.
 \begin{figure}[H]
     \centering
      \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.50]{img/PLCODE_Network1.pdf}
-    \caption{Diagrama de bloques del PLC para el servidor web.}
+    \caption{Diagrama de bloques del PLC para el servidor web. \textcolor{Red}{La descripción de la figura no corresponde.}}
     \label{fig:PLCODE_Network1}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics{img/webPLC.JPG}
-    \caption{Diagrama de bloques del PLC para el servidor web.}
+    \caption{Diagrama de bloques del PLC para el servidor web. }
     \label{fig:webPLC.JPG}
 \end{figure}
 % 
@@ -1161,7 +1179,7 @@ En la Figura \ref{fig:network-2} se describe la acción que se toma una vez que 
     \label{fig:network_3-4}
 
     \includegraphics{img/FB_network-1.png}
-    \caption{Red 1 del bloque de función del motor.}
+    \caption{Red 1 del bloque de función del motor. \textcolor{Red}{La descripción de la figura no corresponde.}}
     \label{fig:FB_network-1}
 \end{figure}
 %
@@ -1209,7 +1227,7 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
     \centering
 
       \includegraphics[trim = {1mm 15mm 1mm 15mm},clip,scale=0.5]{img/PLCFCM1_Network2.pdf}
-    \caption{Red 2, Acción paso uno, con dos botones se acciona el motor para adelante o para atrás.}
+    \caption{Red 2, Acción paso uno, con dos botones se acciona el motor para adelante o para atrás. \textcolor{Red}{Por que de la red 3 se pasa a la 2 y después a la 4?.}}
     \label{fig:FCM1_network-2}
 
     \includegraphics{img/FB_network-4.png}
