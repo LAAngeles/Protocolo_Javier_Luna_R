@@ -111,6 +111,9 @@ urlcolor=blue,
 %\setlength{\arrayrulewidth}{0.5mm}
 %\setlength{\tabcolsep}{18pt}
 \renewcommand{\arraystretch}{1.5}
+%\setlength{\arrayrulewidth}{0.5mm}
+%\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{1.5}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 % 
@@ -131,9 +134,11 @@ urlcolor=blue,
 \justifying
 \pagenumbering{roman}
 
-\textbf{A mis amigos que formaron parte antes, durante y después
-de esta etapa de mi vida y con dedicatoria especial a mi familia, mis padres y
-mi pareja que me apoyaron en todo momento en la medida de lo posible.}
+\colorbox{yellow}{\Large Agrega tus dedicatorias.}
+
+\textbf{A los alumnos de los posgrados de la
+Universidad Autónoma de Querétaro
+Las dedicatorias son opcionales.}
 % 
 % 
 \newpage
@@ -860,58 +865,18 @@ Los fotodiodos son dispositivos sensibles a la luz, dependiendo de la cantidad d
 {\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
     \centering
-    \caption{Características eléctricas del fotodiodo BPW21R \cite{bpw21r2006vishay}.}
-    \label{ElecproBPW21R}
-    \begin{adjustwidth}{1.2cm}{0cm}
-    \begin{tabular}{|c|c|c|c|c|c|}
-    \hline
-        Parámetro & Simbolo & MIN & Typ. & MAX & Unit \\
-    \hline
-        Voltaje directo &  $V_{f}$ & - & 1.0 & 1.3 & $V$ \\
-    \hline
-        Corriente inversa en oscuridad & $I_{ro}$ & - & 2 & - & $nA$ \\
-    \hline
-        Resistencia en oscuridad & $V_{R}$ & - & 38 & - & $G\Omega $ \\
-    \hline
-\end{tabular} 
-\end{adjustwidth}
-\end{table}
-}
-
-%\begin{figure}[H]
-    %\centering
-     %\includegraphics[trim = {26mm 215mm 26mm 40mm},clip,scale=1]{img/ElectricalPro_BPW21R_PDF.pdf}
-    %\caption{Características eléctricas del fotodiodo BPW21R \cite{bpw21r2006vishay}. \textcolor{Red}{Hay que hacerlo una tabla y pasarlo a español, solo lo más importante}}
-    %\label{fig:ElecproBPW21R}
-%\end{figure}
+     \includegraphics[trim = {26mm 215mm 26mm 40mm},clip,scale=1]{img/ElectricalPro_BPW21R_PDF.pdf}
+    \caption{Características eléctricas del fotodiodo BPW21R \cite{bpw21r2006vishay}. \textcolor{Red}{Hay que hacerlo una tabla y pasarlo a español, solo lo más importante}}
+    \label{fig:ElecproBPW21R}
+\end{figure}
 
 {\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
     \centering
-    \caption{Características ópticas del fotodiodo BPW21R \cite{bpw21r2006vishay}.}
-    \label{OpticproBPW21R}
-    \begin{adjustwidth}{-.1cm}{0cm}
-    \begin{tabular}{|c|c|c|c|c|c|}
-    \hline
-        Parámetro & Simbolo & MIN & Typ. & MAX & Unit \\
-    \hline
-        Corriente inversa en luz &  $I_{ra}$ & 4.5 & 9.0 & - & $\mu A$ \\
-    \hline
-        Ángulo de sensibilidad media & $\phi $ & - & $\pm 50$  & - & $deg$ \\
-    \hline
-        Rango de banda de espectrometría & $\lambda_{0.5}$ & - & 420 a 675 & - & $nm$ \\
-    \hline
-\end{tabular} 
-\end{adjustwidth}
-\end{table}
-}
-
-%\begin{figure}[H]
-%    \centering
-%     \includegraphics[trim = {26mm 190mm 26mm 40mm},clip,scale=1]{img/OpticalPro_BPW21R_PDF.pdf}
-%    \caption{Características ópticas del fotodiodo BPW21R \cite{bpw21r2006vishay}. \textcolor{Red}{Hay que hacerlo una tabla y pasarlo a español solo lo más importante.}}
-%    \label{fig:OpticproBPW21R}
-%\end{figure}
+     \includegraphics[trim = {26mm 190mm 26mm 40mm},clip,scale=1]{img/OpticalPro_BPW21R_PDF.pdf}
+    \caption{Características ópticas del fotodiodo BPW21R \cite{bpw21r2006vishay}. \textcolor{Red}{Hay que hacerlo una tabla y pasarlo a español solo lo más importante.}}
+    \label{fig:OpticproBPW21R}
+\end{figure}
 
 En la Tabla \ref{ElecproBPW21R} se observan las propiedades eléctricas del fotodiodo, los parámetros más importantes son los siguientes: \textbf{Reverse Dark Current} $[I_{ro}]$ y \textbf{Dark Resistance} $[R_{D}]$ \cite{SymbolsandTherms2008vishay}, porque son parámetros que permiten predecir hasta cierto punto el comportamiento del fotodiodo y, en función de ello, diseñar un circuito que sea capaz de adecuar su señal para poder trabajarla.
 Estos parámetros van de la mano debido a que, como su nombre indica, son valores que se obtienen cuando el diodo esta operando en completa oscuridad y son importantes dado que influyen directamente en la medición final que se obtiene cuando el diodo se encuentra operando bajo condiciones de luz.
