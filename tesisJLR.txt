@@ -172,8 +172,6 @@ texto y por sus atinados comentarios para mejorarlo.
 \centering{\section*{ABREVIATURAS}}
 \justifying
 
-\colorbox{yellow}{\Large Revisa esta sección.}
-
 \noindent 
 \begin{tabular}{@{}ll}
 % ANOVA & Análisis de variación\\
