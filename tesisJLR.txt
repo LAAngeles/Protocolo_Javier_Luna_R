@@ -108,20 +108,21 @@ urlcolor=blue,
 \renewcommand\thesection{\Roman{section}} %  letters for sections
 \renewcommand*{\thesubsection}{\null{}}
 \renewcommand*{\thesubsubsection}{\null{}}
+%\setlength{\arrayrulewidth}{0.5mm}
+%\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{1.5}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 % 
 % 
 %%%%%%%%%%%%%%%%%% 
-\textcolor{Red}{\Huge Hay que cambiar la portada externa ya te había enviado un correo de como debería de estar si no lo encuentras me dices para volvértela a enviar}
+% \textcolor{Red}{\Huge Hay que cambiar la portada externa ya te había enviado un correo de como debería de estar si no lo encuentras me dices para volvértela a enviar}
 %%%%%%%%%%%%%%%%%%
-\includepdf[pages=1]{img/portadaExternaJILR.pdf}
+\includepdf[pages=1]{img/portadaExtActualizada.pdf}
 %%%%%%%%%%%%%%%%%% 
-\textcolor{Red}{\Huge La portada interna también hay que cambiarla ya no van los nombre de el directo ni de la directora de posgrado, también te envié un machote.}
-\\
-\colorbox{yellow}{\Large Por favor cambia mi grado y el de Hugo a doctor}
+% \textcolor{Red}{\Huge La portada interna también hay que cambiarla ya no van los nombre de el directo ni de la directora de posgrado, también te envié un machote.}
 %%%%%%%%%%%%%%%%%%
-\includepdf[pages=1]{img/portadaInternaDeTesisJILR.pdf}
+\includepdf[pages=1]{img/portadaIntActualizada.pdf}
 
 \hypersetup{linkcolor=black}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -130,11 +131,9 @@ urlcolor=blue,
 \justifying
 \pagenumbering{roman}
 
-\colorbox{yellow}{\Large Agrega tus dedicatorias.}
-
-\textbf{A los alumnos de los posgrados de la
-Universidad Autónoma de Querétaro
-Las dedicatorias son opcionales.}
+\textbf{A mis amigos que formaron parte antes, durante y después
+de esta etapa de mi vida y con dedicatoria especial a mi familia, mis padres y
+mi pareja que me apoyaron en todo momento en la medida de lo posible.}
 % 
 % 
 \newpage
@@ -166,34 +165,31 @@ texto y por sus atinados comentarios para mejorarlo.
 \addcontentsline{toc}{section}{Índice de figuras}
 \listoffigures
 % \lstlistoflistings
-\newpage
-\linenumbers
+% \newpage
 % 
 % 
 \addcontentsline{toc}{section}{Abreviaturas}
 \centering{\section*{ABREVIATURAS}}
 \justifying
 
-\colorbox{yellow}{\Large Revisa esta sección.}
-
 \noindent 
 \begin{tabular}{@{}ll}
-ANOVA & Análisis de variación\\
+% ANOVA & Análisis de variación\\
 CC  & Centros de acopio\\
 {$CO_2$} & Dióxido de carbono\\
-DIL40 & 40 PINS dual-in-line package\\
+% DIL40 & 40 PINS dual-in-line package\\
 DOE & Diseño de experimentos\\ 
 F & F Relación \\
 gl & Grados de libertad\\
 HDPE & Polietileno de alta densidad \\
 IMER & Industria Mexicana de Reciclaje S.A. de C.V.\\
 JPG & Grupo Conjunto de Expertos Fotográficos\\
-LCD & Pantalla de cristal líquido\\
+% LCD & Pantalla de cristal líquido\\
 LDA & Análisis discriminante lineal\\
 LDPE & Polietileno de baja densidad\\
 LED & Diodo emisor de luz\\
 MS & Cuadrado medio\\
-mL & Mililitros\\
+% mL & Mililitros\\
 NC & Normalmente cerrada\\
 NIRS & Espectroscopia de infrarrojo cercano\\
 No.  & Número\\
@@ -206,7 +202,7 @@ PLC & Controlador lógico programable\\
 PP & Polipropileno\\
 PVC & Cloruro de polivinilo\\
 PS & Poliestireno\\
-SVM & Máquinas de vectores soporte\\
+% SVM & Máquinas de vectores soporte\\
 SS & Suma de cuadrados\\
 USE & Universal serial bus
 \end{tabular}
@@ -230,6 +226,7 @@ USE & Universal serial bus
 % }
 % 
 % 
+\linenumbers
 \newpage
 \addcontentsline{toc}{section}{Resumen}
 \centering{\section*{RESUMEN}}
@@ -832,7 +829,7 @@ Dicho circuito puede ser realizado con un modulo de relevadores los cuales típi
 El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $64$ dolares que equivalen a $1328$ pesos mexicanos mientras que el precio de la Nucleo STM32F446 es de $15.82$ dolares que equivalen a $328$ pesos mexicanos, esto sin contar los costos de envío.
 % 
 % 
-\subsection{Justificación para implementar un amplificador de transimpedancia}
+\subsubsection{Justificación para implementar un amplificador de transimpedancia}
 Un amplificador de transimpedancia es un tipo de configuración desarrollada para un amplificador operacional que permite tener una corriente en la entrada y obtener un voltaje equivalente en cierta proporción a la salida del amplificador.
 
 \begin{figure}[H]
@@ -860,31 +857,73 @@ El \textbf{BPW21R} es un fotodiodo de silicio de tipo PN con un sellado herméti
 
 Los fotodiodos son dispositivos sensibles a la luz, dependiendo de la cantidad de luz que reciban y el ángulo de entrada de la misma al sensor de captura, la corriente que emite el fotodiodo será mayor o menor.
 
-\begin{figure}[H]
+{\renewcommand{\baselinestretch}{1.15}
+\begin{table}[H]
     \centering
-     \includegraphics[trim = {26mm 215mm 26mm 40mm},clip,scale=1]{img/ElectricalPro_BPW21R_PDF.pdf}
-    \caption{Características eléctricas del fotodiodo BPW21R \cite{bpw21r2006vishay}. \textcolor{Red}{Hay que hacerlo una tabla y pasarlo a español, solo lo más importante}}
-    \label{fig:ElecproBPW21R}
-\end{figure}
+    \caption{Características eléctricas del fotodiodo BPW21R \cite{bpw21r2006vishay}.}
+    \label{ElecproBPW21R}
+    \begin{adjustwidth}{1.2cm}{0cm}
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+        Parámetro & Simbolo & MIN & Typ. & MAX & Unit \\
+    \hline
+        Voltaje directo &  $V_{f}$ & - & 1.0 & 1.3 & $V$ \\
+    \hline
+        Corriente inversa en oscuridad & $I_{ro}$ & - & 2 & - & $nA$ \\
+    \hline
+        Resistencia en oscuridad & $V_{R}$ & - & 38 & - & $G\Omega $ \\
+    \hline
+\end{tabular} 
+\end{adjustwidth}
+\end{table}
+}
 
-\begin{figure}[H]
+%\begin{figure}[H]
+    %\centering
+     %\includegraphics[trim = {26mm 215mm 26mm 40mm},clip,scale=1]{img/ElectricalPro_BPW21R_PDF.pdf}
+    %\caption{Características eléctricas del fotodiodo BPW21R \cite{bpw21r2006vishay}. \textcolor{Red}{Hay que hacerlo una tabla y pasarlo a español, solo lo más importante}}
+    %\label{fig:ElecproBPW21R}
+%\end{figure}
+
+{\renewcommand{\baselinestretch}{1.15}
+\begin{table}[H]
     \centering
-     \includegraphics[trim = {26mm 190mm 26mm 40mm},clip,scale=1]{img/OpticalPro_BPW21R_PDF.pdf}
-    \caption{Características ópticas del fotodiodo BPW21R \cite{bpw21r2006vishay}. \textcolor{Red}{Hay que hacerlo una tabla y pasarlo a español solo lo más importante.}}
-    \label{fig:OpticproBPW21R}
-\end{figure}
+    \caption{Características ópticas del fotodiodo BPW21R \cite{bpw21r2006vishay}.}
+    \label{OpticproBPW21R}
+    \begin{adjustwidth}{-.1cm}{0cm}
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+        Parámetro & Simbolo & MIN & Typ. & MAX & Unit \\
+    \hline
+        Corriente inversa en luz &  $I_{ra}$ & 4.5 & 9.0 & - & $\mu A$ \\
+    \hline
+        Ángulo de sensibilidad media & $\phi $ & - & $\pm 50$  & - & $deg$ \\
+    \hline
+        Rango de banda de espectrometría & $\lambda_{0.5}$ & - & 420 a 675 & - & $nm$ \\
+    \hline
+\end{tabular} 
+\end{adjustwidth}
+\end{table}
+}
 
-En la Figura \ref{fig:ElecproBPW21R} se observan las propiedades eléctricas del fotodiodo, los parámetros más importantes son los siguientes: \textbf{Reverse Dark Current} $[I_{ro}]$ y \textbf{Dark Resistance} $[R_{D}]$ \cite{SymbolsandTherms2008vishay}, porque son parámetros que permiten predecir hasta cierto punto el comportamiento del fotodiodo y, en función de ello, diseñar un circuito que sea capaz de adecuar su señal para poder trabajarla.
+%\begin{figure}[H]
+%    \centering
+%     \includegraphics[trim = {26mm 190mm 26mm 40mm},clip,scale=1]{img/OpticalPro_BPW21R_PDF.pdf}
+%    \caption{Características ópticas del fotodiodo BPW21R \cite{bpw21r2006vishay}. \textcolor{Red}{Hay que hacerlo una tabla y pasarlo a español solo lo más importante.}}
+%    \label{fig:OpticproBPW21R}
+%\end{figure}
+
+En la Tabla \ref{ElecproBPW21R} se observan las propiedades eléctricas del fotodiodo, los parámetros más importantes son los siguientes: \textbf{Reverse Dark Current} $[I_{ro}]$ y \textbf{Dark Resistance} $[R_{D}]$ \cite{SymbolsandTherms2008vishay}, porque son parámetros que permiten predecir hasta cierto punto el comportamiento del fotodiodo y, en función de ello, diseñar un circuito que sea capaz de adecuar su señal para poder trabajarla.
 Estos parámetros van de la mano debido a que, como su nombre indica, son valores que se obtienen cuando el diodo esta operando en completa oscuridad y son importantes dado que influyen directamente en la medición final que se obtiene cuando el diodo se encuentra operando bajo condiciones de luz.
 
-Lo anterior se comprobó durante la experimentación con el circuito mostrado en la Figura \ref{fig:TIMPOPAMP}. En la figura \ref{fig:OpticproBPW21R} se observa el parámetro \textbf{Reverse Light Current} $[I_{ra}]$ \cite{SymbolsandTherms2008vishay}; este parámetro se refiere a la corriente que fluye en función de la cantidad de luz que capta el dispositivo y su valor se obtiene mediante la ecuación \ref{RevDarkCurr}:
+Lo anterior se comprobó durante la experimentación con el circuito mostrado en la Figura \ref{fig:TIMPOPAMP}. En la Tabla \ref{OpticproBPW21R} se observa el parámetro \textbf{Reverse Light Current} $[I_{ra}]$ \cite{SymbolsandTherms2008vishay}; este parámetro se refiere a la corriente que fluye en función de la cantidad de luz que capta el dispositivo y su valor se obtiene mediante la ecuación \ref{RevDarkCurr}:
 
 \begin{equation} \label{RevDarkCurr}
     \centering
     I_{ra} = I_{ro}+I_{ph}
 \end{equation}
 
-Donde se observa a $[I_{ph}]$ que es el parte de la corriente de salida que emite el diodo debido a que esta captando luz. Dada la Figura \ref{fig:OpticproBPW21R}, el valor de la \textbf{Reverse Light Current} es de $9_{\mu A}$ como valor típico \cite{bpw21r2006vishay}, resultado de la suma de la \textbf{Reverse Dark Current} y de la \textbf{Photocurrent} $[I_{ph}]$.
+Donde se observa a $[I_{ph}]$ que es el parte de la corriente de salida que emite el diodo debido a que esta captando luz. Dada la Tabla \ref{OpticproBPW21R}, el valor de la \textbf{Reverse Light Current} es de $9_{\mu A}$ como valor típico \cite{bpw21r2006vishay}, resultado de la suma de la \textbf{Reverse Dark Current} y de la \textbf{Photocurrent} $[I_{ph}]$.
 Este valor se comprobó mediante la experimentación dado que con una resistencia de $1M\Omega$, se obtuvieron $8V$ a la salida de un amplificador de transimpedancia, con lo cual, al aplicar ley de Ohm, se obtiene un valor de corriente de aproximadamente $8_{\mu A}$.
 % 
 % 
@@ -1077,7 +1116,7 @@ En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el si
 En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servidor web con el PLC.
 %
 %
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
      \includegraphics[trim = {1mm 40mm 1mm 50mm},clip,scale=0.60]{img/PLC_WEBSERVER.pdf}
     \caption{Diseño de la página web con el \textit{Web Server}.}
@@ -1093,16 +1132,16 @@ En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servi
 \end{figure}
 
 %############################################
-% 
-En las siguientes Figuras \ref{fig:PLCODE_Network1}, \ref{fig:network-1}, \ref{fig:network-2} \ref{fig:network_3-4}, \ref{fig:network-5}, \ref{fig:FCM1_network-1}, \ref{fig:FCM1_network-2}, \ref{fig:FCM1_network-3}, \ref{fig:FCM1_network-4}, \ref{fig:FCM1_network-5}
+% \ref{fig:PLCODE_Network1}
+En las siguientes Figuras \ref{fig:network-1}, \ref{fig:network-2} \ref{fig:network_3-4}, \ref{fig:network-5}, \ref{fig:FCM1_network-1}, \ref{fig:FCM1_network-2}, \ref{fig:FCM1_network-3}, \ref{fig:FCM1_network-4}, \ref{fig:FCM1_network-5}
 se describen el programa que se utilizo para controlar los motores.
 %############################################
-\begin{figure}[H]
-    \centering
-     \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.50]{img/PLCODE_Network1.pdf}
-    \caption{Diagrama de bloques del PLC para el servidor web. \textcolor{Red}{La descripción de la figura no corresponde.}}
-    \label{fig:PLCODE_Network1}
-\end{figure}
+%begin{figure}[H]
+%    \centering
+%     \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.50]{img/PLCODE_Network1.pdf}
+%    \caption{Diagrama de bloques del PLC para el servidor web. \textcolor{Red}{La descripción de la figura no corresponde.}}
+%    \label{fig:PLCODE_Network1}
+%\end{figure}
 
 \begin{figure}[H]
     \includegraphics{img/webPLC.JPG}
@@ -1179,7 +1218,7 @@ En la Figura \ref{fig:network-2} se describe la acción que se toma una vez que 
     \label{fig:network_3-4}
 
     \includegraphics{img/FB_network-1.png}
-    \caption{Red 1 del bloque de función del motor. \textcolor{Red}{La descripción de la figura no corresponde.}}
+    \caption{Condiciones de activación para el bloque de función de los motores.}
     \label{fig:FB_network-1}
 \end{figure}
 %
@@ -1230,10 +1269,6 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
     \caption{Red 2, Acción paso uno, con dos botones se acciona el motor para adelante o para atrás. \textcolor{Red}{Por que de la red 3 se pasa a la 2 y después a la 4?.}}
     \label{fig:FCM1_network-2}
 
-    \includegraphics{img/FB_network-4.png}
-    \caption{Red 4 Acción paso uno, con dos botones se acciona el motor para adelante o para atrás.}
-    \label{fig:FB_network-4}
-
 \end{figure}
 %
 \begin{figure}[H]
@@ -1241,6 +1276,14 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
       \includegraphics[trim = {1mm 30mm 1mm 20mm},clip,scale=0.5]{img/PLCFCM1_Network3.pdf}
     \caption{Red 3, accionamiento del giro en sentido horario del motor, con bloqueo.}
     \label{fig:FCM1_network-3}
+\end{figure}
+%
+\begin{figure}[H]
+    \centering
+    \includegraphics{img/FB_network-4.png}
+    \caption{Red 4 Acción paso uno, con dos botones se acciona el motor para adelante o para atrás.}
+    \label{fig:FB_network-4}
+
 \end{figure}
 %
 \begin{figure}[H]
@@ -1276,7 +1319,203 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 % 
 \subsubsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
 
-
+El diseño de experimentos que se propuso consistió en determinar la distancia y rango de trabajo del sistema.
+Véase la Tabla \ref{table:DOE_1}.
+% 
+% 
+%#############################################################
+{\renewcommand{\baselinestretch}{0.7}
+\begin{table}[H]
+    \centering
+    \caption{Planteamiento del diseño de experimentos para determinar el rango de trabajo del sistema de identificación.}
+    \label{table:DOE_1}
+    \begin{tabular}{c c c c c}
+         \cline{2-4}
+           &  & Distancia cm (A) &  &   \\
+         \cline{2-5}
+           Tamaño de Botella mL (B)& A1 & A2 & A3 &  Suma  \\
+         \cline{1-5}
+         % \multirow{23}{5em}{Tamaño de Botella (B)}  
+             \multirow{2}{3em}{200}  %%%%% 200 ml %%%%%
+                & $y_{ij}$ 
+                    & $y_{ij}$
+                        & $y_{ij}$ &    \\
+            & $y_{ij}$ 
+                & $y_{ij}$	
+                    & $y_{ij}$	
+                        &  $Suma_{j}$  \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\                                 
+         \cline{1-5}
+         \multirow{2}{3em}{300} %%%%% 300 ml %%%%%
+            & $y_{ij}$	 
+                & $y_{ij}$	
+                    & $y_{ij}$ &    \\
+            & $y_{ij}$	
+                & $y_{ij}$	
+                    & $y_{ij}$	 
+                        &  $Suma_{j}$  \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\ 
+         \cline{1-5}
+         \multirow{2}{3em}{355} %%%%% 355 ml %%%%%
+            & $y_{ij}$ 
+                & $y_{ij}$
+                    & $y_{ij}$ &    \\
+            & $y_{ij}$	 
+                & $y_{ij}$	
+                    & $y_{ij}$	
+                        &  $Suma_{j}$  \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\ 
+         \cline{1-5}
+         \multirow{2}{3em}{500} %%%%% 500 ml %%%%%
+            & $y_{ij}$ 
+                & $y_{ij}$
+                    & $y_{ij}$ &    \\
+            & $y_{ij}$	 
+                & $y_{ij}$	
+                    & $y_{ij}$	
+                        &  $Suma_{j}$ \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\ 
+         \cline{1-5}
+         \multirow{2}{3em}{600} %%%%% 600 ml %%%%%
+            & $y_{ij}$	
+                & $y_{ij}$	
+                    & $y_{ij}$ &    \\
+            & $y_{ij}$	
+                & $y_{ij}$	
+                    & $y_{ij}$	
+                        &  $Suma_{j}$  \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\ 
+         \cline{1-5}
+         \multirow{2}{4em}{1000} %%%%% 1000 ml %%%%%
+            & $y_{ij}$	 
+                & $y_{ij}$
+                    & $y_{ij}$ &    \\
+            & $y_{ij}$
+                & $y_{ij}$	
+                    & $y_{ij}$
+                        &  $Suma_{j}$  \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\ 
+         \cline{1-5}
+         \multirow{2}{4em}{1350} %%%%% 1350 ml %%%%%
+            & $y_{ij}$	 
+                & $y_{ij}$	
+                    & $y_{ij}$ &    \\
+            & $y_{ij}$	
+                & $y_{ij}$	
+                    & $y_{ij}$	
+                        &  $Suma_{j}$ \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\ 
+         \cline{1-5}
+         \multirow{2}{4em}{2000} %%%%% 2000 ml %%%%%
+            & $y_{ij}$	
+                & $y_{ij}$	
+                    & $y_{ij}$ &    \\
+            & $y_{ij}$	
+                & $y_{ij}$
+                    & $y_{ij}$	
+                        &  $Suma_{j}$  \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\ 
+         \cline{1-5}
+         \multirow{2}{4em}{3000} %%%%% 3000 ml %%%%%
+            & $y_{ij}$ 
+                & $y_{ij}$
+                    & $y_{ij}$ &    \\
+            & $y_{ij}$	 
+                & $y_{ij}$	
+                    & $y_{ij}$
+                        &  $Suma_{j}$  \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\ 
+         \cline{1-5}
+           Suma Total
+            & $SumaT_{i}$ 
+                & $SumaT_{i}$	
+                    & $SumaT_{i}$	
+                        &  $SumaT$  \\ 
+         \hline
+    \end{tabular}
+\end{table}
+}
+%#############################################################
+% 
+% 
+La posición del sistema se estableció de forma vertical en dirección de la banda transportadora. 
+Con la experimentación sería posible determinar la distancia significativa para el encontrar el óptimo rango de trabajo del sistema de identificación. 
+% 
+%  
+En la Tabla \ref{table:DOE_1a} se resume los resultados de las fuentes de variación de la elaboración del ANOVA de dos factores.
+% 
+% 
+%#############################################################
+{\renewcommand{\baselinestretch}{0.7}
+\begin{table}[H]
+    \centering
+    \caption{Resumen del primer ``ANOVA'' de dos factores}
+    \label{table:DOE_1a}
+    \begin{tabular}{c c c c c}
+        \hline
+         Fuente & SS & gl & MS & F \\
+        \hline
+         Distancia (A) & SSA & a-1 & MSA = SSA/(a-1) & MSA / MSE\\
+        \hline
+         Botella (B) & SSB & b-1 & MSB = SSB/(b-1) & MSB / MSE\\
+        \hline
+         AB & SSAB & a-1 & MSAB = SSAB/(a-1) & MSAB / MSE \\
+        \hline
+         Error & SSE & N-a-b-1 & MSE = SSE/(N-a-b-1) &  \\
+        \cline{1-4}
+         Total & SST & N-1 &  &  \\
+        \cline{1-3}
+    \end{tabular}
+\end{table}
+}
+%#############################################################
+% 
+% 
 % 
 % 
 % \subsection{Diseño mecánico y sistema de control}
