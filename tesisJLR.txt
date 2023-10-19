@@ -116,13 +116,11 @@ urlcolor=blue,
 % 
 % 
 %%%%%%%%%%%%%%%%%% 
-\textcolor{Red}{\Huge Hay que cambiar la portada externa ya te había enviado un correo de como debería de estar si no lo encuentras me dices para volvértela a enviar}
+% \textcolor{Red}{\Huge Hay que cambiar la portada externa ya te había enviado un correo de como debería de estar si no lo encuentras me dices para volvértela a enviar}
 %%%%%%%%%%%%%%%%%%
 \includepdf[pages=1]{img/portadaExtActualizada.pdf}
 %%%%%%%%%%%%%%%%%% 
-\textcolor{Red}{\Huge La portada interna también hay que cambiarla ya no van los nombre de el directo ni de la directora de posgrado, también te envié un machote.}
-\\
-\colorbox{yellow}{\Large Por favor cambia mi grado y el de Hugo a doctor}
+% \textcolor{Red}{\Huge La portada interna también hay que cambiarla ya no van los nombre de el directo ni de la directora de posgrado, también te envié un machote.}
 %%%%%%%%%%%%%%%%%%
 \includepdf[pages=1]{img/portadaIntActualizada.pdf}
 
@@ -132,8 +130,6 @@ urlcolor=blue,
 \centering{\section*{DEDICATORIAS}}
 \justifying
 \pagenumbering{roman}
-
-\colorbox{yellow}{\Large Agrega tus dedicatorias.}
 
 \textbf{A mis amigos que formaron parte antes, durante y después
 de esta etapa de mi vida y con dedicatoria especial a mi familia, mis padres y
@@ -169,8 +165,7 @@ texto y por sus atinados comentarios para mejorarlo.
 \addcontentsline{toc}{section}{Índice de figuras}
 \listoffigures
 % \lstlistoflistings
-\newpage
-\linenumbers
+% \newpage
 % 
 % 
 \addcontentsline{toc}{section}{Abreviaturas}
@@ -181,22 +176,22 @@ texto y por sus atinados comentarios para mejorarlo.
 
 \noindent 
 \begin{tabular}{@{}ll}
-ANOVA & Análisis de variación\\
+% ANOVA & Análisis de variación\\
 CC  & Centros de acopio\\
 {$CO_2$} & Dióxido de carbono\\
-DIL40 & 40 PINS dual-in-line package\\
+% DIL40 & 40 PINS dual-in-line package\\
 DOE & Diseño de experimentos\\ 
 F & F Relación \\
 gl & Grados de libertad\\
 HDPE & Polietileno de alta densidad \\
 IMER & Industria Mexicana de Reciclaje S.A. de C.V.\\
 JPG & Grupo Conjunto de Expertos Fotográficos\\
-LCD & Pantalla de cristal líquido\\
+% LCD & Pantalla de cristal líquido\\
 LDA & Análisis discriminante lineal\\
 LDPE & Polietileno de baja densidad\\
 LED & Diodo emisor de luz\\
 MS & Cuadrado medio\\
-mL & Mililitros\\
+% mL & Mililitros\\
 NC & Normalmente cerrada\\
 NIRS & Espectroscopia de infrarrojo cercano\\
 No.  & Número\\
@@ -209,7 +204,7 @@ PLC & Controlador lógico programable\\
 PP & Polipropileno\\
 PVC & Cloruro de polivinilo\\
 PS & Poliestireno\\
-SVM & Máquinas de vectores soporte\\
+% SVM & Máquinas de vectores soporte\\
 SS & Suma de cuadrados\\
 USE & Universal serial bus
 \end{tabular}
@@ -233,6 +228,7 @@ USE & Universal serial bus
 % }
 % 
 % 
+\linenumbers
 \newpage
 \addcontentsline{toc}{section}{Resumen}
 \centering{\section*{RESUMEN}}
@@ -835,7 +831,7 @@ Dicho circuito puede ser realizado con un modulo de relevadores los cuales típi
 El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $64$ dolares que equivalen a $1328$ pesos mexicanos mientras que el precio de la Nucleo STM32F446 es de $15.82$ dolares que equivalen a $328$ pesos mexicanos, esto sin contar los costos de envío.
 % 
 % 
-\subsection{Justificación para implementar un amplificador de transimpedancia}
+\subsubsection{Justificación para implementar un amplificador de transimpedancia}
 Un amplificador de transimpedancia es un tipo de configuración desarrollada para un amplificador operacional que permite tener una corriente en la entrada y obtener un voltaje equivalente en cierta proporción a la salida del amplificador.
 
 \begin{figure}[H]
@@ -868,7 +864,7 @@ Los fotodiodos son dispositivos sensibles a la luz, dependiendo de la cantidad d
     \centering
     \caption{Características eléctricas del fotodiodo BPW21R \cite{bpw21r2006vishay}.}
     \label{ElecproBPW21R}
-    \begin{adjustwidth}{-1.2cm}{0cm}
+    \begin{adjustwidth}{1.2cm}{0cm}
     \begin{tabular}{|c|c|c|c|c|c|}
     \hline
         Parámetro & Simbolo & MIN & Typ. & MAX & Unit \\
@@ -896,7 +892,7 @@ Los fotodiodos son dispositivos sensibles a la luz, dependiendo de la cantidad d
     \centering
     \caption{Características ópticas del fotodiodo BPW21R \cite{bpw21r2006vishay}.}
     \label{OpticproBPW21R}
-    \begin{adjustwidth}{-1.2cm}{0cm}
+    \begin{adjustwidth}{-.1cm}{0cm}
     \begin{tabular}{|c|c|c|c|c|c|}
     \hline
         Parámetro & Simbolo & MIN & Typ. & MAX & Unit \\
@@ -1122,7 +1118,7 @@ En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el si
 En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servidor web con el PLC.
 %
 %
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
      \includegraphics[trim = {1mm 40mm 1mm 50mm},clip,scale=0.60]{img/PLC_WEBSERVER.pdf}
     \caption{Diseño de la página web con el \textit{Web Server}.}
@@ -1325,7 +1321,203 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 % 
 \subsubsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
 
-
+El diseño de experimentos que se propuso consistió en determinar la distancia y rango de trabajo del sistema.
+Véase la Tabla \ref{table:DOE_1}.
+% 
+% 
+%#############################################################
+{\renewcommand{\baselinestretch}{0.7}
+\begin{table}[H]
+    \centering
+    \caption{Planteamiento del diseño de experimentos para determinar el rango de trabajo del sistema de identificación.}
+    \label{table:DOE_1}
+    \begin{tabular}{c c c c c}
+         \cline{2-4}
+           &  & Distancia cm (A) &  &   \\
+         \cline{2-5}
+           Tamaño de Botella mL (B)& A1 & A2 & A3 &  Suma  \\
+         \cline{1-5}
+         % \multirow{23}{5em}{Tamaño de Botella (B)}  
+             \multirow{2}{3em}{200}  %%%%% 200 ml %%%%%
+                & $y_{ij}$ 
+                    & $y_{ij}$
+                        & $y_{ij}$ &    \\
+            & $y_{ij}$ 
+                & $y_{ij}$	
+                    & $y_{ij}$	
+                        &  $Suma_{j}$  \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\                                 
+         \cline{1-5}
+         \multirow{2}{3em}{300} %%%%% 300 ml %%%%%
+            & $y_{ij}$	 
+                & $y_{ij}$	
+                    & $y_{ij}$ &    \\
+            & $y_{ij}$	
+                & $y_{ij}$	
+                    & $y_{ij}$	 
+                        &  $Suma_{j}$  \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\ 
+         \cline{1-5}
+         \multirow{2}{3em}{355} %%%%% 355 ml %%%%%
+            & $y_{ij}$ 
+                & $y_{ij}$
+                    & $y_{ij}$ &    \\
+            & $y_{ij}$	 
+                & $y_{ij}$	
+                    & $y_{ij}$	
+                        &  $Suma_{j}$  \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\ 
+         \cline{1-5}
+         \multirow{2}{3em}{500} %%%%% 500 ml %%%%%
+            & $y_{ij}$ 
+                & $y_{ij}$
+                    & $y_{ij}$ &    \\
+            & $y_{ij}$	 
+                & $y_{ij}$	
+                    & $y_{ij}$	
+                        &  $Suma_{j}$ \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\ 
+         \cline{1-5}
+         \multirow{2}{3em}{600} %%%%% 600 ml %%%%%
+            & $y_{ij}$	
+                & $y_{ij}$	
+                    & $y_{ij}$ &    \\
+            & $y_{ij}$	
+                & $y_{ij}$	
+                    & $y_{ij}$	
+                        &  $Suma_{j}$  \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\ 
+         \cline{1-5}
+         \multirow{2}{4em}{1000} %%%%% 1000 ml %%%%%
+            & $y_{ij}$	 
+                & $y_{ij}$
+                    & $y_{ij}$ &    \\
+            & $y_{ij}$
+                & $y_{ij}$	
+                    & $y_{ij}$
+                        &  $Suma_{j}$  \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\ 
+         \cline{1-5}
+         \multirow{2}{4em}{1350} %%%%% 1350 ml %%%%%
+            & $y_{ij}$	 
+                & $y_{ij}$	
+                    & $y_{ij}$ &    \\
+            & $y_{ij}$	
+                & $y_{ij}$	
+                    & $y_{ij}$	
+                        &  $Suma_{j}$ \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\ 
+         \cline{1-5}
+         \multirow{2}{4em}{2000} %%%%% 2000 ml %%%%%
+            & $y_{ij}$	
+                & $y_{ij}$	
+                    & $y_{ij}$ &    \\
+            & $y_{ij}$	
+                & $y_{ij}$
+                    & $y_{ij}$	
+                        &  $Suma_{j}$  \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\ 
+         \cline{1-5}
+         \multirow{2}{4em}{3000} %%%%% 3000 ml %%%%%
+            & $y_{ij}$ 
+                & $y_{ij}$
+                    & $y_{ij}$ &    \\
+            & $y_{ij}$	 
+                & $y_{ij}$	
+                    & $y_{ij}$
+                        &  $Suma_{j}$  \\
+         \cline{1-5}
+            Suma
+            & $Suma_{ij}$	
+                & $Suma_{ij}$	
+                    & $Suma_{ij}$
+                        &    \\ 
+         \cline{1-5}
+           Suma Total
+            & $SumaT_{i}$ 
+                & $SumaT_{i}$	
+                    & $SumaT_{i}$	
+                        &  $SumaT$  \\ 
+         \hline
+    \end{tabular}
+\end{table}
+}
+%#############################################################
+% 
+% 
+La posición del sistema se estableció de forma vertical en dirección de la banda transportadora. 
+Con la experimentación sería posible determinar la distancia significativa para el encontrar el óptimo rango de trabajo del sistema de identificación. 
+% 
+%  
+En la Tabla \ref{table:DOE_1a} se resume los resultados de las fuentes de variación de la elaboración del ANOVA de dos factores.
+% 
+% 
+%#############################################################
+{\renewcommand{\baselinestretch}{0.7}
+\begin{table}[H]
+    \centering
+    \caption{Resumen del primer ``ANOVA'' de dos factores}
+    \label{table:DOE_1a}
+    \begin{tabular}{c c c c c}
+        \hline
+         Fuente & SS & gl & MS & F \\
+        \hline
+         Distancia (A) & SSA & a-1 & MSA = SSA/(a-1) & MSA / MSE\\
+        \hline
+         Botella (B) & SSB & b-1 & MSB = SSB/(b-1) & MSB / MSE\\
+        \hline
+         AB & SSAB & a-1 & MSAB = SSAB/(a-1) & MSAB / MSE \\
+        \hline
+         Error & SSE & N-a-b-1 & MSE = SSE/(N-a-b-1) &  \\
+        \cline{1-4}
+         Total & SST & N-1 &  &  \\
+        \cline{1-3}
+    \end{tabular}
+\end{table}
+}
+%#############################################################
+% 
+% 
 % 
 % 
 % \subsection{Diseño mecánico y sistema de control}
