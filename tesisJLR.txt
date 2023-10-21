@@ -175,10 +175,10 @@ texto y por sus atinados comentarios para mejorarlo.
 \noindent 
 \begin{tabular}{@{}ll}
 % ANOVA & Análisis de variación\\
-CC  & Centros de acopio\\
+% CC  & Centros de acopio\\
 {$CO_2$} & Dióxido de carbono\\
 % DIL40 & 40 PINS dual-in-line package\\
-DOE & Diseño de experimentos\\ 
+% DOE & Diseño de experimentos\\ 
 F & F Relación \\
 gl & Grados de libertad\\
 HDPE & Polietileno de alta densidad \\
@@ -191,20 +191,20 @@ LED & Diodo emisor de luz\\
 MS & Cuadrado medio\\
 % mL & Mililitros\\
 NC & Normalmente cerrada\\
-NIRS & Espectroscopia de infrarrojo cercano\\
-No.  & Número\\
+NIR & Espectroscopia de infrarrojo cercano\\
+% No.  & Número\\
 PCA & Análisis de componentes principales\\
-PCB & placa de circuito impreso\\
+% PCB & placa de circuito impreso\\
 PET & Tereftalato de polietileno\\
 PIC & Controlador de interfaz de periféricos\\
-PIB & Producto Interno Bruto\\
+% PIB & Producto Interno Bruto\\
 PLC & Controlador lógico programable\\
 PP & Polipropileno\\
 PVC & Cloruro de polivinilo\\
 PS & Poliestireno\\
 % SVM & Máquinas de vectores soporte\\
 SS & Suma de cuadrados\\
-USE & Universal serial bus
+% USE & Universal serial bus
 \end{tabular}
 % 
 % 
