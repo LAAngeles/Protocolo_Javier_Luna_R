@@ -737,7 +737,7 @@ Basándonos en la gráfica de la Figura \ref{NIRRange} y en el hecho de que el r
 {\renewcommand{\baselinestretch}{1.15}
 \begin{figure}[H]
     \centering
- \includegraphics[trim = {0mm 20mm 0mm 30mm},clip,scale=.58]{img/PINTABLEDIODES2.pdf}
+ \includegraphics[trim = {0mm 20mm 7mm 30mm},clip,scale=.58]{img/PINTABLEDIODES2.pdf}
     \caption{Rangos de detección de diodos construidos de InGaAs \cite{kk2015ingaas}.}
     \label{PINDiodes}
 \end{figure}
@@ -778,7 +778,7 @@ Dada el cuadro en la Figura \ref{PINDiodes} podemos observar los diferentes mode
     \centering
     \caption{Características de la serie G12180 \cite{kk2015ingaas}.}
     \label{G12180CAS}
-    \begin{adjustwidth}{-1.2cm}{0cm}
+    \begin{adjustwidth}{-1.6cm}{0cm}
     \begin{tabular}{|c|c|c|c|c|}
         \hline
         Modelo & Área fotosensible & Voltaje en reversa & Enfriamiento & \textit{Fc} $[MHz]$\\ 
@@ -1118,9 +1118,11 @@ En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servi
 %
 \begin{figure}[H]
     \centering
-     \includegraphics[trim = {1mm 40mm 1mm 50mm},clip,scale=0.60]{img/PLC_WEBSERVER.pdf}
+\begin{adjustwidth}{-1.5cm}{0cm}
+     \includegraphics[trim = {1mm 60mm 1mm 50mm},clip,scale=0.60]{img/PLC_WEBSERVER.pdf}
     \caption{Diseño de la página web con el \textit{Web Server}.}
     \label{fig:PLC_WEBSERVER.JPG}
+\end{adjustwidth}
 \end{figure}
 %
 %############################################
@@ -1142,11 +1144,12 @@ se describen el programa que se utilizo para controlar los motores.
 %    \caption{Diagrama de bloques del PLC para el servidor web. \textcolor{Red}{La descripción de la figura no corresponde.}}
 %    \label{fig:PLCODE_Network1}
 %\end{figure}
-
 \begin{figure}[H]
-    \includegraphics{img/webPLC.JPG}
-    \caption{Diagrama de bloques del PLC para el servidor web. }
-    \label{fig:webPLC.JPG}
+    \begin{adjustwidth}{-0.8cm}{0cm}
+        \includegraphics{img/webPLC.JPG}
+        \caption{Diagrama de bloques del PLC para el servidor web. }
+        \label{fig:webPLC.JPG}
+    \end{adjustwidth}
 \end{figure}
 % 
 % 
@@ -1232,24 +1235,27 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 
 \end{figure}
 %
+%
 \begin{figure}[H]
     \centering
-
+\begin{adjustwidth}{-0.5cm}{0cm}
     \begin{subfigure}{0.5\textwidth}
-    \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.3]{img/PLCODE_Network5P1.pdf}
+    \includegraphics[trim = {10mm 1mm 20mm 1mm},clip,scale=0.3]{img/PLCODE_Network5P1.pdf}
     \caption{Red 5, primer eslabón}
     \end{subfigure}
     \hfill
     % \centering
-    \begin{subfigure}{0.4\textwidth}
-    \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.3]{img/PLCODE_Network5P2.pdf}
+    \begin{subfigure}{0.5\textwidth}
+    \includegraphics[trim = {65mm 1mm 1mm 1mm},clip,scale=0.3]{img/PLCODE_Network5P2.pdf}
     \caption{Red 5, segundo eslabón.}
     \end{subfigure}
     
     \caption{Red 5, botón \textit{Reset} para reiniciar el proceso.}
     \label{fig:network-5}
+\end{adjustwidth}
 \end{figure}
 %
+{\renewcommand{\baselinestretch}{1.15}
 \begin{figure}[H]
     \centering
       \includegraphics[trim = {1mm 70mm 1mm 70mm},clip,scale=0.5]{img/PLCFCM1_Network1.pdf}
@@ -1261,6 +1267,7 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
     \label{fig:FB_network-3}
 
 \end{figure}
+}
 %
 \begin{figure}[H]
     \centering
@@ -1293,16 +1300,20 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
     \label{fig:FCM1_network-4}
 \end{figure}
 %
+{\renewcommand{\baselinestretch}{1.15}
 \begin{figure}[H]
     \centering
      \includegraphics[trim = {1mm 30mm 1mm 1mm},clip,scale=0.5]{img/PLCFCM1_Network5.pdf}
     \caption{Red 5, Transición paso uno, con esta red se define un botón de paro total o mejor conocido como paro de emergencia.}
     \label{fig:FCM1_network-5}
-
+    
+\begin{adjustwidth}{-1.5cm}{0cm}
     \includegraphics[scale=.9]{img/FB_network-5.png}
     \caption{Red 5 Acción uno, con dos botones se puede activar el motor con pulsos.}
     \label{fig:FB_network-5}
+\end{adjustwidth}
 \end{figure}
+}
 %
 %
 \begin{figure}[H]
@@ -1491,7 +1502,7 @@ En la Tabla \ref{table:DOE_1a} se resume los resultados de las fuentes de variac
 % 
 % 
 %#############################################################
-{\renewcommand{\baselinestretch}{0.7}
+{\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
     \centering
     \caption{Resumen del primer ``ANOVA'' de dos factores}
