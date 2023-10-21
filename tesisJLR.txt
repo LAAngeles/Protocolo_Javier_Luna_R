@@ -1836,17 +1836,27 @@ El análisis de componentes principales se utilizo para describir la variación 
 \newpage
 \centering{\section[\appendixautorefname{}]{APÉNDICE}}
 
-\begin{lstlisting}[language=c, caption=Codigo de ejemplo en c., label=listing:c] 
+% \begin{lstlisting}[language=c, caption=Codigo de ejemplo en c., label=listing:c] 
     
-#include <stdio.h>
+% #include <stdio.h>
 
-int main()
-{
-    printf( "Hola mundo." );
+% int main()
+% {
+%     printf( "Hola mundo." );
 
-    return 0;
-}
-\end{lstlisting}
+%     return 0;
+% }
+% \end{lstlisting}
+% 
+% 
+\lstinputlisting[language=java, caption=Codigo que se utilizo en JavaScript para interactuar con el motor uno, label=listing:motor1] {code/public/js/index.js}
+% 
+% 
+\newpage
+\centering{\section[\appendixautorefname{}]{APÉNDICE}}
+% 
+% 
+\lstinputlisting[language=java, caption=Codigo que se utilizo en JavaScript para interactuar con el motor uno, label=listing:motor2] {code/public/js/motorDos.js}
 % 
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
