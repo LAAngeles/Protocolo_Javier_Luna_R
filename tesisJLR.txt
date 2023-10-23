@@ -927,6 +927,22 @@ Donde se observa a $[I_{ph}]$ que es el parte de la corriente de salida que emit
 Este valor se comprobó mediante la experimentación dado que con una resistencia de $1M\Omega$, se obtuvieron $8V$ a la salida de un amplificador de transimpedancia, con lo cual, al aplicar ley de Ohm, se obtiene un valor de corriente de aproximadamente $8_{\mu A}$.
 % 
 % 
+\subsection{Metodología aplicada para el desarrollo de pruebas en el fotodiodo BPW21R}
+
+Como parte de la metodología desarrollada y aplicada a este trabajo, fue necesario disponer de un banco de pruebas que se desarrolló en tres etapas: el diseño, la implementación y la ejecución del banco de pruebas.
+%
+%
+\subsubsection{Primera etapa: Diseño}
+
+El diseño consistió en la investigación u obtención de datos, análisis y conclusiones de toda la documentación relacionada a cada uno de los elementos y conceptos que formaron parte del sistema que se buscó obtener con el fin de poder trabajar adecuadamente con el fotodiodo BPW21R. En este caso, dicha documentación consistió en hojas de datos e información sobre amplificadores operacionales, sensores ADC haciendo énfasis en sus propiedades como frecuencia de operación, resolución, condiciones de operación y en como estas características se veían afectadas o afectaban al componente encargado de controlar y obtener los datos de dicho dispositivo que, para este trabajo, se utilizó un modulo ESP-WROOM-32.
+%
+%
+\subsubsection{Segunda etapa: Implementación}
+%
+%
+\subsubsection{Tercera etapa: Ejecución}
+%
+%
 \subsection{Determinación de una metodología mediante las características del diodo InGaAs para seleccionar los elementos mecánicos}
 
 Finalmente para la parte que se encargará en forma de separar las botellas de PET se propone la implementación de pistones neumáticos.
