@@ -927,6 +927,39 @@ Donde se observa a $[I_{ph}]$ que es el parte de la corriente de salida que emit
 Este valor se comprobó mediante la experimentación dado que con una resistencia de $1M\Omega$, se obtuvieron $8V$ a la salida de un amplificador de transimpedancia, con lo cual, al aplicar ley de Ohm, se obtiene un valor de corriente de aproximadamente $8_{\mu A}$.
 % 
 % 
+\subsection{Metodología aplicada para el desarrollo de pruebas en el fotodiodo BPW21R}
+
+Como parte de la metodología desarrollada y aplicada a este trabajo, fue necesario disponer de un banco de pruebas que se desarrolló en tres etapas: el diseño, la implementación y la ejecución del banco de pruebas.
+%
+%
+\subsubsection{Primera etapa: Diseño}
+
+El diseño consistió en la investigación u obtención de datos, análisis y conclusiones de toda la documentación relacionada a cada uno de los elementos y conceptos que formaron parte del sistema que se buscó obtener con el fin de poder trabajar adecuadamente con el fotodiodo BPW21R. En este caso, dicha documentación consistió en hojas de datos e información sobre amplificadores operacionales, sensores ADC haciendo énfasis en sus propiedades como frecuencia de operación, resolución, condiciones de operación y en como estas características se veían afectadas o afectaban al componente encargado de controlar y obtener los datos de dicho dispositivo que, para este trabajo, se utilizó un modulo ESP-WROOM-32.
+
+Con base en la etapa de diseño se obtuvo el diseño que se muestra en la Figura \ref{fig:TIADiseño} para el amplificador de transimpedancia:
+
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {25mm 145mm 50mm 25mm},clip,scale=1]{img/TIA_Schematic.pdf}
+    \caption{Esquemático para el amplificador de transimpedancia.}
+    \label{fig:TIADiseño}
+\end{figure}
+
+Como se mencionó previamente, el amplificador de trasimpedancia tiende a ser inestable en función de la frecuencia de operación.
+Considerando que las condiciones bajo las cuales estará operando el fotodiodo requieren ser de alta frecuencia, es necesario realizar ajustes para mitigar lo mejor posible estos factores y esto se realizó de 3 maneras.
+La primera simplemente consistió en añadir un capacitor en la retroalimentación del circuito, en un primer momento se contempló la posibilidad de añadir un capacitor en paralelo al fotodiodo BPW21R, sin embargo, esta idea fue descartada dado que, aunque es un diseño básico y viable para el amplificador de trasimpedancia, a veces resulta en más complicaciones en el análisis de frecuencia, en su lugar se optó por utilizar un arreglo de 2 resistencias y 1 capacitor que consistió en la segunda manera de evitar la saturación.
+Para la segunda manera se agregó una sección en la entrada no inversora del OPAMP para evitar su saturación, esto debido a que se sigue una configuración denominada \textit{rail-to-rail}, esta configuración se da cuando se usan voltajes muy cercanos al voltaje de alimentación.
+Mediante el arreglo de las resistencias $R_1$ y $R_2$ y el capacitor $C_2$ se mantiene un voltaje de referencia del orden de los milivoltios, lo cual evitará que el OPAMP llegué o sobrepase el limite que lo pondría en saturación.
+La tercera y última manera de evitar la saturación, es mediante la adición de JFETs configurados como diodos, esto se utilizó así considerando que el fotodiodo pudiera mandar una corriente lo suficientemente grande que al momento de ser amplificada y transformada en voltaje por la resistencia $R_F$, sobrepase el voltaje de alimentación del OPAMP y lo sature.
+Los JFETs se colocaron de esa manera dado que cada uno idealmente consumirá $0.7V$ y, suponiendo que el voltaje de salida sea mayor al de alimentación, entonces los diodos provocarán en corto circuito entre la salida con la entrada del OPAMP provocando que se mantenga en un voltaje por debajo del de alimentación.
+%
+%
+\subsubsection{Segunda etapa: Implementación}
+%
+%
+\subsubsection{Tercera etapa: Ejecución}
+%
+%
 \subsection{Determinación de una metodología mediante las características del diodo InGaAs para seleccionar los elementos mecánicos}
 
 Finalmente para la parte que se encargará en forma de separar las botellas de PET se propone la implementación de pistones neumáticos.
