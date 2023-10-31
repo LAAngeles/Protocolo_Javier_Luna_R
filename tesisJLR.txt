@@ -140,16 +140,8 @@ mi pareja que me apoyaron en todo momento en la medida de lo posible.}
 \addcontentsline{toc}{section}{Agradecimientos}
 \centering{\section*{AGRADECIMIENTOS}}
 \justifying
-
-\colorbox{yellow}{\Large Agrega tus agradecimientos.}
-
-En la preparación de este manual se recogieron las opiniones desinteresadas de
-los Directores y Coordinadores de Investigación y Posgrado de todas las
-Facultades de la Universidad Autónoma de Querétaro, así como de
-investigadores, académicos y personal administrativo de la misma.
-En particular, la Dirección de Servicios Escolares y la Dirección de Investigación y
-Posgrado, agradecen al Mtro. Francisco Perusquía Monroy el haber revisado el
-texto y por sus atinados comentarios para mejorarlo.
+A la Universidad Autónoma de Querétaro, institución que me preparó durante 5 años para seguir adelante con mi vida como un profesionista; a mi papá Javier Luna Martínez y mi mamá Norma Ramos Olvera que siempre me demostraron su apoyo y me impulsaron a seguir adelante sin importar la situación en que me y nos encontremos; a mi familia y amigos que de una u otra forma me ayudaron a lo largo de este proceso y a mi pareja Karla Marlene Paz Martínez que me apoyo durante esta etapa de mi vida, les doy mis agradecimientos de la manera más sincera.
+De manera partícular agradezco al Mtro. José Luis Avendaño Juaréz, al Dr. Juvenal Rodríguez Resendíz y al Dr. Luis Alberto Ángeles Hurtado, así como al resto de mis sinodales, por el apoyo desinteresado durante el desarrollo de esta tesis.
 % 
 % 
 \newpage
@@ -626,8 +618,8 @@ Desarrollar e implementar una metodología que permita seleccionar los component
 \centering{\section{    METODOLOGÍA}}
 \justifying
 
-Por el método de la observación y el análisis estadístico se llevo acabo este trabajo de investigación. 
-El estudio y la recolección de los datos se realizo en la ciudad de Querétaro, en los laboratorios de automatización de la facultad de ingeniería UAQ. 
+Por el método de la observación, análisis estadístico y experimentación se llevo acabo este trabajo de investigación. 
+El estudio y la generación de los datos se realizo en la ciudad de Querétaro, en los laboratorios de automatización de la facultad de ingeniería UAQ. 
 El período de investigación se llevo acabo a partir de enero de 2022 y se termino el desarrollo en diciembre de 2023.
 Para empezar con la metodología de una mejor forma se definió el nivel de abstracción inicial para el diseño eléctrico, y mecánico, se realizo una descomposición jerárquica, definiendo la estructura de nuevos niveles jerárquicos, estableciendo los niveles de potencia y control para desarrollar la arquitectura necesaria, y finalmente, seleccionar la tecnología que se va a utilizar.\\
 % 
@@ -641,7 +633,7 @@ Para ello se consulto la hoja de datos para obtener el tipo de señal de salida 
 \subsubsection{Definición del mensurando para la medición de la longitud de onda con el diodo InGaAs}
 
 Para la medición de la longitud de onda se considero al mensurando como la corriente eléctrica que pasa por un foto-diodo de InGaAs, la medición es de manera indirecta debido a las propiedades del sensor que al variar la iluminancia que pasa por el material expuesto se refleja y cambia la longitud de onda en el foto-diodo y su resistencia cambia.
-Al variar la resistencia del foto-diodo debido al cambio de iluminancia y al voltaje inducido, la corriente cambiará, dependiendo de esta variación se puede calcular la longitud de onda. 
+La resistencia del foto-diodo cambia debido a la iluminancia y al voltaje inducido, dependiendo de esta variación se puede calcular la longitud de onda. 
 %
 %
 \subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
@@ -690,13 +682,13 @@ De manera general se propuso para la parte mecánica del sistema de clasificaci�
 % 
 La determinación de los elementos mencionados se realizo en función de las características de las botellas de PET y de las características del diodo InGaAs.
 Otro factor a considerar para esta metodología es el espacio de los elementos eléctricos y electrónicos que se utilizaran tanto en el funcionamiento del sensor como en el funcionamiento de elementos previamente mencionados como el motor o la banda transportadora, como el fin de que se mantenga una distribución de cables y conexiones discreta y manteniendo el mínimo requerimiento de seguridad.
-Dado que se trabajo con el concepto de espectroscopia se considero como un factor a considerar puesto que se requiere de una fuente de luz estable y constante, para ello se implemento de una estructura aislada sobre la estructura. 
-En ese sentido, dentro de la metodología se indican que factores permiten el aislamiento de una sección de variables externas como la luz y/o las vibraciones que se puedan presentar en otras secciones del sistema.
+Se trabajo con el concepto de espectroscopia, se considero como factor la fuente de poder puesto que se requiere de una fuente de luz estable y constante, para ello se propuso una estructura aislada. 
+En ese sentido, dentro de la metodología se indican que factores permiten el aislamiento de la sección de variables externas como la luz y/o las vibraciones que se puedan presentar en otras secciones del sistema.
 % 
 % 
 \subsubsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
 
-Se busco minimizar los factores de ruido que con la interacción de todos los factores anteriormente descritos se obtenga la velocidad máxima y mínima que no afecte la eficiencia en la detección ver Figura \ref{diseño04} \cite{gutierrez2004analisis}.
+Se busco minimizar los factores de ruido que con la interacción de todos los factores anteriormente descritos se obtenga la velocidad máxima y mínima que no afecte la eficiencia en la detección, ver Figura \ref{diseño04} \cite{gutierrez2004analisis}.
 % 
 % 
 \begin{figure}[H]
@@ -731,7 +723,7 @@ Cada material y fotodiodo tiene un distinto rango de operación ver Figura \ref{
 \end{figure}
 %
 %
-Basándonos en la gráfica de la Figura \ref{NIRRange} y en el hecho de que el rango necesario para detectar los colores del PET es de entre los 800 $nm$ y 1100 $nm$ podemos asumir que un fotodiodo de silicio correspondiente al tipo S1337-BR'' \cite{kk2015ingaas} es suficiente para el sistema en cuestión, sin embargo, se debe considerar la frecuencia a la cual va a operar el sistema, el área fotosensible que ofrece el sensor y la variedad de modelos que se disponen, considerando estos factores es más factible utilizar un diodo construido a base de arseniuro de indio y galio.
+Basándonos en la gráfica de la Figura \ref{NIRRange} y en el hecho de que el rango necesario para detectar los colores del PET es de entre los 800 $nm$ y 1100 $nm$ podemos asumir que un fotodiodo de silicio correspondiente al tipo S1337-BR \cite{kk2015ingaas} es suficiente para el sistema en cuestión, sin embargo, se debe considerar la frecuencia a la cual va a operar el sistema, el área fotosensible que ofrece el sensor y la variedad de modelos que se disponen, considerando estos factores es más factible utilizar un diodo construido a base de arseniuro de indio y galio.
 % 
 %
 {\renewcommand{\baselinestretch}{1.15}
@@ -824,31 +816,14 @@ En la Tabla \ref{G10899CAS} y Tabla \ref{G12180CAS} se muestran los modelos que 
 %
 \subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
 
+Para poder describir esta sección resaltamos que se requiere automatizar un sistema que identifique botellas PET que pasan por una banda transportadora y que posteriormente son expulsadas por un sistema neumático.
 Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de 5v para la entrada y otro de 24v para la activación de las bobinas de las electroválvulas.
 Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre 5v y 30v de corriente directa y de 125v a 250v de corriente alterna con corrientes de hasta 10A. 
-El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $64$ dolares que equivalen a $1328$ pesos mexicanos mientras que el precio de la Nucleo STM32F446 es de $15.82$ dolares que equivalen a $328$ pesos mexicanos, esto sin contar los costos de envío.
+El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. 
+Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $64$ dolares que equivalen a $1328$ pesos mexicanos mientras que el precio de la Nucleo STM32F446 es de $15.82$ dolares que equivalen a $328$ pesos mexicanos, esto sin contar los costos de envío.
+\colorbox{Yellow}{Agrega las referencias de los precios porque creo que es más cara la FPGA}
 % 
 % 
-\subsubsection{Justificación para implementar un amplificador de transimpedancia}
-Un amplificador de transimpedancia es un tipo de configuración desarrollada para un amplificador operacional que permite tener una corriente en la entrada y obtener un voltaje equivalente en cierta proporción a la salida del amplificador.
-
-\begin{figure}[H]
-    \centering
-     \includegraphics[trim = {26mm 90mm 26mm 60mm},clip,scale=.5]{img/TImpOP.pdf}
-    \caption{Diseño de un amplificador de transimpedancia.}
-    \label{fig:TIMPOPAMP}
-\end{figure}
-
-Acorde a la Figura \ref{fig:TIMPOPAMP}, el funcionamiento del amplificador de transimpedancia en conjunto al BPW21R comienza con la obtención de la corriente que fluye a través del fotodiodo como resultado de la captación de luz.
-Por regla general se sabe que idealmente las entradas del amplificador operacional tienden a tener el mismo voltaje, es por eso que una resistencia es colocada en realimentación, por que se busca que el voltaje en una de las terminales sea de $0V$ con el fin de que el análisis del circuito se reduzca al comportamiento de la ley de Ohm.
-
-Esto se explica suponiendo que el fotodiodo emite una corriente de $1_{\mu A}$, entonces si suministramos un voltaje de $1V$ que fluye a través de una resistencia de $1M\Omega$, al llegar al mismo nodo esas corrientes se ''anulan'', provocando que el voltaje en la entrada inversora del amplificador operacional sea de $0V$.
-
-Se optó por utilizar un amplificador de transimpedacia porque los valores de corriente que se pueden obtener del fotodiodo de prueba BPW21R y posiblemente del diodo de InGaAs, son del orden de los nanoamperios y microamperios.
-Se podría optar por utilizar un amplificador operacional en configuración de seguidor de voltaje teniendo una resistencia conocida, sin embargo, el problema es el mismo, al tratarse de una corriente muy pequeña y utilizar una resistencia muy grande únicamente en la entrada del OPAMP, se tienen problemas de impedancia que resultan en un mal funcionamiento del circuito debido a oscilaciones que resultan de las propias características del OPAMP.
-Estas oscilaciones también se dan en el amplificador de transimpedancia, pero son más sencillas de controlar mediante la adición de capacitores tanto en la realimentación del OPAMP, como en las propias terminales de alimentación o en paralelo con el fotodiodo.
-%
-%
 \subsubsection{BPW21R como método de aproximación al comportamiento del diodo InGaAs}
 
 Con la finalidad de obtener un acercamiento al comportamiento del diodo InGaAs, se realizaron pruebas con el circuito diseñado y propuesto para operar y acondicionar la señal de dicho diodo, esto se realizó con un diodo \textbf{BPW21R}.
@@ -856,7 +831,8 @@ Con la finalidad de obtener un acercamiento al comportamiento del diodo InGaAs, 
 El \textbf{BPW21R} es un fotodiodo de silicio de tipo PN con un sellado hermético en un formato TO-5, especialmente diseñado para aplicaciones de alta precisión y lineales \cite{bpw21r2006vishay}.
 
 Los fotodiodos son dispositivos sensibles a la luz, dependiendo de la cantidad de luz que reciban y el ángulo de entrada de la misma al sensor de captura, la corriente que emite el fotodiodo será mayor o menor.
-
+% 
+% 
 {\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
     \centering
@@ -877,7 +853,8 @@ Los fotodiodos son dispositivos sensibles a la luz, dependiendo de la cantidad d
 \end{adjustwidth}
 \end{table}
 }
-
+% 
+% 
 %\begin{figure}[H]
     %\centering
      %\includegraphics[trim = {26mm 215mm 26mm 40mm},clip,scale=1]{img/ElectricalPro_BPW21R_PDF.pdf}
@@ -916,17 +893,45 @@ Los fotodiodos son dispositivos sensibles a la luz, dependiendo de la cantidad d
 En la Tabla \ref{ElecproBPW21R} se observan las propiedades eléctricas del fotodiodo, los parámetros más importantes son los siguientes: \textbf{Reverse Dark Current} $[I_{ro}]$ y \textbf{Dark Resistance} $[R_{D}]$ \cite{SymbolsandTherms2008vishay}, porque son parámetros que permiten predecir hasta cierto punto el comportamiento del fotodiodo y, en función de ello, diseñar un circuito que sea capaz de adecuar su señal para poder trabajarla.
 Estos parámetros van de la mano debido a que, como su nombre indica, son valores que se obtienen cuando el diodo esta operando en completa oscuridad y son importantes dado que influyen directamente en la medición final que se obtiene cuando el diodo se encuentra operando bajo condiciones de luz.
 
-Lo anterior se comprobó durante la experimentación con el circuito mostrado en la Figura \ref{fig:TIMPOPAMP}. En la Tabla \ref{OpticproBPW21R} se observa el parámetro \textbf{Reverse Light Current} $[I_{ra}]$ \cite{SymbolsandTherms2008vishay}; este parámetro se refiere a la corriente que fluye en función de la cantidad de luz que capta el dispositivo y su valor se obtiene mediante la ecuación \ref{RevDarkCurr}:
-
+Lo anterior se comprobó durante la experimentación con el circuito mostrado en la Figura \ref{fig:TIMPOPAMP}. 
+En la Tabla \ref{OpticproBPW21R} se observa el parámetro \textbf{Reverse Light Current} $[I_{ra}]$ \cite{SymbolsandTherms2008vishay}; este parámetro se refiere a la corriente que fluye en función de la cantidad de luz que capta el dispositivo y su valor se obtiene mediante la ecuación \ref{RevDarkCurr}:
+% 
+% 
 \begin{equation} \label{RevDarkCurr}
     \centering
     I_{ra} = I_{ro}+I_{ph}
 \end{equation}
-
+% 
+% 
 Donde se observa a $[I_{ph}]$ que es el parte de la corriente de salida que emite el diodo debido a que esta captando luz. Dada la Tabla \ref{OpticproBPW21R}, el valor de la \textbf{Reverse Light Current} es de $9_{\mu A}$ como valor típico \cite{bpw21r2006vishay}, resultado de la suma de la \textbf{Reverse Dark Current} y de la \textbf{Photocurrent} $[I_{ph}]$.
 Este valor se comprobó mediante la experimentación dado que con una resistencia de $1M\Omega$, se obtuvieron $8V$ a la salida de un amplificador de transimpedancia, con lo cual, al aplicar ley de Ohm, se obtiene un valor de corriente de aproximadamente $8_{\mu A}$.
 % 
 % 
+\subsubsection{Justificación para implementar un amplificador de transimpedancia}
+
+Para la experimentación se establecio trabajar con el diodo BPW21R para aproximar el funcionamiento del InGaAs porque su funcionamiento son similares pero su costo del BPW21R es asequible para está tesis.
+Consideramos el siguiente componente para la experimentación;
+Un amplificador de transimpedancia, es un tipo de configuración desarrollada para un amplificador operacional que permite tener una corriente en la entrada y obtener un voltaje equivalente en cierta proporción a la salida del amplificador.
+Acorde a la Figura \ref{fig:TIMPOPAMP}, el funcionamiento del amplificador de transimpedancia en conjunto con el BPW21R comienza con la obtención de la corriente que fluye a través del fotodiodo como resultado de la captación de luz.
+% 
+% 
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {26mm 90mm 26mm 60mm},clip,scale=.5]{img/TImpOP.pdf}
+    \caption{Diseño de un amplificador de transimpedancia.}
+    \label{fig:TIMPOPAMP}
+\end{figure}
+% 
+% 
+Por regla general se sabe que idealmente las entradas del amplificador operacional tienden a tener el mismo voltaje, es por eso que una resistencia es colocada en realimentación, por que se busca que el voltaje en una de las terminales sea de $0V$ con el fin de que el análisis del circuito se reduzca al comportamiento de la ley de Ohm.
+
+Esto se explica suponiendo que el fotodiodo emite una corriente de $1_{\mu A}$, entonces si suministramos un voltaje de $1V$ que fluye a través de una resistencia de $1M\Omega$, al llegar al mismo nodo esas corrientes se ''anulan'', provocando que el voltaje en la entrada inversora del amplificador operacional sea de $0V$.
+
+Se optó por utilizar un amplificador de transimpedacia porque los valores de corriente que se pueden obtener del fotodiodo de prueba BPW21R y posiblemente del diodo de InGaAs, son del orden de los nanoamperios y microamperios.
+Se podría optar por utilizar un amplificador operacional en configuración de seguidor de voltaje teniendo una resistencia conocida, sin embargo, el problema es el mismo, al tratarse de una corriente muy pequeña y utilizar una resistencia muy grande únicamente en la entrada del OPAMP, se tienen problemas de impedancia que resultan en un mal funcionamiento del circuito debido a oscilaciones que resultan de las propias características del OPAMP. \colorbox{Yellow}{OPAMP-agregalo a las abreviaturas}
+Estas oscilaciones también se dan en el amplificador de transimpedancia, pero son más sencillas de controlar mediante la adición de capacitores tanto en la realimentación del OPAMP, como en las propias terminales de alimentación o en paralelo con el fotodiodo.
+%
+%
 \subsection{Metodología aplicada para el desarrollo de pruebas en el fotodiodo BPW21R}
 
 Como parte de la metodología desarrollada y aplicada a este trabajo, fue necesario disponer de un banco de pruebas que se desarrolló en tres etapas: el diseño, la implementación y la ejecución del banco de pruebas.
@@ -934,17 +939,20 @@ Como parte de la metodología desarrollada y aplicada a este trabajo, fue necesa
 %
 \subsubsection{Primera etapa: Diseño}
 
-El diseño consistió en la investigación u obtención de datos, análisis y conclusiones de toda la documentación relacionada a cada uno de los elementos y conceptos que formaron parte del sistema que se buscó obtener con el fin de poder trabajar adecuadamente con el fotodiodo BPW21R. En este caso, dicha documentación consistió en hojas de datos e información sobre amplificadores operacionales, sensores ADC haciendo énfasis en sus propiedades como frecuencia de operación, resolución, condiciones de operación y en como estas características se veían afectadas o afectaban al componente encargado de controlar y obtener los datos de dicho dispositivo que, para este trabajo, se utilizó un modulo ESP-WROOM-32.
+El diseño consistió en la investigación u obtención de datos, análisis y conclusiones de toda la documentación relacionada a cada uno de los elementos y conceptos que formaron parte del sistema que se buscó obtener con el fin de poder trabajar adecuadamente con el fotodiodo BPW21R. 
+En este caso, dicha documentación consistió en hojas de datos e información sobre amplificadores operacionales, sensores ADC \colorbox{Yellow}{ADC-agregalo a las abreviaturas} haciendo énfasis en sus propiedades como frecuencia de operación, resolución, condiciones de operación y en como estas características se veían afectadas o afectaban al componente encargado de controlar y obtener los datos de dicho dispositivo que, para este trabajo, se utilizó un modulo ESP-WROOM-32.
 
 Con base en la etapa de diseño se obtuvo el diseño que se muestra en la Figura \ref{fig:TIADiseño} para el amplificador de transimpedancia:
-
+% 
+% 
 \begin{figure}[H]
     \centering
      \includegraphics[trim = {25mm 145mm 50mm 25mm},clip,scale=1]{img/TIA_Schematic.pdf}
     \caption{Esquemático para el amplificador de transimpedancia.}
     \label{fig:TIADiseño}
 \end{figure}
-
+% 
+% 
 Como se mencionó previamente, el amplificador de trasimpedancia tiende a ser inestable en función de la frecuencia de operación.
 Considerando que las condiciones bajo las cuales estará operando el fotodiodo requieren ser de alta frecuencia, es necesario realizar ajustes para mitigar lo mejor posible estos factores y esto se realizó de 3 maneras.
 La primera simplemente consistió en añadir un capacitor en la retroalimentación del circuito, en un primer momento se contempló la posibilidad de añadir un capacitor en paralelo al fotodiodo BPW21R, sin embargo, esta idea fue descartada dado que, aunque es un diseño básico y viable para el amplificador de trasimpedancia, a veces resulta en más complicaciones en el análisis de frecuencia, en su lugar se optó por utilizar un arreglo de 2 resistencias y 1 capacitor que consistió en la segunda manera de evitar la saturación.
@@ -955,9 +963,13 @@ Los JFETs se colocaron de esa manera dado que cada uno idealmente consumirá $0.
 %
 %
 \subsubsection{Segunda etapa: Implementación}
+
+
 %
 %
 \subsubsection{Tercera etapa: Ejecución}
+
+
 %
 %
 \subsection{Determinación de una metodología mediante las características del diodo InGaAs para seleccionar los elementos mecánicos}
@@ -966,8 +978,8 @@ Finalmente para la parte que se encargará en forma de separar las botellas de P
 Para esta implementación en la metodología es necesario considerar factores como longitud, peso, velocidad de accionamiento, tipo de accionamiento y la presión mínima que requiere el pistón para ejecutar la tarea de manera óptima \cite{sole2012neumatica}.
 Todo esto se realizó en función de las características de cada elemento mecánico, eléctrico y electrónico que pueda formar parte del sistema de clasificación, así mismo, se utilizaron herramientas como las \textit{Core Tools} que son herramientas que en la industria automotriz permiten diseñar, desarrollar, prevenir, medir, controlar, registrar, analizar y aprobar productos y servicios de calidad que satisfagan las necesidades y expectativas del cliente \cite{olmedo2017}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsubsection{Diseño mecánico y sistema de control}
-
+% 
+% 
 \subsubsection{Diseño eléctrico del sistema de clasificación}
 
 En la figura \ref{fig:MOTOREDUCTOR} se ilustra el moto reductor que se utilizo, con 1750 revoluciones por minuto y con un reductor de cien a uno lo que equivale a dar dieciocho vueltas en un minuto.
@@ -980,45 +992,10 @@ En la figura \ref{fig:MOTOREDUCTOR} se ilustra el moto reductor que se utilizo, 
         \caption{Moto-reductor en el sistema mecánico.}
         \label{fig:MOTOREDUCTOR}
 \end{figure}
-
-% En la figura \ref{fig:Imagen17} se ilustra el moto reductor que se utilizo, con 1750 revoluciones por minuto y con un reductor de cien a uno lo que equivale a dar dieciocho vueltas en un minuto.
 % 
 % 
-%############################################
-% \begin{figure}[H]
-
-%     \begin{subfigure}{0.5\textwidth}
-%         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen17.jpg} 
-
-%         % \caption{}
-%         \label{fig:Imagen17}
-%     \end{subfigure}
-%     \hfill
-%     \begin{subfigure}{0.5\textwidth}
-
-%     \centering
-%         \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.2]{img/MOTOREDUCTOR2.pdf} 
-
-%         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen18.jpg}
-
-%         % \caption{}
-%         \label{fig:subim2}
-%     \end{subfigure}
-%     \hfill
-
-%     \caption{Motor utilizado}
-%     \label{fig:Imagen117}
-
-%     \caption{Moto-reductor en el sistema mecánico.}
-%     \label{fig:Imagen17}
-
-% \end{figure}
-%############################################
-% 
-% 
-
 En las figuras \ref{fig:MOTOR_ConnectionDiag} y \ref{fig:MOTOR_ConnectionPDiag2}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor.
-Consta de 5 botones; 2 botones habilitadores de cada motor que son parte del ''PLC´´, 2 botones para indicar el giro del motor y 1 botón de paro total.
+Consta de 5 botones; 2 botones habilitadores de cada motor que son parte del PLC, 2 botones para indicar el giro del motor y 1 botón de paro total.
 % 
 % 
 %############################################
@@ -1035,7 +1012,8 @@ Consta de 5 botones; 2 botones habilitadores de cada motor que son parte del ''P
     \caption{Diagrama de conexiones de potencia.}
     \label{fig:MOTOR_ConnectionPDiag2}
 \end{figure}
-
+% 
+% 
 En las figuras \ref{fig:Imagen13}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor.
 Tiene cinco botones uno de paro de emergencia. 
 Dos de arranca de color verde uno para ir al frente y otro para reversa.
@@ -1066,16 +1044,13 @@ Dos botones de dos polos dos tiros para dar pulsos ya sea de frente o de reversa
 \subsubsection{Programa de arranque de motores}
 
 Para que la experimentación y la adquisición de todos los datos se desarrollo una página web que junto con el servidor del PLC funcionan para activar y desactivar los motores de la banda transportadora y del sistema de identificación.
-
 Por recomendación del fabricante, se recomienda utilizar el navegador web Firefox.
-
-Por recomendación del fabricante se recomienda utilizar el navegador web Firefox.
-
 En la Tabla \ref{tab:motor_DB} se detallan los tipos de variables que se utilizaron para el motor 1 y para el motor 2.
 Físicamente cada PLC tiene un numero limitado de entradas y eso dificulta la automatización cuando se requieren de muchas entradas. 
 La finalidad principal de hacer una pagina web para controlar las entradas de los motores es por las ventajas que proporciona al poder definir n cantidad de entradas y procesar esa información internamente con el PLC. 
 En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el sistema mecánico para funcionar.
-
+% 
+% 
 {\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
     \centering
@@ -1112,6 +1087,7 @@ En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el si
     \label{tab:motor_DB}
 \end{table}
 }
+%
 %
 {\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
@@ -1165,7 +1141,6 @@ En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servi
     \caption{\textit{Grafcet} utilizado para realizar el código del PLC.}
     \label{fig:PLC_GRAFCET}
 \end{figure}
-
 %############################################
 % \ref{fig:PLCODE_Network1}
 En las siguientes Figuras \ref{fig:network-1}, \ref{fig:network-2} \ref{fig:network_3-4}, \ref{fig:network-5}, \ref{fig:FCM1_network-1}, \ref{fig:FCM1_network-2}, \ref{fig:FCM1_network-3}, \ref{fig:FCM1_network-4}, \ref{fig:FCM1_network-5}
@@ -1206,7 +1181,7 @@ se describen el programa que se utilizo para controlar los motores.
     \caption{Descripción los bloques de código que controlan los motores.}
     \label{fig:network_1-2}
 \end{figure}
-
+% 
 %############################################
 La función de sistema WWW se llama en el OB1.
 Esta función inicializa el servidor web de la CPU.
@@ -1215,6 +1190,7 @@ El Web DB (DB 333) está conectado a la función WWW.
 
 La base de datos web y la base de datos de fragmentos almacenan la estructura de las páginas definidas por el usuario, véase la Figura \ref{fig:network-1}.
 % 
+% 
 \begin{figure}[H]
     \centering
      \includegraphics[trim = {1mm 30mm 1mm 1mm},clip,scale=0.5]{img/PLCODE_Network1.pdf}
@@ -1222,9 +1198,11 @@ La base de datos web y la base de datos de fragmentos almacenan la estructura de
     \label{fig:network-1}
 \end{figure}
 %
+%
 En la Figura \ref{fig:network-1} se describe la primer red del bloque de función que se determino en el PLC. 
 
 La base de datos web y la base de datos de fragmentos almacenan la estructura de las páginas definidas por el usuario, véase la Figura \ref{fig:network-3}.
+% 
 % 
 \begin{figure}[H]
     \centering
@@ -1233,9 +1211,11 @@ La base de datos web y la base de datos de fragmentos almacenan la estructura de
     \label{fig:network-3}
 \end{figure}
 %
+%
 En la Figura \ref{fig:FB_network-1} se describe la primer red del bloque de función que se determino en el PLC. 
 
 Consta de un disparador que se activa cuando el PLC hace su primer escaneo del sistema y sirve para inicializar todas las redes del programa.
+% 
 % 
 \begin{figure}[H]
     \centering
@@ -1245,7 +1225,9 @@ Consta de un disparador que se activa cuando el PLC hace su primer escaneo del s
     \label{fig:network-2}
 \end{figure}
 %
+%
 En la Figura \ref{fig:network-2} se describe la acción que se toma una vez que se ejecuto la red 0, la cual espera a que se active el paso cero con el botón de \textbf{start}.
+% 
 % 
 \begin{figure}[H]
     \centering
@@ -1257,6 +1239,7 @@ En la Figura \ref{fig:network-2} se describe la acción que se toma una vez que 
     \caption{Condiciones de activación para el bloque de función de los motores.}
     \label{fig:FB_network-1}
 \end{figure}
+%
 %
 En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez que se ejecuto la red 1, la cual espera a que se active el paso cero con el botón de \textbf{star}.
 % 
@@ -1288,6 +1271,7 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 \end{adjustwidth}
 \end{figure}
 %
+%
 {\renewcommand{\baselinestretch}{1.15}
 \begin{figure}[H]
     \centering
@@ -1302,6 +1286,7 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 \end{figure}
 }
 %
+%
 \begin{figure}[H]
     \centering
 
@@ -1311,12 +1296,14 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 
 \end{figure}
 %
+%
 \begin{figure}[H]
     \centering
       \includegraphics[trim = {1mm 30mm 1mm 20mm},clip,scale=0.5]{img/PLCFCM1_Network3.pdf}
     \caption{Red 3, accionamiento del giro en sentido horario del motor, con bloqueo.}
     \label{fig:FCM1_network-3}
 \end{figure}
+%
 %
 \begin{figure}[H]
     \centering
@@ -1326,12 +1313,14 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 
 \end{figure}
 %
+%
 \begin{figure}[H]
     \centering
       \includegraphics[trim = {1mm 30mm 1mm 1mm},clip,scale=0.5]{img/PLCFCM1_Network4.pdf}
     \caption{Red 4, accionamiento del giro en sentido anti-horario del motor, con bloqueo.}
     \label{fig:FCM1_network-4}
 \end{figure}
+%
 %
 {\renewcommand{\baselinestretch}{1.15}
 \begin{figure}[H]
@@ -1363,7 +1352,7 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 % 
 \subsubsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
 
-El diseño de experimentos que se propuso consistió en determinar la distancia y rango de trabajo del sistema.
+El diseño de experimentos que se propone consistió en determinar la distancia y rango de trabajo del sistema.
 Véase la Tabla \ref{table:DOE_1}.
 % 
 % 
@@ -1531,14 +1520,14 @@ La posición del sistema se estableció de forma vertical en dirección de la ba
 Con la experimentación sería posible determinar la distancia significativa para el encontrar el óptimo rango de trabajo del sistema de identificación. 
 % 
 %  
-En la Tabla \ref{table:DOE_1a} se resume los resultados de las fuentes de variación de la elaboración del ANOVA de dos factores.
+En la Tabla \ref{table:DOE_1a} se resume la tabla que almacenaría los resultados de las fuentes de variación de la elaboración del ANOVA de dos factores.
 % 
 % 
 %#############################################################
 {\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
     \centering
-    \caption{Resumen del primer ``ANOVA'' de dos factores}
+    \caption{Resumen del primer ANOVA de dos factores}
     \label{table:DOE_1a}
     \begin{tabular}{c c c c c}
         \hline
@@ -1557,262 +1546,6 @@ En la Tabla \ref{table:DOE_1a} se resume los resultados de las fuentes de variac
     \end{tabular}
 \end{table}
 }
-%#############################################################
-% 
-% 
-% 
-% 
-% \subsection{Diseño mecánico y sistema de control}
-% % 
-% % 
-% \subsubsection{Diseño eléctrico del sistema de clasificación}
-
-% En la figura \ref{fig:Imagen17} se ilustra el moto reductor que se utilizo, con 1750 revoluciones por minuto y con un reductor de cien a uno lo que equivale a dar dieciocho vueltas en un minuto.
-% % 
-% % 
-% %############################################
-% \begin{figure}[H]
-
-%     \begin{subfigure}{0.49\textwidth}
-%         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen17.jpg} 
-%         % \caption{}
-%         \label{fig:Imagen17}
-%     \end{subfigure}
-%     \hfill
-%     \begin{subfigure}{0.49\textwidth}
-%         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen18.jpg}
-%         % \caption{}
-%         \label{fig:subim2}
-%     \end{subfigure}
-
-%     \caption{Moto-reductor en el sistema mecánico.}
-%     \label{fig:Imagen17}
-% \end{figure}
-% %############################################
-% % 
-% % 
-% En las figuras \ref{fig:Imagen13}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor.
-% Tiene cinco botones uno de paro de emergencia. 
-% Dos de arranca de color verde uno para ir al frente y otro para reversa.
-% Dos botones de dos polos dos tiros para dar pulsos ya sea de frente o de reversa.
-% % 
-% % 
-% %############################################
-% \begin{figure}[H]
-
-%     \begin{subfigure}{0.49\textwidth}
-%         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen13.jpg} 
-%         % \caption{}
-%         \label{fig:Imagen13}
-%     \end{subfigure}
-%     \hfill
-%     \begin{subfigure}{0.49\textwidth}
-%         \includegraphics[width=0.9\linewidth, height=8cm]{img/Imagen14.jpg}
-%         % \caption{}
-%         \label{fig:subim2}
-%     \end{subfigure}
-
-%     \caption{Pruebas de las conexiones en la etapa de potencia.}
-%     \label{fig:Imagen13}
-% \end{figure}
-% %############################################
-% % 
-% % 
-% \subsubsection{Programa de arranque de motores}
-
-% Para que la experimentación y la adquisición de todos los datos se desarrollo una página web que junto con el servidor del PLC funcionan para activar y desactivar los motores de la banda transportadora y del sistema de identificación.
-% Por recomendación del fabricante se recomienda utilizar el navegador web Firefox.
-% En la Tabla \ref{tab:motor_DB} se detallan los tipos de variables que se utilizaron para el motor 1 y para el motor 2.
-% Físicamente cada PLC tiene un numero limitado de entradas y eso dificulta la automatización cuando se requieren de muchas entradas. 
-% La finalidad principal de hacer una pagina web para controlar las entradas de los motores es por las ventajas que proporciona al poder definir n cantidad de entradas y procesar esa información internamente con el PLC. 
-% En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el sistema mecánico para funcionar.
-% {\renewcommand{\baselinestretch}{1.15}
-% \begin{table}[H]
-%     \centering
-%     \caption{motor\_ DB[DB1] y motor\_ DB\_Dos[DB3]}
-%     \begin{adjustwidth}{2cm}{0cm}
-%         \begin{tabular}{c c c c c}
-%              \hline
-%             id & Nombre & Tipo de dato & Nombre & Tipo de dato \\
-%              \hline
-%               & Entrada &  \\
-%              \hline
-%             1 & reset & Bool & reset & Bool\\
-%             2 & start & Bool& start & Bool\\
-%             3 & inicioAdelante & Bool& inicioAdelante & Bool\\
-%             4 & stop & Bool& stop & Bool\\
-%             5 & inicioAtras & Bool& inicioAtras & Bool\\
-%             6 & pasoAdelante & Bool& pasoAdelante & Bool\\
-%             7 & pasoAtras & Bool& pasoAtras & Bool\\
-%              \hline
-%              & Salida &  \\
-%              \hline
-%             8 & adelante & Bool& adelante & Bool\\
-%             9 & atras & Bool& atras & Bool\\
-%             10 & Enable & Bool& Enable & Bool\\
-%              \hline
-%             & Estática &  \\
-%              \hline
-%             11 & R\_Trig\_reset & R\_TRIG& R\_Trig\_reset & R\_TRIG\\
-%             12 & Step & Array[0..2]& Step & Array[0..2]\\
-%             13 & pulso & Array[0..2]& pulso & Array[0..2]\\
-%             \hline
-%         \end{tabular}
-%     \end{adjustwidth}
-%     \label{tab:motor_DB}
-% \end{table}
-% }
-% %
-% {\renewcommand{\baselinestretch}{1.15}
-% \begin{table}[H]
-%     \centering
-%     \caption{TestDB[DB2]}
-%     \begin{adjustwidth}{5cm}{0cm}
-%         \begin{tabular}{c c c}
-%              \hline
-%             id & Nombre & Tipo de dato \\
-%              \hline
-%               & Estática &  \\
-%              \hline
-%             1 & ResetWeb & Bool\\
-%             2 & StartWeb & Bool\\
-%             3 & InicioAdelanteWeb &	Bool\\
-%             4 & StopWeb & Bool\\
-%             5 & InicioAtrasWeb & Bool\\
-%             6 & pasoAdelanteWeb & Bool\\
-%             7 & pasoAtrasWeb & Bool\\
-%             8 & ResetWeb\_2 & Bool\\
-%             9 & StartWeb\_2 & Bool\\
-%             10 & InicioAdelanteWeb\_2 & Bool\\
-%             11 & StopWeb\_2 & Bool\\
-%             12 & InicioAtrasWeb\_2 &	Bool\\
-%             13 & pasoAdelanteWeb\_2 & Bool\\
-%             14 & pasoAtrasWeb\_2 & Bool\\
-%             \hline
-%         \end{tabular}
-%     \end{adjustwidth}
-%     \label{tab:TestDB}
-% \end{table}
-% }
-% % 
-% % 
-% En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servidor web con el PLC.
-% %
-% %
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics{img/webPLC.JPG}
-%     \caption{Diagrama de bloques del PLC para el servidor web.}
-%     \label{fig:webPLC.JPG}
-% \end{figure}
-% % 
-% % 
-% En las siguientes Figuras \ref{fig:network_1-2}, \ref{fig:network-3}, \ref{fig:FB_network-1}, \ref{fig:FB_network-2}, \ref{fig:FB_network-3}, \ref{fig:FB_network-4}, \ref{fig:FB_network-5}, \ref{fig:FB_network-6}.
-% se describen el programa que se utilizo para controlar los motores.
-% %############################################
-% \begin{figure}[H]
-%     \begin{subfigure}{0.49\textwidth}
-%         \includegraphics[width=0.9\linewidth, height=9cm]{img/network-1.png} 
-%         \caption{Red 1 del motor número uno.}
-%         \label{img:network-1}
-%     \end{subfigure}
-%     \hfill
-%     \begin{subfigure}{0.49\textwidth}
-%         \includegraphics[width=0.9\linewidth, height=9cm]{img/network-2.png}
-%         \caption{Red 2 del motor número dos.}
-%         \label{img:network-2}
-%     \end{subfigure}
-
-%     \caption{Descripción los bloques de código que controlan los motores.}
-%     \label{fig:network_1-2}
-% \end{figure}
-% %############################################
-% La función de sistema WWW se llama en el OB1.
-% Esta función inicializa el servidor web de la CPU.
-% La llamada cíclica de la función en el OB1 permite la interacción entre el servidor web y el controlador.
-% El Web DB (DB 333) está conectado a la función WWW. 
-% La base de datos web y la base de datos de fragmentos almacenan la estructura de las páginas definidas por el usuario, véase la Figura \ref{fig:network-3}. 
-% % 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.9\linewidth, height=4cm]{img/network-3.png}
-%     \caption{Red 3, Esta función de bloque inicializa el servidor web de la CPU.}
-%     \label{fig:network-3}
-% \end{figure}
-% %
-% En la Figura \ref{fig:FB_network-1} se describe la primer red del bloque de función que se determino en el PLC. 
-% Consta de un disparador que se activa cuando el PLC hace su primer escaneo del sistema y sirve para inicializar todas las redes del programa.
-% % 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics{img/FB_network-1.png}
-%     \caption{Red 1 del bloque de función del motor.}
-%     \label{fig:FB_network-1}
-% \end{figure}
-% %
-% En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez que se ejecuto la red 1, la cual espera a que se active el paso cero con el botón de \textbf{star}.
-% % 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics{img/FB_network-2.png}
-%     \caption{Red 2 Acción paso cero si esta en alto indica que el motor esta listo para arrancar.}
-%     \label{fig:FB_network-2}
-% \end{figure}
-% %
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics{img/FB_network-3.png}
-%     \caption{Red 3 Transición del paso cero, la cual indica que si el botón de inicio esta activado todos los botones se habilitan para el accionamiento del motor.}
-%     \label{fig:FB_network-3}
-% \end{figure}
-% %
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics{img/FB_network-4.png}
-%     \caption{Red 4 Acción paso uno, con dos botones se acciona el motor para adelante o para atrás.}
-%     \label{fig:FB_network-4}
-% \end{figure}
-% %
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[scale=.9]{img/FB_network-5.png}
-%     \caption{Red 5 Acción uno, con dos botones se puede activar el motor con pulsos.}
-%     \label{fig:FB_network-5}
-% \end{figure}
-% %
-% %
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics{img/FB_network-6.png}
-%     \caption{Red 6 Transición paso uno, con esta red se define un botón de paro total o mejor conocido como paro de emergencia.}
-%     \label{fig:FB_network-6}
-% \end{figure}
-% 
-% 
-
-% 
-% \begin{itemize}
-%     \item Obtener una metodología basada en el funcionamiento de los diodos de InGaAs.
-%     \item Desarrollar un sistema de acondicionamiento de señal para diodo de InGaAs.
-%     \item Simular el comportamiento del diodo de InGaAs y los componentes mecánicos para la automatización.
-%     \item Aplicar herramientas estadísticas como PCA poder determinar los elementos para el sistema de clasificación.
-%     \item Buscar la obtención de un artículo JCR.
-%     \item Comprobar que con la metodología obtenida se da la opción para la realización de un diseño asequible.
-%     \item Generar una presentación de un plan de negocios.
-% \end{itemize}
-% 
-% 
-% \subsection{Factibilidad e impacto social}
-
-% \subsection{Aporte Tecnológico}
-
-% \newpage
-% \section{Abreviaturas y Acrónimos}
-
-% \begin{itemize}
-%     \item \textbf{PET}. ”\textit{Polyethylene Terephthalate}”
-%     \item \textbf{HDPE}. ”\textit{High Density Polyethylene}”
-% \end{itemize}
 % 
 % 
 \newpage
