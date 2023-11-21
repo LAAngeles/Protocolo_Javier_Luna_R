@@ -967,6 +967,7 @@ Este procedimiento también se puede realizar para cuando se requiera evitar que
 %
 %
 \subsubsection{Segunda etapa: Implementación}
+
 La primera implementación se realizó de manera simulada utilizando el software \textbf{Multisim}, mediante la simulación se obtuvieron resultados que permitieron observar el comportamiento ideal del sistema de acondicionamiento de señal para el fotodiodo.
 Lo más destacable de estos resultados es que debido a que el fotodiodo se esta utilizando en polarización inversa tiende a ser más sensible ante la luz entrante y, en consecuencia, emitir corrientes de $27\ [{\mu A}]$ que son tres veces mayores a las indicadas en la hoja de datos, considerando que el ADC ADS1115 soporta máximo un voltaje de entrada de $5\ [V]$ fue necesario utilizar un divisor de voltaje a la salida del amplificador de trasimpedancia para poder utilizar adecuadamente este elemento.
 
