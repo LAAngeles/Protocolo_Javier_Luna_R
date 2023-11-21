@@ -2,6 +2,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\familydefault}{\sfdefault} % Arial font
 \setlength{\parindent}{16mm} % sangria de 1.6 cm
+\usepackage [latin1]{inputenc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \usepackage[left=3cm,top=3cm,right=3cm,nohead,foot=2.5cm]{geometry}
 \usepackage[left=4cm,top=3cm,right=2cm,nohead,foot=3cm]{geometry}
@@ -44,7 +45,7 @@
 \usepackage{times}
 \usepackage{url}
 \usepackage{pdflscape}
-\usepackage[utf8]{inputenc}
+% \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage{color}
@@ -1765,32 +1766,33 @@ El análisis de componentes principales se utilizo para describir la variación 
 % \section[\appendixname~\thesection]{Apéndice}
 \newpage
 \centering{\section[\appendixautorefname{}]{APÉNDICE}}
-
-% \begin{lstlisting}[language=c, caption=Codigo de ejemplo en c., label=listing:c] 
-    
-% #include <stdio.h>
-
-% int main()
-% {
-%     printf( "Hola mundo." );
-
-%     return 0;
-% }
-% \end{lstlisting}
 % 
 % 
-\lstinputlisting[language=java, caption=Codigo que se utilizo en JavaScript para interactuar con el motor uno, label=listing:motor1] {code/public/js/index.js}
+\lstinputlisting[language=html, caption=Código que se utilizo en HTML, label=listing:html] {code/index.html}
 % 
 % 
 \newpage
 \centering{\section[\appendixautorefname{}]{APÉNDICE}}
 % 
 % 
-\lstinputlisting[language=java, caption=Codigo que se utilizo en JavaScript para interactuar con el motor uno, label=listing:motor2] {code/public/js/motorDos.js}
+\lstinputlisting[language=html, caption=Código que se utilizo en css, label=listing:css] {code/public/css/styles.css}
+% 
+% 
+\newpage
+\centering{\section[\appendixautorefname{}]{APÉNDICE}}
+% 
+% 
+\lstinputlisting[language=java, caption=Código que se utilizo en JavaScript para interactuar con el motor uno, label=listing:motor1] {code/public/js/index.js}
+% 
+% 
+\newpage
+\centering{\section[\appendixautorefname{}]{APÉNDICE}}
+% 
+% 
+\lstinputlisting[language=java, caption=Código que se utilizo en JavaScript para interactuar con el motor uno, label=listing:motor2] {code/public/js/motorDos.js}
 % 
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 % 
-
 \end{document}
