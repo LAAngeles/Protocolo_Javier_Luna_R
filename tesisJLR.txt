@@ -1004,6 +1004,140 @@ Por otro lado, el ADS1115 se selecciono dado que se requiere realizar lecturas d
 
 En conclusión, estos elementos fueron seleccionados dadas las necesidades que requiere utilizar IoT y la precisión de este trabajo.
 
+Por otro lado, el ADS1115 se selecciono dado que se requiere realizar lecturas de voltaje precisas y continuas, si bien es cierto que la propia ESP32 tiene esta capacidad, el ADS1115 ofrece una resolución de 16-bits, esto nos permite leer valores del orden de los $200\ [mV]$ y esto pudo ser comprobado fácilmente durante la experimentación física.
+
+En conclusión, estos elementos fueron seleccionados dadas las necesidades que requiere utilizar IoT y la precisión de este trabajo.
+
+%
+%
+\subsubsection{Etapa 2: Alimentación del acondicionador de señal}
+Para la alimentación del circuito se requirió utilizar de dos convertidores DC-DC tipo Buck para los respectivos voltajes que se utilizan en el PCB, en este caso se utilizó uno denotado como $V_{REF}$ y otro denotado como $VCC_{OPAMP}$ respectivamente; el primero funciona para las referencias de voltaje de los amplificadores operacionales que se utilizaron en el circuito y el segundo para la alimentación los mismos tal y como se muestra en la Figura \ref{fig:SignalCSE2}.
+% 
+% 
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {40mm 190mm 40mm 40mm},clip,scale=1]{img/Etapa2_Alimentacion.pdf}
+    \caption{Diagrama de conexiones de la etapa 2 para el PCB}
+    \label{fig:SignalCSE2}
+\end{figure}
+% 
+% 
+Se pudo haber diseñado un convertidor DC-DC síncrono tipo Buck utilizando transistores tipo MOSFET, pero esto requería generar un PWM de al menos $100\ [kHz]$ de frecuencia para conmutar los transistores y utilizar pines de la ESP32 como realimentación del convertidor con el fin de evitar que el voltaje de salida suba o baje en función de la carga, pero esto conllevaba a utilizar más espacio en el PCB y más recursos que al final del día se ven reflejados en este modulo pero de una forma sintetizada ya que utiliza el LM2596 que prácticamente realiza la tarea mencionada anteriormente por su cuenta.
+%
+%
+\subsubsection{Etapa 3: Amplificador de trasimpedancia}
+En la Figura \ref{fig:SignalCSE3} se observa el diseño del amplificador de trasimpedancia que se obtuvo tanto a partir de la teoria como de la experimentación que permitió basarse en prueba y error.
+En un principio se contempló el uso de transistores JFET como medio de protección del circuito y como limitante para evitar la saturación hacía el polo positivo del OPAMP, pero esto fue rápidamente descartado puesto que esta técnica es recomendable para cuando se trabajará con voltajes de nivel TTL, es decir, $3.3\ [V]$ y para este proyecto esa no fue la intención dado que el suministro de energía no es una limitante.
+
+Como se mencionó previamente, los capacitores funcionan como medios estabilizadores del circuito ya que esta aplicación de los amplificadores operacionales tiende a ser particularmente inestable debido al tipo de señal que se esta manejando.
+Lo anterior resulta más claro cuando se entiende que en un OPAMP idealmente no hay flujo de corriente a través de sus terminales y es por ello que estos dispositivos tratan de que el voltaje en sus terminales de entrada sea el mismo.
+
+Esto conlleva a que al utilizar un dispositivo que emite una señal de corriente y no de voltaje en función de la luz, se requiera tener particular cuidado al momento de operar este circuito en altas frecuencias, es por ello que se seleccionó el TLC272, un OPAMP de tipo rail-to-rail con una alta impedancia en sus entradas lo cual garantiza dos cosas: evitar el uso de una alimentación de voltaje negativa y que la corriente no fluya a través de las terminales del OPAMP.
+% 
+% 
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {40mm 130mm 40mm 40mm},clip,scale=1]{img/TIA_FinalDesign.pdf}
+    \caption{Diagrama de conexiones de la etapa 3 para el PCB}
+    \label{fig:SignalCSE3}
+\end{figure}
+% 
+% 
+Esencialmente, son los capacitores $C_{1}$ y $C_{F}$ los que se encargan de realizar esta tarea de estabilización, aunque el arreglo de resistencias y capacitores que sirve como limite en la entrada no inversora del OPAMP también impactan en este ámbito.
+%
+%
+\subsubsection{Etapa 4: Comparador unitario}
+Un comparador es un elemento electrónico que permite obtener dos señales en las entradas del OPAMP y en función de su valor emitir una salida en alto o en bajo, esto se realiza para cuando se busca "digitalizar" una señal.
+
+En este caso lo que realizar el circuito de la Figura \ref{fig:SignalCSE4} es comparar la señal de salida del divisor de voltaje realizado en la etapa previa con una referencia de voltaje fija que se conecta en la entrada inversora del OPAMP, si la señal del divisor de voltaje de la etapa previa es mayor a la referencia de la entrada inversora entonces la salida del OPAMP será de $3.3\ [V]$ gracias al divisor de voltaje en la salida del mismo, en caso contrario será de $0\ [V]$ idealmente, aunque en la simulación y experimentación se obtuvieron valores de $35\ [mV]$.
+% 
+% 
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {40mm 180mm 40mm 40mm},clip,scale=1]{img/TIA_Etapa4.pdf}
+    \caption{Diagrama de conexiones de la etapa 4 para el PCB}
+    \label{fig:SignalCSE4}
+\end{figure}
+% 
+% 
+Se optó por utilizar el LM311 porque aunque es posible tomar cualquier OPAMP y configurarlo como comparador, es mejor utilizar uno que este diseñado específicamente para esta tarea, de esta forma se evitan errores en el diseño y/o utilzar alimentaciones negativas.
+%
+%
+\subsubsection{Etapa 5: Comparadores en configuración de doble limite}
+La Figura \ref{fig:SignalCSE5} muestra la configuración necesaria para disponer de un circuito comparador que maneje dos límites. Previamente en la etapa 4 se observó el circuito comparador básico, donde se tiene una entrada variable y una referencia fija, dado que para este proyecto el voltaje de salida del amplificador de trasimpedancia varia mucho y en pequeña medida debido a la corriente emitida por el fotodiodo, fue necesario utilizar esta configuración de doble límite para colocar rangos de voltaje de detección dentro de los cuales los OPAMPs enviarán $3.3\ [V]$ o $35\ [mV]$ sea el caso correspondiente.
+% 
+% 
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {40mm 145mm 40mm 40mm},clip,scale=1]{img/TIA_Etapa5.pdf}
+    \caption{Diagrama de conexiones de la etapa 5 para el PCB}
+    \label{fig:SignalCSE5}
+\end{figure}
+% 
+% 
+A pesar de que hay circuitos integrados que contienen 2 o hasta 4 comparadores en un solo elemento como el LM339, considere adecuado seguir utilizando comparadores individuales para esta tarea simplemente por cuestiones de diseño y disposición de los elementos en el PCB.
+%
+%
+\subsubsection{Etapa 6: Implementación de un PCB para el circuito}
+En la Figura \ref{fig:SignalCSE6.1} y la Figura \ref{fig:SignalCSE6.2} se observan las vistas correspondientes a la capa superior e inferior respectivamente del PCB diseñado para este sistema acondicionador de señal.
+% 
+% 
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {40mm 135mm 40mm 40mm},clip,scale=1]{img/PCB_TOPLAYER.pdf}
+    \caption{Capa superior del PCB}
+    \label{fig:SignalCSE6.1}
+\end{figure}
+% 
+%
+Se decidió realizar en dos capas porque aunque se hiciera un plano de tierra común era muy complicado evitar que las pistas se encontraran demasiado cercas unas de otras.
+% 
+% 
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {40mm 135mm 40mm 40mm},clip,scale=1]{img/PCB_BOTTOMLAYER.pdf}
+    \caption{Capa inferior del PCB}
+    \label{fig:SignalCSE6.2}
+\end{figure}
+% 
+% 
+Las pistas de alimentación del convertidor DC-DC tipo Buck son de $30\ [mils]$ que equivalen a $0.762\ [mm]$, y las pistas que transfieren la señal del fotodiodo, los divisores de voltaje, las salidas de los comparadores y las alimentaciones de todos los amplificadores operacionales utilizados son de $15\ [mils]$ que equivalen a $0.381\ [mm]$, esto se realizó en función de la siguiente tabla:
+%
+%
+{\renewcommand{\baselinestretch}{1.12}
+\begin{table}[H]
+    \centering
+    \caption{Ancho de la pista del PCB \cite{AltiumPCBTraceWidht}.}
+    \label{PCBAnchoPista}
+    \begin{adjustwidth}{4cm}{0cm}
+    \begin{tabular}{|c|c|}
+    \hline
+        Corriente $[A]$ & Ancho la pista $[mils]$ \\
+    \hline
+        $1\ [A]$ & $10\ [mils]$ \\
+    \hline
+        $2\ [A]$ & $30\ [mils]$ \\
+    \hline
+        $3\ [A]$ & $50\ [mils]$ \\
+    \hline
+        $4\ [A]$ & $80\ [mils]$ \\
+    \hline
+        $5\ [A]$ & $110\ [mils]$ \\
+    \hline
+        $6\ [A]$ & $150\ [mils]$ \\
+    \hline
+        $7\ [A]$ & $180\ [mils]$ \\
+    \hline
+        $8\ [A]$ & $220\ [mils]$ \\
+    \hline
+        $9\ [A]$ & $260\ [mils]$ \\
+    \hline
+        $10\ [A]$ & $300\ [mils]$ \\
+    \hline
+\end{tabular} 
+\end{adjustwidth}
+\end{table}
+}
 %
 %
 \subsubsection{Etapa 2: Alimentación del acondicionador de señal}
