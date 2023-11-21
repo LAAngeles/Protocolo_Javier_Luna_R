@@ -166,6 +166,7 @@ De manera partícular agradezco al Mtro. José Luis Avendaño Juaréz, al Dr. Ju
 
 \noindent 
 \begin{tabular}{@{}ll}
+ADC & Convertidor analógico-digital\\
 % ANOVA & Análisis de variación\\
 % CC  & Centros de acopio\\
 {$CO_2$} & Dióxido de carbono\\
@@ -175,35 +176,39 @@ F & F Relación \\
 gl & Grados de libertad\\
 HDPE & Polietileno de alta densidad \\
 IMER & Industria Mexicana de Reciclaje S.A. de C.V.\\
+JFET & Transistor de efecto de campo con unión\\
 JPG & Grupo Conjunto de Expertos Fotográficos\\
 % LCD & Pantalla de cristal líquido\\
 LDA & Análisis discriminante lineal\\
 LDPE & Polietileno de baja densidad\\
 LED & Diodo emisor de luz\\
+MOSFET & Transistor de efecto de campo metal-óxido semiconductor\\
 MS & Cuadrado medio\\
 % mL & Mililitros\\
 NC & Normalmente cerrada\\
 NIR & Espectroscopia de infrarrojo cercano\\
 % No.  & Número\\
+OPAMP & Amplificador operacional\\
 PCA & Análisis de componentes principales\\
 % PCB & placa de circuito impreso\\
 PET & Tereftalato de polietileno\\
 PIC & Controlador de interfaz de periféricos\\
 % PIB & Producto Interno Bruto\\
-PLC & Controlador lógico programable\\
-PP & Polipropileno\\
-PVC & Cloruro de polivinilo\\
-PS & Poliestireno\\
-% SVM & Máquinas de vectores soporte\\
-SS & Suma de cuadrados\\
-% USE & Universal serial bus
+PLC & Controlador lógico programable
 \end{tabular}
 % 
 % 
-% \newpage
-% \justifying
-% \noindent
-% \begin{tabular}{@{}ll}
+\newpage
+\justifying
+\noindent
+\begin{tabular}{@{}ll}
+PP & Polipropileno\\
+PVC & Cloruro de polivinilo\\
+PS & Poliestireno\\
+PWM & Modulación por ancho de pulso\\
+% SVM & Máquinas de vectores soporte\\
+SS & Suma de cuadrados\\
+TIA & Amplificador de transimpedancia
 % PIC & Controlador de interfaz de periféricos\\
 % PIB & Producto Interno Bruto\\
 % PLC & Controlador lógico programable\\
@@ -213,7 +218,7 @@ SS & Suma de cuadrados\\
 % SVM & Máquinas de vectores soporte\\
 % SS & Suma de cuadrados\\
 % USE & Universal serial bus
-% \end{tabular}
+\end{tabular}
 
 % }
 % 
@@ -708,7 +713,7 @@ Se busco minimizar los factores de ruido que con la interacción de todos los fa
 % 
 \subsection{Diseño del sistema de acondicionamiento de señal para el diodo de InGaAs}
 
-En este caso como se busca separar botellas de PET se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre 800 $nm$ y 2500 $nm$ aunque un rango de entre 800 $nm$ y 1100 $nm$ es más que suficiente para la detección y diferenciación entre el PET transparente y el de color.
+En este caso como se busca separar botellas de PET se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre $800\ [nm]$ y $2500\ [nm]$ aunque un rango de entre $800\ [nm]$ y $1100\ [nm]$ es más que suficiente para la detección y diferenciación entre el PET transparente y el de color.
 Esta tecnología en conjunto con una cámara que pueda generar imágenes hiper-espectrales y contenga un dispositivo de carga acoplada puede ser más que suficiente para realizar la clasificación de las botellas de PET \cite{wu2020auto}.
 
 Los sensores infrarrojos se basan en fotodiodos que pueden estar construidos a partir de cuatro elementos químicos como el silicio Si, el indio In, el galio Ga o el arsénico As, sin embargo, cabe aclarar que se pueden adquirir fotodiodos hechos a partir de únicamente silicio y fotodiodos construidos a partir arseniuro de indio y galio InGaAs.
@@ -723,7 +728,7 @@ Cada material y fotodiodo tiene un distinto rango de operación ver Figura \ref{
 \end{figure}
 %
 %
-Basándonos en la gráfica de la Figura \ref{NIRRange} y en el hecho de que el rango necesario para detectar los colores del PET es de entre los 800 $nm$ y 1100 $nm$ podemos asumir que un fotodiodo de silicio correspondiente al tipo S1337-BR \cite{kk2015ingaas} es suficiente para el sistema en cuestión, sin embargo, se debe considerar la frecuencia a la cual va a operar el sistema, el área fotosensible que ofrece el sensor y la variedad de modelos que se disponen, considerando estos factores es más factible utilizar un diodo construido a base de arseniuro de indio y galio.
+Basándonos en la gráfica de la Figura \ref{NIRRange} y en el hecho de que el rango necesario para detectar los colores del PET es de entre los $800\ [nm]$ y $1100\ [nm]$ podemos asumir que un fotodiodo de silicio correspondiente al tipo S1337-BR \cite{kk2015ingaas} es suficiente para el sistema en cuestión, sin embargo, se debe considerar la frecuencia a la cual va a operar el sistema, el área fotosensible que ofrece el sensor y la variedad de modelos que se disponen, considerando estos factores es más factible utilizar un diodo construido a base de arseniuro de indio y galio.
 % 
 %
 {\renewcommand{\baselinestretch}{1.15}
@@ -811,17 +816,16 @@ Dada el cuadro en la Figura \ref{PINDiodes} podemos observar los diferentes mode
 % 
 \subsubsection{Definición del mensurando para la medición de la longitud de onda con el diodo InGaAs}
 
-En la Tabla \ref{G10899CAS} y Tabla \ref{G12180CAS} se muestran los modelos que pertenecen a las respectivas series de fotodiodos y sus características generales, sin embargo, cabe destacar que la serie G10899 \cite{kk2015ingaas} tiene un rango de operación de entre 800 $nm$ y los 1700 $nm$ mientras que la serie G12180 \cite{kk2015ingaas} tiene un rango menor de entre 900 $nm$ y 1700 $nm$, si bien esta diferencia de 100 $nm$ podría o no representar un cambio en la precisión considerable se compensa con el hecho de que la serie G12180 \cite{kk2015ingaas} tiene más opciones que permiten obtener resultados diferentes en cuestiones de eficiencia y velocidad que son factores importantes para la realización del sistema de clasificación, por lo que de momento estas dos series son consideradas aptas para la tarea que se desea llevar a cabo.
+En la Tabla \ref{G10899CAS} y Tabla \ref{G12180CAS} se muestran los modelos que pertenecen a las respectivas series de fotodiodos y sus características generales, sin embargo, cabe destacar que la serie G10899 \cite{kk2015ingaas} tiene un rango de operación de entre $800\ [nm]$ y los $1700\ [nm]$ mientras que la serie G12180 \cite{kk2015ingaas} tiene un rango menor de entre $900\ [nm]$ y $1700\ [nm]$, si bien esta diferencia de $100\ [nm]$ podría o no representar un cambio en la precisión considerable se compensa con el hecho de que la serie G12180 \cite{kk2015ingaas} tiene más opciones que permiten obtener resultados diferentes en cuestiones de eficiencia y velocidad que son factores importantes para la realización del sistema de clasificación, por lo que de momento estas dos series son consideradas aptas para la tarea que se desea llevar a cabo.
 % 
 %
 \subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
 
 Para poder describir esta sección resaltamos que se requiere automatizar un sistema que identifique botellas PET que pasan por una banda transportadora y que posteriormente son expulsadas por un sistema neumático.
-Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de 5v para la entrada y otro de 24v para la activación de las bobinas de las electroválvulas.
-Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre 5v y 30v de corriente directa y de 125v a 250v de corriente alterna con corrientes de hasta 10A. 
+Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de $5\ [V]$ para la entrada y otro de $24\ [V]$ para la activación de las bobinas de las electroválvulas.
+Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre $5\ [V]$ y $30\ [V]$ de corriente directa y de $125\ [V]$ a $250\ [V]$ de corriente alterna con corrientes de hasta $10\ [A]$. 
 El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. 
-Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $64$ dolares que equivalen a $1328$ pesos mexicanos mientras que el precio de la Nucleo STM32F446 es de $15.82$ dolares que equivalen a $328$ pesos mexicanos, esto sin contar los costos de envío.
-\colorbox{Yellow}{Agrega las referencias de los precios porque creo que es más cara la FPGA}
+Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $82$ dolares que equivalen a $1412.75$ pesos mexicanos en precio de estudiante \cite{TerasicFPGA}, en precio para todo publico son $140$ dolares que equivalen a $2412.00$ pesos mexicanos \cite{TerasicFPGA} mientras que el precio de la Nucleo STM32F446 es de $14.90$ dolares que equivalen a $256.71$ pesos mexicanos \cite{STMElectronics}, esto sin contar los costos de envío.
 % 
 % 
 \subsubsection{BPW21R como método de aproximación al comportamiento del diodo InGaAs}
@@ -876,7 +880,7 @@ Los fotodiodos son dispositivos sensibles a la luz, dependiendo de la cantidad d
     \hline
         Ángulo de sensibilidad media & $\phi $ & - & $\pm 50$  & - & $deg$ \\
     \hline
-        Rango de banda de espectrometría & $\lambda_{0.5}$ & - & 420 a 675 & - & $nm$ \\
+        Rango de banda de espectrometría & $\lambda_{0.5}$ & - & 420 a 675 & - & $\ [nm]$ \\
     \hline
 \end{tabular} 
 \end{adjustwidth}
@@ -903,8 +907,8 @@ En la Tabla \ref{OpticproBPW21R} se observa el parámetro \textbf{Reverse Light 
 \end{equation}
 % 
 % 
-Donde se observa a $[I_{ph}]$ que es el parte de la corriente de salida que emite el diodo debido a que esta captando luz. Dada la Tabla \ref{OpticproBPW21R}, el valor de la \textbf{Reverse Light Current} es de $9_{\mu A}$ como valor típico \cite{bpw21r2006vishay}, resultado de la suma de la \textbf{Reverse Dark Current} y de la \textbf{Photocurrent} $[I_{ph}]$.
-Este valor se comprobó mediante la experimentación dado que con una resistencia de $1M\Omega$, se obtuvieron $8V$ a la salida de un amplificador de transimpedancia, con lo cual, al aplicar ley de Ohm, se obtiene un valor de corriente de aproximadamente $8_{\mu A}$.
+Donde se observa a $[I_{ph}]$ que es el parte de la corriente de salida que emite el diodo debido a que esta captando luz. Dada la Tabla \ref{OpticproBPW21R}, el valor de la \textbf{Reverse Light Current} es de $9\ [{\mu A}]$ como valor típico \cite{bpw21r2006vishay}, resultado de la suma de la \textbf{Reverse Dark Current} y de la \textbf{Photocurrent} $[I_{ph}]$.
+Este valor se comprobó mediante la experimentación dado que con una resistencia de $1\ [M\Omega]$, se obtuvieron $8\ [V]$ a la salida de un amplificador de transimpedancia, con lo cual, al aplicar ley de Ohm, se obtiene un valor de corriente de aproximadamente $8\ [{\mu A}]$.
 % 
 % 
 \subsubsection{Justificación para implementar un amplificador de transimpedancia}
@@ -925,10 +929,10 @@ Acorde a la Figura \ref{fig:TIMPOPAMP}, el funcionamiento del amplificador de tr
 % 
 Por regla general se sabe que idealmente las entradas del amplificador operacional tienden a tener el mismo voltaje, es por eso que una resistencia es colocada en realimentación, por que se busca que el voltaje en una de las terminales sea de $0V$ con el fin de que el análisis del circuito se reduzca al comportamiento de la ley de Ohm.
 
-Esto se explica suponiendo que el fotodiodo emite una corriente de $1_{\mu A}$, entonces si suministramos un voltaje de $1V$ que fluye a través de una resistencia de $1M\Omega$, al llegar al mismo nodo esas corrientes se ''anulan'', provocando que el voltaje en la entrada inversora del amplificador operacional sea de $0V$.
+Esto se explica suponiendo que el fotodiodo emite una corriente de $1\ [{\mu A}]$, entonces si suministramos un voltaje de $1\ [V]$ que fluye a través de una resistencia de $1\ [M\Omega]$, al llegar al mismo nodo esas corrientes se ''anulan'', provocando que el voltaje en la entrada inversora del amplificador operacional sea de $0\ [V]$.
 
 Se optó por utilizar un amplificador de transimpedacia porque los valores de corriente que se pueden obtener del fotodiodo de prueba BPW21R y posiblemente del diodo de InGaAs, son del orden de los nanoamperios y microamperios.
-Se podría optar por utilizar un amplificador operacional en configuración de seguidor de voltaje teniendo una resistencia conocida, sin embargo, el problema es el mismo, al tratarse de una corriente muy pequeña y utilizar una resistencia muy grande únicamente en la entrada del OPAMP, se tienen problemas de impedancia que resultan en un mal funcionamiento del circuito debido a oscilaciones que resultan de las propias características del OPAMP. \colorbox{Yellow}{OPAMP-agregalo a las abreviaturas}
+Se podría optar por utilizar un amplificador operacional en configuración de seguidor de voltaje teniendo una resistencia conocida, sin embargo, el problema es el mismo, al tratarse de una corriente muy pequeña y utilizar una resistencia muy grande únicamente en la entrada del OPAMP, se tienen problemas de impedancia que resultan en un mal funcionamiento del circuito debido a oscilaciones que resultan de las propias características del OPAMP.
 Estas oscilaciones también se dan en el amplificador de transimpedancia, pero son más sencillas de controlar mediante la adición de capacitores tanto en la realimentación del OPAMP, como en las propias terminales de alimentación o en paralelo con el fotodiodo.
 %
 %
@@ -940,36 +944,196 @@ Como parte de la metodología desarrollada y aplicada a este trabajo, fue necesa
 \subsubsection{Primera etapa: Diseño}
 
 El diseño consistió en la investigación u obtención de datos, análisis y conclusiones de toda la documentación relacionada a cada uno de los elementos y conceptos que formaron parte del sistema que se buscó obtener con el fin de poder trabajar adecuadamente con el fotodiodo BPW21R. 
-En este caso, dicha documentación consistió en hojas de datos e información sobre amplificadores operacionales, sensores ADC \colorbox{Yellow}{ADC-agregalo a las abreviaturas} haciendo énfasis en sus propiedades como frecuencia de operación, resolución, condiciones de operación y en como estas características se veían afectadas o afectaban al componente encargado de controlar y obtener los datos de dicho dispositivo que, para este trabajo, se utilizó un modulo ESP-WROOM-32.
+En este caso, dicha documentación consistió en hojas de datos e información sobre amplificadores operacionales, sensores ADC haciendo énfasis en sus propiedades como frecuencia de operación, resolución, condiciones de operación y en como estas características se veían afectadas o afectaban al componente encargado de controlar y obtener los datos de dicho dispositivo que, para este trabajo, se utilizó un modulo ESP-WROOM-32 que tiene un precio de 200 pesos mexicanos que trabajara en complemento a un ADS1115, un ADC de 16-bit de resolución, de un precio de 200 pesos mexicanos.
 
-Con base en la etapa de diseño se obtuvo el diseño que se muestra en la Figura \ref{fig:TIADiseño} para el amplificador de transimpedancia:
+Con base en la etapa de diseño se obtuvo el diseño preliminar que se muestra en la Figura \ref{fig:TIADiseño} para el amplificador de transimpedancia:
 % 
 % 
 \begin{figure}[H]
     \centering
      \includegraphics[trim = {25mm 145mm 50mm 25mm},clip,scale=1]{img/TIA_Schematic.pdf}
-    \caption{Esquemático para el amplificador de transimpedancia.}
+    \caption{Propuesta previa a simulación del amplificador de trasimpedancia}
     \label{fig:TIADiseño}
 \end{figure}
 % 
 % 
 Como se mencionó previamente, el amplificador de trasimpedancia tiende a ser inestable en función de la frecuencia de operación.
-Considerando que las condiciones bajo las cuales estará operando el fotodiodo requieren ser de alta frecuencia, es necesario realizar ajustes para mitigar lo mejor posible estos factores y esto se realizó de 3 maneras.
-La primera simplemente consistió en añadir un capacitor en la retroalimentación del circuito, en un primer momento se contempló la posibilidad de añadir un capacitor en paralelo al fotodiodo BPW21R, sin embargo, esta idea fue descartada dado que, aunque es un diseño básico y viable para el amplificador de trasimpedancia, a veces resulta en más complicaciones en el análisis de frecuencia, en su lugar se optó por utilizar un arreglo de 2 resistencias y 1 capacitor que consistió en la segunda manera de evitar la saturación.
-Para la segunda manera se agregó una sección en la entrada no inversora del OPAMP para evitar su saturación, esto debido a que se sigue una configuración denominada \textit{rail-to-rail}, esta configuración se da cuando se usan voltajes muy cercanos al voltaje de alimentación.
-Mediante el arreglo de las resistencias $R_1$ y $R_2$ y el capacitor $C_2$ se mantiene un voltaje de referencia del orden de los milivoltios, lo cual evitará que el OPAMP llegué o sobrepase el limite que lo pondría en saturación.
-La tercera y última manera de evitar la saturación, es mediante la adición de JFETs configurados como diodos, esto se utilizó así considerando que el fotodiodo pudiera mandar una corriente lo suficientemente grande que al momento de ser amplificada y transformada en voltaje por la resistencia $R_F$, sobrepase el voltaje de alimentación del OPAMP y lo sature.
-Los JFETs se colocaron de esa manera dado que cada uno idealmente consumirá $0.7V$ y, suponiendo que el voltaje de salida sea mayor al de alimentación, entonces los diodos provocarán en corto circuito entre la salida con la entrada del OPAMP provocando que se mantenga en un voltaje por debajo del de alimentación.
+Considerando que las condiciones bajo las cuales estará operando el fotodiodo requieren ser de alta frecuencia, es necesario realizar ajustes para mitigar lo mejor posible estos factores y esto se realizó de 2 maneras.
+La primera simplemente consistió en añadir un capacitor en la retroalimentación del circuito y otro en paralelo al fotodiodo, únicamente para tener una señal más limpia y evitar la inestabilidad del OPAMP.
+Para la segunda manera se agregó una sección en la entrada no inversora del OPAMP para evitar su saturación, esto debido a que se sigue una configuración denominada \textit{rail-to-rail}, esta configuración se da cuando se usan voltajes muy cercanos al voltaje de alimentación. 
+Mediante el arreglo de las resistencias $R_1$ y $R_2$ y el capacitor $C_2$ se mantiene un voltaje de referencia del orden de los milivoltios, lo cual evitará que el OPAMP llegue o sobrepase el límite que lo pondría en saturación.
+Este procedimiento también se puede realizar para cuando se requiera evitar que el OPAMP sobrepase el límite superior, sin embargo, esto se puede evitar con utilizar correctamente la resistencia de retroalimentación o incluir algún JFET en configuración de diodo o directamente un diodo tipo Schottky por que estos elementos idealmente consumirán $0.7\ [V]$, con lo cual evitaría que se sobrepasara este límite.
 %
 %
 \subsubsection{Segunda etapa: Implementación}
+La primera implementación se realizó de manera simulada utilizando el software \textbf{Multisim}, mediante la simulación se obtuvieron resultados que permitieron observar el comportamiento ideal del sistema de acondicionamiento de señal para el fotodiodo.
+Lo más destacable de estos resultados es que debido a que el fotodiodo se esta utilizando en polarización inversa tiende a ser más sensible ante la luz entrante y, en consecuencia, emitir corrientes de $27\ [{\mu A}]$ que son tres veces mayores a las indicadas en la hoja de datos, considerando que el ADC ADS1115 soporta máximo un voltaje de entrada de $5\ [V]$ fue necesario utilizar un divisor de voltaje a la salida del amplificador de trasimpedancia para poder utilizar adecuadamente este elemento.
 
+Basado en lo anterior, el circuito final para el amplificador de trasimpedancia se muestra en la Figura \ref{fig:TIAFinalDesign}.
+% 
+% 
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {40mm 130mm 40mm 40mm},clip,scale=1]{img/TIA_FinalDesign.pdf}
+    \caption{Diseño final para el amplificador de trasimpedancia.}
+    \label{fig:TIAFinalDesign}
+\end{figure}
+% 
+% 
+El diseño es relativamente simple, se utilizaron más capacitores para poder obtener una señal más limpia tanto en la entrada como en la salida del amplificador de trasimpedancia.
+También se observa que no se utilizaron JFETs ni un diodo tipo Schottky para evitar que sobrepase el límite superior, esto es debido a que al realizar la simulación y la experimentación física en una placa de pruebas o protoboard, se observó que el voltaje máximo a la salida es de entre $7\ [V]$ y $7.4\ [V]$, con lo cual nunca sobrepasa dicho límite.
 
+En su lugar, se incluyó un capacitor de desacoplo para el OPAMP, esto se realiza en todos los circuitos integrados que se utilizan en un diseño con el fin de eliminar la componente CA que se encuentra invadiendo una señal con el fin de obtener únicamente la componente CC.
 %
 %
 \subsubsection{Tercera etapa: Ejecución}
+Como se mencionó previamente, la ejecución se realizó de dos maneras; simulada en el software \textbf{Multisim} y física en una placa de pruebas o protoboard.
 
+Ambas ejecuciones arrojaron resultados muy similares, obviamente una simulación considera un entorno ideal para el circuito, con lo cual, afectaciones climáticas o de ruido no son del todo visibles en este apartado, sin embargo, permitió obtener un panorama más claro de los elementos que se pueden y no seleccionar para este trabajo.
 
+%
+%
+\subsection{Justificación de los componentes seleccionados para el sistema de acondicionamiento de señal}
+\subsubsection{Etapa 1: ESP-WROOM-32 y ADS1115 como medios de captura y procesamiento}
+En un primer momento se considero el uso de una FPGA o un STM32 para realizar la tarea de lectura, captura y procesamiento de la señal ADC, sin embargo, conforme se trabajó en el proyecto se propuso implementar el internet de las cosas o mejor conocido como IoT.
+Esto conllevó a buscar un dispositivo que combinara capacidad de puertos y velocidad de procesamiento con disponibilidad de comunicación WiFi, y esta busqueda culminó con la tarjeta ESP-WROOM-32.
+
+NodeMCU-32 es el nombre real de este modulo, sin embargo, se le llama ESP-WROOM-32 por que es el procesador que opera dicha tarjeta, esta misma provee de 25 puertos de entrada y salida digital que pueden ser utilizados como puertos ADC o como puertos de comunicación I$^{2}$C, SPI, RS232, etc. Su procesador puede ser configurado para trabajar en frecuencias de entre $80\ [MHz]$ y $240\ [MHz]$ y posee la capacidad de utilizar tecnología WiFi y Bluetooth sin necesidad de incorporar modulos externos.
+
+Por otro lado, el ADS1115 se selecciono dado que se requiere realizar lecturas de voltaje precisas y continuas, si bien es cierto que la propia ESP32 tiene esta capacidad, el ADS1115 ofrece una resolución de 16-bits, esto nos permite leer valores del orden de los $200\ [mV]$ y esto pudo ser comprobado fácilmente durante la experimentación física.
+
+En conclusión, estos elementos fueron seleccionados dadas las necesidades que requiere utilizar IoT y la precisión de este trabajo.
+
+%
+%
+\subsubsection{Etapa 2: Alimentación del acondicionador de señal}
+Para la alimentación del circuito se requirió utilizar de dos convertidores DC-DC tipo Buck para los respectivos voltajes que se utilizan en el PCB, en este caso se utilizó uno denotado como $V_{REF}$ y otro denotado como $VCC_{OPAMP}$ respectivamente; el primero funciona para las referencias de voltaje de los amplificadores operacionales que se utilizaron en el circuito y el segundo para la alimentación los mismos tal y como se muestra en la Figura \ref{fig:SignalCSE2}.
+% 
+% 
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {40mm 190mm 40mm 40mm},clip,scale=1]{img/Etapa2_Alimentacion.pdf}
+    \caption{Diagrama de conexiones de la etapa 2 para el PCB}
+    \label{fig:SignalCSE2}
+\end{figure}
+% 
+% 
+Se pudo haber diseñado un convertidor DC-DC síncrono tipo Buck utilizando transistores tipo MOSFET, pero esto requería generar un PWM de al menos $100\ [kHz]$ de frecuencia para conmutar los transistores y utilizar pines de la ESP32 como realimentación del convertidor con el fin de evitar que el voltaje de salida suba o baje en función de la carga, pero esto conllevaba a utilizar más espacio en el PCB y más recursos que al final del día se ven reflejados en este modulo pero de una forma sintetizada ya que utiliza el LM2596 que prácticamente realiza la tarea mencionada anteriormente por su cuenta.
+%
+%
+\subsubsection{Etapa 3: Amplificador de trasimpedancia}
+En la Figura \ref{fig:SignalCSE3} se observa el diseño del amplificador de trasimpedancia que se obtuvo tanto a partir de la teoria como de la experimentación que permitió basarse en prueba y error.
+En un principio se contempló el uso de transistores JFET como medio de protección del circuito y como limitante para evitar la saturación hacía el polo positivo del OPAMP, pero esto fue rápidamente descartado puesto que esta técnica es recomendable para cuando se trabajará con voltajes de nivel TTL, es decir, $3.3\ [V]$ y para este proyecto esa no fue la intención dado que el suministro de energía no es una limitante.
+
+Como se mencionó previamente, los capacitores funcionan como medios estabilizadores del circuito ya que esta aplicación de los amplificadores operacionales tiende a ser particularmente inestable debido al tipo de señal que se esta manejando.
+Lo anterior resulta más claro cuando se entiende que en un OPAMP idealmente no hay flujo de corriente a través de sus terminales y es por ello que estos dispositivos tratan de que el voltaje en sus terminales de entrada sea el mismo.
+
+Esto conlleva a que al utilizar un dispositivo que emite una señal de corriente y no de voltaje en función de la luz, se requiera tener particular cuidado al momento de operar este circuito en altas frecuencias, es por ello que se seleccionó el TLC272, un OPAMP de tipo rail-to-rail con una alta impedancia en sus entradas lo cual garantiza dos cosas: evitar el uso de una alimentación de voltaje negativa y que la corriente no fluya a través de las terminales del OPAMP.
+% 
+% 
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {40mm 130mm 40mm 40mm},clip,scale=1]{img/TIA_FinalDesign.pdf}
+    \caption{Diagrama de conexiones de la etapa 3 para el PCB}
+    \label{fig:SignalCSE3}
+\end{figure}
+% 
+% 
+Esencialmente, son los capacitores $C_{1}$ y $C_{F}$ los que se encargan de realizar esta tarea de estabilización, aunque el arreglo de resistencias y capacitores que sirve como limite en la entrada no inversora del OPAMP también impactan en este ámbito.
+%
+%
+\subsubsection{Etapa 4: Comparador unitario}
+Un comparador es un elemento electrónico que permite obtener dos señales en las entradas del OPAMP y en función de su valor emitir una salida en alto o en bajo, esto se realiza para cuando se busca "digitalizar" una señal.
+
+En este caso lo que realizar el circuito de la Figura \ref{fig:SignalCSE4} es comparar la señal de salida del divisor de voltaje realizado en la etapa previa con una referencia de voltaje fija que se conecta en la entrada inversora del OPAMP, si la señal del divisor de voltaje de la etapa previa es mayor a la referencia de la entrada inversora entonces la salida del OPAMP será de $3.3\ [V]$ gracias al divisor de voltaje en la salida del mismo, en caso contrario será de $0\ [V]$ idealmente, aunque en la simulación y experimentación se obtuvieron valores de $35\ [mV]$.
+% 
+% 
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {40mm 180mm 40mm 40mm},clip,scale=1]{img/TIA_Etapa4.pdf}
+    \caption{Diagrama de conexiones de la etapa 4 para el PCB}
+    \label{fig:SignalCSE4}
+\end{figure}
+% 
+% 
+Se optó por utilizar el LM311 porque aunque es posible tomar cualquier OPAMP y configurarlo como comparador, es mejor utilizar uno que este diseñado específicamente para esta tarea, de esta forma se evitan errores en el diseño y/o utilzar alimentaciones negativas.
+%
+%
+\subsubsection{Etapa 5: Comparadores en configuración de doble limite}
+La Figura \ref{fig:SignalCSE5} muestra la configuración necesaria para disponer de un circuito comparador que maneje dos límites. Previamente en la etapa 4 se observó el circuito comparador básico, donde se tiene una entrada variable y una referencia fija, dado que para este proyecto el voltaje de salida del amplificador de trasimpedancia varia mucho y en pequeña medida debido a la corriente emitida por el fotodiodo, fue necesario utilizar esta configuración de doble límite para colocar rangos de voltaje de detección dentro de los cuales los OPAMPs enviarán $3.3\ [V]$ o $35\ [mV]$ sea el caso correspondiente.
+% 
+% 
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {40mm 145mm 40mm 40mm},clip,scale=1]{img/TIA_Etapa5.pdf}
+    \caption{Diagrama de conexiones de la etapa 5 para el PCB}
+    \label{fig:SignalCSE5}
+\end{figure}
+% 
+% 
+A pesar de que hay circuitos integrados que contienen 2 o hasta 4 comparadores en un solo elemento como el LM339, considere adecuado seguir utilizando comparadores individuales para esta tarea simplemente por cuestiones de diseño y disposición de los elementos en el PCB.
+%
+%
+\subsubsection{Etapa 6: Implementación de un PCB para el circuito}
+En la Figura \ref{fig:SignalCSE6.1} y la Figura \ref{fig:SignalCSE6.2} se observan las vistas correspondientes a la capa superior e inferior respectivamente del PCB diseñado para este sistema acondicionador de señal.
+% 
+% 
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {40mm 135mm 40mm 40mm},clip,scale=1]{img/PCB_TOPLAYER.pdf}
+    \caption{Capa superior del PCB}
+    \label{fig:SignalCSE6.1}
+\end{figure}
+% 
+%
+Se decidió realizar en dos capas porque aunque se hiciera un plano de tierra común era muy complicado evitar que las pistas se encontraran demasiado cercas unas de otras.
+% 
+% 
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {40mm 135mm 40mm 40mm},clip,scale=1]{img/PCB_BOTTOMLAYER.pdf}
+    \caption{Capa inferior del PCB}
+    \label{fig:SignalCSE6.2}
+\end{figure}
+% 
+% 
+Las pistas de alimentación del convertidor DC-DC tipo Buck son de $30\ [mils]$ que equivalen a $0.762\ [mm]$, y las pistas que transfieren la señal del fotodiodo, los divisores de voltaje, las salidas de los comparadores y las alimentaciones de todos los amplificadores operacionales utilizados son de $15\ [mils]$ que equivalen a $0.381\ [mm]$, esto se realizó en función de la siguiente tabla:
+%
+%
+{\renewcommand{\baselinestretch}{1.12}
+\begin{table}[H]
+    \centering
+    \caption{Ancho de la pista del PCB \cite{AltiumPCBTraceWidht}.}
+    \label{PCBAnchoPista}
+    \begin{adjustwidth}{4cm}{0cm}
+    \begin{tabular}{|c|c|}
+    \hline
+        Corriente $[A]$ & Ancho la pista $[mils]$ \\
+    \hline
+        $1\ [A]$ & $10\ [mils]$ \\
+    \hline
+        $2\ [A]$ & $30\ [mils]$ \\
+    \hline
+        $3\ [A]$ & $50\ [mils]$ \\
+    \hline
+        $4\ [A]$ & $80\ [mils]$ \\
+    \hline
+        $5\ [A]$ & $110\ [mils]$ \\
+    \hline
+        $6\ [A]$ & $150\ [mils]$ \\
+    \hline
+        $7\ [A]$ & $180\ [mils]$ \\
+    \hline
+        $8\ [A]$ & $220\ [mils]$ \\
+    \hline
+        $9\ [A]$ & $260\ [mils]$ \\
+    \hline
+        $10\ [A]$ & $300\ [mils]$ \\
+    \hline
+\end{tabular} 
+\end{adjustwidth}
+\end{table}
+}
 %
 %
 \subsection{Determinación de una metodología mediante las características del diodo InGaAs para seleccionar los elementos mecánicos}
