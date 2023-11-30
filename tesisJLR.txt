@@ -1142,8 +1142,8 @@ Las pistas de alimentación del convertidor DC-DC tipo Buck son de $30\ [mils]$ 
 \end{adjustwidth}
 \end{table}
 }
-%
-%
+% 
+% 
 \subsection{Determinación de una metodología mediante las características del diodo InGaAs para seleccionar los elementos mecánicos}
 
 Finalmente para la parte que se encargará en forma de separar las botellas de PET se propone la implementación de pistones neumáticos.
@@ -1166,7 +1166,7 @@ En la figura \ref{fig:MOTOREDUCTOR} se ilustra el moto reductor que se utilizo, 
 \end{figure}
 % 
 % 
-En las figuras \ref{fig:MOTOR_ConnectionDiag} y \ref{fig:MOTOR_ConnectionPDiag2}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor.
+En las figuras \ref{fig:MOTOR_ConnectionDiag} y \ref{fig:MOTOR_ConnectionPDiag2}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor. 
 Consta de cinco botones; dos botones habilitadores de cada motor que son parte del PLC, dos botones para indicar el giro del motor y un botón de paro total.
 % 
 % 
@@ -1221,6 +1221,7 @@ En la Tabla \ref{tab:motor_DB} se detallan los tipos de variables que se utiliza
 Físicamente cada PLC tiene un número limitado de entradas y eso dificulta la automatización cuando se requieren de muchas entradas. 
 La finalidad principal de hacer una pagina web para controlar las entradas de los motores es por las ventajas que proporciona al poder definir n cantidad de entradas y procesar esa información internamente con el PLC. 
 En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el sistema mecánico para funcionar.
+Para ver los códigos utilizados para la puesta en marcha véase los Apéndices del \ref{listing:html} al \ref{listing:motor2}.
 % 
 % 
 {\renewcommand{\baselinestretch}{1.15}
@@ -1731,17 +1732,19 @@ Con esto y teniendo en cuenta que la clasificación en la sección de sensores d
 Por otro lado, suponiendo de que las botellas caerán a través de un embudo a la banda transportadora entonces se debe considerar por mera seguridad que estás salgan eyectadas hacía los laterales, siendo este el caso se deben colocar paredes de un metal que sea ligero pero lo suficientemente resistente para que no se deforme debido a los impactos y permita que las botellas se mantengan dentro de la banda transportadora en todo momento. 
 Para ello se podría usar aluminio como material principal dado que es un metal que si bien no se vende puro sino en aleación con algún otro metal sigue siendo barato y ligero en comparación con otros metales como el acero, de esta manera el costo no se elevaría demasiado y se sigue manteniendo el factor de seguridad.
 
-La segunda sección de la banda transportadora sería la sección de identificación la cual se puede realizar mediante sensores o cámaras o una combinación de ambos dispositivos, en cualquiera de los casos el sistema empleado debe ser capaz de clasificar las botellas de manera rápida con el fin de tener una tasa mínima de 3 botellas por minuto.
+La segunda sección de la banda transportadora sería la sección de identificación la cual se puede realizar mediante sensores o cámaras o una combinación de ambos dispositivos, en cualquiera de los casos el sistema empleado debe ser capaz de clasificar las botellas de manera rápida con el fin de tener una tasa mínima de tres botellas por minuto.
 
 Después de la sección de identificación sigue la sección de clasificación en la cual las botellas serán removidas de la banda transportadora y pasarán a contenedores en función de sus características previamente identificadas.
 Esta clasificación puede realizarse mediante pistones neumáticos que se accionen mediante sus respectivas electroválvulas, las cuales son fáciles de controlar puesto que únicamente se activarían si las características de la botella identificadas en la sección previa cumplen con lo estipulado.
 Para esta última parte se debe considerar que se requiere de un suministro constante de aire comprimido para los pistones neumáticos, está presión debe ser de al menos $0.08MPa$, a menos que se requiera un control más estricto sobre el accionamiento se pueden utilizar pistones de simple efecto con retorno de muelle, de lo contrario se debe optar por pistones de doble efecto para controlar tanto el accionamiento como el regreso mediante un electroválvula de $\frac{5}{2}$ monoestable.
 % 
 %
-\subsection{Análisis de componentes principales para la identificación de los elementos}
+\subsection{Trabajos futuros}
+% \subsection{Análisis de componentes principales para la identificación de los elementos}
 
-El método de PCA se utilizo para explicar la cantidad máxima de varianza con el menor número de componentes.
 PCA analiza los elementos principales de múltiples características, exponiendo su naturaleza y resaltando sus principales características, acortando las dimensiones de los datos. 
+Para este trabajo se considero trabajar con PCA pero por falta de presupuesto se considera para trabajos futuros.
+El método de PCA se utiliría para explicar la cantidad máxima de varianza con el menor número de componentes.
 % PCA establecerá un método para disminuir la dimensión de los datos.
 El análisis de componentes principales se utilizo para describir la variación en los conjuntos de variables correlacionadas reduciendo la complejidad ayudando a la interpretación de los datos y la reducción del ruido o variables que se tienen que monitorear.
 % 
