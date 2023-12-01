@@ -1523,6 +1523,35 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 % 
+\newpage
+\centering{\section{    DISCUSIÓN}}
+\justifying
+
+Para poder identificar si los elementos son los adecuados.
+Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de PET a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
+Con esto y teniendo en cuenta que la clasificación en la sección de sensores de realizara de botella en botella entonces el peso en la banda transportadora no pasaría de 5kg, por ende, no es necesario recurrir a un motor muy potente ni a una tensión alta en la banda para poder desplazar el contenido.
+
+Por otro lado, suponiendo de que las botellas caerán a través de un embudo a la banda transportadora entonces se debe considerar por mera seguridad que estás salgan eyectadas hacía los laterales, siendo este el caso se deben colocar paredes de un metal que sea ligero pero lo suficientemente resistente para que no se deforme debido a los impactos y permita que las botellas se mantengan dentro de la banda transportadora en todo momento. 
+Para ello se podría usar aluminio como material principal dado que es un metal que si bien no se vende puro sino en aleación con algún otro metal sigue siendo barato y ligero en comparación con otros metales como el acero, de esta manera el costo no se elevaría demasiado y se sigue manteniendo el factor de seguridad.
+
+La segunda sección de la banda transportadora sería la sección de identificación la cual se puede realizar mediante sensores o cámaras o una combinación de ambos dispositivos, en cualquiera de los casos el sistema empleado debe ser capaz de clasificar las botellas de manera rápida con el fin de tener una tasa mínima de tres botellas por minuto.
+
+Después de la sección de identificación sigue la sección de clasificación en la cual las botellas serán removidas de la banda transportadora y pasarán a contenedores en función de sus características previamente identificadas.
+Esta clasificación puede realizarse mediante pistones neumáticos que se accionen mediante sus respectivas electroválvulas, las cuales son fáciles de controlar puesto que únicamente se activarían si las características de la botella identificadas en la sección previa cumplen con lo estipulado.
+Para esta última parte se debe considerar que se requiere de un suministro constante de aire comprimido para los pistones neumáticos, está presión debe ser de al menos $0.08MPa$, a menos que se requiera un control más estricto sobre el accionamiento se pueden utilizar pistones de simple efecto con retorno de muelle, de lo contrario se debe optar por pistones de doble efecto para controlar tanto el accionamiento como el regreso mediante un electroválvula de $\frac{5}{2}$ monoestable.
+% 
+%
+\subsection{Trabajos futuros}
+
+\subsubsection{Análisis de componentes principales para la identificación de los elementos}
+
+PCA analiza los elementos principales de múltiples características, exponiendo su naturaleza y resaltando sus principales características, acortando las dimensiones de los datos. 
+Para este trabajo se considero trabajar con PCA pero por falta de presupuesto se considera para trabajos futuros.
+El método de PCA se utiliría para explicar la cantidad máxima de varianza con el menor número de componentes.
+% PCA establecerá un método para disminuir la dimensión de los datos.
+El análisis de componentes principales se utilizo para describir la variación en los conjuntos de variables correlacionadas reduciendo la complejidad ayudando a la interpretación de los datos y la reducción del ruido o variables que se tienen que monitorear.
+% 
+% 
 \subsubsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
 
 El diseño de experimentos que se propone consistió en determinar la distancia y rango de trabajo del sistema.
@@ -1719,34 +1748,6 @@ En la Tabla \ref{table:DOE_1a} se resume la tabla que almacenaría los resultado
     \end{tabular}
 \end{table}
 }
-% 
-% 
-\newpage
-\centering{\section{    DISCUSIÓN}}
-\justifying
-
-Para poder identificar si los elementos son los adecuados.
-Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de PET a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
-Con esto y teniendo en cuenta que la clasificación en la sección de sensores de realizara de botella en botella entonces el peso en la banda transportadora no pasaría de 5kg, por ende, no es necesario recurrir a un motor muy potente ni a una tensión alta en la banda para poder desplazar el contenido.
-
-Por otro lado, suponiendo de que las botellas caerán a través de un embudo a la banda transportadora entonces se debe considerar por mera seguridad que estás salgan eyectadas hacía los laterales, siendo este el caso se deben colocar paredes de un metal que sea ligero pero lo suficientemente resistente para que no se deforme debido a los impactos y permita que las botellas se mantengan dentro de la banda transportadora en todo momento. 
-Para ello se podría usar aluminio como material principal dado que es un metal que si bien no se vende puro sino en aleación con algún otro metal sigue siendo barato y ligero en comparación con otros metales como el acero, de esta manera el costo no se elevaría demasiado y se sigue manteniendo el factor de seguridad.
-
-La segunda sección de la banda transportadora sería la sección de identificación la cual se puede realizar mediante sensores o cámaras o una combinación de ambos dispositivos, en cualquiera de los casos el sistema empleado debe ser capaz de clasificar las botellas de manera rápida con el fin de tener una tasa mínima de tres botellas por minuto.
-
-Después de la sección de identificación sigue la sección de clasificación en la cual las botellas serán removidas de la banda transportadora y pasarán a contenedores en función de sus características previamente identificadas.
-Esta clasificación puede realizarse mediante pistones neumáticos que se accionen mediante sus respectivas electroválvulas, las cuales son fáciles de controlar puesto que únicamente se activarían si las características de la botella identificadas en la sección previa cumplen con lo estipulado.
-Para esta última parte se debe considerar que se requiere de un suministro constante de aire comprimido para los pistones neumáticos, está presión debe ser de al menos $0.08MPa$, a menos que se requiera un control más estricto sobre el accionamiento se pueden utilizar pistones de simple efecto con retorno de muelle, de lo contrario se debe optar por pistones de doble efecto para controlar tanto el accionamiento como el regreso mediante un electroválvula de $\frac{5}{2}$ monoestable.
-% 
-%
-\subsection{Trabajos futuros}
-% \subsection{Análisis de componentes principales para la identificación de los elementos}
-
-PCA analiza los elementos principales de múltiples características, exponiendo su naturaleza y resaltando sus principales características, acortando las dimensiones de los datos. 
-Para este trabajo se considero trabajar con PCA pero por falta de presupuesto se considera para trabajos futuros.
-El método de PCA se utiliría para explicar la cantidad máxima de varianza con el menor número de componentes.
-% PCA establecerá un método para disminuir la dimensión de los datos.
-El análisis de componentes principales se utilizo para describir la variación en los conjuntos de variables correlacionadas reduciendo la complejidad ayudando a la interpretación de los datos y la reducción del ruido o variables que se tienen que monitorear.
 % 
 % 
 \newpage
