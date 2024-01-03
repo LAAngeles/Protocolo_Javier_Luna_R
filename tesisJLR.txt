@@ -695,14 +695,14 @@ En ese sentido, dentro de la metodolog\'ia se indican que factores permiten el a
 % 
 \subsubsection {Dise\~{n}o de experimentos con la interacci\'on de todos los factores a controlar} 
 
-Se busco minimizar los factores de ruido que se provoca con la interacci\'on de todos los factores anteriormente descritos y as\'i se obtenga la velocidad m\'axima y m\'inima que no afecte la eficiencia en la detecci\'on, ver Figura \ref{dise\~{n}o04} \cite{gutierrez2004analisis}.
+Se busco minimizar los factores de ruido que se provoca con la interacci\'on de todos los factores anteriormente descritos y as\'i se obtenga la velocidad m\'axima y m\'inima que no afecte la eficiencia en la detecci\'on, ver Figura \ref{diseno04} \cite{gutierrez2004analisis}.
 % 
 % 
 \begin{figure}[H]
     \centering
     \includegraphics[trim = {41mm 155mm 13mm 20mm},clip,scale=0.85]{img/Vg_fig_18.pdf}
     \caption{Factores y variables en el dise\~{n}o de experimentos para la interacci\'on de todo el sistema.}
-    \label{dise\~{n}o04}
+    \label{diseno04}
 \end{figure}
 % 
 % 
@@ -945,14 +945,14 @@ Como parte de la metodolog\'ia desarrollada y aplicada a este trabajo, fue neces
 El dise\~{n}o consisti\'o en la investigaci\'on u obtenci\'on de datos, an\'alisis y conclusiones de toda la documentaci\'on relacionada a cada uno de los elementos y conceptos que formaron parte del sistema que se busc\'o obtener con el fin de poder trabajar adecuadamente con el fotodiodo BPW21R. 
 En este caso, dicha documentaci\'on consisti\'o en hojas de datos e informaci\'on sobre amplificadores operacionales, sensores ADC haciendo \'enfasis en sus propiedades como frecuencia de operaci\'on, resoluci\'on, condiciones de operaci\'on y en como estas caracter\'isticas se ve\'ian afectadas o afectaban al componente encargado de controlar y obtener los datos de dicho dispositivo que, para este trabajo, se utiliz\'o un modulo ESP-WROOM-32 que tiene un precio de 200 pesos mexicanos que trabajara en complemento con un ADS1115, un ADC de 16-bit de resoluci\'on, de un precio de 200 pesos mexicanos.
 
-Con base en la etapa de dise\~{n}o se obtuvo el dise\~{n}o preliminar que se muestra en la Figura \ref{fig:TIADise\~{n}o} para el amplificador de transimpedancia:
+Con base en la etapa de dise\~{n}o se obtuvo el dise\~{n}o preliminar que se muestra en la Figura \ref{fig:TIADiseno} para el amplificador de transimpedancia:
 % 
 % 
 \begin{figure}[H]
     \centering
      \includegraphics[trim = {25mm 145mm 50mm 25mm},clip,scale=1]{img/TIA_Schematic.pdf}
     \caption{Propuesta previa a simulaci\'on del amplificador de trasimpedancia}
-    \label{fig:TIADise\~{n}o}
+    \label{fig:TIADiseno}
 \end{figure}
 % 
 % 
