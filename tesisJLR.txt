@@ -2,6 +2,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\familydefault}{\sfdefault} % Arial font
 \setlength{\parindent}{16mm} % sangria de 1.6 cm
+\usepackage [latin1]{inputenc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \usepackage[left=3cm,top=3cm,right=3cm,nohead,foot=2.5cm]{geometry}
 \usepackage[left=4cm,top=3cm,right=2cm,nohead,foot=3cm]{geometry}
@@ -44,7 +45,7 @@
 \usepackage{times}
 \usepackage{url}
 \usepackage{pdflscape}
-\usepackage[utf8]{inputenc}
+% \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage{color}
@@ -612,7 +613,7 @@ Desarrollar e implementar una metodología que permita seleccionar los component
 % 
 % 
 \begin{itemize}
-    \item Diseñar un sistema de acondicionamiento de señal para el diodo de InGaAs.
+    \item Diseñar un sistema de acondicionamiento de señal para el diodo de InGaAs utilizando el diodo BPW21R.
     \item Determinar una metodología a partir de las características de los diodos InGaAs para seleccionar los elementos mecánicos.
     \item Justificar a partir de la metodología propuesta los elementos eléctricos y electrónicos que interactuarán en el sistema.
     % \item Comparar el comportamiento del diodo InGaAs con los distintos elementos electrónicos y eléctricos del sistema.
@@ -629,7 +630,7 @@ El período de investigación se llevo acabo a partir de enero de 2022 y se term
 Para empezar con la metodología de una mejor forma se definió el nivel de abstracción inicial para el diseño eléctrico, y mecánico, se realizo una descomposición jerárquica, definiendo la estructura de nuevos niveles jerárquicos, estableciendo los niveles de potencia y control para desarrollar la arquitectura necesaria, y finalmente, seleccionar la tecnología que se va a utilizar.\\
 % 
 % 
-\subsection{Diseño del sistema de acondicionamiento de señal para el diodo de InGaAs}
+\subsection{Diseño del sistema de acondicionamiento de señal para el diodo de InGaAs mediante el diodo BPW21R}
 
 Para realizar el sistema de acondicionamiento de señal, primero se definieron los rangos de operación del diodo y las características que este posee para trabajar bajo distintas condiciones ambientales.
 Para ello se consulto la hoja de datos para obtener el tipo de señal de salida que el diodo envía y que posteriormente será procesada para que se convierta en una señal limpia y que permita tener mínimos errores en la medición.
@@ -638,19 +639,20 @@ Para ello se consulto la hoja de datos para obtener el tipo de señal de salida 
 \subsubsection{Definición del mensurando para la medición de la longitud de onda con el diodo InGaAs}
 
 Para la medición de la longitud de onda se considero al mensurando como la corriente eléctrica que pasa por un foto-diodo de InGaAs, la medición es de manera indirecta debido a las propiedades del sensor que al variar la iluminancia que pasa por el material expuesto se refleja y cambia la longitud de onda en el foto-diodo y su resistencia cambia.
-La resistencia del foto-diodo cambia debido a la iluminancia y al voltaje inducido, dependiendo de esta variación se puede calcular la longitud de onda. 
+La resistencia del foto-diodo cambia debido a la iluminancia y al voltaje inducido, dependiendo de esta variación se puede calcular la longitud de onda.
+Toda la experimentación se realizo con el diodo BPW21R y con los resultados se infirió el adecuado acondicionamiento de señal.
 %
 %
 \subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
 
-De manera general se utilizo un microcontrolador para ejecutar las instrucciones más complejas. 
-Se considero el apartado de potencia puesto que se utilizo cuando menos un motor y una banda transportadora.
 Un microcontrolador es un componente electrónico que en una sola pastilla o circuito integrado incluye la memoria, puertos y algunos periféricos \cite{del1999sistemas}.
 Para la selección de este componente es necesario considerar aspectos de frecuencia de operación, número de entradas y salidas digitales, número de puertos de conversión A/D, número de \textit{TIMERS} disponibles, etc. \cite{del1999sistemas}.
+De manera general se utilizo un microcontrolador para ejecutar las instrucciones más complejas y un PLC para el accionamiento de un motor.
+Se considero el apartado de potencia puesto que se utilizo cuando menos un motor y una banda transportadora.
 Así mismo, se considero el tipo de conectores y elementos necesarios para realizar la etapa de potencia ideal para que el sistema de clasificación funcione correctamente manteniendo la seguridad como premisa principal.
-Dado que se aproximo el funcionamiento del diodo de InGaAs como componente principal para el trabajo de espectroscopia, se considero aquellos factores de ruido que puedan provocar fallas en su funcionamiento, para ello es crucial identificar dichos factores y determinar cual sería la manera más idónea para eliminarlos con el fin de permitir que el diodo y sus futuras etapas de amplificación y de filtrado funcionen correctamente. 
+Dado que se aproximo el funcionamiento del diodo de InGaAs como componente principal para el trabajo de espectroscopia, se determinaron factores de ruido que puedan provocar fallas en su funcionamiento, para ello es crucial identificar dichos factores y determinar cual sería la manera más idónea para eliminarlos con el fin de permitir que el diodo y sus futuras etapas de amplificación y de filtrado funcionen correctamente. 
 Dicha información puede ser consultada mediante la hoja de datos así como cada característica del dispositivo y esto puede ser realizado de manera similar con cada componente que vaya a formar parte del sistema, ya sea en la parte de control o en la parte de potencia.
-Otro factor que se considero fue el correcto funcionamiento de manera diferente en función del entorno que lo rodea puesto que todo semiconductor puede verse afectado en su función debido a la temperatura exterior \cite{malvino1991principios}.
+Otro factor que se considero fue el correcto funcionamiento en función del entorno que lo rodea puesto que todo semiconductor puede verse afectado en su función debido a la temperatura exterior \cite{malvino1991principios}.
 Por ende, fue necesario utilizar instrumentos de medición como voltímetros, amperímetros y osciloscopio.
 % 
 % 
@@ -685,15 +687,15 @@ De manera general se propuso para la parte mecánica del sistema de clasificaci�
 \end{figure}
 % 
 % 
-La determinación de los elementos mencionados se realizo en función de las características de las botellas de PET y de las características del diodo InGaAs.
-Otro factor a considerar para esta metodología es el espacio de los elementos eléctricos y electrónicos que se utilizaran tanto en el funcionamiento del sensor como en el funcionamiento de elementos previamente mencionados como el motor o la banda transportadora, como el fin de que se mantenga una distribución de cables y conexiones discreta y manteniendo el mínimo requerimiento de seguridad.
+La determinación de los elementos mencionados se realizo en función de las características de las botellas de PET y de las características del diodo InGaAs y BPW21R.
+Otro factor a considerar para esta metodología es el espacio de los elementos eléctricos y electrónicos que se utilizaran tanto en el funcionamiento del sensor como en el funcionamiento de elementos previamente mencionados como el motor o la banda transportadora, con el fin de que se mantenga una distribución de cables y conexiones discreta y manteniendo seguridad.
 Se trabajo con el concepto de espectroscopia, se considero como factor la fuente de poder puesto que se requiere de una fuente de luz estable y constante, para ello se propuso una estructura aislada. 
 En ese sentido, dentro de la metodología se indican que factores permiten el aislamiento de la sección de variables externas como la luz y/o las vibraciones que se puedan presentar en otras secciones del sistema.
 % 
 % 
 \subsubsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
 
-Se busco minimizar los factores de ruido que con la interacción de todos los factores anteriormente descritos se obtenga la velocidad máxima y mínima que no afecte la eficiencia en la detección, ver Figura \ref{diseño04} \cite{gutierrez2004analisis}.
+Se busco minimizar los factores de ruido que se provoca con la interacción de todos los factores anteriormente descritos y así se obtenga la velocidad máxima y mínima que no afecte la eficiencia en la detección, ver Figura \ref{diseño04} \cite{gutierrez2004analisis}.
 % 
 % 
 \begin{figure}[H]
@@ -711,13 +713,13 @@ Se busco minimizar los factores de ruido que con la interacción de todos los fa
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 % 
-\subsection{Diseño del sistema de acondicionamiento de señal para el diodo de InGaAs}
-
-En este caso como se busca separar botellas de PET se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre $800\ [nm]$ y $2500\ [nm]$ aunque un rango de entre $800\ [nm]$ y $1100\ [nm]$ es más que suficiente para la detección y diferenciación entre el PET transparente y el de color.
-Esta tecnología en conjunto con una cámara que pueda generar imágenes hiper-espectrales y contenga un dispositivo de carga acoplada puede ser más que suficiente para realizar la clasificación de las botellas de PET \cite{wu2020auto}.
+\subsection{Diseño del sistema de acondicionamiento de señal para el diodo de InGaAs mediante el diodo BPW21R}
 
 Los sensores infrarrojos se basan en fotodiodos que pueden estar construidos a partir de cuatro elementos químicos como el silicio Si, el indio In, el galio Ga o el arsénico As, sin embargo, cabe aclarar que se pueden adquirir fotodiodos hechos a partir de únicamente silicio y fotodiodos construidos a partir arseniuro de indio y galio InGaAs.
 Cada material y fotodiodo tiene un distinto rango de operación ver Figura \ref{NIRRange}, lo cual nos permite decidir que tipo de diodo es el ideal para la tarea que se desea realizar.
+
+En este caso como se busca separar botellas de PET se puede recurrir únicamente a los sensores basados en la espectroscopia de infrarrojo cercano dado que trabaja en la región entre $800\ [nm]$ y $2500\ [nm]$ aunque un rango de entre $800\ [nm]$ y $1100\ [nm]$ es más que suficiente para la detección y diferenciación entre el PET transparente y el de color.
+Esta tecnología en conjunto con una cámara que pueda generar imágenes hiper-espectrales y contenga un dispositivo de carga acoplada puede ser más que suficiente para realizar la clasificación de las botellas de PET \cite{wu2020auto}.
 % 
 %
 \begin{figure}[H]
@@ -726,8 +728,8 @@ Cada material y fotodiodo tiene un distinto rango de operación ver Figura \ref{
     \caption{Rango de operación de los fotodiodos InGaAs \cite{kk2015ingaas}.}
     \label{NIRRange}
 \end{figure}
-%
-%
+% 
+% 
 Basándonos en la gráfica de la Figura \ref{NIRRange} y en el hecho de que el rango necesario para detectar los colores del PET es de entre los $800\ [nm]$ y $1100\ [nm]$ podemos asumir que un fotodiodo de silicio correspondiente al tipo S1337-BR \cite{kk2015ingaas} es suficiente para el sistema en cuestión, sin embargo, se debe considerar la frecuencia a la cual va a operar el sistema, el área fotosensible que ofrece el sensor y la variedad de modelos que se disponen, considerando estos factores es más factible utilizar un diodo construido a base de arseniuro de indio y galio.
 % 
 %
@@ -821,20 +823,20 @@ En la Tabla \ref{G10899CAS} y Tabla \ref{G12180CAS} se muestran los modelos que 
 %
 \subsection{Justificación de una metodología para los elementos eléctricos y electrónicos del sistema}
 
-Para poder describir esta sección resaltamos que se requiere automatizar un sistema que identifique botellas PET que pasan por una banda transportadora y que posteriormente son expulsadas por un sistema neumático.
+Para poder describir esta sección resaltamos que se requiere automatizar un sistema que identifique botellas PET que pasan por una banda transportadora y que posteriormente sean expulsadas por un sistema neumático.
 Para controlar las electroválvulas se requiere de un circuito de potencia relativamente simple y que permita manejar dos voltajes diferentes, uno de $5\ [V]$ para la entrada y otro de $24\ [V]$ para la activación de las bobinas de las electroválvulas.
 Dicho circuito puede ser realizado con un modulo de relevadores los cuales típicamente manejan voltajes de entre $5\ [V]$ y $30\ [V]$ de corriente directa y de $125\ [V]$ a $250\ [V]$ de corriente alterna con corrientes de hasta $10\ [A]$. 
 El control se puede realizar con un FPGA o bien con una tarjeta STM32F4 las cuales poseen características similares a las de un microcontrolador PIC de microchip pero con una mayor capacidad de memoria y frecuencia de trabajo que la harían apta para esta aplicación. 
-Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $82$ dolares que equivalen a $1412.75$ pesos mexicanos en precio de estudiante \cite{TerasicFPGA}, en precio para todo publico son $140$ dolares que equivalen a $2412.00$ pesos mexicanos \cite{TerasicFPGA} mientras que el precio de la Nucleo STM32F446 es de $14.90$ dolares que equivalen a $256.71$ pesos mexicanos \cite{STMElectronics}, esto sin contar los costos de envío.
+Otro factor a considerar es el precio, el costo de la FPGA De-10 Lite es de $82$ dolares que equivalen a $1412.75$ pesos mexicanos en precio de estudiante \cite{TerasicFPGA}, versus el precio para publico en general que ronda los $140$ dolares que equivalen a $2412.00$ pesos mexicanos \cite{TerasicFPGA} mientras que el precio de la Nucleo STM32F446 es de $14.90$ dolares que equivalen a $256.71$ pesos mexicanos \cite{STMElectronics}, esto sin contar los costos de envío.
 % 
 % 
 \subsubsection{BPW21R como método de aproximación al comportamiento del diodo InGaAs}
 
 Con la finalidad de obtener un acercamiento al comportamiento del diodo InGaAs, se realizaron pruebas con el circuito diseñado y propuesto para operar y acondicionar la señal de dicho diodo, esto se realizó con un diodo \textbf{BPW21R}.
 
-El \textbf{BPW21R} es un fotodiodo de silicio de tipo PN con un sellado hermético en un formato TO-5, especialmente diseñado para aplicaciones de alta precisión y lineales \cite{bpw21r2006vishay}.
-
 Los fotodiodos son dispositivos sensibles a la luz, dependiendo de la cantidad de luz que reciban y el ángulo de entrada de la misma al sensor de captura, la corriente que emite el fotodiodo será mayor o menor.
+
+El \textbf{BPW21R} es un fotodiodo de silicio de tipo PN con un sellado hermético en un formato TO-5, especialmente diseñado para aplicaciones de alta precisión y lineales \cite{bpw21r2006vishay}.
 % 
 % 
 {\renewcommand{\baselinestretch}{1.15}
@@ -907,13 +909,14 @@ En la Tabla \ref{OpticproBPW21R} se observa el parámetro \textbf{Reverse Light 
 \end{equation}
 % 
 % 
-Donde se observa a $[I_{ph}]$ que es el parte de la corriente de salida que emite el diodo debido a que esta captando luz. Dada la Tabla \ref{OpticproBPW21R}, el valor de la \textbf{Reverse Light Current} es de $9\ [{\mu A}]$ como valor típico \cite{bpw21r2006vishay}, resultado de la suma de la \textbf{Reverse Dark Current} y de la \textbf{Photocurrent} $[I_{ph}]$.
+Donde se observa a $[I_{ph}]$ que es el parte de la corriente de salida que emite el diodo debido a que esta captando luz. 
+Dada la Tabla \ref{OpticproBPW21R}, el valor de la \textbf{Reverse Light Current} es de $9\ [{\mu A}]$ como valor típico \cite{bpw21r2006vishay}, resultado de la suma de la \textbf{Reverse Dark Current} y de la \textbf{Photocurrent} $[I_{ph}]$.
 Este valor se comprobó mediante la experimentación dado que con una resistencia de $1\ [M\Omega]$, se obtuvieron $8\ [V]$ a la salida de un amplificador de transimpedancia, con lo cual, al aplicar ley de Ohm, se obtiene un valor de corriente de aproximadamente $8\ [{\mu A}]$.
 % 
 % 
 \subsubsection{Justificación para implementar un amplificador de transimpedancia}
 
-Para la experimentación se establecio trabajar con el diodo BPW21R para aproximar el funcionamiento del InGaAs porque su funcionamiento son similares pero su costo del BPW21R es asequible para está tesis.
+Para la experimentación se estableció trabajar con el diodo BPW21R para aproximar el funcionamiento del InGaAs porque su funcionamiento son similares pero su costo del BPW21R es asequible para está tesis.
 Consideramos el siguiente componente para la experimentación;
 Un amplificador de transimpedancia, es un tipo de configuración desarrollada para un amplificador operacional que permite tener una corriente en la entrada y obtener un voltaje equivalente en cierta proporción a la salida del amplificador.
 Acorde a la Figura \ref{fig:TIMPOPAMP}, el funcionamiento del amplificador de transimpedancia en conjunto con el BPW21R comienza con la obtención de la corriente que fluye a través del fotodiodo como resultado de la captación de luz.
@@ -930,10 +933,6 @@ Acorde a la Figura \ref{fig:TIMPOPAMP}, el funcionamiento del amplificador de tr
 Por regla general se sabe que idealmente las entradas del amplificador operacional tienden a tener el mismo voltaje, es por eso que una resistencia es colocada en realimentación, por que se busca que el voltaje en una de las terminales sea de $0V$ con el fin de que el análisis del circuito se reduzca al comportamiento de la ley de Ohm.
 
 Esto se explica suponiendo que el fotodiodo emite una corriente de $1\ [{\mu A}]$, entonces si suministramos un voltaje de $1\ [V]$ que fluye a través de una resistencia de $1\ [M\Omega]$, al llegar al mismo nodo esas corrientes se ''anulan'', provocando que el voltaje en la entrada inversora del amplificador operacional sea de $0\ [V]$.
-
-Se optó por utilizar un amplificador de transimpedacia porque los valores de corriente que se pueden obtener del fotodiodo de prueba BPW21R y posiblemente del diodo de InGaAs, son del orden de los nanoamperios y microamperios.
-Se podría optar por utilizar un amplificador operacional en configuración de seguidor de voltaje teniendo una resistencia conocida, sin embargo, el problema es el mismo, al tratarse de una corriente muy pequeña y utilizar una resistencia muy grande únicamente en la entrada del OPAMP, se tienen problemas de impedancia que resultan en un mal funcionamiento del circuito debido a oscilaciones que resultan de las propias características del OPAMP.
-Estas oscilaciones también se dan en el amplificador de transimpedancia, pero son más sencillas de controlar mediante la adición de capacitores tanto en la realimentación del OPAMP, como en las propias terminales de alimentación o en paralelo con el fotodiodo.
 %
 %
 \subsection{Metodología aplicada para el desarrollo de pruebas en el fotodiodo BPW21R}
@@ -944,7 +943,7 @@ Como parte de la metodología desarrollada y aplicada a este trabajo, fue necesa
 \subsubsection{Primera etapa: Diseño}
 
 El diseño consistió en la investigación u obtención de datos, análisis y conclusiones de toda la documentación relacionada a cada uno de los elementos y conceptos que formaron parte del sistema que se buscó obtener con el fin de poder trabajar adecuadamente con el fotodiodo BPW21R. 
-En este caso, dicha documentación consistió en hojas de datos e información sobre amplificadores operacionales, sensores ADC haciendo énfasis en sus propiedades como frecuencia de operación, resolución, condiciones de operación y en como estas características se veían afectadas o afectaban al componente encargado de controlar y obtener los datos de dicho dispositivo que, para este trabajo, se utilizó un modulo ESP-WROOM-32 que tiene un precio de 200 pesos mexicanos que trabajara en complemento a un ADS1115, un ADC de 16-bit de resolución, de un precio de 200 pesos mexicanos.
+En este caso, dicha documentación consistió en hojas de datos e información sobre amplificadores operacionales, sensores ADC haciendo énfasis en sus propiedades como frecuencia de operación, resolución, condiciones de operación y en como estas características se veían afectadas o afectaban al componente encargado de controlar y obtener los datos de dicho dispositivo que, para este trabajo, se utilizó un modulo ESP-WROOM-32 que tiene un precio de 200 pesos mexicanos que trabajara en complemento con un ADS1115, un ADC de 16-bit de resolución, de un precio de 200 pesos mexicanos.
 
 Con base en la etapa de diseño se obtuvo el diseño preliminar que se muestra en la Figura \ref{fig:TIADiseño} para el amplificador de transimpedancia:
 % 
@@ -958,7 +957,7 @@ Con base en la etapa de diseño se obtuvo el diseño preliminar que se muestra e
 % 
 % 
 Como se mencionó previamente, el amplificador de trasimpedancia tiende a ser inestable en función de la frecuencia de operación.
-Considerando que las condiciones bajo las cuales estará operando el fotodiodo requieren ser de alta frecuencia, es necesario realizar ajustes para mitigar lo mejor posible estos factores y esto se realizó de 2 maneras.
+Considerando que las condiciones bajo las cuales estará operando el fotodiodo requieren ser de alta frecuencia, es necesario realizar ajustes para mitigar lo mejor posible estos factores y esto se realizó de dos maneras.
 La primera simplemente consistió en añadir un capacitor en la retroalimentación del circuito y otro en paralelo al fotodiodo, únicamente para tener una señal más limpia y evitar la inestabilidad del OPAMP.
 Para la segunda manera se agregó una sección en la entrada no inversora del OPAMP para evitar su saturación, esto debido a que se sigue una configuración denominada \textit{rail-to-rail}, esta configuración se da cuando se usan voltajes muy cercanos al voltaje de alimentación. 
 Mediante el arreglo de las resistencias $R_1$ y $R_2$ y el capacitor $C_2$ se mantiene un voltaje de referencia del orden de los milivoltios, lo cual evitará que el OPAMP llegue o sobrepase el límite que lo pondría en saturación.
@@ -966,6 +965,7 @@ Este procedimiento también se puede realizar para cuando se requiera evitar que
 %
 %
 \subsubsection{Segunda etapa: Implementación}
+
 La primera implementación se realizó de manera simulada utilizando el software \textbf{Multisim}, mediante la simulación se obtuvieron resultados que permitieron observar el comportamiento ideal del sistema de acondicionamiento de señal para el fotodiodo.
 Lo más destacable de estos resultados es que debido a que el fotodiodo se esta utilizando en polarización inversa tiende a ser más sensible ante la luz entrante y, en consecuencia, emitir corrientes de $27\ [{\mu A}]$ que son tres veces mayores a las indicadas en la hoja de datos, considerando que el ADC ADS1115 soporta máximo un voltaje de entrada de $5\ [V]$ fue necesario utilizar un divisor de voltaje a la salida del amplificador de trasimpedancia para poder utilizar adecuadamente este elemento.
 
@@ -987,30 +987,29 @@ En su lugar, se incluyó un capacitor de desacoplo para el OPAMP, esto se realiz
 %
 %
 \subsubsection{Tercera etapa: Ejecución}
+
 Como se mencionó previamente, la ejecución se realizó de dos maneras; simulada en el software \textbf{Multisim} y física en una placa de pruebas o protoboard.
 
-Ambas ejecuciones arrojaron resultados muy similares, obviamente una simulación considera un entorno ideal para el circuito, con lo cual, afectaciones climáticas o de ruido no son del todo visibles en este apartado, sin embargo, permitió obtener un panorama más claro de los elementos que se pueden y no seleccionar para este trabajo.
-
+Ambas ejecuciones arrojaron resultados muy similares, obviamente una simulación considera un entorno ideal para el circuito, con lo cual, las afectaciones climáticas o de ruido no son del todo visibles en este apartado, sin embargo, permitió obtener un panorama más claro de los elementos que se pueden y no seleccionar para este trabajo.
 %
 %
 \subsection{Justificación de los componentes seleccionados para el sistema de acondicionamiento de señal}
+
 \subsubsection{Etapa 1: ESP-WROOM-32 y ADS1115 como medios de captura y procesamiento}
+
 En un primer momento se considero el uso de una FPGA o un STM32 para realizar la tarea de lectura, captura y procesamiento de la señal ADC, sin embargo, conforme se trabajó en el proyecto se propuso implementar el internet de las cosas o mejor conocido como IoT.
 Esto conllevó a buscar un dispositivo que combinara capacidad de puertos y velocidad de procesamiento con disponibilidad de comunicación WiFi, y esta busqueda culminó con la tarjeta ESP-WROOM-32.
 
-NodeMCU-32 es el nombre real de este modulo, sin embargo, se le llama ESP-WROOM-32 por que es el procesador que opera dicha tarjeta, esta misma provee de 25 puertos de entrada y salida digital que pueden ser utilizados como puertos ADC o como puertos de comunicación I$^{2}$C, SPI, RS232, etc. Su procesador puede ser configurado para trabajar en frecuencias de entre $80\ [MHz]$ y $240\ [MHz]$ y posee la capacidad de utilizar tecnología WiFi y Bluetooth sin necesidad de incorporar modulos externos.
+NodeMCU-32 es el nombre real de este modulo, sin embargo, se le llama ESP-WROOM-32 por que es el procesador que opera dicha tarjeta, esta misma provee de 25 puertos de entrada y salida digital que pueden ser utilizados como puertos ADC o como puertos de comunicación I$^{2}$C, SPI, RS232, etc. 
+Su procesador puede ser configurado para trabajar en frecuencias de entre $80\ [MHz]$ y $240\ [MHz]$ y posee la capacidad de utilizar tecnología WiFi y Bluetooth sin necesidad de incorporar módulos externos.
 
 Por otro lado, el ADS1115 se selecciono dado que se requiere realizar lecturas de voltaje precisas y continuas, si bien es cierto que la propia ESP32 tiene esta capacidad, el ADS1115 ofrece una resolución de 16-bits, esto nos permite leer valores del orden de los $200\ [mV]$ y esto pudo ser comprobado fácilmente durante la experimentación física.
 
-En conclusión, estos elementos fueron seleccionados dadas las necesidades que requiere utilizar IoT y la precisión de este trabajo.
-
-Por otro lado, el ADS1115 se selecciono dado que se requiere realizar lecturas de voltaje precisas y continuas, si bien es cierto que la propia ESP32 tiene esta capacidad, el ADS1115 ofrece una resolución de 16-bits, esto nos permite leer valores del orden de los $200\ [mV]$ y esto pudo ser comprobado fácilmente durante la experimentación física.
-
-En conclusión, estos elementos fueron seleccionados dadas las necesidades que requiere utilizar IoT y la precisión de este trabajo.
-
+A modo de conclusión, estos elementos fueron seleccionados dadas las necesidades que requiere utilizar IoT y la precisión de este trabajo.
 %
 %
 \subsubsection{Etapa 2: Alimentación del acondicionador de señal}
+
 Para la alimentación del circuito se requirió utilizar de dos convertidores DC-DC tipo Buck para los respectivos voltajes que se utilizan en el PCB, en este caso se utilizó uno denotado como $V_{REF}$ y otro denotado como $VCC_{OPAMP}$ respectivamente; el primero funciona para las referencias de voltaje de los amplificadores operacionales que se utilizaron en el circuito y el segundo para la alimentación los mismos tal y como se muestra en la Figura \ref{fig:SignalCSE2}.
 % 
 % 
@@ -1026,7 +1025,8 @@ Se pudo haber diseñado un convertidor DC-DC síncrono tipo Buck utilizando tran
 %
 %
 \subsubsection{Etapa 3: Amplificador de trasimpedancia}
-En la Figura \ref{fig:SignalCSE3} se observa el diseño del amplificador de trasimpedancia que se obtuvo tanto a partir de la teoria como de la experimentación que permitió basarse en prueba y error.
+
+En la Figura \ref{fig:SignalCSE3} se observa el diseño del amplificador de trasimpedancia que se obtuvo tanto a partir de la teoría como de la experimentación que permitió basarse en prueba y error.
 En un principio se contempló el uso de transistores JFET como medio de protección del circuito y como limitante para evitar la saturación hacía el polo positivo del OPAMP, pero esto fue rápidamente descartado puesto que esta técnica es recomendable para cuando se trabajará con voltajes de nivel TTL, es decir, $3.3\ [V]$ y para este proyecto esa no fue la intención dado que el suministro de energía no es una limitante.
 
 Como se mencionó previamente, los capacitores funcionan como medios estabilizadores del circuito ya que esta aplicación de los amplificadores operacionales tiende a ser particularmente inestable debido al tipo de señal que se esta manejando.
@@ -1047,9 +1047,10 @@ Esencialmente, son los capacitores $C_{1}$ y $C_{F}$ los que se encargan de real
 %
 %
 \subsubsection{Etapa 4: Comparador unitario}
+
 Un comparador es un elemento electrónico que permite obtener dos señales en las entradas del OPAMP y en función de su valor emitir una salida en alto o en bajo, esto se realiza para cuando se busca "digitalizar" una señal.
 
-En este caso lo que realizar el circuito de la Figura \ref{fig:SignalCSE4} es comparar la señal de salida del divisor de voltaje realizado en la etapa previa con una referencia de voltaje fija que se conecta en la entrada inversora del OPAMP, si la señal del divisor de voltaje de la etapa previa es mayor a la referencia de la entrada inversora entonces la salida del OPAMP será de $3.3\ [V]$ gracias al divisor de voltaje en la salida del mismo, en caso contrario será de $0\ [V]$ idealmente, aunque en la simulación y experimentación se obtuvieron valores de $35\ [mV]$.
+En este caso lo que se realizo fue el circuito de la Figura \ref{fig:SignalCSE4} que compara la señal de salida del divisor de voltaje realizado en la etapa previa con una referencia de voltaje fija que se conecta en la entrada inversora del OPAMP, si la señal del divisor de voltaje de la etapa previa es mayor a la referencia de la entrada inversora entonces la salida del OPAMP será de $3.3\ [V]$ gracias al divisor de voltaje en la salida del mismo, en caso contrario será de $0\ [V]$ idealmente, aunque en la simulación y experimentación se obtuvieron valores de $35\ [mV]$.
 % 
 % 
 \begin{figure}[H]
@@ -1060,11 +1061,13 @@ En este caso lo que realizar el circuito de la Figura \ref{fig:SignalCSE4} es co
 \end{figure}
 % 
 % 
-Se optó por utilizar el LM311 porque aunque es posible tomar cualquier OPAMP y configurarlo como comparador, es mejor utilizar uno que este diseñado específicamente para esta tarea, de esta forma se evitan errores en el diseño y/o utilzar alimentaciones negativas.
+Se optó por utilizar el LM311 porque aunque es posible tomar cualquier OPAMP y configurarlo como comparador, es mejor utilizar uno que este diseñado específicamente para esta tarea, de esta forma se evitan errores en el diseño y/o utilizar alimentaciones negativas.
 %
 %
 \subsubsection{Etapa 5: Comparadores en configuración de doble limite}
-La Figura \ref{fig:SignalCSE5} muestra la configuración necesaria para disponer de un circuito comparador que maneje dos límites. Previamente en la etapa 4 se observó el circuito comparador básico, donde se tiene una entrada variable y una referencia fija, dado que para este proyecto el voltaje de salida del amplificador de trasimpedancia varia mucho y en pequeña medida debido a la corriente emitida por el fotodiodo, fue necesario utilizar esta configuración de doble límite para colocar rangos de voltaje de detección dentro de los cuales los OPAMPs enviarán $3.3\ [V]$ o $35\ [mV]$ sea el caso correspondiente.
+
+La Figura \ref{fig:SignalCSE5} muestra la configuración necesaria para disponer de un circuito comparador que maneje dos límites. 
+Previamente en la etapa 4 se observó el circuito comparador básico, donde se tiene una entrada variable y una referencia fija, dado que para este proyecto el voltaje de salida del amplificador de trasimpedancia varia mucho y en pequeña medida debido a la corriente emitida por el fotodiodo, fue necesario utilizar esta configuración de doble límite para colocar rangos de voltaje de detección dentro de los cuales los OPAMPs enviarán $3.3\ [V]$ o $35\ [mV]$ sea el caso correspondiente.
 % 
 % 
 \begin{figure}[H]
@@ -1075,10 +1078,11 @@ La Figura \ref{fig:SignalCSE5} muestra la configuración necesaria para disponer
 \end{figure}
 % 
 % 
-A pesar de que hay circuitos integrados que contienen 2 o hasta 4 comparadores en un solo elemento como el LM339, considere adecuado seguir utilizando comparadores individuales para esta tarea simplemente por cuestiones de diseño y disposición de los elementos en el PCB.
+A pesar de que hay circuitos integrados que contienen dos o hasta cuatro comparadores en un solo elemento como el LM339, considere adecuado seguir utilizando comparadores individuales para esta tarea simplemente por cuestiones de diseño y disposición de los elementos en el PCB.
 %
 %
 \subsubsection{Etapa 6: Implementación de un PCB para el circuito}
+
 En la Figura \ref{fig:SignalCSE6.1} y la Figura \ref{fig:SignalCSE6.2} se observan las vistas correspondientes a la capa superior e inferior respectivamente del PCB diseñado para este sistema acondicionador de señal.
 % 
 % 
@@ -1138,138 +1142,8 @@ Las pistas de alimentación del convertidor DC-DC tipo Buck son de $30\ [mils]$ 
 \end{adjustwidth}
 \end{table}
 }
-%
-%
-\subsubsection{Etapa 2: Alimentación del acondicionador de señal}
-Para la alimentación del circuito se requirió utilizar de dos convertidores DC-DC tipo Buck para los respectivos voltajes que se utilizan en el PCB, en este caso se utilizó uno denotado como $V_{REF}$ y otro denotado como $VCC_{OPAMP}$ respectivamente; el primero funciona para las referencias de voltaje de los amplificadores operacionales que se utilizaron en el circuito y el segundo para la alimentación los mismos tal y como se muestra en la Figura \ref{fig:SignalCSE2}.
 % 
 % 
-\begin{figure}[H]
-    \centering
-     \includegraphics[trim = {40mm 190mm 40mm 40mm},clip,scale=1]{img/Etapa2_Alimentacion.pdf}
-    \caption{Diagrama de conexiones de la etapa 2 para el PCB}
-    \label{fig:SignalCSE2}
-\end{figure}
-% 
-% 
-Se pudo haber diseñado un convertidor DC-DC síncrono tipo Buck utilizando transistores tipo MOSFET, pero esto requería generar un PWM de al menos $100\ [kHz]$ de frecuencia para conmutar los transistores y utilizar pines de la ESP32 como realimentación del convertidor con el fin de evitar que el voltaje de salida suba o baje en función de la carga, pero esto conllevaba a utilizar más espacio en el PCB y más recursos que al final del día se ven reflejados en este modulo pero de una forma sintetizada ya que utiliza el LM2596 que prácticamente realiza la tarea mencionada anteriormente por su cuenta.
-%
-%
-\subsubsection{Etapa 3: Amplificador de trasimpedancia}
-En la Figura \ref{fig:SignalCSE3} se observa el diseño del amplificador de trasimpedancia que se obtuvo tanto a partir de la teoria como de la experimentación que permitió basarse en prueba y error.
-En un principio se contempló el uso de transistores JFET como medio de protección del circuito y como limitante para evitar la saturación hacía el polo positivo del OPAMP, pero esto fue rápidamente descartado puesto que esta técnica es recomendable para cuando se trabajará con voltajes de nivel TTL, es decir, $3.3\ [V]$ y para este proyecto esa no fue la intención dado que el suministro de energía no es una limitante.
-
-Como se mencionó previamente, los capacitores funcionan como medios estabilizadores del circuito ya que esta aplicación de los amplificadores operacionales tiende a ser particularmente inestable debido al tipo de señal que se esta manejando.
-Lo anterior resulta más claro cuando se entiende que en un OPAMP idealmente no hay flujo de corriente a través de sus terminales y es por ello que estos dispositivos tratan de que el voltaje en sus terminales de entrada sea el mismo.
-
-Esto conlleva a que al utilizar un dispositivo que emite una señal de corriente y no de voltaje en función de la luz, se requiera tener particular cuidado al momento de operar este circuito en altas frecuencias, es por ello que se seleccionó el TLC272, un OPAMP de tipo rail-to-rail con una alta impedancia en sus entradas lo cual garantiza dos cosas: evitar el uso de una alimentación de voltaje negativa y que la corriente no fluya a través de las terminales del OPAMP.
-% 
-% 
-\begin{figure}[H]
-    \centering
-     \includegraphics[trim = {40mm 130mm 40mm 40mm},clip,scale=1]{img/TIA_FinalDesign.pdf}
-    \caption{Diagrama de conexiones de la etapa 3 para el PCB}
-    \label{fig:SignalCSE3}
-\end{figure}
-% 
-% 
-Esencialmente, son los capacitores $C_{1}$ y $C_{F}$ los que se encargan de realizar esta tarea de estabilización, aunque el arreglo de resistencias y capacitores que sirve como limite en la entrada no inversora del OPAMP también impactan en este ámbito.
-%
-%
-\subsubsection{Etapa 4: Comparador unitario}
-Un comparador es un elemento electrónico que permite obtener dos señales en las entradas del OPAMP y en función de su valor emitir una salida en alto o en bajo, esto se realiza para cuando se busca "digitalizar" una señal.
-
-En este caso lo que realizar el circuito de la Figura \ref{fig:SignalCSE4} es comparar la señal de salida del divisor de voltaje realizado en la etapa previa con una referencia de voltaje fija que se conecta en la entrada inversora del OPAMP, si la señal del divisor de voltaje de la etapa previa es mayor a la referencia de la entrada inversora entonces la salida del OPAMP será de $3.3\ [V]$ gracias al divisor de voltaje en la salida del mismo, en caso contrario será de $0\ [V]$ idealmente, aunque en la simulación y experimentación se obtuvieron valores de $35\ [mV]$.
-% 
-% 
-\begin{figure}[H]
-    \centering
-     \includegraphics[trim = {40mm 180mm 40mm 40mm},clip,scale=1]{img/TIA_Etapa4.pdf}
-    \caption{Diagrama de conexiones de la etapa 4 para el PCB}
-    \label{fig:SignalCSE4}
-\end{figure}
-% 
-% 
-Se optó por utilizar el LM311 porque aunque es posible tomar cualquier OPAMP y configurarlo como comparador, es mejor utilizar uno que este diseñado específicamente para esta tarea, de esta forma se evitan errores en el diseño y/o utilzar alimentaciones negativas.
-%
-%
-\subsubsection{Etapa 5: Comparadores en configuración de doble limite}
-La Figura \ref{fig:SignalCSE5} muestra la configuración necesaria para disponer de un circuito comparador que maneje dos límites. Previamente en la etapa 4 se observó el circuito comparador básico, donde se tiene una entrada variable y una referencia fija, dado que para este proyecto el voltaje de salida del amplificador de trasimpedancia varia mucho y en pequeña medida debido a la corriente emitida por el fotodiodo, fue necesario utilizar esta configuración de doble límite para colocar rangos de voltaje de detección dentro de los cuales los OPAMPs enviarán $3.3\ [V]$ o $35\ [mV]$ sea el caso correspondiente.
-% 
-% 
-\begin{figure}[H]
-    \centering
-     \includegraphics[trim = {40mm 145mm 40mm 40mm},clip,scale=1]{img/TIA_Etapa5.pdf}
-    \caption{Diagrama de conexiones de la etapa 5 para el PCB}
-    \label{fig:SignalCSE5}
-\end{figure}
-% 
-% 
-A pesar de que hay circuitos integrados que contienen 2 o hasta 4 comparadores en un solo elemento como el LM339, considere adecuado seguir utilizando comparadores individuales para esta tarea simplemente por cuestiones de diseño y disposición de los elementos en el PCB.
-%
-%
-\subsubsection{Etapa 6: Implementación de un PCB para el circuito}
-En la Figura \ref{fig:SignalCSE6.1} y la Figura \ref{fig:SignalCSE6.2} se observan las vistas correspondientes a la capa superior e inferior respectivamente del PCB diseñado para este sistema acondicionador de señal.
-% 
-% 
-\begin{figure}[H]
-    \centering
-     \includegraphics[trim = {40mm 135mm 40mm 40mm},clip,scale=1]{img/PCB_TOPLAYER.pdf}
-    \caption{Capa superior del PCB}
-    \label{fig:SignalCSE6.1}
-\end{figure}
-% 
-%
-Se decidió realizar en dos capas porque aunque se hiciera un plano de tierra común era muy complicado evitar que las pistas se encontraran demasiado cercas unas de otras.
-% 
-% 
-\begin{figure}[H]
-    \centering
-     \includegraphics[trim = {40mm 135mm 40mm 40mm},clip,scale=1]{img/PCB_BOTTOMLAYER.pdf}
-    \caption{Capa inferior del PCB}
-    \label{fig:SignalCSE6.2}
-\end{figure}
-% 
-% 
-Las pistas de alimentación del convertidor DC-DC tipo Buck son de $30\ [mils]$ que equivalen a $0.762\ [mm]$, y las pistas que transfieren la señal del fotodiodo, los divisores de voltaje, las salidas de los comparadores y las alimentaciones de todos los amplificadores operacionales utilizados son de $15\ [mils]$ que equivalen a $0.381\ [mm]$, esto se realizó en función de la siguiente tabla:
-%
-%
-{\renewcommand{\baselinestretch}{1.12}
-\begin{table}[H]
-    \centering
-    \caption{Ancho de la pista del PCB \cite{AltiumPCBTraceWidht}.}
-    \label{PCBAnchoPista}
-    \begin{adjustwidth}{4cm}{0cm}
-    \begin{tabular}{|c|c|}
-    \hline
-        Corriente $[A]$ & Ancho la pista $[mils]$ \\
-    \hline
-        $1\ [A]$ & $10\ [mils]$ \\
-    \hline
-        $2\ [A]$ & $30\ [mils]$ \\
-    \hline
-        $3\ [A]$ & $50\ [mils]$ \\
-    \hline
-        $4\ [A]$ & $80\ [mils]$ \\
-    \hline
-        $5\ [A]$ & $110\ [mils]$ \\
-    \hline
-        $6\ [A]$ & $150\ [mils]$ \\
-    \hline
-        $7\ [A]$ & $180\ [mils]$ \\
-    \hline
-        $8\ [A]$ & $220\ [mils]$ \\
-    \hline
-        $9\ [A]$ & $260\ [mils]$ \\
-    \hline
-        $10\ [A]$ & $300\ [mils]$ \\
-    \hline
-\end{tabular} 
-\end{adjustwidth}
-\end{table}
-}
-%
-%
 \subsection{Determinación de una metodología mediante las características del diodo InGaAs para seleccionar los elementos mecánicos}
 
 Finalmente para la parte que se encargará en forma de separar las botellas de PET se propone la implementación de pistones neumáticos.
@@ -1292,8 +1166,8 @@ En la figura \ref{fig:MOTOREDUCTOR} se ilustra el moto reductor que se utilizo, 
 \end{figure}
 % 
 % 
-En las figuras \ref{fig:MOTOR_ConnectionDiag} y \ref{fig:MOTOR_ConnectionPDiag2}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor.
-Consta de 5 botones; 2 botones habilitadores de cada motor que son parte del PLC, 2 botones para indicar el giro del motor y 1 botón de paro total.
+En las figuras \ref{fig:MOTOR_ConnectionDiag} y \ref{fig:MOTOR_ConnectionPDiag2}, se ilustra el procedimiento que se llevo para la conexión y puesta en marcha del moto-reductor. 
+Consta de cinco botones; dos botones habilitadores de cada motor que son parte del PLC, dos botones para indicar el giro del motor y un botón de paro total.
 % 
 % 
 %############################################
@@ -1343,10 +1217,11 @@ Dos botones de dos polos dos tiros para dar pulsos ya sea de frente o de reversa
 
 Para que la experimentación y la adquisición de todos los datos se desarrollo una página web que junto con el servidor del PLC funcionan para activar y desactivar los motores de la banda transportadora y del sistema de identificación.
 Por recomendación del fabricante, se recomienda utilizar el navegador web Firefox.
-En la Tabla \ref{tab:motor_DB} se detallan los tipos de variables que se utilizaron para el motor 1 y para el motor 2.
-Físicamente cada PLC tiene un numero limitado de entradas y eso dificulta la automatización cuando se requieren de muchas entradas. 
+En la Tabla \ref{tab:motor_DB} se detallan los tipos de variables que se utilizaron para el motor uno y para el motor dos.
+Físicamente cada PLC tiene un número limitado de entradas y eso dificulta la automatización cuando se requieren de muchas entradas. 
 La finalidad principal de hacer una pagina web para controlar las entradas de los motores es por las ventajas que proporciona al poder definir n cantidad de entradas y procesar esa información internamente con el PLC. 
 En la Tabla \ref{tab:TestDB} se describen las catorce entradas que utiliza el sistema mecánico para funcionar.
+Para ver los códigos utilizados para la puesta en marcha véase los Apéndices del \ref{listing:html} al \ref{listing:motor2}.
 % 
 % 
 {\renewcommand{\baselinestretch}{1.15}
@@ -1648,6 +1523,35 @@ En la Figura \ref{fig:FB_network-2} se describe la acción que se toma una vez q
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 % 
+\newpage
+\centering{\section{    DISCUSIÓN}}
+\justifying
+
+Para poder identificar si los elementos son los adecuados.
+Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de PET a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
+Con esto y teniendo en cuenta que la clasificación en la sección de sensores de realizara de botella en botella entonces el peso en la banda transportadora no pasaría de 5kg, por ende, no es necesario recurrir a un motor muy potente ni a una tensión alta en la banda para poder desplazar el contenido.
+
+Por otro lado, suponiendo de que las botellas caerán a través de un embudo a la banda transportadora entonces se debe considerar por mera seguridad que estás salgan eyectadas hacía los laterales, siendo este el caso se deben colocar paredes de un metal que sea ligero pero lo suficientemente resistente para que no se deforme debido a los impactos y permita que las botellas se mantengan dentro de la banda transportadora en todo momento. 
+Para ello se podría usar aluminio como material principal dado que es un metal que si bien no se vende puro sino en aleación con algún otro metal sigue siendo barato y ligero en comparación con otros metales como el acero, de esta manera el costo no se elevaría demasiado y se sigue manteniendo el factor de seguridad.
+
+La segunda sección de la banda transportadora sería la sección de identificación la cual se puede realizar mediante sensores o cámaras o una combinación de ambos dispositivos, en cualquiera de los casos el sistema empleado debe ser capaz de clasificar las botellas de manera rápida con el fin de tener una tasa mínima de tres botellas por minuto.
+
+Después de la sección de identificación sigue la sección de clasificación en la cual las botellas serán removidas de la banda transportadora y pasarán a contenedores en función de sus características previamente identificadas.
+Esta clasificación puede realizarse mediante pistones neumáticos que se accionen mediante sus respectivas electroválvulas, las cuales son fáciles de controlar puesto que únicamente se activarían si las características de la botella identificadas en la sección previa cumplen con lo estipulado.
+Para esta última parte se debe considerar que se requiere de un suministro constante de aire comprimido para los pistones neumáticos, está presión debe ser de al menos $0.08MPa$, a menos que se requiera un control más estricto sobre el accionamiento se pueden utilizar pistones de simple efecto con retorno de muelle, de lo contrario se debe optar por pistones de doble efecto para controlar tanto el accionamiento como el regreso mediante un electroválvula de $\frac{5}{2}$ monoestable.
+% 
+%
+\subsection{Trabajos futuros}
+
+\subsubsection{Análisis de componentes principales para la identificación de los elementos}
+
+PCA analiza los elementos principales de múltiples características, exponiendo su naturaleza y resaltando sus principales características, acortando las dimensiones de los datos. 
+Para este trabajo se considero trabajar con PCA pero por falta de presupuesto se considera para trabajos futuros.
+El método de PCA se utiliría para explicar la cantidad máxima de varianza con el menor número de componentes.
+% PCA establecerá un método para disminuir la dimensión de los datos.
+El análisis de componentes principales se utilizo para describir la variación en los conjuntos de variables correlacionadas reduciendo la complejidad ayudando a la interpretación de los datos y la reducción del ruido o variables que se tienen que monitorear.
+% 
+% 
 \subsubsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
 
 El diseño de experimentos que se propone consistió en determinar la distancia y rango de trabajo del sistema.
@@ -1847,35 +1751,12 @@ En la Tabla \ref{table:DOE_1a} se resume la tabla que almacenaría los resultado
 % 
 % 
 \newpage
-\centering{\section{    DISCUSIÓN}}
-\justifying
-
-Para poder identificar si los elementos son los adecuados.
-Primero se tiene el motor que se encargará de mover la banda transportadora en la cual todas las botellas de PET a clasificar se encontrarán a la espera de ingresar a la sección de clasificación, el motor puede ser monofásico puesto que no se requiere de una potencia grande dado que el peso de una botella de 1 litro de agua es de aproximadamente 8,7g aunque hay botellas que pesan entre 7,0g y 6,5g.
-Con esto y teniendo en cuenta que la clasificación en la sección de sensores de realizara de botella en botella entonces el peso en la banda transportadora no pasaría de 5kg, por ende, no es necesario recurrir a un motor muy potente ni a una tensión alta en la banda para poder desplazar el contenido.
-
-Por otro lado, suponiendo de que las botellas caerán a través de un embudo a la banda transportadora entonces se debe considerar por mera seguridad que estás salgan eyectadas hacía los laterales, siendo este el caso se deben colocar paredes de un metal que sea ligero pero lo suficientemente resistente para que no se deforme debido a los impactos y permita que las botellas se mantengan dentro de la banda transportadora en todo momento. 
-Para ello se podría usar aluminio como material principal dado que es un metal que si bien no se vende puro sino en aleación con algún otro metal sigue siendo barato y ligero en comparación con otros metales como el acero, de esta manera el costo no se elevaría demasiado y se sigue manteniendo el factor de seguridad.
-
-La segunda sección de la banda transportadora sería la sección de identificación la cual se puede realizar mediante sensores o cámaras o una combinación de ambos dispositivos, en cualquiera de los casos el sistema empleado debe ser capaz de clasificar las botellas de manera rápida con el fin de tener una tasa mínima de 3 botellas por minuto.
-
-Después de la sección de identificación sigue la sección de clasificación en la cual las botellas serán removidas de la banda transportadora y pasarán a contenedores en función de sus características previamente identificadas.
-Esta clasificación puede realizarse mediante pistones neumáticos que se accionen mediante sus respectivas electroválvulas, las cuales son fáciles de controlar puesto que únicamente se activarían si las características de la botella identificadas en la sección previa cumplen con lo estipulado.
-Para esta última parte se debe considerar que se requiere de un suministro constante de aire comprimido para los pistones neumáticos, está presión debe ser de al menos $0.08MPa$, a menos que se requiera un control más estricto sobre el accionamiento se pueden utilizar pistones de simple efecto con retorno de muelle, de lo contrario se debe optar por pistones de doble efecto para controlar tanto el accionamiento como el regreso mediante un electroválvula de $\frac{5}{2}$ monoestable.
-% 
-%
-\subsection{Análisis de componentes principales para la identificación de los elementos}
-
-El método de PCA se utilizo para explicar la cantidad máxima de varianza con el menor número de componentes.
-PCA analiza los elementos principales de múltiples características, exponiendo su naturaleza y resaltando sus principales características, acortando las dimensiones de los datos. 
-% PCA establecerá un método para disminuir la dimensión de los datos.
-El análisis de componentes principales se utilizo para describir la variación en los conjuntos de variables correlacionadas reduciendo la complejidad ayudando a la interpretación de los datos y la reducción del ruido o variables que se tienen que monitorear.
-% 
-% 
-\newpage
 \centering{\section{CONCLUSIONES}}
 \justifying
 
+Se optó por utilizar un amplificador de transimpedacia porque los valores de corriente que se pueden obtener del fotodiodo de prueba BPW21R y posiblemente del diodo de InGaAs, son del orden de los nanoamperios y microamperios.
+Se podría optar por utilizar un amplificador operacional en configuración de seguidor de voltaje teniendo una resistencia conocida, sin embargo, el problema es el mismo, al tratarse de una corriente muy pequeña y utilizar una resistencia muy grande únicamente en la entrada del OPAMP, se tienen problemas de impedancia que resultan en un mal funcionamiento del circuito debido a oscilaciones que resultan de las propias características del OPAMP.
+Estas oscilaciones también se dan en el amplificador de transimpedancia, pero son más sencillas de controlar mediante la adición de capacitores tanto en la realimentación del OPAMP, como en las propias terminales de alimentación o en paralelo con el fotodiodo.
 % 
 % 
 \newpage
@@ -1899,32 +1780,33 @@ El análisis de componentes principales se utilizo para describir la variación 
 % \section[\appendixname~\thesection]{Apéndice}
 \newpage
 \centering{\section[\appendixautorefname{}]{APÉNDICE}}
-
-% \begin{lstlisting}[language=c, caption=Codigo de ejemplo en c., label=listing:c] 
-    
-% #include <stdio.h>
-
-% int main()
-% {
-%     printf( "Hola mundo." );
-
-%     return 0;
-% }
-% \end{lstlisting}
 % 
 % 
-\lstinputlisting[language=java, caption=Codigo que se utilizo en JavaScript para interactuar con el motor uno, label=listing:motor1] {code/public/js/index.js}
+\lstinputlisting[language=html, caption=Código que se utilizo en HTML, label=listing:html] {code/index.html}
 % 
 % 
 \newpage
 \centering{\section[\appendixautorefname{}]{APÉNDICE}}
 % 
 % 
-\lstinputlisting[language=java, caption=Codigo que se utilizo en JavaScript para interactuar con el motor uno, label=listing:motor2] {code/public/js/motorDos.js}
+\lstinputlisting[language=html, caption=Código que se utilizo en css, label=listing:css] {code/public/css/styles.css}
+% 
+% 
+\newpage
+\centering{\section[\appendixautorefname{}]{APÉNDICE}}
+% 
+% 
+\lstinputlisting[language=java, caption=Código que se utilizo en JavaScript para interactuar con el motor uno, label=listing:motor1] {code/public/js/index.js}
+% 
+% 
+\newpage
+\centering{\section[\appendixautorefname{}]{APÉNDICE}}
+% 
+% 
+\lstinputlisting[language=java, caption=Código que se utilizo en JavaScript para interactuar con el motor uno, label=listing:motor2] {code/public/js/motorDos.js}
 % 
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 % 
-
 \end{document}
