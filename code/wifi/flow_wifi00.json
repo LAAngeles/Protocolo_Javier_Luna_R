@@ -1,0 +1,105 @@
+[
+    {
+        "id": "03da84c4eac89217",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "546e4e1ed99b72cb",
+        "type": "inject",
+        "z": "03da84c4eac89217",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "a",
+        "payloadType": "str",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "2f2b07ef8dcb82c1"
+            ]
+        ]
+    },
+    {
+        "id": "c1c7bfa79a07038a",
+        "type": "inject",
+        "z": "03da84c4eac89217",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "b",
+        "payloadType": "str",
+        "x": 130,
+        "y": 180,
+        "wires": [
+            [
+                "2f2b07ef8dcb82c1"
+            ]
+        ]
+    },
+    {
+        "id": "b2abfe25e6f320f4",
+        "type": "debug",
+        "z": "03da84c4eac89217",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "2f2b07ef8dcb82c1",
+        "type": "tcp request",
+        "z": "03da84c4eac89217",
+        "name": "",
+        "server": "192.168.137.21",
+        "port": "8000",
+        "out": "time",
+        "ret": "string",
+        "splitc": "0",
+        "newline": "",
+        "trim": false,
+        "tls": "",
+        "x": 450,
+        "y": 160,
+        "wires": [
+            [
+                "b2abfe25e6f320f4"
+            ]
+        ]
+    }
+]
