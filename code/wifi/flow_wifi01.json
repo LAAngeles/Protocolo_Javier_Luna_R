@@ -1,0 +1,526 @@
+[
+    {
+        "id": "03da84c4eac89217",
+        "type": "tab",
+        "label": "eje04",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "546e4e1ed99b72cb",
+        "type": "inject",
+        "z": "03da84c4eac89217",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "a",
+        "payloadType": "str",
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "2f2b07ef8dcb82c1"
+            ]
+        ]
+    },
+    {
+        "id": "c1c7bfa79a07038a",
+        "type": "inject",
+        "z": "03da84c4eac89217",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "b",
+        "payloadType": "str",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "2f2b07ef8dcb82c1"
+            ]
+        ]
+    },
+    {
+        "id": "b2abfe25e6f320f4",
+        "type": "debug",
+        "z": "03da84c4eac89217",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2f2b07ef8dcb82c1",
+        "type": "tcp request",
+        "z": "03da84c4eac89217",
+        "name": "",
+        "server": "192.168.137.101",
+        "port": "8000",
+        "out": "time",
+        "ret": "string",
+        "splitc": "0",
+        "newline": "",
+        "trim": false,
+        "tls": "",
+        "x": 320,
+        "y": 200,
+        "wires": [
+            [
+                "8cf64083e5d9bff3",
+                "c8d16ed1563a7c37"
+            ]
+        ]
+    },
+    {
+        "id": "4f266ff0ecb8469c",
+        "type": "ui_gauge",
+        "z": "03da84c4eac89217",
+        "name": "",
+        "group": "6598b0ac903efec5",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Indicador",
+        "label": "Lectura analogica",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4096",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 780,
+        "y": 100,
+        "wires": [],
+        "info": " http://localhost:1880/ui "
+    },
+    {
+        "id": "ce7557b4a94c7a03",
+        "type": "ui_chart",
+        "z": "03da84c4eac89217",
+        "name": "",
+        "group": "6598b0ac903efec5",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "4096",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8cf64083e5d9bff3",
+        "type": "function",
+        "z": "03da84c4eac89217",
+        "name": "function 6",
+        "func": "msg.payload = msg.payload.split(\",\")[0];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 100,
+        "wires": [
+            [
+                "ce7557b4a94c7a03",
+                "4f266ff0ecb8469c",
+                "b2abfe25e6f320f4",
+                "fc23e9ad24485d21"
+            ]
+        ]
+    },
+    {
+        "id": "c8d16ed1563a7c37",
+        "type": "function",
+        "z": "03da84c4eac89217",
+        "name": "function 7",
+        "func": "msg.payload = msg.payload.split(\",\")[1];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 260,
+        "wires": [
+            [
+                "f87553927e5429e3",
+                "4dcebdb5965b02b9",
+                "d87f1f8d78ce7fe9",
+                "349c79316bbdab65"
+            ]
+        ]
+    },
+    {
+        "id": "f87553927e5429e3",
+        "type": "debug",
+        "z": "03da84c4eac89217",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4dcebdb5965b02b9",
+        "type": "ui_gauge",
+        "z": "03da84c4eac89217",
+        "name": "",
+        "group": "b5de80abd5cdbc30",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4096",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 770,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d87f1f8d78ce7fe9",
+        "type": "ui_chart",
+        "z": "03da84c4eac89217",
+        "name": "",
+        "group": "b5de80abd5cdbc30",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c6e6475ce0f67584",
+        "type": "ui_led",
+        "z": "03da84c4eac89217",
+        "order": 6,
+        "group": "a5ed0f6de477893f",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 270,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "56236adf853643e3",
+        "type": "ui_switch",
+        "z": "03da84c4eac89217",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "a5ed0f6de477893f",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 90,
+        "y": 320,
+        "wires": [
+            [
+                "c6e6475ce0f67584"
+            ]
+        ]
+    },
+    {
+        "id": "fc23e9ad24485d21",
+        "type": "ui_text",
+        "z": "03da84c4eac89217",
+        "group": "6598b0ac903efec5",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Valor en HEX :",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 800,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "349c79316bbdab65",
+        "type": "ui_text",
+        "z": "03da84c4eac89217",
+        "group": "b5de80abd5cdbc30",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Dato en mini volts:",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 810,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d9f6cecf435e6e3e",
+        "type": "ui_switch",
+        "z": "03da84c4eac89217",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "a5ed0f6de477893f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 90,
+        "y": 380,
+        "wires": [
+            [
+                "c185cedef7b0b97e"
+            ]
+        ]
+    },
+    {
+        "id": "c185cedef7b0b97e",
+        "type": "ui_led",
+        "z": "03da84c4eac89217",
+        "order": 4,
+        "group": "a5ed0f6de477893f",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 270,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "6598b0ac903efec5",
+        "type": "ui_group",
+        "name": "Analog Read ADC",
+        "tab": "1dfa407b31d6435e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b5de80abd5cdbc30",
+        "type": "ui_group",
+        "name": "Analog-Read-MilliVolts",
+        "tab": "1dfa407b31d6435e",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a5ed0f6de477893f",
+        "type": "ui_group",
+        "name": "Enviar",
+        "tab": "1dfa407b31d6435e",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1dfa407b31d6435e",
+        "type": "ui_tab",
+        "name": "Node-Red-Dashboard y ESP32",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
