@@ -1144,6 +1144,25 @@ Las pistas de alimentaci\'on del convertidor DC-DC tipo Buck son de $30\ [mils]$
 }
 % 
 % 
+\subsubsection{Test Bench y dise\~{n}o de pruebas preliminares}
+El \textit{Test Bench} empleado para las pruebas del dise\~{n}o propuesto consisti\'o en un par de protoboards o placas de prueba y dos fuentes de voltaje peque\~{n}as y comerciales de $5\ [V]$ y $12\ [V]$.
+
+\begin{figure}[H]
+    \centering
+     \includegraphics[trim = {50mm 175mm 40mm 35mm},clip,scale=1]{img/TestBench.pdf}
+    \caption{Test Bench para pruebas con BPW21R}
+    \label{fig:TestBench}
+\end{figure}
+
+En la Figura \ref{fig:TestBench} se observa la etapa principal del sistema de acondicionamiento de se\~{n}al que consiste en el amplificador de transimpedancia y en el primer comparador de voltaje que activa el primer l\'imite basado en la se\~{n}al del fotodiodo BPW21R.
+
+Tambi\'en se observa la tarjeta ESP32 y el modelo de ADC ADS1115 los cuales funcionan en conjunto mediante un c\'odigo de prueba realizado mediante el IDE de Arduino para fines pr\'acticos y depuraci\'on de c\'odigo y dise\~{n}o.
+
+El c\'odigo desarrollado utiliza el modulo ADS1115 y el modulo WiFi de la tarjeta ESP32, permitiendo capturar el valor de voltaje de salida del amplificador de transimpedancia con una resoluci\'on de 16-bits y en una tasa de actualizaci\'on de $250\ [ms]$, es decir, permite capturar cuatro respuestas del sensor por segundo. As\'i mismo, el c\'odigo habilita una conexi\'on WiFi mediante dos variables: la SSID y la contrase\~{n}a del modulo que se quiera utilizar, esto permite que se realice una transmisi\'on de los datos capturados por el modulo ADS1115 a una base de datos en línea conocida como ThinkSpeak.
+
+ThinkSpeak es una plataforma en l\'inea que permite adquirir y mostrar datos recibidos de una manera adecuada y agradable para su visualizaci\'on e interpretaci\'on. Si bien es cierto que ThinkSpeak ofrece una versi\'o de uso gratuita, es necesario recalcar que esta versi\'o incluye la limitante de que se actualiza cada $15$ segundos, con lo cual, para esta aplicaci\'on, al menos en su versi\'on gratuita, resulto \'util para las pruebas realizadas con el fin de verificar la funcionalidad del circuito y observar las capacidades del modulo ESP32.
+%
+%
 \subsection{Determinaci\'on de una metodolog\'ia mediante las caracter\'isticas del diodo InGaAs para seleccionar los elementos mec\'anicos}
 
 Finalmente para la parte que se encargar\'a en forma de separar las botellas de PET se propone la implementaci\'on de pistones neum\'aticos.
@@ -1405,7 +1424,7 @@ En la Figura \ref{fig:network-2} se describe la acci\'on que se toma una vez que
 \begin{figure}[H]
     \centering
      \includegraphics[trim = {1mm 30mm 1mm 1mm},clip,scale=0.5]{img/PLCODE_Network3_4.pdf}
-    \caption{Red 3 y 4, \textit{Function Block} del motor 1 y 2 que continen el control.}
+    \caption{Red 3 y 4, \textit{Function Block} del motor 1 y 2 que contienen el control.}
     \label{fig:network_3-4}
 
     \includegraphics{img/FB_network-1.png}
@@ -1464,7 +1483,7 @@ En la Figura \ref{fig:FB_network-2} se describe la acci\'on que se toma una vez 
     \centering
 
       \includegraphics[trim = {1mm 15mm 1mm 15mm},clip,scale=0.5]{img/PLCFCM1_Network2.pdf}
-    \caption{Red 2, Acci\'on paso uno, con dos botones se acciona el motor para adelante o para atr\'as. \textcolor{Red}{Por que de la red 3 se pasa a la 2 y despu\'es a la 4?.}}
+    \caption{Red 2, Acci\'on paso uno, con dos botones se acciona el motor para adelante o para atr\'as.}
     \label{fig:FCM1_network-2}
 
 \end{figure}
@@ -1804,6 +1823,13 @@ Estas oscilaciones tambi\'en se dan en el amplificador de transimpedancia, pero 
 % 
 % 
 \lstinputlisting[language=java, caption=C\'odigo que se utilizo en JavaScript para interactuar con el motor uno, label=listing:motor2] {code/public/js/motorDos.js}
+% 
+% 
+\newpage
+\centering{\section[\appendixautorefname{}]{AP\'ENDICE}}
+% 
+% 
+\lstinputlisting[language=c++, caption=C\'odigo que se utilizo para el Test Bench, label=listing:testbench] {code/ESP32TestBench/ESP32TestBench.ino}
 % 
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
