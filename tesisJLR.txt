@@ -59,7 +59,7 @@
 \usepackage{hyperref}
 \hypersetup{
 colorlinks=true,
-citecolor=blue,
+citecolor=black,
 urlcolor=blue,
 }
 \urlstyle{rm}
@@ -169,33 +169,37 @@ De manera part\'icular agradezco al Mtro. Jos\'e Luis Avenda\~{n}o Juar\'ez, al 
 \begin{tabular}{@{}ll}
 ADC & Convertidor anal\'ogico-digital\\
 % ANOVA & An\'alisis de variaci\'on\\
+Buck Converter & Convertidor Reductor\\
+CPU & Unidad Central de Procesamiento\\
 % CC  & Centros de acopio\\
-{$CO_2$} & Di\'oxido de carbono\\
+%{$CO_2$} & Di\'oxido de carbono\\
 % DIL40 & 40 PINS dual-in-line package\\
 % DOE & Dise\~{n}o de experimentos\\ 
-F & F Relaci\'on \\
+DC-DC & Corriente directa a Corriente directa\\
+F & F Relaci\'on\\
+First Scan & Inicializaci\'on de variables en el PLC\\
+FPGA & Matriz de puertas programables en campo\\
 gl & Grados de libertad\\
-HDPE & Polietileno de alta densidad \\
+HDPE & Polietileno de alta densidad\\
+ID o id & Identificador \'unico\\
 IMER & Industria Mexicana de Reciclaje S.A. de C.V.\\
+IoT & Internet de las cosas\\
 JFET & Transistor de efecto de campo con uni\'on\\
 JPG & Grupo Conjunto de Expertos Fotogr\'aficos\\
 % LCD & Pantalla de cristal l\'iquido\\
 LDA & An\'alisis discriminante lineal\\
 LDPE & Polietileno de baja densidad\\
 LED & Diodo emisor de luz\\
+mils & Mil\'esimas de pulgada\\
 MOSFET & Transistor de efecto de campo metal-\'oxido semiconductor\\
 MS & Cuadrado medio\\
-% mL & Mililitros\\
+mL & Mililitros\\
 NC & Normalmente cerrada\\
 NIR & Espectroscopia de infrarrojo cercano\\
 % No.  & N\'umero\\
 OPAMP & Amplificador operacional\\
 PCA & An\'alisis de componentes principales\\
-% PCB & placa de circuito impreso\\
-PET & Tereftalato de polietileno\\
-PIC & Controlador de interfaz de perif\'ericos\\
 % PIB & Producto Interno Bruto\\
-PLC & Controlador l\'ogico programable
 \end{tabular}
 % 
 % 
@@ -203,13 +207,20 @@ PLC & Controlador l\'ogico programable
 \justifying
 \noindent
 \begin{tabular}{@{}ll}
+PCB & Placa de circuito impreso\\
+PET & Tereftalato de polietileno\\
+PIC & Controlador de interfaz de perif\'ericos\\
+PLC & Controlador l\'ogico programable\\
 PP & Polipropileno\\
 PVC & Cloruro de polivinilo\\
 PS & Poliestireno\\
 PWM & Modulaci\'on por ancho de pulso\\
 % SVM & M\'aquinas de vectores soporte\\
 SS & Suma de cuadrados\\
-TIA & Amplificador de transimpedancia
+ThinkSpeak & Proveedor de servidores en l\'inea\\
+TIA & Amplificador de transimpedancia \\
+TTL & L\'ogica Transistor - Transistor \\
+WiFi & Fidelidad Inal\'ambrica \\
 % PIC & Controlador de interfaz de perif\'ericos\\
 % PIB & Producto Interno Bruto\\
 % PLC & Controlador l\'ogico programable\\
@@ -839,6 +850,7 @@ Los fotodiodos son dispositivos sensibles a la luz, dependiendo de la cantidad d
 El \textbf{BPW21R} es un fotodiodo de silicio de tipo PN con un sellado herm\'etico en un formato TO-5, especialmente dise\~{n}ado para aplicaciones de alta precisi\'on y lineales \cite{bpw21r2006vishay}.
 % 
 % 
+\begin{center}
 {\renewcommand{\baselinestretch}{1.15}
 \begin{table}[H]
     \centering
@@ -847,7 +859,7 @@ El \textbf{BPW21R} es un fotodiodo de silicio de tipo PN con un sellado herm\'et
     \begin{adjustwidth}{1.2cm}{0cm}
     \begin{tabular}{|c|c|c|c|c|c|}
     \hline
-        Par\'ametro & Simbolo & MIN & Typ. & MAX & Unit \\
+        Par\'ametro & S\'imbolo & MIN & T\'ipico & MAX & Unidad \\
     \hline
         Voltaje directo &  $V_{f}$ & - & 1.0 & 1.3 & $V$ \\
     \hline
@@ -859,6 +871,7 @@ El \textbf{BPW21R} es un fotodiodo de silicio de tipo PN con un sellado herm\'et
 \end{adjustwidth}
 \end{table}
 }
+\end{center}
 % 
 % 
 %\begin{figure}[H]
@@ -876,7 +889,7 @@ El \textbf{BPW21R} es un fotodiodo de silicio de tipo PN con un sellado herm\'et
     \begin{adjustwidth}{-.1cm}{0cm}
     \begin{tabular}{|c|c|c|c|c|c|}
     \hline
-        Par\'ametro & Simbolo & MIN & Typ. & MAX & Unit \\
+        Par\'ametro & S\'imbolo & MIN & T\'ipico. & MAX & Unidad \\
     \hline
         Corriente inversa en luz &  $I_{ra}$ & 4.5 & 9.0 & - & $\mu A$ \\
     \hline
@@ -896,11 +909,11 @@ El \textbf{BPW21R} es un fotodiodo de silicio de tipo PN con un sellado herm\'et
 %    \label{fig:OpticproBPW21R}
 %\end{figure}
 
-En la Tabla \ref{ElecproBPW21R} se observan las propiedades el\'ectricas del fotodiodo, los par\'ametros m\'as importantes son los siguientes: \textbf{Reverse Dark Current} $[I_{ro}]$ y \textbf{Dark Resistance} $[R_{D}]$ \cite{SymbolsandTherms2008vishay}, porque son par\'ametros que permiten predecir hasta cierto punto el comportamiento del fotodiodo y, en funci\'on de ello, dise\~{n}ar un circuito que sea capaz de adecuar su se\~{n}al para poder trabajarla.
+En la Tabla \ref{ElecproBPW21R} se observan las propiedades el\'ectricas del fotodiodo, los par\'ametros m\'as importantes son los siguientes: Corriente inversa en oscuridad o \textbf{Reverse Dark Current} $[I_{ro}]$ y resistencia en oscuridad \textbf{Dark Resistance} $[R_{D}]$ \cite{SymbolsandTherms2008vishay}, porque son par\'ametros que permiten predecir hasta cierto punto el comportamiento del fotodiodo y, en funci\'on de ello, dise\~{n}ar un circuito que sea capaz de adecuar su se\~{n}al para poder trabajarla.
 Estos par\'ametros van de la mano debido a que, como su nombre indica, son valores que se obtienen cuando el diodo esta operando en completa oscuridad y son importantes dado que influyen directamente en la medici\'on final que se obtiene cuando el diodo se encuentra operando bajo condiciones de luz.
 
 Lo anterior se comprob\'o durante la experimentaci\'on con el circuito mostrado en la Figura \ref{fig:TIMPOPAMP}. 
-En la Tabla \ref{OpticproBPW21R} se observa el par\'ametro \textbf{Reverse Light Current} $[I_{ra}]$ \cite{SymbolsandTherms2008vishay}; este par\'ametro se refiere a la corriente que fluye en funci\'on de la cantidad de luz que capta el dispositivo y su valor se obtiene mediante la ecuaci\'on \ref{RevDarkCurr}:
+En la Tabla \ref{OpticproBPW21R} se observa el par\'ametro corriente inversa en luz o \textbf{Reverse Light Current} $[I_{ra}]$ \cite{SymbolsandTherms2008vishay}; este par\'ametro se refiere a la corriente que fluye en funci\'on de la cantidad de luz que capta el dispositivo y su valor se obtiene mediante la ecuaci\'on \ref{RevDarkCurr}:
 % 
 % 
 \begin{equation} \label{RevDarkCurr}
@@ -910,7 +923,7 @@ En la Tabla \ref{OpticproBPW21R} se observa el par\'ametro \textbf{Reverse Light
 % 
 % 
 Donde se observa a $[I_{ph}]$ que es el parte de la corriente de salida que emite el diodo debido a que esta captando luz. 
-Dada la Tabla \ref{OpticproBPW21R}, el valor de la \textbf{Reverse Light Current} es de $9\ [{\mu A}]$ como valor t\'ipico \cite{bpw21r2006vishay}, resultado de la suma de la \textbf{Reverse Dark Current} y de la \textbf{Photocurrent} $[I_{ph}]$.
+Dada la Tabla \ref{OpticproBPW21R}, el valor de la \textbf{Reverse Light Current} es de $9\ [{\mu A}]$ como valor t\'ipico \cite{bpw21r2006vishay}, resultado de la suma de la \textbf{Reverse Dark Current} y de la fotocorriente o \textbf{Photocurrent} $[I_{ph}]$.
 Este valor se comprob\'o mediante la experimentaci\'on dado que con una resistencia de $1\ [M\Omega]$, se obtuvieron $8\ [V]$ a la salida de un amplificador de transimpedancia, con lo cual, al aplicar ley de Ohm, se obtiene un valor de corriente de aproximadamente $8\ [{\mu A}]$.
 % 
 % 
@@ -1144,13 +1157,13 @@ Las pistas de alimentaci\'on del convertidor DC-DC tipo Buck son de $30\ [mils]$
 }
 % 
 % 
-\subsubsection{Test Bench y dise\~{n}o de pruebas preliminares}
-El \textit{Test Bench} empleado para las pruebas del dise\~{n}o propuesto consisti\'o en un par de protoboards o placas de prueba y dos fuentes de voltaje peque\~{n}as y comerciales de $5\ [V]$ y $12\ [V]$.
+\subsubsection{Banco de pruebas y dise\~{n}o de pruebas preliminares}
+El Banco de pruebas empleado para las pruebas del dise\~{n}o propuesto consisti\'o en un par de protoboards o placas de prueba y dos fuentes de voltaje peque\~{n}as y comerciales de $5\ [V]$ y $12\ [V]$.
 
 \begin{figure}[H]
     \centering
      \includegraphics[trim = {50mm 175mm 40mm 35mm},clip,scale=1]{img/TestBench.pdf}
-    \caption{Test Bench para pruebas con BPW21R}
+    \caption{Banco de pruebas para BPW21R}
     \label{fig:TestBench}
 \end{figure}
 
@@ -1173,7 +1186,7 @@ Todo esto se realiz\'o en funci\'on de las caracter\'isticas de cada elemento me
 % 
 \subsubsection{Dise\~{n}o el\'ectrico del sistema de clasificaci\'on}
 
-En la figura \ref{fig:MOTOREDUCTOR} se ilustra el moto reductor que se utilizo, con 1750 revoluciones por minuto y con un reductor de cien a uno lo que equivale a dar dieciocho vueltas en un minuto.
+En la Figura \ref{fig:MOTOREDUCTOR} se ilustra el moto reductor que se utilizo, con 1750 revoluciones por minuto y con un reductor de cien a uno lo que equivale a dar dieciocho vueltas en un minuto.
 %
 %############################################
 \begin{figure}[H]
@@ -1185,7 +1198,7 @@ En la figura \ref{fig:MOTOREDUCTOR} se ilustra el moto reductor que se utilizo, 
 \end{figure}
 % 
 % 
-En las figuras \ref{fig:MOTOR_ConnectionDiag} y \ref{fig:MOTOR_ConnectionPDiag2}, se ilustra el procedimiento que se llevo para la conexi\'on y puesta en marcha del moto-reductor. 
+En las Figuras \ref{fig:MOTOR_ConnectionDiag} y \ref{fig:MOTOR_ConnectionPDiag2}, se ilustra el procedimiento que se llevo para la conexi\'on y puesta en marcha del moto-reductor. 
 Consta de cinco botones; dos botones habilitadores de cada motor que son parte del PLC, dos botones para indicar el giro del motor y un bot\'on de paro total.
 % 
 % 
@@ -1321,7 +1334,7 @@ En la Figura \ref{fig:webPLC.JPG} se ilustra el diagrama de bloques con el servi
     \centering
 \begin{adjustwidth}{-1.5cm}{0cm}
      \includegraphics[trim = {1mm 60mm 1mm 50mm},clip,scale=0.60]{img/PLC_WEBSERVER.pdf}
-    \caption{Dise\~{n}o de la p\'agina web con el \textit{Web Server}.}
+    \caption{Dise\~{n}o de la p\'agina web con el \textit{Servidor web}.}
     \label{fig:PLC_WEBSERVER.JPG}
 \end{adjustwidth}
 \end{figure}
@@ -1341,7 +1354,7 @@ se describen el programa que se utilizo para controlar los motores.
 %begin{figure}[H]
 %    \centering
 %     \includegraphics[trim = {1mm 1mm 1mm 1mm},clip,scale=0.50]{img/PLCODE_Network1.pdf}
-%    \caption{Diagrama de bloques del PLC para el servidor web. \textcolor{Red}{La descripci\'on de la figura no corresponde.}}
+%    \caption{Diagrama de bloques del PLC para el servidor web. \textcolor{Red}{La descripci\'on de la Figura no corresponde.}}
 %    \label{fig:PLCODE_Network1}
 %\end{figure}
 \begin{figure}[H]
@@ -1386,7 +1399,7 @@ La base de datos web y la base de datos de fragmentos almacenan la estructura de
 \begin{figure}[H]
     \centering
      \includegraphics[trim = {1mm 30mm 1mm 1mm},clip,scale=0.5]{img/PLCODE_Network1.pdf}
-    \caption{Red 1, inicializaci\'on del proceso y el \textit{Web Server} mediante el \textit{First Scan} del PLC.}
+    \caption{Red 1, inicializaci\'on del proceso y el \textit{Servidor web} mediante el \textit{First Scan} del PLC.}
     \label{fig:network-1}
 \end{figure}
 %
@@ -1418,13 +1431,13 @@ Consta de un disparador que se activa cuando el PLC hace su primer escaneo del s
 \end{figure}
 %
 %
-En la Figura \ref{fig:network-2} se describe la acci\'on que se toma una vez que se ejecuto la red 0, la cual espera a que se active el paso cero con el bot\'on de \textbf{start}.
+En la Figura \ref{fig:network-2}, se describe la acci\'on que se toma una vez que se ejecut\'o la red 0, la cual espera a que se active el paso cero con el bot\'on de \textbf{start}.
 % 
 % 
 \begin{figure}[H]
     \centering
      \includegraphics[trim = {1mm 30mm 1mm 1mm},clip,scale=0.5]{img/PLCODE_Network3_4.pdf}
-    \caption{Red 3 y 4, \textit{Function Block} del motor 1 y 2 que contienen el control.}
+    \caption{Red 3 y 4, \textit{Bloque de funciones} del motor 1 y 2 que contienen el control.}
     \label{fig:network_3-4}
 
     \includegraphics{img/FB_network-1.png}
@@ -1433,7 +1446,7 @@ En la Figura \ref{fig:network-2} se describe la acci\'on que se toma una vez que
 \end{figure}
 %
 %
-En la Figura \ref{fig:FB_network-2} se describe la acci\'on que se toma una vez que se ejecuto la red 1, la cual espera a que se active el paso cero con el bot\'on de \textbf{star}.
+En la Figura \ref{fig:FB_network-2} se describe la acci\'on que se toma una vez que se ejecuto la red 1, la cual espera a que se active el paso cero con el bot\'on de \textbf{start}.
 % 
 \begin{figure}[H]
     \centering
@@ -1468,7 +1481,7 @@ En la Figura \ref{fig:FB_network-2} se describe la acci\'on que se toma una vez 
 \begin{figure}[H]
     \centering
       \includegraphics[trim = {1mm 70mm 1mm 70mm},clip,scale=0.5]{img/PLCFCM1_Network1.pdf}
-    \caption{Red 1, \textit{Function Block} del motor, habilitador}
+    \caption{Red 1, \textit{Bloque de funciones} del motor, habilitador}
     \label{fig:FCM1_network-1}
 
     \includegraphics{img/FB_network-3.png}
@@ -1776,6 +1789,10 @@ En la Tabla \ref{table:DOE_1a} se resume la tabla que almacenar\'ia los resultad
 Se opt\'o por utilizar un amplificador de transimpedacia porque los valores de corriente que se pueden obtener del fotodiodo de prueba BPW21R y posiblemente del diodo de InGaAs, son del orden de los nanoamperios y microamperios.
 Se podr\'ia optar por utilizar un amplificador operacional en configuraci\'on de seguidor de voltaje teniendo una resistencia conocida, sin embargo, el problema es el mismo, al tratarse de una corriente muy peque\~{n}a y utilizar una resistencia muy grande \'unicamente en la entrada del OPAMP, se tienen problemas de impedancia que resultan en un mal funcionamiento del circuito debido a oscilaciones que resultan de las propias caracter\'isticas del OPAMP.
 Estas oscilaciones tambi\'en se dan en el amplificador de transimpedancia, pero son m\'as sencillas de controlar mediante la adici\'on de capacitores tanto en la realimentaci\'on del OPAMP, como en las propias terminales de alimentaci\'on o en paralelo con el fotodiodo.
+
+Aunado a lo previamente mencionado, el uso de un amplificador de trasimpedancia simplific\'o la tarea de capturar la se\~{n}al proveniente del fotodiodo y, en consecuencia, la selecci\'on de los componentes que operan en conjunto con el amplificador de trasimpedancia, se volvi\'o relativamente sencilla dado que, al tener ya un tipo y comportamiento de se\~{n}al definidos, fue cuesti\'on de analizar ventajas y desventajas de los componentes mediante el m\'etodo emp\'irico, ejecuci\'on de simulaciones y el m\'etodo conocido como ensayo y error.
+
+Todo lo anteriormente mencionado, en conjunto con la experiencia adquirida en una empresa del sector automotriz, permitieron definir en cierta medida la metodolog\'ia que fue empleada en este trabajo, la cual consisti\'o en el dise\~{n}o, la implementaci\'on y la ejecuci\'on y que fue plenamente empleada para el desarrollo del sistema de acondicionamiento de se\~{n}al.
 % 
 % 
 \newpage
@@ -1829,7 +1846,7 @@ Estas oscilaciones tambi\'en se dan en el amplificador de transimpedancia, pero 
 \centering{\section[\appendixautorefname{}]{AP\'ENDICE}}
 % 
 % 
-\lstinputlisting[language=c++, caption=C\'odigo que se utilizo para el Test Bench, label=listing:testbench] {code/ESP32TestBench/ESP32TestBench.ino}
+\lstinputlisting[language=c++, caption=C\'odigo que se utilizo para el Banco de pruebas, label=listing:testbench] {code/ESP32TestBench/ESP32TestBench.ino}
 % 
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
