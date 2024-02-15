@@ -84,6 +84,7 @@ urlcolor=blue,
 \usepackage{gensymb}
 \usepackage{float}
 \usepackage{marvosym}
+ \usepackage{comment} 
 \definecolor{light-gray}{gray}{.7}
 %\spanishdecimal{.}
 
@@ -240,8 +241,9 @@ WiFi & Fidelidad Inal\'ambrica \\
 \addcontentsline{toc}{section}{Resumen}
 \centering{\section*{RESUMEN}}
 \justifying
-\colorbox{yellow}{\Large El resumen se hace cuando ya se termino la tesis.}
 
+\begin{comment}
+\colorbox{yellow}{\Large El resumen se hace cuando ya se termino la tesis.}
 Es la secci\'on m\'as le\'ida de una publicaci\'on y permite que la comunidad cient\'ifica
 se entere del trabajo para luego leer el trabajo en detalle; adem\'as es la \'unica
 secci\'on de un trabajo escrito que aparecer\'a en publicaciones de citaci\'on como los
@@ -273,17 +275,29 @@ apegarse lo m\'as posible al texto en espa\~{n}ol. Al final del resumen se prese
 palabras clave queda a criterio del autor. Se escriben entre par\'entesis. La versi\'on
 en ingl\'es de este resumen deber\'a ser avalada por escrito por la Facultad de
 Lenguas y Letras de la UAQ.
-% 
-% 
+%
 \\\\
 (\textbf{Palabras clave:} gu\'ia, referencia, tesis)
+%
+%
+\end{comment}
+
+Actualmente el medio ambiente, la contaminaci\'on y el reciclaje son t\'erminos que han adquirido relevancia debido al constante crecimiento de la poblaci\'on mundial, esto conlleva al incremento en la demanda de productos que involucran el uso de materiales como pl\'astico, papel, cart\'on, vidrio o aluminio generando m\'as desechos, algunos reciclables y otros que no lo son.
+El trabajo presente enfatiza esta problemática desde el punto de vista de la ingenier\'ia proponiendo una metodolog\'ia que permita optar por elementos que funcionen adecuadamente como parte de un sistema, en este caso siendo enfocado al sistema de acondicionamiento de señal para un fotodiodo.
+Esto se logr\'o por medio del an\'alisis de metodolog\'ias previas, mayormente utilizadas en el sector automotriz, que combinadas permitieron obtener un objetivo y procedimiento de trabajo conciso para el desarrollo del sistema de acondicionamiento de se\~{n}al.
+Tambi\'en se analizaron proyectos similares para obtener las capacidades de estos sistemas y sintetizar sus ventajas y desventajas, esto permiti\'o delimitar los par\'ametros para que el sistema sea asequible.
+Los resultados muestran los criterios utilizados para la selecci\'on de los componentes, as\'i como el comportamiento de estos de manera individual y en conjunto, el an\'alisis del fotodiodo BPW21R permiti\'o comprender su modo de operaci\'on con diferentes configuraciones, esto se refleja en que el diodo se polarizado inversamente dado que provoca que sea m\'as sensible.
+Al final, queda claro que un sistema m\'as robusto requiere de una mayor inversi\'on, pero, con un criterio anal\'itico, adquirido seg\'un un conjunto de procedimientos previamente desarrollados, se pueden obtener resultados adecuados para el enfoque deseado.
+%
+\\\\
+(\textbf{Palabras clave:} acondicionamiento de se\~{n}al, asequible, clasificaci\'on de PET, metodolog\'ia compuesta, reciclaje)
 % 
 % 
 \newpage
 \addcontentsline{toc}{section}{Abstract}
 \centering{\section*{ABSTRACT}}
 \justifying
-
+\begin{comment}
 This is the section of a scientific publication that is read more frequently, and it is
 the quickest way to know what the paper is about in order to decide if the whole
 article is read later on; besides, this is the only section of a paper that will appear in
@@ -312,6 +326,18 @@ Languages of the UAQ.
 % 
 \\\\
 (\textbf{Key words:} guide, references, thesis)
+% 
+% 
+\end{comment}
+Currently, the environment, pollution and recycling are terms that have gained relevance due to the constant growth of the world's population, which leads to an increase in demand for products that require the use of materials such as plastic, paper, cardboard, glass or aluminum, generating more waste, some of which is recyclable and some of which is not.
+The present work emphasizes this problem from an engineering point of view by proposing a methodology that allows the selection of elements that function properly as part of a system, in this case focusing on the signal conditioning system for a photodiode.
+This was achieved through the analysis of previous methodologies, mostly used in the automotive sector, which together allowed to obtain a concise objective and working procedure for the development of the signal conditioning system.
+Similar projects were also analyzed in order to obtain the capabilities of these systems and to synthesize their advantages and disadvantages, which made it possible to delimit the parameters to make the system affordable.
+The results show the criteria used for the selection of the components, as well as the behavior of these elements individually and as a whole, the analysis of the BPW21R diode allowed to understand its behavior and this is reflected in the fact that the diode is inversely polarized, which makes it more sensitive.
+In the end, it is clear that a more robust system requires a greater investment, but with an analytical approach acquired according to a set of previously developed procedures, adequate results can be obtained for the desired approach.
+% 
+\\\\
+(\textbf{Key words:} signal conditioning, affordability, PET sorting, composite methodology, recycling)
 % 
 % 
 \newpage
